@@ -3,7 +3,7 @@
     "/content/eds-preview/:/",
     "/content/eds-preview/configuration:/.helix/config.json",
     "/content/eds-preview/metadata:/metadata.json",
-    "/content/eds-preview/headers:/headers.json
+    "/content/eds-preview/headers:/headers.json"
   ],
   "includes": [
     "/content/eds-preview/"
