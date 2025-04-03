@@ -11,6 +11,6 @@
   ],
   "includes": [
     "/content/eds-preview/",
-    "/content/dam/"
+    "/content/dam/fields-test/dummy.pdf"
   ]
 }
