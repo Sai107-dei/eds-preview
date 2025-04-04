@@ -1,222 +1,156 @@
 export default async function decorate(block) {
   block.innerHTML = `
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-    rel="stylesheet"
-  />
-  <div class="container">
-    <div class="options">
-      <!-- Text Format -->
-      <button id="bold" class="option-button format">
-        <i class="fa-solid fa-bold"></i>
-      </button>
-      <button id="italic" class="option-button format">
-        <i class="fa-solid fa-italic"></i>
-      </button>
-      <button id="underline" class="option-button format">
-        <i class="fa-solid fa-underline"></i>
-      </button>
-      <button id="strikethrough" class="option-button format">
-        <i class="fa-solid fa-strikethrough"></i>
-      </button>
-      <button id="superscript" class="option-button script">
-        <i class="fa-solid fa-superscript"></i>
-      </button>
-      <button id="subscript" class="option-button script">
-        <i class="fa-solid fa-subscript"></i>
-      </button>
+   <div class="toolbar">
+    <!-- Headings -->
+    <select title="Apply Heading" onchange="execCmd('formatBlock', this.value)">
+      <option value="">Heading</option>
+      <option value="H1">H1</option>
+      <option value="H2">H2</option>
+      <option value="H3">H3</option>
+      <option value="H4">H4</option>
+      <option value="H5">H5</option>
+      <option value="H6">H6</option>
+    </select>
 
-      <!-- List -->
-      <button id="insertOrderedList" class="option-button">
-        <div class="fa-solid fa-list-ol"></div>
-      </button>
-      <button id="insertUnorderedList" class="option-button">
-        <i class="fa-solid fa-list"></i>
-      </button>
+    <!-- Font Family -->
+    <select title="Choose Font Family" onchange="execCmd('fontName', this.value)">
+      <option value="">Font</option>
+      <option value="Arial">Arial</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Verdana">Verdana</option>
+    </select>
 
-      <!-- Undo/Redo -->
-      <button id="undo" class="option-button">
-        <i class="fa-solid fa-rotate-left"></i>
-      </button>
-      <button id="redo" class="option-button">
-        <i class="fa-solid fa-rotate-right"></i>
-      </button>
+    <!-- Font Size -->
+    <select title="Adjust Font Size" onchange="execCmd('fontSize', this.value)">
+      <option value="">Font Size</option>
+      <option value="1">8px</option>
+      <option value="2">10px</option>
+      <option value="3">12px</option>
+      <option value="4">14px</option>
+      <option value="5">18px</option>
+      <option value="6">24px</option>
+      <option value="7">32px</option>
+    </select>
 
-      <!-- Link -->
-      <button id="createLink" class="adv-option-button">
-        <i class="fa fa-link"></i>
-      </button>
-      <button id="unlink" class="option-button">
-        <i class="fa fa-unlink"></i>
-      </button>
+    <!-- Formatting -->
+    <button title="Bold" onclick="execCmd('bold')"><b>B</b></button>
+    <button title="Italic" onclick="execCmd('italic')"><i>I</i></button>
+    <button title="Underline" onclick="execCmd('underline')"><u>U</u></button>
+    <button title="Superscript" onclick="execCmd('superscript')">X<sup>2</sup></button>
+    <button title="Subscript" onclick="execCmd('subscript')">X<sub>2</sub></button>
+    <button title="Clear Formatting" onclick="execCmd('removeFormat')">Clear</button>
 
-      <!-- Alignment -->
-      <button id="justifyLeft" class="option-button align">
-        <i class="fa-solid fa-align-left"></i>
-      </button>
-      <button id="justifyCenter" class="option-button align">
-        <i class="fa-solid fa-align-center"></i>
-      </button>
-      <button id="justifyRight" class="option-button align">
-        <i class="fa-solid fa-align-right"></i>
-      </button>
-      <button id="justifyFull" class="option-button align">
-        <i class="fa-solid fa-align-justify"></i>
-      </button>
-      <button id="indent" class="option-button spacing">
-        <i class="fa-solid fa-indent"></i>
-      </button>
-      <button id="outdent" class="option-button spacing">
-        <i class="fa-solid fa-outdent"></i>
-      </button>
+    <!-- Undo, Copy, Paste -->
+    <button title="Undo" onclick="execCmd('undo')">Undo</button>
+    <button title="Copy Selected Text" onclick="copyText()">Copy</button>
+    <button title="Paste from Clipboard" onclick="pasteText()">Paste</button>
 
-      <!-- Headings -->
-      <select id="formatBlock" class="adv-option-button">
-        <option value="H1">H1</option>
-        <option value="H2">H2</option>
-        <option value="H3">H3</option>
-        <option value="H4">H4</option>
-        <option value="H5">H5</option>
-        <option value="H6">H6</option>
-      </select>
+    <!-- List and Table -->
+    <button title="Insert Ordered List" onclick="execCmd('insertOrderedList')">List</button>
+    <button title="Insert Table" onclick="insertTable()">Table</button>
 
-      <!-- Font -->
-      <select id="fontName" class="adv-option-button"></select>
-      <select id="fontSize" class="adv-option-button"></select>
+    <!-- Color Picker -->
+    <input type="color" title="Text Color" onchange="execCmd('foreColor', this.value)" />
+    <input type="color" title="Background Color (Highlight)" onchange="execCmd('hiliteColor', this.value)" />
 
-      <!-- Color -->
-      <div class="input-wrapper">
-        <input type="color" id="foreColor" class="adv-option-button" />
-        <label for="foreColor">Font Color</label>
-      </div>
-      <div class="input-wrapper">
-        <input type="color" id="backColor" class="adv-option-button" />
-        <label for="backColor">Highlight Color</label>
-      </div>
-    </div>
-    <div id="text-input" contenteditable="true"></div>
+    <!-- Alignment -->
+    <button title="Align Left" onclick="execCmd('justifyLeft')">Left</button>
+    <button title="Align Center" onclick="execCmd('justifyCenter')">Center</button>
+    <button title="Align Top" onclick="alignTop()">Top</button>
+
+    <!-- Emoji -->
+    <button title="Insert Emoji" onclick="insertEmoji()">😊</button>
+
+    <!-- Link -->
+    <button title="Insert Link" onclick="insertLink()">Link</button>
+
+    <!-- Save -->
+    <button class="save-button" title="Save Content Below" onclick="saveContent()">💾 Save</button>
   </div>
+
+  <div id="editor" contenteditable="true" spellcheck="true" ondrop="handleDrop(event)"></div>
+
+  <div id="savedContent">
+    <strong>Saved Content:</strong>
+    <div id="output"></div>
+  </div>
+
 `;
 
-  let optionsButtons = document.querySelectorAll(".option-button");
-let advancedOptionButton = document.querySelectorAll(".adv-option-button");
-let fontName = document.getElementById("fontName");
-let fontSizeRef = document.getElementById("fontSize");
-let writingArea = document.getElementById("text-input");
-let linkButton = document.getElementById("createLink");
-let alignButtons = document.querySelectorAll(".align");
-let spacingButtons = document.querySelectorAll(".spacing");
-let formatButtons = document.querySelectorAll(".format");
-let scriptButtons = document.querySelectorAll(".script");
+function execCmd(cmd, val = null) {
+  document.execCommand(cmd, false, val);
+}
 
-//List of fontlist
-let fontList = [
-  "Arial",
-  "Verdana",
-  "Times New Roman",
-  "Garamond",
-  "Georgia",
-  "Courier New",
-  "cursive",
-];
-
-//Initial Settings
-const initializer = () => {
-  //function calls for highlighting buttons
-  //No highlights for link, unlink,lists, undo,redo since they are one time operations
-  highlighter(alignButtons, true);
-  highlighter(spacingButtons, true);
-  highlighter(formatButtons, false);
-  highlighter(scriptButtons, true);
-
-  //create options for font names
-  fontList.map((value) => {
-    let option = document.createElement("option");
-    option.value = value;
-    option.innerHTML = value;
-    fontName.appendChild(option);
+function copyText() {
+  const selection = window.getSelection();
+  const range = selection.getRangeAt(0);
+  navigator.clipboard.writeText(range.toString()).then(() => {
+    alert("Copied to clipboard!");
   });
+}
 
-  //fontSize allows only till 7
-  for (let i = 1; i <= 7; i++) {
-    let option = document.createElement("option");
-    option.value = i;
-    option.innerHTML = i;
-    fontSizeRef.appendChild(option);
-  }
-
-  //default size
-  fontSizeRef.value = 3;
-};
-
-//main logic
-const modifyText = (command, defaultUi, value) => {
-  //execCommand executes command on selected text
-  document.execCommand(command, defaultUi, value);
-};
-
-//For basic operations which don't need value parameter
-optionsButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    modifyText(button.id, false, null);
+function pasteText() {
+  navigator.clipboard.readText().then(text => {
+    execCmd('insertText', text);
   });
-});
+}
 
-//options that require value parameter (e.g colors, fonts)
-advancedOptionButton.forEach((button) => {
-  button.addEventListener("change", () => {
-    modifyText(button.id, false, button.value);
-  });
-});
-
-//link
-linkButton.addEventListener("click", () => {
-  let userLink = prompt("Enter a URL");
-  //if link has http then pass directly else add https
-  if (/http/i.test(userLink)) {
-    modifyText(linkButton.id, false, userLink);
-  } else {
-    userLink = "http://" + userLink;
-    modifyText(linkButton.id, false, userLink);
-  }
-});
-
-//Highlight clicked button
-const highlighter = (className, needsRemoval) => {
-  className.forEach((button) => {
-    button.addEventListener("click", () => {
-      //needsRemoval = true means only one button should be highlight and other would be normal
-      if (needsRemoval) {
-        let alreadyActive = false;
-
-        //If currently clicked button is already active
-        if (button.classList.contains("active")) {
-          alreadyActive = true;
-        }
-
-        //Remove highlight from other buttons
-        highlighterRemover(className);
-        if (!alreadyActive) {
-          //highlight clicked button
-          button.classList.add("active");
-        }
-      } else {
-        //if other buttons can be highlighted
-        button.classList.toggle("active");
+function insertTable() {
+  const rows = parseInt(prompt("Enter number of rows", 2));
+  const cols = parseInt(prompt("Enter number of columns", 2));
+  if (rows && cols) {
+    let table = "<table border='1' style='border-collapse: collapse;'>";
+    for (let i = 0; i < rows; i++) {
+      table += "<tr>";
+      for (let j = 0; j < cols; j++) {
+        table += "<td>&nbsp;</td>";
       }
-    });
-  });
-};
+      table += "</tr>";
+    }
+    table += "</table>";
+    execCmd('insertHTML', table);
+  }
+}
 
-const highlighterRemover = (className) => {
-  className.forEach((button) => {
-    button.classList.remove("active");
-  });
-};
+function alignTop() {
+  document.getElementById("editor").style.verticalAlign = "top";
+}
 
-window.onload = initializer();
+function insertEmoji() {
+  const emoji = prompt("Enter an emoji to insert 😊🔥🚀👇");
+  if (emoji) execCmd('insertText', emoji);
+}
+
+function insertLink() {
+  const url = prompt("Enter URL (https:// or /internal/path)");
+  if (url) {
+    const selection = window.getSelection();
+    const text = selection.toString() || url;
+    const newTab = confirm("Open in new tab?");
+    const anchor = `<a href="${url}" ${newTab ? 'target="_blank"' : ''}>${text}</a>`;
+    execCmd('insertHTML', anchor);
+  }
+}
+
+function saveContent() {
+  const content = document.getElementById("editor").innerHTML;
+  document.getElementById("output").innerHTML = content;
+  alert("Content saved!");
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  const files = e.dataTransfer.files;
+  if (files.length > 0 && files[0].type.startsWith('image/')) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      execCmd('insertImage', event.target.result);
+    };
+    reader.readAsDataURL(files[0]);
+  }
+}
+
+document.getElementById("editor").addEventListener("dragover", (e) => e.preventDefault());
 }
