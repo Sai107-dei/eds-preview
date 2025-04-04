@@ -1,156 +1,82 @@
 export default async function decorate(block) {
   block.innerHTML = `
-   <div class="toolbar">
-    <!-- Headings -->
-    <select title="Apply Heading" onchange="execCmd('formatBlock', this.value)">
-      <option value="">Heading</option>
-      <option value="H1">H1</option>
-      <option value="H2">H2</option>
-      <option value="H3">H3</option>
-      <option value="H4">H4</option>
-      <option value="H5">H5</option>
-      <option value="H6">H6</option>
-    </select>
-
-    <!-- Font Family -->
-    <select title="Choose Font Family" onchange="execCmd('fontName', this.value)">
-      <option value="">Font</option>
+ <div id="toolbar">
+    <select id="fontName">
       <option value="Arial">Arial</option>
       <option value="Courier New">Courier New</option>
       <option value="Georgia">Georgia</option>
-      <option value="Times New Roman">Times New Roman</option>
+      <option value="Tahoma">Tahoma</option>
       <option value="Verdana">Verdana</option>
     </select>
 
-    <!-- Font Size -->
-    <select title="Adjust Font Size" onchange="execCmd('fontSize', this.value)">
-      <option value="">Font Size</option>
-      <option value="1">8px</option>
-      <option value="2">10px</option>
-      <option value="3">12px</option>
-      <option value="4">14px</option>
-      <option value="5">18px</option>
-      <option value="6">24px</option>
-      <option value="7">32px</option>
+    <select id="fontSize">
+      <option value="1">10px</option>
+      <option value="2">13px</option>
+      <option value="3" selected>16px</option>
+      <option value="4">18px</option>
+      <option value="5">24px</option>
+      <option value="6">32px</option>
+      <option value="7">48px</option>
     </select>
 
-    <!-- Formatting -->
-    <button title="Bold" onclick="execCmd('bold')"><b>B</b></button>
-    <button title="Italic" onclick="execCmd('italic')"><i>I</i></button>
-    <button title="Underline" onclick="execCmd('underline')"><u>U</u></button>
-    <button title="Superscript" onclick="execCmd('superscript')">X<sup>2</sup></button>
-    <button title="Subscript" onclick="execCmd('subscript')">X<sub>2</sub></button>
-    <button title="Clear Formatting" onclick="execCmd('removeFormat')">Clear</button>
-
-    <!-- Undo, Copy, Paste -->
-    <button title="Undo" onclick="execCmd('undo')">Undo</button>
-    <button title="Copy Selected Text" onclick="copyText()">Copy</button>
-    <button title="Paste from Clipboard" onclick="pasteText()">Paste</button>
-
-    <!-- List and Table -->
-    <button title="Insert Ordered List" onclick="execCmd('insertOrderedList')">List</button>
-    <button title="Insert Table" onclick="insertTable()">Table</button>
-
-    <!-- Color Picker -->
-    <input type="color" title="Text Color" onchange="execCmd('foreColor', this.value)" />
-    <input type="color" title="Background Color (Highlight)" onchange="execCmd('hiliteColor', this.value)" />
-
-    <!-- Alignment -->
-    <button title="Align Left" onclick="execCmd('justifyLeft')">Left</button>
-    <button title="Align Center" onclick="execCmd('justifyCenter')">Center</button>
-    <button title="Align Top" onclick="alignTop()">Top</button>
-
-    <!-- Emoji -->
-    <button title="Insert Emoji" onclick="insertEmoji()">😊</button>
-
-    <!-- Link -->
-    <button title="Insert Link" onclick="insertLink()">Link</button>
-
-    <!-- Save -->
-    <button class="save-button" title="Save Content Below" onclick="saveContent()">💾 Save</button>
+    <button data-cmd="bold"><b>B</b></button>
+    <button data-cmd="italic"><i>I</i></button>
+    <button data-cmd="underline"><u>U</u></button>
+    <button id="insertLink">Insert Link</button>
+    <button id="insertTable">Insert Table</button>
   </div>
 
-  <div id="editor" contenteditable="true" spellcheck="true" ondrop="handleDrop(event)"></div>
-
-  <div id="savedContent">
-    <strong>Saved Content:</strong>
-    <div id="output"></div>
+  <div id="editor" contenteditable="true">
+    Start editing...
   </div>
 
 `;
 
-function execCmd(cmd, val = null) {
-  document.execCommand(cmd, false, val);
-}
+const editor = document.getElementById('editor');
 
-function copyText() {
-  const selection = window.getSelection();
-  const range = selection.getRangeAt(0);
-  navigator.clipboard.writeText(range.toString()).then(() => {
-    alert("Copied to clipboard!");
+// Formatting buttons
+document.querySelectorAll('[data-cmd]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.execCommand(btn.dataset.cmd, false, null);
   });
-}
+});
 
-function pasteText() {
-  navigator.clipboard.readText().then(text => {
-    execCmd('insertText', text);
-  });
-}
+// Font family
+document.getElementById('fontName').addEventListener('change', (e) => {
+  document.execCommand("fontName", false, e.target.value);
+});
 
-function insertTable() {
-  const rows = parseInt(prompt("Enter number of rows", 2));
-  const cols = parseInt(prompt("Enter number of columns", 2));
-  if (rows && cols) {
-    let table = "<table border='1' style='border-collapse: collapse;'>";
-    for (let i = 0; i < rows; i++) {
-      table += "<tr>";
-      for (let j = 0; j < cols; j++) {
-        table += "<td>&nbsp;</td>";
-      }
-      table += "</tr>";
-    }
-    table += "</table>";
-    execCmd('insertHTML', table);
-  }
-}
+// Font size
+document.getElementById('fontSize').addEventListener('change', (e) => {
+  document.execCommand("fontSize", false, e.target.value);
+});
 
-function alignTop() {
-  document.getElementById("editor").style.verticalAlign = "top";
-}
-
-function insertEmoji() {
-  const emoji = prompt("Enter an emoji to insert 😊🔥🚀👇");
-  if (emoji) execCmd('insertText', emoji);
-}
-
-function insertLink() {
-  const url = prompt("Enter URL (https:// or /internal/path)");
+// Insert link with tab option
+document.getElementById('insertLink').addEventListener('click', () => {
+  const url = prompt("Enter URL:");
   if (url) {
-    const selection = window.getSelection();
-    const text = selection.toString() || url;
-    const newTab = confirm("Open in new tab?");
-    const anchor = `<a href="${url}" ${newTab ? 'target="_blank"' : ''}>${text}</a>`;
-    execCmd('insertHTML', anchor);
+    const target = confirm("Open in new tab?") ? "_blank" : "_self";
+    const selection = document.getSelection();
+    const selectedText = selection.toString() || url;
+    const anchor = `<a href="${url}" target="${target}">${selectedText}</a>`;
+    document.execCommand('insertHTML', false, anchor);
   }
-}
+});
 
-function saveContent() {
-  const content = document.getElementById("editor").innerHTML;
-  document.getElementById("output").innerHTML = content;
-  alert("Content saved!");
-}
+// Insert table (3x3 example)
+document.getElementById('insertTable').addEventListener('click', () => {
+  let rows = prompt("Number of rows", 3);
+  let cols = prompt("Number of columns", 3);
+  if (!rows || !cols) return;
 
-function handleDrop(e) {
-  e.preventDefault();
-  const files = e.dataTransfer.files;
-  if (files.length > 0 && files[0].type.startsWith('image/')) {
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      execCmd('insertImage', event.target.result);
-    };
-    reader.readAsDataURL(files[0]);
+  let table = '<table border="1" cellpadding="4" cellspacing="0">';
+  for (let i = 0; i < rows; i++) {
+    table += "<tr>";
+    for (let j = 0; j < cols; j++) {
+      table += "<td>&nbsp;</td>";
+    }
+    table += "</tr>";
   }
-}
-
-document.getElementById("editor").addEventListener("dragover", (e) => e.preventDefault());
-}
+  table += "</table><br/>";
+  document.execCommand('insertHTML', false, table);
+});}
