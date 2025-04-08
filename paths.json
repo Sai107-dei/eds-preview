@@ -10,6 +10,6 @@
   ],
   "includes": [
     "/content/eds-preview/",
-    "/content/dam/fields-test/"
+    "/content/adaptto/xwalk/"
   ]
 }
