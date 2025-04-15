@@ -16,13 +16,20 @@
       "rte",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "relatedlinks"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "relatedlinks",
+    "components": [
+      "relatedlink"
     ]
   },
   {
