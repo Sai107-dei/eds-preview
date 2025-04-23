@@ -405,7 +405,7 @@
     ],
     "rte": {
       "format": ["bold", "italic","strikethrough","backcolor"],
-      "alignment": ["left","right"],
+      "alignment": ["alignleft","alignright"],
       "indentation": [],
       "sr_script": [],
       "list": [],
