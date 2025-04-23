@@ -1047,7 +1047,7 @@
                   "filter": "technical-data",
                   "content_autoData": "true",
                   "content_accordionView": "true",
-                  "content_autoDataType": "h2",
+                  "content_autoDataType": "div",
                   "content_accordionViewType": "h3",
                   "headline1_headline1LinkType": "secondary",
                   "headline2_headline2LinkType": "secondary",
