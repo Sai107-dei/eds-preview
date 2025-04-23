@@ -405,11 +405,11 @@
     ],
     "rte": {
       "format": ["bold", "italic","strikethrough","backcolor"],
-      "alignment": ["alignleft","alignright"],
+      "alignment": ["alignleft", "alignright", "aligncenter", "alignjustify", "alignnone"],
       "indentation": [],
       "sr_script": [],
       "list": [],
-      "insert": ["link","openlink"],
+      "insert": ["link", "openlink", "unlink"],
       "advanced": ["h2"],
       "extensions": [],
        "editor": []
