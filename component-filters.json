@@ -404,7 +404,7 @@
       "model-data"
     ],
     "rte": {
-      "format": ["bold", "italic"],
+      "format": ["bold", "italic","strikethrough"],
       "alignment": [],
       "indentation": [],
       "sr_script": [],
