@@ -404,12 +404,12 @@
       "model-data"
     ],
     "rte": {
-      "format": ["bold", "italic","strikethrough","backcolor","openlink"],
+      "format": ["bold", "italic","strikethrough","backcolor"],
       "alignment": [],
       "indentation": [],
       "sr_script": [],
       "list": [],
-      "insert": ["link"],
+      "insert": ["link","openlink"],
       "advanced": ["h2"],
       "extensions": [],
        "editor": []
