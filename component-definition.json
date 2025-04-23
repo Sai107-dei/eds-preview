@@ -1073,7 +1073,7 @@
                   "websiteSearchTab1_loadMoreButtonType": "h4",
                   "websiteSearchTab1_noMoreResultsType": "h5",
                   "websiteSearchTab1_backTopButtonType": "h6",
-                  "websiteSearchTab2_rteType": "h2",
+                  "websiteSearchTab2_rteType": "div",
                   "websiteSearchTab3_techErrorHeadlineType": "h2",
                   "websiteSearchTab3_techErrorTextType": "h3",
                   "websiteSearchTab3_bkButtonLabelType": "h4"

@@ -6499,7 +6499,7 @@
         "component": "text-input",
         "name": "websiteSearchTab2_rteType",
         "valueType": "string",
-        "value": "h2",
+        "value": "div",
         "hidden": true
       },
       {
