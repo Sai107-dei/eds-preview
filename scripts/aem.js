@@ -418,7 +418,7 @@ function decorateButtons(element) {
         }
         if (
           up.childNodes.length === 1
-          && up.tagName === 'STRONG' ||  up.tagName === 's' ||  up.tagName === 'S' 
+          && up.tagName === 'STRONG'
           && twoup.childNodes.length === 1
           && twoup.tagName === 'P'
         ) {
