@@ -295,10 +295,10 @@
                 "template": {
                   "columns": 2,
                   "rows": 1,
-                  "classes": [
-                    "left",
-                    "top-vertical-align"
-                  ]
+                    "classes": [
+                      "left",
+                      "top-vertical-align"
+                    ]
                 }
               }
             }
@@ -1069,9 +1069,6 @@
                   "model": "website-search",
                   "filter": "website-search",
                   "websiteSearchTab1_searchBarType": "h2",
-                  "class": [
-                    "sai12345"
-                  ],
                   "websiteSearchTab1_resultsHeadlineType": "h3",
                   "websiteSearchTab1_loadMoreButtonType": "h4",
                   "websiteSearchTab1_noMoreResultsType": "h5",
