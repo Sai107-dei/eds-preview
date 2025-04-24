@@ -1069,7 +1069,7 @@
                   "model": "website-search",
                   "filter": "website-search",
                   "websiteSearchTab1_searchBarType": "h2",
-                  "classes": [
+                  "class": [
                     "sai12345"
                   ],
                   "websiteSearchTab1_resultsHeadlineType": "h3",
