@@ -1048,9 +1048,6 @@
                   "content_autoData": "true",
                   "content_accordionView": "true",
                   "content_autoDataType": "h2",
-                  "classes": [
-                    "sai123"
-                  ],
                   "content_accordionViewType": "h3",
                   "headline1_headline1LinkType": "secondary",
                   "headline2_headline2LinkType": "secondary",
@@ -1072,6 +1069,9 @@
                   "model": "website-search",
                   "filter": "website-search",
                   "websiteSearchTab1_searchBarType": "h2",
+                  "classes": [
+                    "sai12345"
+                  ],
                   "websiteSearchTab1_resultsHeadlineType": "h3",
                   "websiteSearchTab1_loadMoreButtonType": "h4",
                   "websiteSearchTab1_noMoreResultsType": "h5",
