@@ -878,7 +878,7 @@
                   "name": "Text with Image",
                   "model": "text-with-image",
                   "filter": "text-with-image",
-                  "classes": "sai12345",
+                  "classes": "left",
                   "content_imageheadlineType": "h2"
                 }
               }

@@ -618,7 +618,7 @@
         "component": "select",
         "valueType": "string",
         "name": "classes",
-        "value": "sai12345",
+        "value": "left",
         "label": "Image Alignment",
         "description": "Defines on which side the image will appear.",
         "required": true,
@@ -6499,7 +6499,7 @@
         "component": "text-input",
         "name": "websiteSearchTab2_rteType",
         "valueType": "string",
-        "value": "div",
+        "value": "h2",
         "hidden": true
       },
       {
