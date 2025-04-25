@@ -6410,7 +6410,7 @@
         "component": "text-input",
         "name": "websiteSearchTab1_searchBarType",
         "valueType": "string",
-        "value": "span",
+        "value": "h2",
         "hidden": true
       },
       {
