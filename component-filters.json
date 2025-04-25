@@ -404,7 +404,7 @@
       "model-data"
     ],
     "rte": {
-      "format": ["bold", "italic", "strikethrough", "backcolor", "fontselect", "fontsizeselect", "forecolor", "formatselect", "underline", "subscript"],
+      "format": ["bold", "italic", "strikethrough", "backcolor", "fontselect", "fontsizeselect", "forecolor", "formatselect", "underline"]
       "alignment": ["alignleft", "alignright", "aligncenter", "alignjustify", "alignnone"],
       "indentation": ["indent", "outdent"],
       "sr_script": ["subscript", "superscript"],
