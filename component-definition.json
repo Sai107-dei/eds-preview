@@ -1068,7 +1068,7 @@
                   "name": "Website Search",
                   "model": "website-search",
                   "filter": "website-search",
-                  "websiteSearchTab1_searchBarType": "div",
+                  "websiteSearchTab1_searchBarType": "span",
                   "websiteSearchTab1_resultsHeadlineType": "h3",
                   "websiteSearchTab1_loadMoreButtonType": "h4",
                   "websiteSearchTab1_noMoreResultsType": "h5",
