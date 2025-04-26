@@ -363,6 +363,7 @@ function wrapTextNodes(block) {
     'TABLE',
     'H1',
     'H2',
+    "SPAN",
     'H3',
     'H4',
     'H5',
