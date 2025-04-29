@@ -1,51 +1,100 @@
 [
-    {
+  {
       "id": "main",
-      "components": [
-        "section"
-      ]
-    },
-    {
+      "components": ["section"]
+  },
+  {
+      "id": "columns",
+      "components": []
+  },
+  {
+      "id": "column",
+      "components": ["button", "image", "text", "title", "video"]
+  },
+  {
       "id": "section",
       "components": [
-        "text",
-        "image",
-        "button",
-        "title",
-        "hero",
-        "cards",
-        "columns",
-        "fragment",
-        "icongrid-tile",
-        "promo-banner"
+          "button",
+          "image",
+          "text",
+          "title",
+          "video",
+          "accordion",
+          "banner",
+          "cards",
+          "carousel",
+          "columns",
+          "commerce-account",
+          "commerce-cart",
+          "commerce-checkout",
+          "commerce-login",
+          "commerce-order-history",
+          "configurator",
+          "cta",
+          "e-catalog",
+          "embed",
+          "form",
+          "fragment",
+          "headline-fourImg",
+          "help-center",
+          "hero",
+          "know-your-fabrics",
+          "content-carousel",
+          "content-search",
+          "mini-swatches",
+          "navbar-menu-item",
+          "product-details",
+          "product-list",
+          "products",
+          "product-carousel",
+          "refer-a-friend",
+          "reviews",
+          "showroomlocator",
+          "teaser",
+          "ugc-gallery",
+          "whats-inside",
+          "blueconic",
+          "usablenet"
       ]
-    },
-    {
+  },
+  {
       "id": "cards",
-      "components": [
-        "card"
-      ]
-    },
-    {
+      "components": ["card"]
+  },
+  {
+      "id": "e-catalog",
+      "components": ["text"]
+  },
+  {
+      "id": "teaser",
+      "components": ["teaser"]
+  },
+  {
+      "id": "navbar-menu-item",
+      "components": ["navbar-submenu-item"]
+  },
+  {
+      "id": "accordion",
+      "components": ["accordion-item"]
+  },
+  {
       "id": "hero",
-      "components": [
-        "icongrid-tile"
-      ]
-    },
-  
-    {
-      "id": "columns",
-      "components": [
-        "column"
-      ]
-    },
-    {
-      "id": "column",
-      "components": [
-        "text",
-        "image",
-        "button",
-        "title"
-      ]
-    }
-  ]
+      "components": ["hero-item"]
+  },
+  {
+      "id": "know-your-fabrics",
+      "components": ["fabrics-item"]
+  },
+  {
+      "id": "banner",
+      "components": ["banner-item"]
+  },
+  {
+      "id": "content-carousel",
+      "components": ["content-carousel-item"]
+  },
+  {
+      "id": "whats-inside",
+      "components": ["whats-inside-item"]
+  }
+]
