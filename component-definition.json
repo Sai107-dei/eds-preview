@@ -164,7 +164,7 @@
                   "name": "Carousel",
                   "model": "carousel",
                   "filter": "slide",
-                  "limit": 1,
+                  "limit": 2,
                   "classes": ["carousel-slide-3", "hero-banner-carousel", "carousel","carousel-dynamic-column-slide"],
                   "item": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
