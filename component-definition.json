@@ -164,9 +164,6 @@
                   "name": "Carousel",
                   "model": "carousel",
                   "filter": "slide",
-                  "key-value": true,
-"limit": 4,
-                  "keywords": ["Developer","Courses"],
                   "classes": ["carousel-slide-3", "hero-banner-carousel", "carousel","carousel-dynamic-column-slide"],
                   "item": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
