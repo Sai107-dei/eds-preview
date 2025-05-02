@@ -132,7 +132,7 @@
                 "template": {
                   "name": "Card",
                   "model": "card",
-                  "classes": ["default","green", "aqua", "blue"]
+                  "classes": ["homepage", "offerpage"]
                 }
               }
             }
@@ -168,7 +168,8 @@
                   "item": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Slide",
-                    "model": "slide"
+                    "model": "slide",
+                    "classes": ["carousel-slide-123"]
                   }
                 }
               }
