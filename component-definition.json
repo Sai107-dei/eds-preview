@@ -571,8 +571,7 @@
                   "name": "Link List",
                   "model": "link-list",
                   "filter": "link-list",
-                  "linkListClassname": "link-list",
-                  "class":"sai123"
+                  "linkListClassname": "link-list"
                 }
               }
             }
