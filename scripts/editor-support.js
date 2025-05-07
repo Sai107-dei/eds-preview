@@ -37,7 +37,7 @@ async function applyChanges(event) {
       element.remove();
       newMain.style.display = null;
       // eslint-disable-next-line no-use-before-define
-      // attachEventListners(newMain);
+      attachEventListners(newMain);
       return true;
     }
 
@@ -98,11 +98,10 @@ function attachEventListners(main) {
     'aue:content-copy',
   ].forEach((eventType) => main?.addEventListener(eventType, async (event) => {
     event.stopPropagation();
-    
     const applied = await applyChanges(event);
     if (!applied) window.location.reload();
    
   }));
 }
 
-// attachEventListners(document.querySelector('main'));
+attachEventListners(document.querySelector('main'));
