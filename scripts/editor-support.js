@@ -56,11 +56,7 @@ addMetaTag();
 
 async function applyChanges(event) {
 
-  if ((event === 'aue:content-add')  ){
-     const { detail } = event;
-     const resource = detail?.request?.target?.resource
-    console.log('lll' + resource);
-  }
+
   // redecorate default content and blocks on patches (in the properties rail)
   const { detail } = event;
 
@@ -151,7 +147,11 @@ function attachEventListners(main) {
     'aue:content-remove',
     'aue:content-copy',
   ].forEach((eventType) => main?.addEventListener(eventType, async (event) => {
-   
+    if ((event === 'aue:content-add')  ){
+      const { detail } = event;
+      const resource = detail?.request?.target?.resource
+     console.log('lll' + resource);
+   }
 
     event.stopPropagation();
     const applied = await applyChanges(event);
