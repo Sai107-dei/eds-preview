@@ -1,9 +1,9 @@
 // add delayed functionality here
 window.adobeDataLayer = window.adobeDataLayer || []
-console.log('Meta description content:');
 const metaDescription = document.querySelector('meta[name="description"]').getAttribute('content');
 const pageUrl = document.querySelector('meta[name="canonical"]').getAttribute('content');
 const htmlLang = document.documentElement.getAttribute('lang');
+console.log('Adobe datalayer props' + metaDescription + pageUrl + htmlLang);
 adobeDataLayer.push({
     "event": "page_view",
     "pageInfo": {
