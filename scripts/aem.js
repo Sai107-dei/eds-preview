@@ -704,6 +704,7 @@ async function loadSection(section, loadCallback) {
     section.style.display = null;
   }
 }
+
 async function fetchImageAltText(url) {
   try {
     const response = await fetch(url);
@@ -717,6 +718,7 @@ async function fetchImageAltText(url) {
     console.error('Error fetching data:', error);
   }
 }
+
 
 /**
  * Loads all sections.
@@ -761,6 +763,7 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  fetchImageAltText,
 };
 
 
