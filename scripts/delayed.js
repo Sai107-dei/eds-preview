@@ -7,6 +7,6 @@ adobeDataLayer.push({
   pageInfo: {
     pageName: metaDescription,
     pageURL: pageUrl,
-    businessCountryLanguage: htmlLang
-  }
+    businessCountryLanguage: htmlLang,
+  },
 });
