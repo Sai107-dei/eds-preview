@@ -15,7 +15,7 @@ async function applyChanges(event) {
     const { detail } = event;
 
   const resource = detail?.request?.target?.resource;
-  console.log(resource);
+  console.log(resource+ "llll");
   }
   // redecorate default content and blocks on patches (in the properties rail)
   const { detail } = event;
