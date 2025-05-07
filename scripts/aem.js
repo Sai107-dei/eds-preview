@@ -763,6 +763,4 @@ async function fetchImageAltText(url) {
     console.error('Error fetching data:', error);
   }
 }
-const imageUrl = "";
 
-fetchImageAltText(imageUrl);
