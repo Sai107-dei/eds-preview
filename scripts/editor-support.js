@@ -98,7 +98,13 @@ function attachEventListners(main) {
     'aue:content-copy',
   ].forEach((eventType) => main?.addEventListener(eventType, async (event) => {
     event.stopPropagation();
+    if(event === 'aue:content-add' ){
+    event.remove();
+
+
+    }
     const applied = await applyChanges(event);
+    
     if (!applied) window.location.reload();
    
   }));
