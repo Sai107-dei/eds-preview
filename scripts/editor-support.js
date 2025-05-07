@@ -92,7 +92,7 @@ function attachEventListners(main) {
   [
     'aue:content-patch',
     'aue:content-update',
-    'aue:content-add',
+    // 'aue:content-add',
     'aue:content-move',
     'aue:content-remove',
     'aue:content-copy',
