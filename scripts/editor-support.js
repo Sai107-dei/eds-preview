@@ -149,7 +149,11 @@ function attachEventListners(main) {
   ].forEach((eventType) => main?.addEventListener(eventType, async (event) => {
     if ((eventType === 'aue:content-add')  ){
       const { detail } = event;
-      const resource = detail?.request?.target?.resource
+      const resource = detail.response.updates[0].resource
+      if(resource){
+        resource.remove();
+        console.log('removedS');
+      }
      console.log('lll' + resource);
    }
 
