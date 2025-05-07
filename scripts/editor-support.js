@@ -11,6 +11,7 @@ import { decorateRichtext } from './editor-support-rte.js';
 import { decorateMain } from './scripts.js';
 
 async function applyChanges(event) {
+  if(event === 'aue:content-add'){
   // redecorate default content and blocks on patches (in the properties rail)
   const { detail } = event;
 
@@ -86,7 +87,7 @@ async function applyChanges(event) {
   }
 
   return false;
-}
+}}
 
 function attachEventListners(main) {
   [
@@ -98,10 +99,21 @@ function attachEventListners(main) {
     'aue:content-copy',
   ].forEach((eventType) => main?.addEventListener(eventType, async (event) => {
     event.stopPropagation();
-    if(event === 'aue:content-add' ){
-    event.remove();
+    const element = document.querySelector(`[data-aue-resource="${resource}"]`);
 
-
+  if (element) {
+    if (element.matches('main')) {
+      const newMain = parsedUpdate.querySelector(`[data-aue-resource="${resource}"]`);
+      newMain.style.display = 'none';
+      element.insertAdjacentElement('afterend', newMain);
+      decorateMain(newMain);
+      decorateRichtext(newMain);
+      await loadSections(newMain);
+      element.remove();
+      newMain.style.display = null;
+      // eslint-disable-next-line no-use-before-define
+      attachEventListners(newMain);
+      return true;
     }
     const applied = await applyChanges(event);
     
