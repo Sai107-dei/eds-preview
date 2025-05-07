@@ -5,7 +5,7 @@ import { fetchImageAltText } from '../../scripts/common-utils.js';
 export default async function decorate(block) {
   try {
     const altText = await fetchImageAltText('https://delivery-p153303-e1585520.adobeaemcloud.com/adobe/assets/urn:aaid:aem:d2358024-836e-47b6-a541-4093a63654a3/metadata?p=2');
-    console.log(`Fetched alt text: ${altText}`);
+    console.log(`Alt text: ${altText}`);
   } catch (error) {
     console.error('Error fetching alt text:', error);
   }
