@@ -5,7 +5,7 @@ const htmlLang = document.documentElement.getAttribute('lang');
 adobeDataLayer.push({
   'event': 'page_view',
   'pageInfo': {
-    "pageName": metaDescription,
+    'pageName': metaDescription,
       'pageURL': pageUrl,
       'businessCountryLanguage': htmlLang
     }
