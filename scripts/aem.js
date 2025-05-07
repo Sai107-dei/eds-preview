@@ -16,7 +16,7 @@ function sampleRUM(checkpoint, data) {
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
   try {
     window.hlx = window.hlx || {};
-    sampleRUM.enhance = () => {};
+    sampleRUM.enhance = () => { };
     if (!window.hlx.rum) {
       const param = new URLSearchParams(window.location.search).get('rum');
       const weight = (window.SAMPLE_PAGEVIEWS_AT_RATE === 'high' && 10)
@@ -749,3 +749,20 @@ export {
   waitForFirstImage,
   wrapTextNodes,
 };
+
+async function fetchImageAltText(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    const altText = data.assetMetadata["Iptc4xmpCore:AltTextAccessibility"];
+    console.log(`altText: ${altText}`);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+const imageUrl = "";
+
+fetchImageAltText(imageUrl);
