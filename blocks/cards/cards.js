@@ -2,15 +2,9 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 import {  fetchImageAltText} from '../../scripts/aem.js';
 
-export default async function decorate(block) {
+export default  function decorate(block) {
   let altText = '';
 
-  try {
-    altText = await fetchImageAltText('https://delivery-p153303-e1585520.adobeaemcloud.com/adobe/assets/urn:aaid:aem:d2358024-836e-47b6-a541-4093a63654a3/metadata?p=2');
-    console.log(`Fetched alt text: ${altText}`);
-  } catch (error) {
-    console.error('Error fetching alt text:', error);
-  }
   /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {

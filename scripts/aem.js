@@ -16,7 +16,7 @@ function sampleRUM(checkpoint, data) {
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
   try {
     window.hlx = window.hlx || {};
-    sampleRUM.enhance = () => { };
+    sampleRUM.enhance = () => {};
     if (!window.hlx.rum) {
       const param = new URLSearchParams(window.location.search).get('rum');
       const weight = (window.SAMPLE_PAGEVIEWS_AT_RATE === 'high' && 10)
@@ -470,6 +470,18 @@ function decorateIcons(element, prefix = '') {
 }
 
 /**
+ * Decorates a Container.
+ * @param {Element} block The Container element
+ */
+function decorateContainer(section) {
+  const sectionClassName = section.classList[0];
+  const container = document.createElement('div');
+  Array.from(section.children).forEach((child) => container.append(child));
+  container.classList.add((sectionClassName ? `${sectionClassName}-container` : 'default-container'));
+  section.append(container);
+}
+
+/**
  * Decorates all sections in a container element.
  * @param {Element} main The container element
  */
@@ -502,6 +514,8 @@ function decorateSections(main) {
             .filter((style) => style)
             .map((style) => toClassName(style.trim()));
           styles.forEach((style) => section.classList.add(style));
+          // debugger;
+          if (styles.includes('container')) decorateContainer(section);
         } else {
           section.dataset[toCamelCase(key)] = meta[key];
         }
@@ -705,21 +719,6 @@ async function loadSection(section, loadCallback) {
   }
 }
 
-async function fetchImageAltText(url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    const altText = data.assetMetadata["Iptc4xmpCore:AltTextAccessibility"];
-    console.log(`altText: ${altText}`);
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
-}
-
-
 /**
  * Loads all sections.
  * @param {Element} element The parent element of sections to load
@@ -746,6 +745,7 @@ export {
   decorateButtons,
   decorateIcons,
   decorateSections,
+  decorateContainer,
   decorateTemplateAndTheme,
   fetchPlaceholders,
   getMetadata,
@@ -763,7 +763,4 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
-  fetchImageAltText,
 };
-
-
