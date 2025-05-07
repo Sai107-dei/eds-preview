@@ -56,7 +56,7 @@ addMetaTag();
 
 async function applyChanges(event) {
 
-  if ((eventType === 'aue:content-add')  ){
+  if ((event === 'aue:content-add')  ){
      const { detail } = event;
      const resource = detail?.request?.target?.resource
     console.log('lll' + resource);
