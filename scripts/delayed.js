@@ -1,7 +1,6 @@
 window.adobeDataLayer = window.adobeDataLayer || [];
-const metaDescription = document.querySelector('meta[name="description"]').getAttribute('content');
-const pageUrl = document.querySelector('meta[name="canonical"]').getAttribute('content');
-const htmlLang = document.documentElement.getAttribute('lang');
+const { content: metaDescription } = document.querySelector('meta[name="description"]');
+const { content: pageUrl } = document.querySelector('meta[name="canonical"]');
 let adobeDataLayer = window.adobeDataLayer;
 adobeDataLayer.push({
   event: 'page_view',
