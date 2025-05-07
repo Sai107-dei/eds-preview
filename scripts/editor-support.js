@@ -99,6 +99,7 @@ function attachEventListners(main) {
   ].forEach((eventType) => main?.addEventListener(eventType, async (event) => {
     event.stopPropagation();
     if(eventType === 'aue:content-add'){
+      return;
 console.log('...');
     }
     const applied = await applyChanges(event);
