@@ -1,5 +1,4 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { fetchImageAltText } from '../../scripts/aem.js';
+import { createOptimizedPicture , fetchImageAltText} from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default async function decorate(block) {
