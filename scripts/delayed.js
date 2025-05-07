@@ -6,7 +6,7 @@ adobeDataLayer.push({
   'event': 'page_view',
   'pageInfo': {
     "pageName": metaDescription,
-      "pageURL": pageUrl,
+      'pageURL': pageUrl,
       'businessCountryLanguage': htmlLang
     }
 });
