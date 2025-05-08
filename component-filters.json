@@ -2,7 +2,8 @@
   {
     "id": "main",
     "components": [
-      "section"
+      "section",
+      "tabs-section"
     ]
   },
   {
@@ -16,21 +17,32 @@
       "cards",
       "columns",
       "fragment",
-      "categories",
-      "tags",
-      "tag-list",
-      "blog-list",
-      "blog-details",
-      "experience-fragment",
-      "container",
-      "pagination",
-      "klaviyo-script"
+      "text-component",
+      "teaser",
+      "carousel",
+      "tabs"
+    ]
+  },
+  {
+    "id": "tabs-section",
+    "components": [
+      "tabs",
+      "image",
+      "text-component",
+      "teaser"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "text-component"
     ]
   },
   {
     "id": "cards",
     "components": [
-      "card"
+      "card",
+      "text-component"
     ]
   },
   {
@@ -45,20 +57,7 @@
       "text",
       "image",
       "button",
-      "title",
-      "hero",
-      "cards",
-      "columns",
-      "fragment",
-      "categories",
-      "tags",
-      "tag-list",
-      "blog-details",
-      "experience-fragment"
+      "title"
     ]
-  },
-  {
-    "id": "container",
-    "components": []
   }
 ]
