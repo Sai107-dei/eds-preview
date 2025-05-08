@@ -612,10 +612,11 @@
       },
       {
         "component": "text",
-        "name": "textOverImage",
+        "name": "title",
+        "required": true,
         "label": "Text over Image",
-        "description": "Enter the text to be displayed over image",
-        "required": true
+        "valueType": "string",
+        "description": "Enter the Title"
       },
       {
         "component": "aem-content",
