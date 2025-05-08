@@ -215,7 +215,7 @@
                 "template": {
                   "name": "Carousel",
                   "model": "carousel",
-                  "filter": "cards"
+                  "filter": "carousel"
                 }
               }
             }
