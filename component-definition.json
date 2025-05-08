@@ -215,7 +215,12 @@
                 "template": {
                   "name": "Carousel",
                   "model": "carousel",
-                  "filter": "carousel"
+                  "filter": "carousel",
+                  "care-team-carousel": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Care-team-carousel",
+                    "model": "care-team-carousel"
+                }
                 }
               }
             }
