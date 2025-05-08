@@ -612,9 +612,9 @@
       },
       {
         "component": "text",
-        "name": "title",
+        "name": "textoverimage",
         "required": true,
-        "label": "textoverimage",
+        "label": "Text over Image",
         "valueType": "string",
         "description": "Enter the Title"
       },
