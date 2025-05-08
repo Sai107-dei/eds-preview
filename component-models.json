@@ -610,7 +610,7 @@
         "label": "Image Alt text",
         "description": "Pick alt text from AEM DAM with ability to overridwwwe it",
         "required": true
-      }
+      },
       {
         "component": "text",
         "name": "textoverimage",
