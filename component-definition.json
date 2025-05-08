@@ -114,7 +114,6 @@
             }
           }
         },
-        
         {
           "title": "Card",
           "id": "card",
@@ -230,7 +229,12 @@
                 "template": {
                   "name": "Care-team-carousel",
                   "model": "care-team-carousel",
-                  "filter": "care-team-carousel"
+                  "filter": "care-team-carousel",
+                  "care-team-carousel-item": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Care-team-carousel-item",
+                    "model": "care-team-carousel-item"
+                  }
                 }
               }
             }
