@@ -562,7 +562,7 @@
   },
 
   {
-    "id": "care-team-carousel",
+    "id": "care-team-carousel-item",
     "fields": [
       {
         "component": "reference",
