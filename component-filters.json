@@ -20,8 +20,7 @@
       "text-component",
       "teaser",
       "carousel",
-      "tabs",
-      "care-team-carousel"
+      "tabs"
     ]
   },
   {
@@ -37,6 +36,13 @@
     "id": "tabs",
     "components": [
       "text-component"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "care-team-carousel"
+
     ]
   },
   {
