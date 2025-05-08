@@ -614,7 +614,7 @@
         "component": "text",
         "name": "title",
         "required": true,
-        "label": "Text over Image",
+        "label": "textoverimage",
         "valueType": "string",
         "description": "Enter the Title"
       },
