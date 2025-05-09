@@ -655,16 +655,8 @@
         "label": "Component Type",
         "description": "Select layout of quote block",
         "value": "noImage",
-        "options": [
-          {
-            "name": "No Image",
-            "value": "noImage"
-          },
-          {
-            "name": "With Image",
-            "value": "withImage"
-          }
-        ]
+        "options": [ {"name": "No Image", "value": "noImage"},
+                     {"name": "With Image","value": "withImage" } ]
       },
       {
         "component": "select",
