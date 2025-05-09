@@ -181,6 +181,7 @@
     "id": "section",
     "components": [
       "accordion",
+      "cards",
       "background-media",
       "button",
       "columns",
@@ -206,8 +207,7 @@
       "title",
       "video",
       "video-gallery",
-      "website-search",
-      "cards"
+      "website-search"
     ]
   },
   {
