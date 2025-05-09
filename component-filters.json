@@ -181,7 +181,6 @@
     "id": "section",
     "components": [
       "accordion",
-      "cards",
       "background-media",
       "button",
       "columns",
