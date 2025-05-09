@@ -647,7 +647,7 @@
   }
   ,
   {
-    "id": "test-component",
+    "id": "quote",
     "fields": [
       {
         "component": "select",
@@ -691,6 +691,7 @@
         "valueType": "string",
         "name": "icon",
         "label": "Icon",
+        "required": true,
         "description": "Upload Icon for the component"
       },
       {
@@ -712,7 +713,6 @@
       {
         "component": "richtext",
         "name": "description",
-        "required": true,
         "label": "Description",
         "valueType": "string",
         "description": "Enter the description"
