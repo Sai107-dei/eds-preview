@@ -112,6 +112,12 @@
     "id": "button",
     "fields": [
       {
+        "component": "date-time",
+        "label": "Date & Time",
+        "name": "date",
+        "valueType": "date"
+      },
+      {
         "component": "aem-content",
         "valueType": "string",
         "description": "Defines the page to which the user will be directed to. Please add the full URL including https://",
