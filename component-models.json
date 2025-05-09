@@ -707,7 +707,7 @@
             {
               "var": "componentType"
             },
-            "noImage"
+            "withImage"
           ]
         },
         "fields": [
