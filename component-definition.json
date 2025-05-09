@@ -346,7 +346,7 @@
                   "name": "Copy Text",
                   "model": "copy_text",
                   "filter": "copy_text",
-                  "text": "\u003Cp\u003EThis is a Copy Text\u003C/p\u003E",
+                  "text": "<p>This is a Copy Text</p>",
                   "content_videoCarouselCopyText": "This is a Copy Text.",
                   "content_imageCarouselCopyText": "This is a Copy Text.",
                   "content_imagecopytext": "This is a Copy Text.",
@@ -520,9 +520,7 @@
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/image/v1/image",
-                "template": {
-
-                }
+                "template": {}
               }
             }
           }
