@@ -666,7 +666,17 @@
           }
         ]
       },
-    
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "BackgroundImage",
+        "label": "Background Image",
+        "description": "Upload Image for the Primary Hero",
+        "required": true,
+        "condition": {
+          "===": [{ "var": "componentType" }, "noImage"]
+        }
+      },
       {
         "component": "reference",
         "valueType": "string",
