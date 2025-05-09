@@ -111,12 +111,7 @@
   {
     "id": "button",
     "fields": [
-      {
-        "component": "date-time",
-        "label": "Date & Time",
-        "name": "date",
-        "valueType": "date"
-      },
+      
       {
         "component": "aem-content",
         "valueType": "string",
@@ -1387,6 +1382,12 @@
   {
     "id": "page-metadata",
     "fields": [
+      {
+        "component": "date-time",
+        "label": "Date & Time",
+        "name": "date",
+        "valueType": "date"
+      },
       {
         "component": "tab",
         "label": "General",
