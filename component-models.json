@@ -666,26 +666,7 @@
           }
         ]
       },
-      {
-        "component": "select",
-        "name": "alignment",
-        "label": "Alignment",
-        "description": "Select alignment of of icon placed on top",
-         "condition": {
-          "===": [{ "var": "componentType" }, "noimage"]
-        },
-        "value": "left",
-        "options": [
-          {
-            "name": "Left",
-            "value": "left"
-          },
-          {
-            "name": "Center",
-            "value": "center"
-          }
-        ]
-      },
+    
       {
         "component": "reference",
         "valueType": "string",
