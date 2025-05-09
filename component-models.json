@@ -1394,6 +1394,12 @@
         "description": "Defines the the page meta title for SEO, as well as a title displayable in the page content (unless and overriding 'Page Title' below is defined)."
       },
       {
+        "component": "boolean",
+        "label": "Boolean",
+        "name": "boolean",
+        "valueType": "boolean"
+      },
+      {
         "component": "text-input",
         "name": "pageTitle",
         "label": "Page Title",
