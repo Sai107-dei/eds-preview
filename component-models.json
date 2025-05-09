@@ -1400,6 +1400,12 @@
         "valueType": "boolean"
       },
       {
+        "component": "date-time",
+        "label": "Date & Time",
+        "name": "date",
+        "valueType": "date"
+      },
+      {
         "component": "text-input",
         "name": "pageTitle",
         "label": "Page Title",
