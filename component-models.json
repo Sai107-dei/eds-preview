@@ -685,7 +685,7 @@
             "value": "center"
           }
         ]
-      }
+      },
       {
         "component": "reference",
         "valueType": "string",
