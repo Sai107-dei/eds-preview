@@ -246,6 +246,12 @@
     "id": "card",
     "fields": [
       {
+        "component": "date-time",
+        "label": "Date & Time",
+        "name": "date",
+        "valueType": "date"
+      },
+      {
         "component": "custom-asset-namespace:custom-asset",
         "valueType": "string",
         "name": "image",
