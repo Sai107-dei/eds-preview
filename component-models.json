@@ -655,8 +655,7 @@
         "label": "Component Type",
         "description": "Select layout of quote block",
         "value": "noImage",
-        "options": [ {"name": "No Image", "value": "noImage"},
-                     {"name": "With Image","value": "withImage" } ]
+        "options": [ {"name": "No Image", "value": "noImage"},{"name": "With Image","value": "withImage" } ]
       },
       {
         "component": "select",
@@ -667,15 +666,7 @@
           "===": [{ "var": "componentType" }, "noImage"]
         },
         "value": "left",
-        "options": [
-          {
-            "name": "Left",
-            "value": "left"
-          },
-          {
-            "name": "Center",
-            "value": "center"
-          }
+        "options": [ {"name": "Left","value": "left"},{"name": "Center","value": "center"}
         ]
       },
       {
@@ -713,14 +704,7 @@
         "component": "container",
         "name": "Image",
         "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "componentType"
-            },
-            "withImage"
-          ]
-        },
+        "condition": {"===": [{"var": "componentType"},"withImage"]},
         "fields": [
           {
             "component": "select",
@@ -728,17 +712,7 @@
             "label": "Image Position",
             "description": "Select the appropriate column for image placement",
             "value": "left",
-            "options": [
-              {
-                "name": "Left",
-                "value": "left"
-              },
-              {
-                "name": "Right",
-                "value": "right"
-              }
-            ]
-          },
+            "options": [{"name": "Left","value": "left"},{"name": "Right","value": "right"}]          },
           {
             "component": "reference",
             "valueType": "string",
