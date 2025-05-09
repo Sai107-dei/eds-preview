@@ -1382,16 +1382,17 @@
   {
     "id": "page-metadata",
     "fields": [
+     
+      {
+        "component": "tab",
+        "label": "General",
+        "name": "general"
+      },
       {
         "component": "date-time",
         "label": "Date & Time",
         "name": "date",
         "valueType": "date"
-      },
-      {
-        "component": "tab",
-        "label": "General",
-        "name": "general"
       },
       {
         "component": "text-input",
