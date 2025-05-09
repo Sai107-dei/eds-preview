@@ -1391,7 +1391,7 @@
       {
         "component": "date-time",
         "label": "Date & Time",
-        "name": "date123",
+        "name": "date",
         "valueType": "date"
       },
       {
