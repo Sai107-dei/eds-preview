@@ -1184,7 +1184,15 @@
         "valueType": "string",
         "label": "Name",
         "name": "executiveName",
-        "description": "Enter the Executive’s name123",
+        "description": "Enter the Executive’s name",
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "label": "Designation",
+        "name": "executiveDesignation",
+        "description": "Enter the Executive’s Designation",
         "required": true
       },
       {
