@@ -1,85 +1,69 @@
 version: 1
+
 indices:
-  lang-en:
-    include:
-      - '/*'
+  default: &default
+    target: /query-index.json
     exclude:
-      - '/site-howto/**'
-      - '/nav'
-      - '/footer'
-      - '/es/**'
-      - '**/fragments/**'
-      - '**/templates'
-    target: /query-index
+      - '**/blog/drafts/**'
     properties:
+      path:
+        select: none
+        value: |
+          path
       title:
         select: head > meta[property="og:title"]
-        value: attribute(el, "content")
+        value: |
+          attribute(el, 'content')
       description:
-        select: head > meta[name="description"]
-        value: attribute(el, "content")
-      type:
-        select: head > meta[name="type"]
-        value: attribute(el, "content")
-      topics:
-        select: head > meta[name="topics"]
-        values: attribute(el, "content")
-      category:
-        select: head > meta[name="category"]
-        values: attribute(el, "content")
-      image:
-        select: head > meta[property="og:image"]
-        value: attribute(el, "content")
-      lastModified:
-        select: none
-        value: parseTimestamp(headers["last-modified"])
-      publicationDate:
-        select: head > meta[name="published-time"]
-        value: parseTimestamp(attribute(el, "content"))
-      template:
-        select: head > meta[name="template"]
-        value: attribute(el, "content")
+        select: head > meta[property="og:description"]
+        value: |
+          attribute(el, 'content')
       robots:
         select: head > meta[name="robots"]
+        value: |
+          attribute(el, 'content')
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
+      template:
+        select: head > meta[name="template"]
+        value: |
+          attribute(el, 'content')
+      date:
+        select: head > meta[name="date"]
+        value: |
+          attribute(el, 'content')
+      lastModified:
+        select: none
+        value: |
+          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, 'content')
+      language:
+        select: head > meta[name="lang"]
+        value: |
+          attribute(el, 'content')
+      content:
+        select: main
+        value: |
+          textContent(el)
+      primary-language-url:
+        select: head > meta[name="primary-language-url"]
         value: attribute(el, "content")
-  lang-es:
+  cs-cz:
+    <<: *default
     include:
-      - '/*'
-    exclude:
-      - '/site-howto/**'
-      - '/nav'
-      - '/footer'
-      - '**/fragments/**'
-      - '**/templates'
-    target: /es/query-index
-    properties:
-      title:
-        select: head > meta[property="og:title"]
-        value: attribute(el, "content")
-      description:
-        select: head > meta[name="description"]
-        value: attribute(el, "content")
-      type:
-        select: head > meta[name="type"]
-        value: attribute(el, "content")
-      topics:
-        select: head > meta[name="topics"]
-        values: attribute(el, "content")
-      category:
-        select: head > meta[name="category"]
-        values: attribute(el, "content")
-      image:
-        select: head > meta[property="og:image"]
-        value: attribute(el, "content")
-      lastModified:
-        select: none
-        value: parseTimestamp(headers["last-modified"])
-      publicationDate:
-        select: head > meta[name="published-time"]
-        value: parseTimestamp(attribute(el, "content"))
-      template:
-        select: head > meta[name="template"]
-        value: attribute(el, "content")
-      robots:
-        select: head > meta[name="robots"]
-        value: attribute(el, "content")
+      - '/cz-cs/blog/**'
+    target: /cz-cs/blog/query-index.json
+  de-de:
+    <<: *default
+    include:
+      - '/de-de/blog/**'
+    target: /de-de/blog/query-index.json
