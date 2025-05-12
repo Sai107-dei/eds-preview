@@ -1,72 +1,628 @@
 version: 1
-
 indices:
-  default:
-    target: /query-index
-    properties:
-      title:
-        select: head > meta[property="og:title"]
-        value: |
-          attribute(el, 'content')
-      image:
-        select: head > meta[property="og:image"]
-        value: |
-          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
-      description:
-        select: head > meta[name="description"]
-        value: |
-          attribute(el, 'content')
-      lastModified:
-        select: none
-        value: |
-          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
-      robots:
-        select: head > meta[name="robots"]
-        value: |
-          attribute(el, 'content')
-      publicationDate:
-        select: head > meta[name="publication-date"]
-        value: |
-          attribute(el, 'content')
-      deprecation:
-        select: head > meta[name="deprecation"]
-        value: |
-          attribute(el, 'content')
-      labs:
-        select: head > meta[name="labs"]
-        value: |
-          attribute(el, 'content')
-  docpages:
-    target: /docpages-index
+  site:
     include:
-      - /docs/**
-      - /developer/**
+      - /**
+    exclude:
+      - /about-us/blogs/**
+      - /about-us/gallery/**
+      - /about-us/news-and-press-release/**
+      - /apply-now-form/**
+      - /become-a-partner/**
+      - /boardmembers/**
+      - /campaign/aarohi-loans/**
+      - /campaign/pl-gig/**
+      - /content/**
+      - /cookies/cookie
+      - /customer-support/**
+      - /different_type_of_loan/**
+      - /error
+      - /footer
+      - /fragments/**
+      - /headers-footer/**
+      - /information_and_policies/**
+      - /interest_rate_document/**
+      - /nav-element/**
+      - /nav
+      - /quick-tools/**
+      - /search
+      - /sub
+      - /secondaryfooter
+      - /testing/**
+      - /thankyou
+      - /tools/**
+      - /awards/**
+      - /nps/**
+      - /third-party-product/**
+
+    target: /query-index.json
+    properties:
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      lastmodified:
+        select: head > meta[name="lastmodified"]
+        value: attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, "content")
+      keywords:
+        select: head > meta[name="keywords"]
+        value: attribute(el, "content")
+      color:
+        select: head > meta[name="color"]
+        value: attribute(el, "content")
+      theme:
+        select: head > meta[name="theme"]
+        value: attribute(el, "content")
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+      searchkeywords:
+        select: head > meta[name="search-keywords"]
+        value: attribute(el, "content")
+      searchtitle:
+        select: head > meta[name="search-title"]
+        value: attribute(el, "content")
+
+
+  blogs:
+    include:
+      - /about-us/blogs/business-loan/**
+      - /about-us/blogs/home-loan/**
+      - /about-us/blogs/loan-against-property/**
+      - /about-us/blogs/professional-loan/**
+      - /about-us/blogs/plot-loan/**
+      - /about-us/blogs/**
+    target: /about-us/blogs/query-index.json
+    properties:
+      category:
+        select: head > meta[name="category"]
+        value: |
+          attribute(el, 'content')
+      detailpageurl:
+        select: head > meta[name="detailpageurl"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[property="og:description"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
+      imagealt:
+        select: head > meta[property="imagealt"]
+        value: attribute(el, 'content')
+      articlepublishdate:
+        select: head > meta[name="articlepublishdate"]
+        value: attribute(el, 'content')
+      readtime:
+        select: head > meta[name="readtime"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  information_and_policies:
+    include:
+      - /information_and_policies/home-loans/**
+    target: /information_and_policies/home-loans/query-index.json
+    properties:
+      parent:
+        select: head > meta[name="parent"]
+        value: attribute(el, 'content')
+      selector:
+        select: head > meta[name="selector"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  interest_rate_document:
+    include:
+      - /interest_rate_document/**
+    target: /interest_rate_document/query-index.json
+    properties:
+      document_type:
+        select: head > meta[name="document_type"]
+        value: attribute(el, 'content')
+      profession_type:
+        select: head > meta[name="profession_type"]
+        value: attribute(el, 'content')
+      title_1:
+        select: head > meta[name="title_1"]
+        value: attribute(el, 'content')
+      description_1:
+        select: head > meta[name="description_1"]
+        value: attribute(el, 'content')
+      bullet_points_1:
+        select: head > meta[name="bullet_points_1"]
+        value: attribute(el, 'content')
+      title_2:
+        select: head > meta[name="title_2"]
+        value: attribute(el, 'content')
+      description_2:
+        select: head > meta[name="description_2"]
+        value: attribute(el, 'content')
+      bullet_points_2:
+        select: head > meta[name="bullet_points_2"]
+        value: attribute(el, 'content')
+      title_3:
+        select: head > meta[name="title_3"]
+        value: attribute(el, 'content')
+      description_3:
+        select: head > meta[name="description_3"]
+        value: attribute(el, 'content')
+      bullet_points_3:
+        select: head > meta[name="bullet_points_3"]
+        value: attribute(el, 'content')
+      title_4:
+        select: head > meta[name="title_4"]
+        value: attribute(el, 'content')
+      description_4:
+        select: head > meta[name="description_4"]
+        value: attribute(el, 'content')
+      bullet_points_4:
+        select: head > meta[name="bullet_points_4"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+      pagename:
+        select: head > meta[name="pagename"]
+        value: attribute(el, "content")
+
+  news-and-press-release:
+    include:
+      - /about-us/news-and-press-release/**
+    target: /about-us/news-and-press-release/query-index.json
     properties:
       title:
         select: head > meta[property="og:title"]
-        value: |
-          attribute(el, 'content')
-      image:
-        select: head > meta[property="og:image"]
-        value: |
-          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
+        value: attribute(el, 'content')
       description:
         select: head > meta[name="description"]
-        value: |
-          attribute(el, 'content')
-      labs:
-        select: head > meta[name="labs"]
-        value: |
-          attribute(el, 'content')
-      lastModified:
-        select: none
-        value: |
-          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
+        value: attribute(el, 'content')
+      publishdate:
+        select: head > meta[name="publishdate"]
+        value: attribute(el, 'content')
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, 'content')
+      readarticlelink:
+        select: head > meta[name="readarticlelink"]
+        value: attribute(el, 'content')
+      carddownloadlink:
+        select: head > meta[name="carddownloadlink"]
+        value: attribute(el, 'content')
       robots:
         select: head > meta[name="robots"]
-        value: |
-          attribute(el, 'content')
-      content:
-        select: main
-        value: |
-          textContent(el)
+        value: attribute(el, "content")
+
+  gallery:
+    include:
+      - /about-us/gallery/pictures/*
+      - /about-us/gallery/videos/*
+    target: /about-us/gallery/query-index.json
+    properties:
+      cardtitle:
+        select: head > meta[name="cardtitle"]
+        value: attribute(el, 'content')
+      cardimagelink:
+        select: head > meta[name="cardimagelink"]
+        value: attribute(el, 'content')
+      cardvideolink:
+        select: head > meta[name="cardvideolink"]
+        value: attribute(el, 'content')
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, 'content')
+      publishdate:
+        select: head > meta[name="publishdate"]
+        value: attribute(el, 'content')
+      videotype:
+        select: head > meta[name="videotype"]
+        value: attribute(el, 'content')
+      carddescription:
+        select: head > meta[name="carddescription"]
+        value: attribute(el, 'content')
+      thumbnailimage:
+        select: head > meta[name="thumbnailimage"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  different_type_of_loans:
+    include:
+      - /different_type_of_loan/*
+    target: /different_type_of_loan/query-index.json
+    properties:
+      category:
+        select: head > meta[name="category"]
+        value: attribute(el, 'content')
+      detailpageredirection:
+        select: head > meta[name="detailpageredirection"]
+        value: attribute(el, 'content')
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[property="og:description"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  navigation-element-business:
+    include:
+      - /nav-element/business_loan/*
+    target: /nav-element/business_loan/query-index.json
+    properties:
+      parent:
+        select: head > meta[name="parent"]
+        value: attribute(el, 'content')
+      pagepath:
+        select: head > meta[name="pagepath"]
+        value: attribute(el, 'content')
+      subpagepath:
+        select: head > meta[name="subpagepath"]
+        value: attribute(el, 'content')
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  navigation-element-home:
+    include:
+      - /nav-element/home_loan/*
+    target: /nav-element/home_loan/query-index.json
+    properties:
+      parent:
+        select: head > meta[name="parent"]
+        value: attribute(el, 'content')
+      pagepath:
+        select: head > meta[name="pagepath"]
+        value: attribute(el, 'content')
+      subpagepath:
+        select: head > meta[name="subpagepath"]
+        value: attribute(el, 'content')
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+         
+  navigation-element-property:
+    include:
+      - /nav-element/loan_against_property/*
+    target: /nav-element/Loan_Against_Property/query-index.json
+    properties:
+      parentredirectionurl:
+        select: head > meta[name="parentredirectionurl"]
+        value: attribute(el, 'content')
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  navigation-element-professional:
+    include:
+      - /nav-element/professional_loan/*
+    target: /nav-element/professional_loan/query-index.json
+    properties:
+      pagepath:
+        select: head > meta[name="pagepath"]
+        value: attribute(el, 'content')
+      subpagepath:
+        select: head > meta[name="subpagepath"]
+        value: attribute(el, 'content')
+      parent:
+        select: head > meta[name="parent"]
+        value: attribute(el, 'content')
+      parentredirectionurl:
+        select: head > meta[name="parentredirectionurl"]
+        value: attribute(el, 'content')
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  navigation-element-support:
+    include:
+      - /nav-element/support/*
+    target: /nav-element/support/query-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      customersupport:
+        select: head > meta[name="customersupport"]
+        value: attribute(el, 'content')
+      customersupportlink:
+        select: head > meta[name="customersupportlink"]
+        value: attribute(el, 'content')
+      selfservices:
+        select: head > meta[name="selfservices"]
+        value: attribute(el, 'content')
+      branchlocater:
+        select: head > meta[name="branchlocater"]
+        value: attribute(el, 'content')
+      branchlocaterlink:
+        select: head > meta[name="branchlocaterlink"]
+        value: attribute(el, 'content')
+      trackstatus:
+        select: head > meta[name="trackstatus"]
+        value: attribute(el, 'content')
+      trackstatuslink:
+        select: head > meta[name="trackstatuslink"]
+        value: attribute(el, 'content')
+      faq:
+        select: head > meta[name="faq"]
+        value: attribute(el, 'content')
+      faqlink:
+        select: head > meta[name="faqlink"]
+        value: attribute(el, 'content')
+      grievanceredressal:
+        select: head > meta[name="grievanceredressal"]
+        value: attribute(el, 'content')
+      godrejhousingfinance:
+        select: head > meta[name="godrejhousingfinance"]
+        value: attribute(el, 'content')
+      godrejhousingfinancelink:
+        select: head > meta[name="godrejhousingfinancelink"]
+        value: attribute(el, 'content')
+      godrejfinance:
+        select: head > meta[name="godrejfinance"]
+        value: attribute(el, 'content')
+      godrejfinancelink:
+        select: head > meta[name="godrejfinancelink"]
+        value: attribute(el, 'content')
+      contactus:
+        select: head > meta[name="contactus"]
+        value: attribute(el, 'content')
+      mobilenumber:
+        select: head > meta[name="mobilenumber"]
+        value: attribute(el, 'content')
+      mail:
+        select: head > meta[name="mail"]
+        value: attribute(el, 'content')
+      freecreditscore:
+        select: head > meta[name="freecreditscore"]
+        value: attribute(el, 'content')
+      freecreditscorelink:
+        select: head > meta[name="freecreditscorelink"]
+        value: attribute(el, 'content')
+      freecrediticon:
+        select: head > meta[name="freecrediticon"]
+        value: attribute(el, 'content')
+      freecreditscoredescription:
+        select: head > meta[name="freecreditscoredescription"]
+        value: attribute(el, 'content')
+      checkcreditscore:
+        select: head > meta[name="checkcreditscore"]
+        value: attribute(el, 'content')
+      checkcreditscorelink:
+        select: head > meta[name="checkcreditscorelink"]
+        value: attribute(el, 'content')
+      whatsupsupport:
+        select: head > meta[name="whatsupsupport"]
+        value: attribute(el, 'content')
+      whatsupdescription:
+        select: head > meta[name="whatsupdescription"]
+        value: attribute(el, 'content')
+      whatsupsupportredirection:
+        select: head > meta[name="whatsupsupportredirection"]
+        value: attribute(el, 'content')
+      whatsupicon:
+        select: head > meta[name="whatsupicon"]
+        value: attribute(el, 'content')
+      mainimage:
+        select: head > meta[name="mainimage"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+         
+         
+         
+         
+         
+         
+
+# this configuration is for the godrej-housing-finance site
+
+version2: 2
+indices2:
+  site:
+    include:
+      - /**
+    exclude:
+      - /about-us/blogs/**
+      - /about-us/gallery/**
+      - /about-us/news-and-press-release/*
+      - /apply-now-form/*
+      - /become-a-partner/*
+      - /boardmembers/**
+      - /campaign/aarohi-loans/**
+      - /campaign/pl-gig/**
+      - /content/**
+      - /cookies/cookie
+      - /customer-support/**
+      - /different_type_of_loan/**
+      - /error
+      - /footer
+      - /fragments/**
+      - /headers-footer/**
+      - /information_and_policies/**
+      - /interest_rate_document/**
+      - /nav-element/**
+      - /nav
+      - /quick-tools/**
+      - /secondaryfooter
+      - /sub
+      - /search
+      - /testing/*
+      - /testing/*
+      - /thankyou
+      - /tools/**
+
+    target: /query-index.json
+    properties:
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      lastmodified:
+        select: head > meta[name="lastmodified"]
+        value: attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, "content")
+      keywords:
+        select: head > meta[name="keywords"]
+        value: attribute(el, "content")
+      color:
+        select: head > meta[name="color"]
+        value: attribute(el, "content")
+      theme:
+        select: head > meta[name="theme"]
+        value: attribute(el, "content")
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  information_and_policies:
+    include:
+      - /information_and_policies/pages/**
+    target: /information_and_policies/pages/query-index.json
+    properties:
+      parent:
+        select: head > meta[name="parent"]
+        value: attribute(el, 'content')
+      selector:
+        select: head > meta[name="selector"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+
+
+
+
+
+
+
+
+
+# this configuration is for the godrej-housing-finance site
+
+version3: 3
+indices3:
+  site:
+    include:
+      - /**
+    exclude:
+      - /about-us/blogs/**
+      - /about-us/gallery/**
+      - /about-us/news-and-press-release/*
+      - /apply-now-form/*
+      - /become-a-partner/*
+      - /boardmembers/**
+      - /campaign/aarohi-loans/**
+      - /campaign/pl-gig/**
+      - /content/**
+      - /cookies/cookie
+      - /customer-support/**
+      - /different_type_of_loan/**
+      - /error
+      - /footer
+      - /fragments/**
+      - /headers-footer/**
+      - /information_and_policies/**
+      - /interest_rate_document/**
+      - /nav-element/**
+      - /nav
+      - /quick-tools/**
+      - /search
+      - /secondaryfooter
+      - /search
+      - /testing/*
+      - /thankyou
+      - /tools/**
+
+    target: /query-index.json
+    properties:
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      lastmodified:
+        select: head > meta[name="lastmodified"]
+        value: attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: attribute(el, "content")
+      keywords:
+        select: head > meta[name="keywords"]
+        value: attribute(el, "content")
+      color:
+        select: head > meta[name="color"]
+        value: attribute(el, "content")
+      theme:
+        select: head > meta[name="theme"]
+        value: attribute(el, "content")
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  information_and_policies:
+    include:
+      - /information_and_policies/pages/**
+    target: /information_and_policies/pages/query-index.json
+    properties:
+      parent:
+        select: head > meta[name="parent"]
+        value: attribute(el, 'content')
+      selector:
+        select: head > meta[name="selector"]
+        value: attribute(el, 'content')
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
