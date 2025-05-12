@@ -1323,17 +1323,15 @@
       },
       {
         "component": "text",
-        "name": "author",
-        "label": "Author",
         "valueType": "string",
-        "description": "Enter description for each card"
+        "name": "stitle",
+        "label": "Title"
       },
       {
-        "component": "text-input",
-        "name": "authorTitle",
-        "label": "Author Title",
+        "component": "text",
         "valueType": "string",
-        "description": "Enter Author Title"
+        "name": "descriptions",
+        "label": "Description"
       }
      
     ]
