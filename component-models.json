@@ -1182,16 +1182,9 @@
       {
         "component": "text",
         "name": "executiveName",
-        "label": "Name",
-        "description": "Enter the Executive's name",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "executiveDesignation",
-        "label": "Designation",
+        "label": "Title",
         "required": true,
-        "description": "Enter the Executive's Designation"
+        "description": "Enter the Executive's name"
       },
       {
         "component": "boolean",
