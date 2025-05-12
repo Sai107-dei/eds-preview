@@ -1161,6 +1161,99 @@
     ]
   },
   {
+    "id": "executive-tile",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "required": true,
+        "description": "Upload Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt text",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true,
+        "value": "Alt text from AEM DAM"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Name",
+        "description": "Enter the Executive's name",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Designation",
+        "required": true,
+        "description": "Enter the Executive's Designation"
+      },
+      {
+        "component": "boolean",
+        "label": "Instagram Profile",
+        "name": "instagramProfile",
+        "valueType": "boolean",
+        "description": "Select if the Executive’s Instagram profile is available",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "instagramURL",
+        "label": "Instagram URL",
+        "description": "Enter the Instagram profile URL"
+      },
+      {
+        "component": "boolean",
+        "label": "X Profile",
+        "name": "xProfile",
+        "valueType": "boolean",
+        "description": "Select if the Executive’s X profile is available",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "xURL",
+        "label": "X URL",
+        "description": "Enter the X profile URL"
+      },
+      {
+        "component": "boolean",
+        "label": "LinkedIn Profile",
+        "name": "linkedInProfile",
+        "valueType": "boolean",
+        "description": "Select if the Executive’s LinkedIn profile is available",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "linkedInURL",
+        "label": "LinkedIn URL",
+        "description": "Enter the LinkedIn profile URL"
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA"
+      },
+      {
+        "component": "aem-content",
+        "name": "CTA Link",
+        "label": "CTA Link",
+        "description": "Enter the URL to navigate when CTA is clicked",
+        "validation": {
+          "rootPath": "/content/ewi-lilly-com-block-library"
+        }
+      }
+    ]
+  },
+  {
     "id": "pull-quote",
     "fields": [
       {
