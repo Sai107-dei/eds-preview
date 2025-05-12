@@ -1172,6 +1172,36 @@
         "options": [ {"name": "No Image", "value": "noImage"},{"name": "With Image","value": "withImage" } ]
       },
       {
+        "component": "container",
+        "name": "Image",
+        "label": "With image Field Details",
+        "valueType": "string",
+        "condition": {"===": [{"var": "componentType"},"withImage"]},
+        "fields": [
+          {
+            "component": "select",
+            "name": "imagePosition",
+            "label": "Image Position",
+            "description": "Select the appropriate column for image placement",
+            "value": "left",
+            "options": [{"name": "Left","value": "left"},{"name": "Right","value": "right"}]          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "required": true,
+            "description": "Upload image for the component"
+          },
+          {
+            "component": "text",
+            "name": "imageAlt",
+            "label": "Alt Text",
+            "description": "Pick alt text from AEM DAM with ability to override it"
+          }
+        ]
+      },
+      {
         "component": "select",
         "name": "alignment",
         "label": "Alignment",
@@ -1202,37 +1232,8 @@
         "label": "Author Title",
         "valueType": "string",
         "description": "Enter Author Title"
-      },
-      {
-        "component": "container",
-        "name": "Image",
-        "label": "With image Field Details",
-        "valueType": "string",
-        "condition": {"===": [{"var": "componentType"},"withImage"]},
-        "fields": [
-          {
-            "component": "select",
-            "name": "imagePosition",
-            "label": "Image Position",
-            "description": "Select the appropriate column for image placement",
-            "value": "left",
-            "options": [{"name": "Left","value": "left"},{"name": "Right","value": "right"}]          },
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "image",
-            "label": "Image",
-            "required": true,
-            "description": "Upload image for the component"
-          },
-          {
-            "component": "text",
-            "name": "imageAlt",
-            "label": "Alt Text",
-            "description": "Pick alt text from AEM DAM with ability to override it"
-          }
-        ]
       }
+     
     ]
   },
   {
