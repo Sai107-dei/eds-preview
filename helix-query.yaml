@@ -11,7 +11,7 @@ indices:
       - /fragments/**
       - /style-guide/**
       - /spreadsheets/**
-      - /content/mysite/en
+      - /content/
     target: /query-index.json
     properties:
       title:
