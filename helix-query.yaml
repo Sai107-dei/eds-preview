@@ -3,38 +3,6 @@ indices:
   site:
     include:
       - /**
-    exclude:
-      - /about-us/blogs/**
-      - /about-us/gallery/**
-      - /about-us/news-and-press-release/**
-      - /apply-now-form/**
-      - /become-a-partner/**
-      - /boardmembers/**
-      - /campaign/aarohi-loans/**
-      - /campaign/pl-gig/**
-      - /content/**
-      - /cookies/cookie
-      - /customer-support/**
-      - /different_type_of_loan/**
-      - /error
-      - /footer
-      - /fragments/**
-      - /headers-footer/**
-      - /information_and_policies/**
-      - /interest_rate_document/**
-      - /nav-element/**
-      - /nav
-      - /quick-tools/**
-      - /search
-      - /sub
-      - /secondaryfooter
-      - /testing/**
-      - /thankyou
-      - /tools/**
-      - /awards/**
-      - /nps/**
-      - /third-party-product/**
-
     target: /query-index.json
     properties:
       lastModified:
@@ -77,12 +45,7 @@ indices:
 
   blogs:
     include:
-      - /about-us/blogs/business-loan/**
-      - /about-us/blogs/home-loan/**
-      - /about-us/blogs/loan-against-property/**
-      - /about-us/blogs/professional-loan/**
-      - /about-us/blogs/plot-loan/**
-      - /about-us/blogs/**
+      - /**
     target: /about-us/blogs/query-index.json
     properties:
       category:
@@ -113,7 +76,7 @@ indices:
 
   information_and_policies:
     include:
-      - /information_and_policies/home-loans/**
+      - /**
     target: /information_and_policies/home-loans/query-index.json
     properties:
       parent:
@@ -128,7 +91,7 @@ indices:
 
   interest_rate_document:
     include:
-      - /interest_rate_document/**
+      - /**
     target: /interest_rate_document/query-index.json
     properties:
       document_type:
