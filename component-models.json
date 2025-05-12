@@ -1161,7 +1161,7 @@
     ]
   },
   {
-    "id": "quote",
+    "id": "pull-quote",
     "fields": [
       {
         "component": "select",
