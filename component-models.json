@@ -1321,9 +1321,15 @@
         "description": "Enter title for each card",
         "required": true
       },
-     
       {
         "component": "text",
+        "name": "author",
+        "label": "Author",
+        "valueType": "string",
+        "description": "Enter description for each card"
+      },
+      {
+        "component": "text-input",
         "name": "authorTitle",
         "label": "Author Title",
         "valueType": "string",
