@@ -1324,14 +1324,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "stitle",
-        "label": "Author"
+        "name": "authorText",
+        "label": "Author123"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "descriptions",
-        "label": "Author Title"
+        "name": "authorTitle",
+        "label": "Author Title123"
       }
      
     ]
