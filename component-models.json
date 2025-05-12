@@ -1244,9 +1244,9 @@
       },
       {
         "component": "aem-content",
-        "name": "CTA Link",
-        "label": "CTA Link",
-        "description": "Enter the URL to navigate when CTA is clicked",
+        "name": "executiveBioFile ",
+        "label": "Executive Bio File ",
+        "description": "Upload link to the bio file",
         "validation": {
           "rootPath": "/content/ewi-lilly-com-block-library"
         }
