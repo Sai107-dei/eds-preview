@@ -1181,10 +1181,11 @@
       },
       {
         "component": "text",
-        "name": "executiveName",
-        "label": "Title",
-        "required": true,
-        "description": "Enter the Executive's name"
+        "valueType": "string",
+        "label": "Link Headline",
+        "name": "linkHeadline",
+        "description": "Enter display text for the quick link",
+        "required": true
       },
       {
         "component": "boolean",
