@@ -1181,14 +1181,14 @@
       },
       {
         "component": "text",
-        "name": "name",
+        "name": "executiveName",
         "label": "Name",
         "description": "Enter the Executive's name",
         "required": true
       },
       {
         "component": "text",
-        "name": "designation",
+        "name": "executiveDesignation",
         "label": "Designation",
         "required": true,
         "description": "Enter the Executive's Designation"
