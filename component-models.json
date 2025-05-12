@@ -1010,23 +1010,6 @@
         "valueType": "string",
         "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
         "options": [{ "name": "Exit Interstitial", "value": "true" }]
-      },
-      {
-        "component": "select",
-        "name": "ctaType",
-        "label": "CTA Type",
-        "description": "Select the type of CTA for component",
-        "value": "button",
-        "options": [
-          {
-            "name": "Button",
-            "value": "button"
-          },
-          {
-            "name": "Text Link",
-            "value": "textLink"
-          }
-        ]
       }
     ]
   },
