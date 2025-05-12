@@ -399,7 +399,7 @@
           }
         },
         {
-          "title": "Quote",
+          "title": "Pull Quote",
           "id": "quote",
           "plugins": {
             "xwalk": {
