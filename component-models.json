@@ -1183,7 +1183,7 @@
         "component": "text",
         "valueType": "string",
         "label": "Name",
-        "name": "Name",
+        "name": "executiveName",
         "description": "Enter the Executive’s name",
         "required": true
       },
