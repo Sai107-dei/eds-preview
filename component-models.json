@@ -1182,35 +1182,26 @@
         ]
       },
       {
-        "component": "reference",
+        "component": "richtext",
+        "name": "quote",
+        "label": "Quote",
         "valueType": "string",
-        "name": "icon",
-        "label": "Icon",
-        "required": true,
-        "description": "Upload Icon for the component"
-      },
-      {
-        "component": "text",
-        "name": "iconAlt",
-        "label": "Icon Alt text",
-        "valueType": "string",
-        "description": "Pick alt text from AEM DAM with ability to override it",
+        "description": "Enter title for each card",
         "required": true
       },
       {
         "component": "text",
-        "name": "title",
-        "required": true,
-        "label": "Title",
+        "name": "author",
+        "label": "Author",
         "valueType": "string",
-        "description": "Enter title for each card"
+        "description": "Enter description for each card"
       },
       {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description",
+        "component": "text",
+        "name": "authorTitle",
+        "label": "Author Title",
         "valueType": "string",
-        "description": "Enter the description"
+        "description": "Enter Author Title"
       },
       {
         "component": "container",
