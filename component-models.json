@@ -1182,7 +1182,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "label": "Link Headline",
+        "label": "Name",
         "name": "Name",
         "description": "Enter the Executive’s name",
         "required": true
