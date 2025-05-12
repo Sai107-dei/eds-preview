@@ -1183,8 +1183,8 @@
         "component": "text",
         "valueType": "string",
         "label": "Link Headline",
-        "name": "linkHeadline",
-        "description": "Enter display text for the quick link",
+        "name": "Name",
+        "description": "Enter the Executive’s name",
         "required": true
       },
       {
