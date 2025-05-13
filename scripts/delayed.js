@@ -10,7 +10,7 @@ if (href.startsWith('https://qa--ewi-lilly-com-block-library-qa--elilillyco.aem.
 } else {
   environment = 'Unknown Environment';
 }
-const userAgent = navigator.userAgent;
+const { userAgent } = navigator;
 let deviceType;
 if (/android/i.test(userAgent)) {
   deviceType = 'Android';
