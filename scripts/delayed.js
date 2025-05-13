@@ -1,5 +1,4 @@
 window.adobeDataLayer = window.adobeDataLayer || [];
-const { adobeDataLayer } = window;
 const htmlLang = document.documentElement?.getAttribute('lang');
 const href = window.location.href;
 let environment;
