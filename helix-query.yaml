@@ -11,34 +11,4 @@ indices:
       title:
         select: head > meta[property="og:title"]
         value: attribute(el, "content")
-      description:
-        select: head > meta[name="description"]
-        value: attribute(el, "content")
-      lastmodified:
-        select: head > meta[name="lastmodified"]
-        value: attribute(el, "content")
-      image:
-        select: head > meta[property="og:image"]
-        value: attribute(el, "content")
-      keywords:
-        select: head > meta[name="keywords"]
-        value: attribute(el, "content")
-      color:
-        select: head > meta[name="color"]
-        value: attribute(el, "content")
-      theme:
-        select: head > meta[name="theme"]
-        value: attribute(el, "content")
-      template:
-        select: head > meta[name="template"]
-        value: attribute(el, "content")
-      robots:
-        select: head > meta[name="robots"]
-        value: attribute(el, "content")
-      searchkeywords:
-        select: head > meta[name="search-keywords"]
-        value: attribute(el, "content")
-      searchtitle:
-        select: head > meta[name="search-title"]
-        value: attribute(el, "content")
-
+     
