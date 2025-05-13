@@ -27,25 +27,25 @@ if (/android/i.test(userAgent)) {
 }
 let browserType;
 if (/Chrome/i.test(userAgent) && !/Edge|Edg/i.test(userAgent)) {
-  browserType = "Chrome";
+  browserType = 'Chrome';
 } else if (/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) {
-  browserType = "Safari";
+  browserType = 'Safari';
 } else if (/Edge|Edg/i.test(userAgent)) {
-  browserType = "Edge";
+  browserType = 'Edge';
 } else {
-  browserType = "Unknown Browser";
+  browserType = 'Unknown Browser';
 }
 adobeDataLayer.push({
-    event: 'page_view',
-    pageInfo: {
-        pageName: document.title,
-        pageURL: window.location.href,
-        previousPageName: document.referrer,
-        environment: environment,
-        businessCountryLanguage: htmlLang,
-    },
-    applicationInfo: {
-        applicationType: browserType,
-        applicationOS: deviceType
-    }
+  event: 'page_view',
+  pageInfo: {
+    pageName: document.title,
+    pageURL: window.location.href,
+    previousPageName: document.referrer,
+    environment: environment,
+    businessCountryLanguage: htmlLang,
+  },
+  applicationInfo: {
+    applicationType: browserType,
+    applicationOS: deviceType
+  }
 });
