@@ -23,7 +23,7 @@ if (/android/i.test(userAgent)) {
 } else if (/Linux/i.test(userAgent)) {
   deviceType = 'Linux';
 } else {
-  deviceType = 'Unknown';
+  deviceType = 'Unknown Device';
 }
 let browserType;
 if (/Chrome/i.test(userAgent) && !/Edge|Edg/i.test(userAgent)) {
@@ -40,7 +40,6 @@ adobeDataLayer.push({
   pageInfo: {
     pageName: document.title,
     pageURL: window.location.href,
-    previousPageName: document.referrer,
     environment: environment,
     businessCountryLanguage: htmlLang,
   },
