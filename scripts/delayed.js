@@ -2,13 +2,13 @@ window.adobeDataLayer = window.adobeDataLayer || [];
 const { adobeDataLayer } = window;
 const { lang: htmlLang } = document.documentElement || {};
 const { href } = window.location;
-let environment;
+let environmentName;
 if (href.startsWith('https://qa--ewi-lilly-com-block-library-qa--elilillyco.aem.page') || href.includes('https://qa--ewi-lilly-com-block-library-qa--elilillyco.aem.page')) {
-  environment = 'QA';
+  environmentName = 'QA';
 } else if (href.startsWith('https://dev--ewi-lilly-com-block-library--elilillyco.aem.page') || href.includes('https://dev--ewi-lilly-com-block-library--elilillyco.aem.page')) {
-  environment = 'DEV';
+  environmentName = 'DEV';
 } else {
-  environment = 'Unknown Environment';
+  environmentName = 'Unknown Environment';
 }
 const { userAgent } = navigator;
 let deviceType;
@@ -40,7 +40,7 @@ adobeDataLayer.push({
   pageInfo: {
     pageName: document.title,
     pageURL: window.location.href,
-    environment: environment,
+    environment: environmentName,
     businessCountryLanguage: htmlLang,
   },
   applicationInfo: {
