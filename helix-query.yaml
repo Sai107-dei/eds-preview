@@ -11,4 +11,7 @@ indices:
       title:
         select: head > meta[property="og:title"]
         value: attribute(el, "content")
+      url:
+        select: head > meta[property="og:url"]
+        value: attribute(el, "content")
      
