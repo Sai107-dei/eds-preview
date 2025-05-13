@@ -37,6 +37,17 @@ if (/android/i.test(userAgent)) {
 
 // Log the device type for verification
 console.log("Device Type:", deviceType);
+let browserType;
+
+if (/Chrome/i.test(userAgent) && !/Edge|Edg/i.test(userAgent)) {
+    browserType = "Chrome";
+} else if (/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) {
+    browserType = "Safari";
+} else if (/Edge|Edg/i.test(userAgent)) {
+    browserType = "Edge";
+} else {
+    browserType = "Unknown Browser";
+}
 
 adobeDataLayer.push({
     event: 'page_view',
@@ -48,7 +59,7 @@ adobeDataLayer.push({
         businessCountryLanguage: htmlLang,
     },
     applicationInfo: {
-        applicationType: "<Application Type>",
-        applicationOS: "<Application OS>"
+        applicationType: browserType,
+        applicationOS: deviceType
     }
 });
