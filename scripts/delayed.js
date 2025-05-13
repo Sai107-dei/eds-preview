@@ -1,13 +1,8 @@
 window.adobeDataLayer = window.adobeDataLayer || [];
-
 const { adobeDataLayer } = window;
-
 const htmlLang = document.documentElement?.getAttribute('lang');
-
 const href = window.location.href;
-
 let environment;
-
 if (href.startsWith("https://qa--ewi-lilly-com-block-library-qa--elilillyco.aem.page") || href.includes("https://qa--ewi-lilly-com-block-library-qa--elilillyco.aem.page")) {
     environment = "QA";
 } else if (href.startsWith("https://dev--ewi-lilly-com-block-library--elilillyco.aem.page") || href.includes("https://dev--ewi-lilly-com-block-library--elilillyco.aem.page")) {
@@ -15,12 +10,8 @@ if (href.startsWith("https://qa--ewi-lilly-com-block-library-qa--elilillyco.aem.
 } else {
     environment = "Unknown Environment";
 }
-
 const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-console.log("User Agent:", userAgent); // Log the user agent for debugging
-
-let deviceType; // Declare a variable to store the device type
-
+let deviceType; 
 if (/android/i.test(userAgent)) {
     deviceType = "Android";
 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -34,11 +25,8 @@ if (/android/i.test(userAgent)) {
 } else {
     deviceType = "Unknown";
 }
-
-// Log the device type for verification
 console.log("Device Type:", deviceType);
 let browserType;
-
 if (/Chrome/i.test(userAgent) && !/Edge|Edg/i.test(userAgent)) {
     browserType = "Chrome";
 } else if (/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) {
@@ -48,7 +36,6 @@ if (/Chrome/i.test(userAgent) && !/Edge|Edg/i.test(userAgent)) {
 } else {
     browserType = "Unknown Browser";
 }
-
 adobeDataLayer.push({
     event: 'page_view',
     pageInfo: {
