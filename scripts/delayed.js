@@ -1,7 +1,7 @@
 window.adobeDataLayer = window.adobeDataLayer || [];
 const { adobeDataLayer } = window;
-const htmlLang = document.documentElement?.getAttribute('lang');
-const href = window.location.href;
+const { lang: htmlLang } = document.documentElement || {};
+const { href } = window.location;
 let environment;
 if (href.startsWith('https://qa--ewi-lilly-com-block-library-qa--elilillyco.aem.page') || href.includes('https://qa--ewi-lilly-com-block-library-qa--elilillyco.aem.page')) {
   environment = 'QA';
