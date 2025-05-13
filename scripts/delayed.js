@@ -46,6 +46,6 @@ adobeDataLayer.push({
   },
   applicationInfo: {
     applicationType: browserType,
-    applicationOS: deviceType
-  }
+    applicationOS: deviceType,
+  },
 });
