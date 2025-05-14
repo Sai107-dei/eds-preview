@@ -610,7 +610,7 @@
     "id": "text-with-image",
     "fields": [
       {
-        "component": "text-area",
+        "component": "text-input",
         "name": "abstract",
         "label": "Absrtact",
         "description": "Enter an abstract for site search"
