@@ -1,513 +1,30 @@
 {
   "groups": [
     {
-      "title": "Sections",
-      "id": "sections",
+      "title": "Default Content",
+      "id": "default",
       "components": [
         {
-          "title": "All Models Section",
-          "id": "all-models-section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "name": "All Models Section",
-                  "model": "all-models-section",
-                  "filter": "all-models-section",
-                  "style": "allmodel-section"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Flexible Width Section",
-          "id": "flexible-width-section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "name": "Flexible Width Section",
-                  "model": "flexible-width-section",
-                  "sectiontopmargin": true,
-                  "sectionalignment": "center",
-                  "sectionbgcolor": "white",
-                  "sectionwidth": "grid-10",
-                  "filter": "flexible-width-section"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Section",
-          "id": "section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "style": "alignment-center",
-                  "fixedsectiontopmargin": true,
-                  "sectionbgcolor": "white"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Stock Locator Section",
-          "id": "stock-locator-section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "name": "Stock Locator Section",
-                  "model": "stock-locator-section",
-                  "filter": "stock-locator-section"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Tabs Section",
-          "id": "tabs-section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "name": "Tabs Section",
-                  "model": "tabs-section",
-                  "filter": "tabs-section",
-                  "sectionbgcolor": "white"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Header Section",
-          "id": "header-section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "name": "Header Section",
-                  "model": "header-section",
-                  "filter": "header-section"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Footer Section",
-          "id": "footer-section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "name": "Footer Section",
-                  "model": "footer-section",
-                  "filter": "footer-section"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Default Blocks",
-      "id": "default_blocks",
-      "components": [
-        {
-          "title": "Card",
-          "id": "card",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Card",
-                  "model": "card"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Main Blocks",
-      "id": "bmw_blocks",
-      "components": [
-        {
-          "title": "Accordion",
-          "id": "accordion",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Accordion",
-                  "model": "accordion",
-                  "filter": "accordion"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Accordion Item",
-          "id": "accordion-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Accordion Item",
-                  "model": "accordion-item",
-                  "filter": "accordion-item",
-                  "accordionItemIconType": "h5"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "All Models Overview",
-          "id": "all-models",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "All Models",
-                  "model": "all-models",
-                  "filter": "all-models",
-                  "content_descriptionType": "h2",
-                  "content_confvariantType": "h3",
-                  "content_headlineType": "h4"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Background Media",
-          "id": "background-media",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Background Media",
-                  "model": "background-media",
-                  "filter": "background-media"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Background Image",
-          "id": "background-image",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Background Image",
-                  "model": "background-image",
-                  "bgImgIcon_radio": "showcopytext",
-                  "bgImgIcon_bgRadio": "shownormal",
-                  "bgImgGeneral_headlineclassType": "h2",
-                  "bgImgIcon_subbrandicon": "noicon",
-                  "bgImgStyle_elementAlignType": "h3",
-                  "bgImgStyle_elementAlign": "central-left",
-                  "bgImgCta1_CtaClassName": "money-btn money-btn-flex",
-                  "bgImgCta2_CtaClassName": "ghost-img-btn ghost-img-flex-btn",
-                  "shopthelook_IconPosition": "bottom",
-                  "wdh_contexttype": "allOptions"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Background Video",
-          "id": "background-video",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Background Video",
-                  "model": "background-video",
-                  "bgVidIcon_radio": "showcopytext",
-                  "bgVidGeneral_headlineclassType": "h2",
-                  "bgVidIcon_subbrandicon": "noicon",
-                  "bgVidIcon_bgRadio": "shownormal",
-                  "bgVidStyle_elementAlign": "central-left",
-                  "bgVidStyle_elementAlignType": "h3",
-                  "bgVidVideo_loopVideo": true,
-                  "bgVidVideo_loopVideoType": "h1",
-                  "bgVidVideo_autoPlayVideoType": "h2",
-                  "bgVidVideo_autoPlayVideo": true,
-                  "bgVidCta1_CtaBtnStyle": "money-btn money-btn-flex",
-                  "bgVidCta2_CtaBtnStyle": "ghost-img-btn ghost-img-flex-btn",
-                  "wdh_contexttype": "allOptions"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Button/Link",
-          "id": "button",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/button/v1/button",
-                "template": {
-                  "name": "Button/Link",
-                  "model": "button"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Columns",
-          "id": "columns",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns",
-                "template": {
-                  "columns": 2,
-                  "rows": 1,
-                  "classes": [
-                    "left",
-                    "top-vertical-align"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Copyright",
-          "id": "copyright",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Copyright",
-                  "model": "copyright"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Content Navigation",
-          "id": "content-navigation",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Content Navigation",
-                  "model": "content-navigation",
-                  "filter": "content-navigation"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Copy Text",
-          "id": "copy_text",
+          "title": "Text",
+          "id": "text",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/text/v1/text",
-                "template": {
-                  "name": "Copy Text",
-                  "model": "copy_text",
-                  "filter": "copy_text",
-                  "text": "<p>This is a Copy Text</p>",
-                  "content_videoCarouselCopyText": "This is a Copy Text.",
-                  "content_imageCarouselCopyText": "This is a Copy Text.",
-                  "content_imagecopytext": "This is a Copy Text.",
-                  "content_videocopytext": "This is a Copy Text.",
-                  "menuTeaserCopyText": "This is a Copy Text.",
-                  "content_videoSlideCopyText": "This is a Copy Text.",
-                  "content_imageSlideCopytext": "This is a Copy Text.",
-                  "accordionItemCopyText": "This is a Copy Text.",
-                  "bgImgDesp_Copytext": "This is a Copy Text.",
-                  "bgVidDesp_Copytext": "This is a Copy Text."
-                }
+                "template": {}
               }
             }
           }
         },
         {
-          "title": "Disclaimer",
-          "id": "disclaimer",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Disclaimer",
-                  "model": "disclaimer"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Download",
-          "id": "download",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Download",
-                  "model": "download"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "DriveTrain Switch",
-          "id": "drivetrain-switch",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "DriveTrain Switch",
-                  "model": "drivetrain-switch",
-                  "filter": "drivetrain-switch",
-                  "content_labelsourceType": "h2",
-                  "detail_activemodelType": "h3",
-                  "detail_descp": "{model.description}",
-                  "detail_descpType": "h4",
-                  "detail_technocalLinkType": "primary",
-                  "detail_popoverType": "h6",
-                  "detail_popover": true,
-                  "technical_fact1": "Snaga",
-                  "technical_fact1Type": "h2",
-                  "technical_value1": "{model.systemPower}",
-                  "technical_value1Type": "h3",
-                  "technical_fact2": " 0-100 km/h ",
-                  "technical_fact2Type": "h4",
-                  "technical_value2": "{model.acceleration} s",
-                  "technical_value2Type": "h5",
-                  "technical1_fact3": "Vmax",
-                  "technical1_fact3Type": "h2",
-                  "technical1_value3": "{model.topSpeed} km/h",
-                  "technical1_value3Type": "h3",
-                  "technical1_fact4": "Domet (do)",
-                  "technical1_fact4Type": "h4",
-                  "technical1_value4": "{techData.electricRangeWltpCombined} km",
-                  "technical1_value4Type": "h5"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Eyebrow",
-          "id": "eyebrow",
+          "title": "Title",
+          "id": "title",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/title/v1/title",
                 "template": {
-                  "name": "Eyebrow",
-                  "model": "eyebrow",
-                  "type": "h6"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Headline",
-          "id": "headline",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/title/v1/title",
-                "template": {
-                  "name": "Headline",
-                  "model": "headline",
-                  "type": "h2"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Icon Link List",
-          "id": "icon-link-list",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Icon Link List",
-                  "model": "icon-link-list",
-                  "filter": "icon-link-list",
-                  "icon": {
-                    "name": "icon",
-                    "model": "icon"
-                  }
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Icon",
-          "id": "icon",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Icon",
-                  "model": "icon"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "iFrame",
-          "id": "iframe",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "iFrame",
-                  "model": "iframe"
+                  "model": "title"
                 }
               }
             }
@@ -526,370 +43,758 @@
           }
         },
         {
-          "title": "Image Slide",
-          "id": "image-slide",
+          "title": "Button",
+          "id": "button",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/button/v1/button",
+                "template": {}
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Sections",
+      "id": "sections",
+      "components": [
+        {
+          "title": "Section",
+          "id": "section",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/section/v1/section",
+                "template": {
+                  "name": "Section",
+                  "model": "section",
+                  "style": "default",
+                  "filter": "section"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Blocks",
+      "id": "blocks",
+      "components": [
+        {
+          "title": "Bio Detail",
+          "id": "bio-detail",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Image Slide",
-                  "model": "image-slide",
-                  "filter": "image-slide",
-                  "content_imageSlideHeadlineType": "h4",
-                  "cta_imageSlideLinkType": "primary"
+                  "model": "bio-detail",
+                  "name": "Bio Detail",
+                  "image": "/content/dam/world-bank/sample/placeholder-black.png",
+                  "display-name": "Axel van Trotsenburg",
+                  "job-title": " <p>Senior Managing Director</p><p>World Bank Group</p>",
+                  "x-link": "www.xlink.com",
+                  "linkedin-link": "www.linkedin.com",
+                  "instagram-link": "www.instagram.com",
+                  "media-inquiries": "<p><strong>Kimberly Versak</strong></p><p>Senior External Affairs Officer</p><p><strong><em><a href='tel:2024588881' title='Tel: 202-458-8881'>Tel: 202-458-8881</a></em></strong></p><p><strong><em><a href='mailto:kversak@worldbank.org' title='kversak@worldbank.org'>kversak@worldbank.org</a></em></strong></p>",
+                  "resources": "<p><strong><em><a href='#' title='Full Bio'>Full Bio</a></em></strong></p><p> <strong><em><a href='#' title='High-Res Photo'>High-Res Photo</a></em></strong> </p> <p><strong><em><a href='#' title='Other Download'>Other Download</a></em></strong></p>"
                 }
               }
             }
           }
         },
         {
-          "title": "Image Carousel",
-          "id": "image-carousel",
+          "title": "Block Quote",
+          "id": "block-quote",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Image Carousel",
-                  "model": "image-carousel",
-                  "filter": "image-carousel",
-                  "content_imageCarouselHeadlineType": "h2"
+                  "name": "Block Quote",
+                  "model": "block-quote",
+                  "title": "Block Quote"
                 }
               }
             }
           }
         },
         {
-          "title": "Link List",
-          "id": "link-list",
+          "title": "Breadcrumb",
+          "id": "breadcrumb",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Link List",
-                  "model": "link-list",
-                  "filter": "link-list",
-                  "linkListClassname": "link-list"
+                  "name": "Breadcrumb",
+                  "model": "breadcrumb"
                 }
               }
             }
           }
         },
         {
-          "title": "Logo",
-          "id": "logo",
+          "title": "Cards",
+          "id": "cards",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Logo",
-                  "model": "logo"
+                  "name": "Cards",
+                  "model": "cards",
+                  "filter": "cards",
+                  "item1": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Card",
+                    "model": "card",
+                    "image": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "imageAlt": "Alt Text",
+                    "text": "<h3>Lorem Ipsum</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p><p class = 'button-container'><a href='#'>Read Bio</a></p>"
+                  }
                 }
               }
             }
           }
         },
         {
-          "title": "Menu Flyout",
-          "id": "menu-flyout",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Menu Flyout",
-                  "model": "menu-flyout",
-                  "filter": "menu-flyout"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Menu Link",
-          "id": "menu-link",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Menu Link",
-                  "model": "menu-link"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Menu Teaser",
-          "id": "menu-teaser",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Menu Teaser",
-                  "model": "menu-teaser",
-                  "filter": "menu-teaser",
-                  "menuTeaserClassname": "menu-teaser"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Media Carousel",
-          "id": "media-carousel",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Media Carousel",
-                  "model": "media-carousel",
-                  "filter": "media-carousel"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Multicontent Gallery",
-          "id": "multicontent-gallery",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Multicontent Gallery",
-                  "model": "multicontent-gallery",
-                  "filter": "multicontent-gallery"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Model Card",
-          "id": "drivetrain-model-card",
+          "title": "Card",
+          "id": "card",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Model Card",
-                  "model": "drivetrain-model-card",
-                  "group_modelType": "h2",
-                  "group_selectedmodel": false
+                  "name": "Card",
+                  "model": "card"
                 }
               }
             }
           }
         },
         {
-          "title": "Model Data",
-          "id": "model-data",
+          "title": "Carousel",
+          "id": "carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Carousel",
+                  "model": "carousel",
+                  "filter": "carousel",
+                  "item1": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Card",
+                    "model": "card",
+                    "image": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "text": "<p>Explore History - essential data to learn about the important moments in the history of the World Bank while discovering the gems of the World Bank Group Archives</p>"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Columns",
+          "id": "columns",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "2",
+                  "rows": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Curated Cards",
+          "id": "curated-cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Curated Cards",
+                  "filter": "curated-cards",
+                  "item1": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Curated Card",
+                    "model": "curated-card",
+                    "curated-card-tags": "world-bank:content-type/feature story",
+                    "curated-card-title": "Curated Card Title 1",
+                    "curated-card-description": "Card Description",
+                    "curated-card-link": "/content/world-bank/global/en"
+                  },
+                  "item2": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Curated Card",
+                    "model": "curated-card",
+                    "curated-card-tags": "world-bank:content-type/event",
+                    "curated-card-title": "Curated Card Title 2",
+                    "curated-card-description": "Card Description",
+                    "curated-card-link": "/content/world-bank/global/en"
+                  },
+                  "item3": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Curated Card",
+                    "model": "curated-card",
+                    "curated-card-tags": "world-bank:content-type/event",
+                    "curated-card-title": "Curated Card Title 3",
+                    "curated-card-description": "Card Description",
+                    "curated-card-link": "/content/world-bank/global/en"
+                  },
+                  "item4": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Curated Card",
+                    "model": "curated-card",
+                    "curated-card-tags": "world-bank:content-type/event",
+                    "curated-card-title": "Curated Card Title 4",
+                    "curated-card-description": "Card Description",
+                    "curated-card-link": "/content/world-bank/global/en"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Curated Card",
+          "id": "curated-card",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Model Data",
-                  "model": "model-data"
+                  "name": "Curated Card",
+                  "model": "curated-card"
                 }
               }
             }
           }
         },
         {
-          "title": "PreCon",
-          "id": "precon",
+          "title": "Data Cards",
+          "id": "data-cards",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "PreCon",
-                  "model": "precon",
-                  "filter": "precon"
+                  "name": "Data Cards",
+                  "model": "data-cards",
+                  "filter": "data-cards",
+                  "title": "<p><strong>Data</strong> for Development</p>",
+                  "description": "<p>Essential data to guide decisions, monitor progress, and evaluate impacts</p>",
+                  "additional-text": "<p>Explore by focus area</p>"
                 }
               }
             }
           }
         },
         {
-          "title": "PreCon Vehicle",
-          "id": "precon-vehicle",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "contextualised_Link": "https://configure.bmw.rs/sr_RS/configure",
-                  "name": "PreCon Vehicle",
-                  "model": "precon-vehicle",
-                  "filter": "precon-vehicle"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Quote",
-          "id": "quote",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Quote",
-                  "model": "quote",
-                  "filter": "quote"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Speed Dial",
-          "id": "speed-dial",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Speed Dial",
-                  "model": "speed-dial",
-                  "filter": "speed-dial"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Speed Dial Item",
-          "id": "speed-dial-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Speed Dial Item",
-                  "model": "speed-dial-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Stock Locator Model Overview",
-          "id": "stock-locator-model-overview",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Stock Locator Model Overview",
-                  "model": "stock-locator-model-overview",
-                  "filter": "stock-locator-model-overview",
-                  "content_modeltitlebtnType": "h2",
-                  "mp_general_resultsCountType": "h3"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Stock Locator Model Detail",
-          "id": "stock-locator-model-detail",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Stock Locator Model Detail",
-                  "model": "stock-locator-model-detail",
-                  "filter": "stock-locator-model-detail",
-                  "content_buttonType": "h2",
-                  "content_dealerButtonType": "h3"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Search",
-          "id": "search",
+          "title": "Data Card",
+          "id": "data-card",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Search",
-                  "model": "search"
+                  "name": "Data Card",
+                  "model": "data-card"
                 }
               }
             }
           }
         },
         {
-          "title": "Text with Media",
-          "id": "text-with-media",
+          "title": "News Card",
+          "id": "news-card",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
+                "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Text with Media",
-                  "model": "text-with-media",
-                  "filter": "text-with-media"
+                  "name": "News Card",
+                  "model": "news-card"
                 }
               }
             }
           }
         },
         {
-          "title": "Text with Image",
-          "id": "text-with-image",
+          "title": "Dynamic Media Asset",
+          "id": "dm-asset",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Text with Image",
-                  "model": "text-with-image",
-                  "filter": "text-with-image",
-                  "classes": "left",
-                  "content_imageheadlineType": "h2"
+                  "name": "Dynamic Media Asset",
+                  "model": "dm-asset"
                 }
               }
             }
           }
         },
         {
-          "title": "Text with Video",
-          "id": "text-with-video",
+          "title": "Explore Cards",
+          "id": "explore-cards",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Text with Video",
-                  "model": "text-with-video",
-                  "filter": "text-with-video",
-                  "classes": "left",
-                  "content_videoheadlineType": "h2",
-                  "media_loopVideo": true,
-                  "media_loopVideoType": "h2",
-                  "media_autoplay": true,
-                  "media_autoplayType": "h3",
-                  "media_videoControls": false,
-                  "media_videoControlsType": "h4",
-                  "media_muteVideo": true,
-                  "media_muteVideoType": "h5"
+                  "name": "Explore Cards",
+                  "model": "explore-cards",
+                  "filter": "explore-cards",
+                  "title": "<p>Explore Development Stories <strong>From Around the World</strong></p>",
+                  "item1": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Explore Card",
+                    "model": "explore-card",
+                    "fileReference": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "alt": "Alt text",
+                    "title": "Green Jobs. Learn What They Are. And Why We’re Invested.",
+                    "link": "/content/world-bank/global/en",
+                    "content-type": "world-bank:content-type/audio",
+                    "story-type": "world-bank:story-type/immersive-stories"
+                  },
+                  "item2": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Explore Card",
+                    "model": "explore-card",
+                    "fileReference": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "alt": "Alt text",
+                    "title": "Inside Somalia: Signs of Hope on the Road to Recovery.",
+                    "link": "/content/world-bank/global/en",
+                    "content-type": "world-bank:content-type/article",
+                    "story-type": "world-bank:story-type/the-development-podcast"
+                  },
+                  "item3": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Explore Card",
+                    "model": "explore-card",
+                    "fileReference": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "alt": "Alt text",
+                    "title": "Discover the Link Between Plastic Pollution and Poverty.",
+                    "link": "/content/world-bank/global/en",
+                    "content-type": "world-bank:content-type/video",
+                    "story-type": "world-bank:story-type/expert-answers"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Explore Card",
+          "id": "explore-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Explore Card",
+                  "model": "explore-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Fragment",
+          "id": "fragment",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Fragment",
+                  "model": "fragment",
+                  "key-value": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Heading",
+          "id": "heading",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Heading",
+                  "model": "heading"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Iframe",
+          "id": "iframe",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Iframe",
+                  "model": "iframe"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Leaders List",
+          "id": "leaders-list",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Leaders List",
+                  "model": "leaders-list"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Live Now",
+          "id": "live-now",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "live-now",
+                  "model": "live-now",
+                  "key-value": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Impact Card",
+          "id": "impact-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Impact Card",
+                  "model": "impact-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Mini Cards",
+          "id": "mini-cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Mini Cards",
+                  "filter": "mini-cards",
+                  "model": "mini-cards",
+                  "mini-cards-heading": "<p>The Heading for <strong>Mini Cards Block</strong></p>",
+                  "item1": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Mini Card",
+                    "model": "mini-card",
+                    "mini-card-image": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "mini-card-tag": "world-bank:content-type/event",
+                    "mini-card-title": "Mini Card Title",
+                    "mini-card-date": "July 18",
+                    "mini-card-time": "8:30 AM",
+                    "mini-card-link": "/content/world-bank/global/en",
+                    "mini-card-location": "city, country",
+                    "alt": "default alt"
+                  },
+                  "item2": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Mini Card",
+                    "model": "mini-card",
+                    "mini-card-image": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "mini-card-tag": "world-bank:content-type/event",
+                    "mini-card-title": "Mini Card Title",
+                    "mini-card-date": "July 18",
+                    "mini-card-time": "",
+                    "mini-card-link": "/content/world-bank/global/en",
+                    "alt": "default alt"
+                  },
+                  "item3": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Mini Card",
+                    "model": "mini-card",
+                    "mini-card-image": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "mini-card-tag": "world-bank:content-type/event",
+                    "mini-card-title": "Mini Card Title",
+                    "mini-card-date": "July 18",
+                    "mini-card-time": "",
+                    "mini-card-link": "/content/world-bank/global/en",
+                    "alt": "default alt"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Mini Card",
+          "id": "mini-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Mini Card",
+                  "model": "mini-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Organizational Cards",
+          "id": "organizational-cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Organizational Cards",
+                  "model": "organizational-cards",
+                  "filter": "organizational-cards",
+                  "item1": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Organizational Card",
+                    "model": "organizational-card",
+                    "acronym": "IBRD",
+                    "title": "International Bank for Reconstruction and Development",
+                    "mission": "Placeholder",
+                    "link": "/content/world-bank/global/en",
+                    "linkText": "Learn More"
+                  },
+                  "item2": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Organizational Card",
+                    "model": "organizational-card",
+                    "acronym": "IDA",
+                    "title": "International Development Association",
+                    "mission": "IDA provides grants and interest-free loans to the world's poorest nations to help them grow equitably and sustainably.",
+                    "link": "/content/world-bank/global/en",
+                    "linkText": "Learn More"
+                  },
+                  "item3": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Organizational Card",
+                    "model": "organizational-card",
+                    "acronym": "IFC",
+                    "title": "International Finance Corporation",
+                    "mission": "Placeholder",
+                    "link": "/content/world-bank/global/en",
+                    "linkText": "Learn More"
+                  },
+                  "item4": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Organizational Card",
+                    "model": "organizational-card",
+                    "acronym": "MIGA",
+                    "title": "Multilateral Investment Guarantee Agency",
+                    "mission": "Placeholder",
+                    "link": "/content/world-bank/global/en",
+                    "linkText": "Learn More"
+                  },
+                  "item5": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Organizational Card",
+                    "model": "organizational-card",
+                    "acronym": "ICSID",
+                    "title": "International Centre for Settlement of Investment Disputes",
+                    "mission": "Placeholder",
+                    "link": "/content/world-bank/global/en",
+                    "linkText": "Learn More"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Priority List",
+          "id": "priority-list",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Priority List",
+                  "model": "priority-list",
+                  "filter": "priority-list"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Priority Item",
+          "id": "priority-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Priority Item",
+                  "model": "priority-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Research Publications Cards",
+          "id": "research-publications-cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Research Publications Cards",
+                  "model": "research-publications-cards",
+                  "filter": "research-publications-cards",
+                  "title": "<p>&nbsp;<strong>Research</strong> & Publications</p>",
+                  "buttontext": "More Research & Publications",
+                  "buttonlink": "https://www.worldbank.org",
+                  "item1": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Research Publications Card",
+                    "model": "research-publications-card",
+                    "image": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "alt": "Global Economy Set for Weakest Showing in 30 Years",
+                    "title": "Global Economy Set for Weakest Showing in 30 Years",
+                    "description": "Find global economic outlook, regional outlooks and special topics in this twice-a-year flagship publication.",
+                    "href": "https://www.worldbank.org",
+                    "buttontext": "Read Full Report",
+                    "buttonlink": "https://www.worldbank.org"
+                  },
+                  "item2": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Research Publications Card",
+                    "model": "research-publications-card",
+                    "image": "/content/dam/world-bank/sample/placeholder-black.png",
+                    "alt": "Bend the Emissions Curve",
+                    "title": "Bend the Emissions Curve",
+                    "description": "State and Trends of Carbon Pricing 2024 helps inform, influence and incentivize better policies for a warming world.",
+                    "href": "https://www.worldbank.org",
+                    "buttontext": "Read Full Report",
+                    "buttonlink": "https://www.worldbank.org"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Research Publications Card",
+          "id": "research-publications-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Research Publications Card",
+                  "model": "research-publications-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Signup",
+          "id": "signup",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Signup",
+                  "filter": "signup"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs",
+          "id": "tabs",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs",
+                  "model": "tabs",
+                  "filter": "tabs",
+                  "item1": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Tab",
+                    "model": "tab",
+                    "title": "Tab"
+                  },
+                  "item2": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "name": "Tab",
+                    "model": "tab",
+                    "title": "Tab"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tab",
+          "id": "tab",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Tab",
+                  "model": "tab",
+                  "title": "Tab"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Teaser",
+          "id": "teaser",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Teaser",
+                  "model": "teaser",
+                  "key-value": true
                 }
               }
             }
@@ -905,162 +810,6 @@
                 "template": {
                   "name": "Video",
                   "model": "video"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Video Slide",
-          "id": "video-slide",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Video Slide",
-                  "model": "video-slide",
-                  "filter": "video-slide",
-                  "content_videoSlideHeadlineType": "h4",
-                  "media_videoSlideLoopVideo": true,
-                  "media_videoSlideLoopVideoType": "h2",
-                  "media_videoSlideAutoplay": true,
-                  "media_videoSlideAutoplayType": "h3",
-                  "cta_videoSlideCtaLinkType": "primary"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Video Carousel",
-          "id": "video-carousel",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Video Carousel",
-                  "model": "video-carousel",
-                  "filter": "video-carousel",
-                  "content_carouselHeadlineType": "h2",
-                  "media_carouselLoopVideoType": "h3",
-                  "media_carouselLoopVideo": true,
-                  "media_carouselMouseHoverVideoType": "h4",
-                  "media_carouselMouseHoverVideo": true,
-                  "media_videoControlsVideoType": "h5",
-                  "media_videoControlsVideo": true,
-                  "media_carouselMuteSoundVideoType": "h6",
-                  "media_carouselMuteSoundVideo": true
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Video Gallery",
-          "id": "video-gallery",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Video Gallery",
-                  "model": "video-gallery",
-                  "filter": "video-gallery"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Video Slide",
-          "id": "video-gallery-slide",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Video Slide",
-                  "model": "video-gallery-slide",
-                  "filter": "video-gallery-slide",
-                  "videoSlide_loopVideoType": "h1",
-                  "videoSlide_loopVideo": true,
-                  "videoSlide_autoPlayVideoType": "h2",
-                  "videoSlide_autoPlayVideo": true,
-                  "videoSlide_videoControlsVideoType": "h5",
-                  "videoSlide_videoControlsVideo": true,
-                  "videoSlide_muteSoundVideoType": "h6",
-                  "videoSlide_muteSoundVideo": true
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Special Blocks",
-      "id": "special_blocks",
-      "components": [
-        {
-          "title": "Cookie Policy",
-          "id": "cookiepolicy",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Cookie Policy",
-                  "model": "cookiepolicy"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Technical Data",
-          "id": "technical-data",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Technical Data",
-                  "model": "technical-data",
-                  "filter": "technical-data",
-                  "content_autoData": "true",
-                  "content_accordionView": "true",
-                  "content_autoDataType": "h2",
-                  "content_accordionViewType": "h3",
-                  "headline1_headline1LinkType": "secondary",
-                  "headline2_headline2LinkType": "secondary",
-                  "disclaimer_headlineType": "h3"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Website Search",
-          "id": "website-search",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Website Search",
-                  "model": "website-search",
-                  "filter": "website-search",
-                  "websiteSearchTab1_searchBarType": "h2",
-                  "websiteSearchTab1_resultsHeadlineType": "h3",
-                  "websiteSearchTab1_loadMoreButtonType": "h4",
-                  "websiteSearchTab1_noMoreResultsType": "h5",
-                  "websiteSearchTab1_backTopButtonType": "h6",
-                  "websiteSearchTab2_rteType": "h2",
-                  "websiteSearchTab3_techErrorHeadlineType": "h2",
-                  "websiteSearchTab3_techErrorTextType": "h3",
-                  "websiteSearchTab3_bkButtonLabelType": "h4"
                 }
               }
             }
