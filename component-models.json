@@ -3576,6 +3576,71 @@
         "required": true
       },
       {
+        "component": "richtext",
+        "valueType": "string",
+        "value": "Your text will show here.",
+        "name": "teaserBlurb",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "teaserStyle",
+        "value": "image",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Video",
+            "value": "video"
+          },
+          {
+            "name": "Image",
+            "value": "image"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Video Properties",
+        "name": "videoProperties",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "teaserStyle"
+            },
+            "video"
+          ]
+        },
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "videoReference",
+            "label": "Video Reference",
+            "multi": false,
+            "description": "Provide a URL for the video background."
+          },
+          {
+            "component": "select",
+            "name": "videoBehavior",
+            "value": "autoplay",
+            "label": "Video Behavior (on load)",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "Autoplay",
+                "value": "autoplay"
+              },
+              {
+                "name": "Pause",
+                "value": "pause"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "component": "select",
         "valueType": "string",
         "name": "tab-type",
