@@ -610,6 +610,12 @@
     "id": "text-with-image",
     "fields": [
       {
+        "component": "text-area",
+        "name": "abstract",
+        "label": "Absrtact",
+        "description": "Enter an abstract for site search"
+      },
+      {
         "component": "tab",
         "label": "General",
         "name": "content_textWithImageTab"
