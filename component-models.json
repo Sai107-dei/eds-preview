@@ -3,102 +3,23 @@
     "id": "page-metadata",
     "fields": [
       {
-        "component": "container",
-        "label": "Fieldset",
-        "fields": [
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "jcr:title",
-            "label": "Title"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "jcr:description",
-            "label": "Description"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "cq:canonicalUrl",
-            "label": "Canonical"
-          },
-          {
-            "component": "aem-tag",
-            "valueType": "string",
-            "name": "cq:tags",
-            "label": "AEM Tag Picker"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "keywords",
-            "multi": true,
-            "label": "Keywords"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "topics",
-            "multi": true,
-            "label": "Topics"
-          },
-          {
-            "component": "select",
-            "name": "template",
-            "label": "Template name",
-            "options": [
-              {
-                "name": "One column",
-                "value": "one-column"
-              },
-              {
-                "name": "Two columns",
-                "value": "two-column"
-              }
-            ]
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "authorName",
-            "label": "Author Name"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "authorTitle",
-            "label": "Author Title"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "brand",
-            "label": "Brand"
-          },
-          {
-            "component": "text",
-            "valueType": "number",
-            "name": "readingTime",
-            "label": "Reading Time"
-          },
-          {
-            "component": "date-time",
-            "valueType": "date-time",
-            "name": "publishDate",
-            "label": "Publish Date",
-            "placeholder": "YYYY-MM-DD",
-            "displayFormat": null,
-            "valueFormat": null
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "navTitle",
-            "label": "Navigation Title"
-          }
-        ]
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "keywords",
+        "multi": true,
+        "label": "Keywords"
       }
     ]
   },
@@ -109,22 +30,68 @@
         "component": "reference",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "multi": false,
+        "required": true,
+        "description": "Upload Image from DAM"
       },
       {
         "component": "text",
+        "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt Text"
+        "label": "Image Alt text",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false,
+        "required": true,
+        "description": "Upload Image from DAM"
       },
       {
         "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt text",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
         "name": "imageTitle",
-        "label": "Image Title"
-      },
+        "label": "Image Title",
+        "description": "ImageTitle",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "lcdp",
+    "fields": [
       {
         "component": "text",
-        "name": "imageCaption",
-        "label": "Image Caption"
+        "name": "lcdp",
+        "label": "LCDP",
+        "description": "Clinical Development Pipeline"
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "name": "search",
+        "label": "Search",
+        "description": "Search"
       }
     ]
   },
@@ -203,29 +170,6 @@
           {
             "name": "secondary",
             "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Red",
-            "value": "bg-red"
-          },
-          {
-            "name": "Green",
-            "value": "bg-green"
-          },
-          {
-            "name": "Blue",
-            "value": "bg-blue"
           }
         ]
       }
@@ -236,8 +180,9 @@
     "fields": [
       {
         "component": "text",
-        "name": "id",
-        "label": "Id"
+        "name": "name",
+        "label": "Section Name",
+        "description": "The label shown for this section in the Content Tree"
       },
       {
         "component": "multiselect",
@@ -249,326 +194,57 @@
             "value": "highlight"
           },
           {
-            "name": "Dark",
-            "value": "dark"
+            "name": "Content-section",
+            "value": "content-section"
           },
           {
-            "name": "Light",
-            "value": "light"
-          },
-          {
-            "name": "Two columns",
-            "value": "grid-layout-two-columns"
-          },
-          {
-            "name": "Three columns",
-            "value": "grid-layout-three-columns"
-          },
-          {
-            "name": "Four columns",
-            "value": "grid-layout-four-columns"
-          }
-        ]
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style variation",
-        "valueType": "string",
-        "maxSize": 3,
-        "options": [
-          {
-            "name": "Background Color",
-            "children": [
-              {
-                "name": "Grey",
-                "value": "bg-grey"
-              },
-              {
-                "name": "Light Blue",
-                "value": "bg-blue-light"
-              }
-            ]
-          },
-          {
-            "name": "Margin Top",
-            "children": [
-              {
-                "name": "3XS - Triple Extra Small",
-                "value": "margin-top-3xs"
-              },
-              {
-                "name": "2XS - Double Extra Small",
-                "value": "margin-top-2xs"
-              },
-              {
-                "name": "XS - Extra Small",
-                "value": "margin-top-xs"
-              },
-              {
-                "name": "S - Small",
-                "value": "margin-top-s"
-              },
-              {
-                "name": "M - Medium",
-                "value": "margin-top-m"
-              },
-              {
-                "name": "L - Large",
-                "value": "margin-top-l"
-              },
-              {
-                "name": "XL - Extra Large",
-                "value": "margin-top-xl"
-              },
-              {
-                "name": "2XL - Double Extra large",
-                "value": "margin-top-2xl"
-              },
-              {
-                "name": "3XL - Triple Extra large",
-                "value": "margin-top-3xl"
-              }
-            ]
-          },
-          {
-            "name": "Margin Bottom",
-            "children": [
-              {
-                "name": "3XS - Triple Extra Small",
-                "value": "margin-bottom-3xs"
-              },
-              {
-                "name": "2XS - Double Extra Small",
-                "value": "margin-bottom-2xs"
-              },
-              {
-                "name": "XS - Extra Small",
-                "value": "margin-bottom-xs"
-              },
-              {
-                "name": "S - Small",
-                "value": "margin-bottom-s"
-              },
-              {
-                "name": "M - Medium",
-                "value": "margin-bottom-m"
-              },
-              {
-                "name": "L - Large",
-                "value": "margin-bottom-l"
-              },
-              {
-                "name": "XL - Extra Large",
-                "value": "margin-bottom-xl"
-              },
-              {
-                "name": "2XL - Double Extra large",
-                "value": "margin-bottom-2xl"
-              },
-              {
-                "name": "3XL - Triple Extra large",
-                "value": "margin-bottom-3xl"
-              }
-            ]
+            "name": "Video-container",
+            "value": "video-container"
           }
         ]
       }
     ]
   },
   {
-    "id": "nav",
+    "id": "tabs-section",
     "fields": [
       {
-        "component": "text",
-        "name": "nav_id",
-        "label": "Id"
-      },
-      {
-        "component": "aem-content",
-        "name": "nav_logo",
-        "label": "Navigation Logo"
-      },
-      {
-        "component": "text",
-        "name": "nav_logoAlt",
-        "label": "Navigation Logo Alt"
-      }
-    ]
-  },
-  {
-    "id": "marginal",
-    "fields": [
-      {
-        "component": "text",
-        "name": "id",
-        "label": "Id"
-      },
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          },
-          {
-            "name": "Dark",
-            "value": "dark"
-          },
-          {
-            "name": "Light",
-            "value": "light"
-          },
-          {
-            "name": "Two columns",
-            "value": "grid-layout-two-columns"
-          },
-          {
-            "name": "Three columns",
-            "value": "grid-layout-three-columns"
-          },
-          {
-            "name": "Four columns",
-            "value": "grid-layout-four-columns"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "tabs",
-    "fields": [
-      {
-        "component": "text",
-        "name": "id",
-        "label": "Id"
-      },
-      {
-        "component": "text",
-        "name": "tabsTitle",
-        "label": "Title",
-        "required": true
-      }
-    ]
-  },
-  {
-    "id": "accordionitem",
-    "fields": [
-      {
-        "component": "text",
-        "name": "accordiontitle",
-        "label": "Accordion Item Title",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "select",
-        "name": "accordionitem-component",
-        "label": "Add Component",
-        "options": [
-          {
-            "name": "Quote",
-            "value": "accordionitem-component-quote"
-          },
-          {
-            "name": "Text",
-            "value": "accordionitem-component-text"
-          }
-        ]
-      },
-      {
-        "component": "text-input",
-        "label": "This text is shown when clicked quote",
-        "name": "hidden-quote",
-        "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "accordionitem-component"
-            },
-            "accordionitem-component-quote"
-          ]
-        }
-      },
-      {
-        "component": "text-input",
-        "label": "This text is shown when clicked text",
-        "name": "hidden-text",
-        "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "accordionitem-component"
-            },
-            "accordionitem-component-text"
-          ]
-        }
-      },
-      {
-        "component": "richtext",
-        "name": "accordionItem_quote",
-        "label": "Answer",
-        "valueType": "string",
-        "value": "",
-        "condition": {
-          "===": [
-            {
-              "var": "accordionitem-component"
-            },
-            "accordionitem-component-quote"
-          ]
-        }
-      },
-      {
-        "component": "richtext",
-        "name": "accordionItem_text",
-        "label": "Answer",
-        "valueType": "string",
-        "value": "",
-        "condition": {
-          "===": [
-            {
-              "var": "accordionitem-component"
-            },
-            "accordionitem-component-text"
-          ]
+        "component": "number",
+        "name": "numberOfTabs",
+        "label": "Number of Tabs",
+        "value": 1,
+        "description": "The label shown for this section in the Content Tree",
+        "validation": {
+          "numberMin": 2,
+          "numberMax": 8,
+          "customErrorMsg": "You also need 1.21 gigawatts."
         }
       }
     ]
   },
   {
-    "id": "asset-picker",
+    "id": "cards",
     "fields": [
-      {
-        "component": "custom-asset-namespace:custom-asset",
-        "name": "image",
-        "label": "Image",
-        "configUrl": "/content/dam/aem-xwalk/asset-selector.json",
-        "valueType": "string"
-      },
-      {
-        "component": "custom-asset-namespace:custom-asset-mimetype",
-        "valueType": "string",
-        "name": "imageMimeType"
-      },
       {
         "component": "text",
-        "name": "imageTitle",
-        "label": "Alt Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "breadcrumbs",
-    "fields": [
+        "valueType": "string",
+        "name": "cards",
+        "label": "Section Title",
+        "description": "Enter the title for the entire Card block",
+        "multi": false
+      },
       {
-        "component": "boolean",
-        "name": "showbreadcrumbs",
-        "value": "",
-        "label": "Show Breadcrumbs"
+        "component": "number",
+        "valueType": "number",
+        "value": 2,
+        "name": "numberOfCards",
+        "label": "Number of Cards",
+        "description": "Choose the number of cards to be displayed in the component",
+        "required": true,
+        "multi": false,
+        "validation": {
+          "numberMin": 2
+        }
       }
     ]
   },
@@ -580,72 +256,156 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "required": true,
+        "description": "Upload images for the card"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text ",
+        "description": "Add Image Alternate Text"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter title for each card",
+        "required": true
       },
       {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "carousel",
-    "fields": [
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter description for each card",
+        "required": false
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA for each card"
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "valueType": "string",
+        "description": "Enter the URL to navigate when CTA is clicked for each card",
+        "validation": {
+          "rootPath": "content/lilly-com-eds"
+        }
+      },
       {
         "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "Background Color",
-        "description": "The button background color",
-        "valueType": "string",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
         "options": [
           {
-            "name": "Red",
-            "value": "bg-red"
+            "name": "Same Tab",
+            "value": "sameTab"
           },
           {
-            "name": "Green",
-            "value": "bg-green"
-          },
-          {
-            "name": "Blue",
-            "value": "bg-blue"
+            "name": "New Tab",
+            "value": "newTab"
           }
         ]
       }
     ]
   },
   {
-    "id": "carouselitem",
+    "id": "spacer-and-divider",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "component": "select",
+        "name": "elementselector",
+        "label": "Element Selector",
+        "description": "Select the appropriate option",
+        "value": "divider",
+        "required": true,
+        "options": [
+          {
+            "name": "Horizontal Divider",
+            "value": "divider"
+          },
+          {
+            "name": "Spacer",
+            "value": "spacer"
+          }
+        ]
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
+        "component": "select",
+        "name": "spacerheight",
+        "label": "Spacer height - Desktop",
+        "value": "small",
+        "description": "Select the appropriate spacer height. Mobile height will be auto calculated on selection made",
+        "options": [
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          }
+        ],
+        "condition": {
+          "===": [{ "var": "elementselector" }, "spacer"]
+        }
       },
       {
-        "component": "richtext",
-        "name": "slide_title",
-        "label": "Slide Title",
-        "valueType": "string"
+        "component": "select",
+        "name": "dividercolor",
+        "label": "Divider Color",
+        "description": "Select the Divider color",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          }
+        ],
+        "condition": {
+          "===": [{ "var": "elementselector" }, "divider"]
+        }
       },
       {
-        "component": "button",
-        "name": "slide_button",
-        "label": "Slide Button",
-        "valueType": "string"
+        "component": "select",
+        "name": "topbottomspacing",
+        "label": "Top & Bottom spacing",
+        "value": "small",
+        "description": "Select the appropriate padding",
+        "options": [
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          }
+        ],
+        "condition": {
+          "===": [{ "var": "elementselector" }, "divider"]
+        }
       }
     ]
   },
@@ -665,225 +425,6 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
-      },
-      {
-        "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "Variation",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Columns",
-            "value": "columns"
-          },
-          {
-            "name": "table",
-            "value": "table"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "custom-asset",
-    "fields": [
-      {
-        "component": "custom-asset-namespace:custom-asset",
-        "name": "customAsset_image",
-        "label": "Image",
-        "configUrl": "/content/dam/aem-xwalk/asset-selector.json",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "customAsset_imageTitle",
-        "label": "Alt Text",
-        "valueType": "string"
-      },
-      {
-        "component": "select",
-        "name": "customAsset_imageSmartCrop",
-        "label": "Image Version",
-        "options": [
-          {
-            "name": "11square",
-            "value": "11square"
-          },
-          {
-            "name": "169banner",
-            "value": "169banner"
-          },
-          {
-            "name": "54vert",
-            "value": "54vert"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "customtable",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "customtable_columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "customtable_rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "download",
-    "fields": [
-      {
-        "component": "text",
-        "name": "downloadtitle",
-        "value": "",
-        "label": "Title"
-      },
-      {
-        "component": "richtext",
-        "name": "downloaddescription",
-        "value": "",
-        "label": "Description"
-      },
-      {
-        "component": "text",
-        "name": "downloadbuttonlabel",
-        "label": "Download Button Label"
-      },
-      {
-        "component": "aem-content",
-        "name": "downloadfile",
-        "label": "Asset",
-        "value": "",
-        "valueType": "string",
-        "validation": {
-          "rootPath": "/content/dam/aem-xwalk"
-        }
-      }
-    ]
-  },
-  {
-    "id": "dynamic-media-asset",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "asset",
-        "label": "Asset"
-      }
-    ]
-  },
-  {
-    "id": "embed",
-    "fields": [
-      {
-        "component": "tab",
-        "label": "URL",
-        "name": "tab1"
-      },
-      {
-        "component": "text",
-        "label": "URL link",
-        "name": "text1",
-        "valueType": "string"
-      },
-      {
-        "component": "tab",
-        "label": "Embedable",
-        "name": "tab2"
-      },
-      {
-        "component": "text",
-        "label": "Embedable",
-        "name": "text2",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "event",
-    "fields": [
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "link",
-        "label": "Link",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "city",
-        "label": "City",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "date-time",
-        "name": "begin",
-        "label": "Begin",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "date-time",
-        "name": "end",
-        "label": "End",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "hall",
-        "label": "Hall",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "cityNumber",
-        "label": "City Number",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "land",
-        "label": "Land",
-        "valueType": "string",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "form",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Form"
-      },
-      {
-        "component": "text",
-        "name": "action",
-        "label": "Action URL",
-        "valueType": "string"
       }
     ]
   },
@@ -901,941 +442,1028 @@
     "id": "hero",
     "fields": [
       {
+        "component": "select",
+        "name": "PrimarybackgroundType",
+        "label": "Primary Background Type",
+        "description": "Select Background Type Primary Hero",
+        "required": true,
+        "options": [
+          {
+            "name": "Image",
+            "value": "imageSlide"
+          },
+          {
+            "name": "Video",
+            "value": "videoSlide"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "BackgroundImage",
+        "label": "Background Image",
+        "description": "Upload Image for the Primary Hero",
+        "required": true,
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Image Alt",
+        "label": "Image Alt Text",
+        "description": "Add Alt Text for Image Primary Hero",
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "label": "Background Video",
+        "name": "BackgroundVideo",
+        "description": "Upload video for the Primary Hero",
+        "required": true,
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "videoSlide"]
+        }
+      },
+      {
+        "component": "boolean",
+        "label": "Enable Overlay?",
+        "name": "EnableOverlay",
+        "valueType": "boolean",
+        "description": "Enable Overlay video for the Primary Hero"
       },
       {
         "component": "text-input",
         "valueType": "string",
+        "name": "overlayTitle",
+        "label": "Overlay Title",
+        "required": true,
+        "condition": {
+          "===": [{ "var": "EnableOverlay" }, true]
+        }
+      },
+
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "description": "Upload the icon image",
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
+      },
+      {
+        "component": "text",
         "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
+        "label": "Icon Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
+      },
+      {
+        "component": "select",
+        "name": "textcolor",
+        "label": "Text Color",
+        "description": "Select the Text Color",
+        "value": "white",
+        "required": true,
+        "options": [
+          { "name": "Black", "value": "black" },
+          { "name": "White", "value": "white" }
+        ],
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
       },
       {
         "component": "text",
-        "name": "accordionItemIconType",
+        "name": "ctalabel",
+        "label": "CTA Label",
         "valueType": "string",
-        "value": "h5",
-        "hidden": true
+        "description": "Enter label to display on the CTA for each card",
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "description": "Enter the URL to navigate when CTA is clicked for each card",
+        "validation": {
+          "rootPath": "/content/lilly-com-eds"
+        },
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          { "name": "Same Tab", "value": "sameTab" },
+          { "name": "New Tab", "value": "newTab" }
+        ],
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
+      },
+      {
+        "component": "checkbox-group",
+        "label": "ExitInterstitial",
+        "name": "exitInterstitial",
+        "valueType": "string",
+        "options": [{ "name": "ExitInterstitial", "value": "true" }],
+        "condition": {
+          "===": [{ "var": "PrimarybackgroundType" }, "imageSlide"]
+        }
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Title",
+        "required": true,
+        "valueType": "string",
+        "description": "Enter main heading for the Primary Hero",
+        "validation": {
+          "minLength": 0,
+          "maxLength": 70,
+          "regExp": "^foo:.*",
+          "customErrorMsg": "Maximum Characters length limit should not be more than 70"
+        }
       },
       {
         "component": "richtext",
-        "valueType": "string",
-        "name": "heroCopyText",
-        "value": "This is a Copy Text.",
-        "label": "Text"
-      }
-    ]
-  },
-  {
-    "id": "hubspot-form",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "id",
-        "label": "ID",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "headline",
-        "label": "Headline Text",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "region",
-        "label": "Region"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "portalId",
-        "label": "Portal Id"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "formId",
-        "label": "Form Id"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
         "name": "description",
-        "label": "Subtitle Text",
-        "value": ""
-      },
-      {
-        "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "Background Color",
+        "label": "Description",
         "valueType": "string",
-        "options": [
-          {
-            "name": "Dark",
-            "value": "bg-dark"
-          },
-          {
-            "name": "Light",
-            "value": "bg-light"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "margin-top",
-        "value": "",
-        "label": "Margin Top",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "None",
-            "value": ""
-          },
-          {
-            "name": "3XS - Triple Extra Small",
-            "value": "margin-top-3xs"
-          },
-          {
-            "name": "2XS - Double Extra Small",
-            "value": "margin-top-2xs"
-          },
-          {
-            "name": "XS - Extra Small",
-            "value": "margin-top-xs"
-          },
-          {
-            "name": "S - Small",
-            "value": "margin-top-s"
-          },
-          {
-            "name": "M - Medium",
-            "value": "margin-top-m"
-          },
-          {
-            "name": "L - Large",
-            "value": "margin-top-l"
-          },
-          {
-            "name": "XL - Extra Large",
-            "value": "margin-top-xl"
-          },
-          {
-            "name": "2XL - Double Extra large",
-            "value": "margin-top-2xl"
-          },
-          {
-            "name": "3XL - Triple Extra large",
-            "value": "margin-top-3xl"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "margin-bottom",
-        "value": "",
-        "label": "Margin Bottom",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "None",
-            "value": ""
-          },
-          {
-            "name": "3XS - Triple Extra Small",
-            "value": "margin-bottom-3xs"
-          },
-          {
-            "name": "2XS - Double Extra Small",
-            "value": "margin-bottom-2xs"
-          },
-          {
-            "name": "XS - Extra Small",
-            "value": "margin-bottom-xs"
-          },
-          {
-            "name": "S - Small",
-            "value": "margin-bottom-s"
-          },
-          {
-            "name": "M - Medium",
-            "value": "margin-bottom-m"
-          },
-          {
-            "name": "L - Large",
-            "value": "margin-bottom-l"
-          },
-          {
-            "name": "XL - Extra Large",
-            "value": "margin-bottom-xl"
-          },
-          {
-            "name": "2XL - Double Extra large",
-            "value": "margin-bottom-2xl"
-          },
-          {
-            "name": "3XL - Triple Extra large",
-            "value": "margin-bottom-3xl"
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "inner-block-marker",
-        "label": "REQUIRED: Initialising the js of a nested component",
-        "readOnly": true,
-        "hidden": true,
-        "value": "inner-block-hubspot-form"
+        "description": "Enter description for additional context"
       }
     ]
   },
+	{
+		"id": "icongrid-tile",
+		"fields": [
+			{
+				"component": "reference",
+				"valueType": "string",
+				"name": "image",
+				"label": "Icon/Logo",
+				"required": true,
+				"description": "Upload icon for the Icon Grid"
+			},
+			{
+				"component": "text",
+				"valueType": "string",
+				"name": "imageAlt",
+				"label": "Alt Text",
+				"description": "Add Image Alternate Text"
+			},
+			{
+				"component": "richtext",
+				"name": "text",
+				"label": "Icon Title",
+				"valueType": "string",
+				"description": "Enter title for the Icon Grid",
+				"required": true
+			},
+			{
+				"component": "richtext",
+				"name": "description",
+				"label": "Icon Description",
+				"valueType": "string",
+				"description": "Enter Description for the Icon Grid",
+				"required": true
+			}
+		]
+	},
   {
-    "id": "landing-page-header",
+		"id": "tile",
+		"fields": [
+			{
+				"component": "reference",
+				"valueType": "string",
+				"name": "image",
+				"label": "Icon/Logo",
+				"required": true,
+				"description": "Upload icon for the Icon Grid"
+			},
+			{
+				"component": "richtext",
+				"name": "text",
+				"label": "Icon Title",
+				"valueType": "string",
+				"description": "Enter title for the Icon Grid",
+				"required": true
+			},
+			{
+				"component": "richtext",
+				"name": "description",
+				"label": "Icon Description",
+				"valueType": "string",
+				"description": "Enter Description for the Icon Grid",
+				"required": true
+			}
+		]
+	},
+	{
+		"id": "icon-tile-grid",
+		"fields": [
+			{
+				"component": "richtext",
+				"name": "title",
+				"label": "Section Title",
+				"valueType": "string",
+				"description": "Enter the title for the section.",
+				"required": true,
+				"maxLength": "70"
+			},
+			{
+				"component": "select",
+				"name": "columnConfiguration",
+				"label": "Column Configuration",
+				"description": "Select the number of columns and their respective widths.",
+				"value": "2-col",
+				"options": [
+					{
+						"name": "2-column",
+						"value": "2-col"
+					},
+					{
+						"name": "3-column",
+						"value": "3-col"
+					}
+				]
+			}
+		]
+	},
+  {
+    "id": "relatedlink",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "id",
-        "label": "ID",
-        "value": ""
+        "label": "Link Headline",
+        "name": "linkHeadline",
+        "description": "Enter display text for the quick link",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "description": "Enter the URL to navigate when Quick Link is clicked",
+        "label": "Link URL",
+        "valueType": "string",
+        "required": true,
+        "validation": {
+          "rootPath": "/content/lilly-com-eds"
+        }
       },
       {
         "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "Background Color",
-        "valueType": "string",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
         "options": [
           {
-            "name": "Dark",
-            "value": "bg-dark"
+            "name": "Same Tab",
+            "value": "sameTab"
           },
           {
-            "name": "Light",
-            "value": "bg-light"
+            "name": "New Tab",
+            "value": "newTab"
           }
         ]
       },
       {
-        "component": "richtext",
+        "component": "checkbox-group",
+        "label": "Exit Interstitial",
+        "name": "checkbox",
         "valueType": "string",
-        "name": "headline",
-        "label": "Headline",
-        "value": ""
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [{ "name": "Exit Interstitial", "value": "true" }]
       },
       {
-        "component": "richtext",
+        "component": "text",
         "valueType": "string",
-        "name": "subheadline",
-        "label": "Subheadline",
-        "value": ""
+        "label": "Sub-text Headline",
+        "name": "subTextHeadline",
+        "description": "Enter display text for the  quick link sub-text",
+        "required": true
       },
       {
-        "component": "richtext",
+        "component": "aem-content",
+        "description": "Enter the URL to navigate when Quick Link sub-text is clicked",
+        "label": "Sub-text Link URL",
         "valueType": "string",
-        "name": "keypoint",
-        "label": "Keypoint",
-        "value": ""
+        "name": "sub-text",
+        "required": true,
+        "validation": {
+          "rootPath": "/content/lilly-com-eds"
+        }
       },
       {
         "component": "select",
-        "valueType": "string",
-        "name": "keypoint-classes",
-        "label": "Keypoint Style",
-        "value": "",
+        "name": "targetPath1",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA sub-text URL",
+        "value": "sameTab",
         "options": [
           {
-            "name": "None",
-            "value": ""
+            "name": "Same Tab",
+            "value": "sameTab"
           },
           {
-            "name": "Green Checkmarks",
-            "value": "bulletpoints-check-green"
-          },
-          {
-            "name": "Blue Checkmarks",
-            "value": "bulletpoints-check-blue"
+            "name": "New Tab",
+            "value": "newTab"
           }
         ]
       },
       {
-        "component": "text",
+        "component": "checkbox-group",
+        "label": "Exit Interstitial",
+        "name": "checkboxSubText",
         "valueType": "string",
-        "name": "button-text",
-        "label": "Button Label"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "button-url",
-        "label": "Button Url",
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "button-aria-label",
-        "label": "Button Aria Label",
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "value": ""
-      },
-      {
-        "component": "select",
-        "name": "button-type",
-        "value": "internal",
-        "label": "Type",
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "options": [
-          {
-            "name": "Internal",
-            "value": ""
-          },
-          {
-            "name": "E-mail",
-            "value": "email"
-          },
-          {
-            "name": "Phone",
-            "value": "phone"
-          },
-          {
-            "name": "Icon",
-            "value": "icon"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "valueType": "string",
-        "name": "button-style",
-        "label": "Button Style",
-        "options": [
-          {
-            "name": "CTA",
-            "value": "cta"
-          },
-          {
-            "name": "CTA inverted",
-            "value": "cta-inverted"
-          },
-          {
-            "name": "CTA white career",
-            "value": "cta-white-career"
-          },
-          {
-            "name": "CTA white career (small)",
-            "value": "cta-white-career-small"
-          },
-          {
-            "name": "CTA white/blue border",
-            "value": "cta-white-blue-border"
-          },
-          {
-            "name": "CTA blue",
-            "value": "cta-blue"
-          },
-          {
-            "name": "Standard",
-            "value": "standard"
-          },
-          {
-            "name": "Animated",
-            "value": "animated"
-          }
-        ],
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "value": ""
-      },
-      {
-        "component": "select",
-        "valueType": "string",
-        "name": "button-target",
-        "label": "Button Target",
-        "options": [
-          {
-            "name": "Self",
-            "value": ""
-          },
-          {
-            "name": "Blank",
-            "value": "_blank"
-          }
-        ],
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Card Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Card Image Alt Text"
-      },
-      {
-        "component": "reference",
-        "name": "background-image",
-        "label": "Background Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "background-imageAlt",
-        "label": "Background Image Alt Text"
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [{ "name": "Exit Interstitial", "value": "true" }]
       }
     ]
   },
   {
-    "id": "landing-page-logo-overview",
+    "id": "enhanced-related-link",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "id",
-        "label": "ID",
-        "value": ""
+        "name": "linkHeadline",
+        "label": "Link Headline",
+        "required": true,
+        "description": "Enter display text for the quick link"
+      },
+      {
+        "component": "aem-content",
+        "name": "linkURL",
+        "label": "Link URL",
+        "valueType": "string",
+        "required": true,
+        "description": "Enter the URL to navigate when Quick Link is clicked",
+        "validation": {
+          "rootPath": "content/lilly-com-eds"
+        }
       },
       {
         "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "Background Color",
-        "valueType": "string",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
         "options": [
           {
-            "name": "Dark",
-            "value": "bg-dark"
+            "name": "Same Tab",
+            "value": "sameTab"
           },
           {
-            "name": "Light",
-            "value": "bg-light"
+            "name": "New Tab",
+            "value": "newTab"
           }
         ]
       },
       {
-        "component": "select",
-        "name": "margin-top",
-        "value": "",
-        "label": "Margin Top",
+        "component": "checkbox-group",
+        "label": "Exit Interstitial",
+        "name": "checkbox",
         "valueType": "string",
-        "options": [
-          {
-            "name": "None",
-            "value": ""
-          },
-          {
-            "name": "3XS - Triple Extra Small",
-            "value": "margin-top-3xs"
-          },
-          {
-            "name": "2XS - Double Extra Small",
-            "value": "margin-top-2xs"
-          },
-          {
-            "name": "XS - Extra Small",
-            "value": "margin-top-xs"
-          },
-          {
-            "name": "S - Small",
-            "value": "margin-top-s"
-          },
-          {
-            "name": "M - Medium",
-            "value": "margin-top-m"
-          },
-          {
-            "name": "L - Large",
-            "value": "margin-top-l"
-          },
-          {
-            "name": "XL - Extra Large",
-            "value": "margin-top-xl"
-          },
-          {
-            "name": "2XL - Double Extra large",
-            "value": "margin-top-2xl"
-          },
-          {
-            "name": "3XL - Triple Extra large",
-            "value": "margin-top-3xl"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "margin-bottom",
-        "value": "",
-        "label": "Margin Bottom",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "None",
-            "value": ""
-          },
-          {
-            "name": "3XS - Triple Extra Small",
-            "value": "margin-bottom-3xs"
-          },
-          {
-            "name": "2XS - Double Extra Small",
-            "value": "margin-bottom-2xs"
-          },
-          {
-            "name": "XS - Extra Small",
-            "value": "margin-bottom-xs"
-          },
-          {
-            "name": "S - Small",
-            "value": "margin-bottom-s"
-          },
-          {
-            "name": "M - Medium",
-            "value": "margin-bottom-m"
-          },
-          {
-            "name": "L - Large",
-            "value": "margin-bottom-l"
-          },
-          {
-            "name": "XL - Extra Large",
-            "value": "margin-bottom-xl"
-          },
-          {
-            "name": "2XL - Double Extra large",
-            "value": "margin-bottom-2xl"
-          },
-          {
-            "name": "3XL - Triple Extra large",
-            "value": "margin-bottom-3xl"
-          }
-        ]
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "headline",
-        "label": "Headline Text",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "button-text",
-        "label": "Button Label"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "button-url",
-        "label": "Button Url",
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "button-aria-label",
-        "label": "Button Aria Label",
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "value": ""
-      },
-      {
-        "component": "select",
-        "name": "button-type",
-        "value": "",
-        "label": "Button Type",
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "options": [
-          {
-            "name": "Internal",
-            "value": ""
-          },
-          {
-            "name": "E-mail",
-            "value": "email"
-          },
-          {
-            "name": "Phone",
-            "value": "phone"
-          },
-          {
-            "name": "Icon",
-            "value": "icon"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "valueType": "string",
-        "name": "button-style",
-        "label": "Button Style",
-        "options": [
-          {
-            "name": "CTA",
-            "value": "cta"
-          },
-          {
-            "name": "CTA inverted",
-            "value": "cta-inverted"
-          },
-          {
-            "name": "CTA white career",
-            "value": "cta-white-career"
-          },
-          {
-            "name": "CTA white career (small)",
-            "value": "cta-white-career-small"
-          },
-          {
-            "name": "CTA white/blue border",
-            "value": "cta-white-blue-border"
-          },
-          {
-            "name": "CTA blue",
-            "value": "cta-blue"
-          },
-          {
-            "name": "Standard",
-            "value": "standard"
-          },
-          {
-            "name": "Animated",
-            "value": "animated"
-          }
-        ],
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "value": ""
-      },
-      {
-        "component": "select",
-        "valueType": "string",
-        "name": "button-target",
-        "label": "Button Target",
-        "options": [
-          {
-            "name": "Self",
-            "value": ""
-          },
-          {
-            "name": "Blank",
-            "value": "_blank"
-          }
-        ],
-        "condition": {
-          "!!": [
-            {
-              "var": "button-text"
-            },
-            true
-          ]
-        },
-        "value": ""
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [{ "name": "Exit Interstitial", "value": "true" }]
       }
     ]
   },
   {
-    "id": "landing-page-logo-item",
+    "id": "accordion",
     "fields": [
+      {
+        "component": "text",
+        "name": "accordiontitle",
+        "label": "Accordion Title",
+        "description": "Enter title for the entire Accordion Block"
+      },
+      {
+        "component": "select",
+        "name": "style",
+        "label": "Accordion Expansion",
+        "description": "Select the relevant Accordion Expansion option",
+        "value": "none",
+        "required": true,
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "First",
+            "value": "first"
+          },
+          {
+            "name": "All",
+            "value": "all"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter title of each accordion item",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter detailed description of each accordion item",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "subtitle",
+        "label": "Image Title",
+        "valueType": "string",
+        "description": "Enter title for the Image"
+      },
       {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "description": "Upload Image for the section content"
       },
       {
         "component": "text",
-        "valueType": "string",
         "name": "imageAlt",
-        "label": "Image Alt Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "logo-description",
-        "label": "Logo Description Text",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "logo-link",
-        "label": "Logo Link",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "logo-link-title",
-        "label": "Logo Link Title",
-        "value": ""
+        "label": "Alt Text",
+        "description": "Pick alt text from AEM DAM with ability to override it"
       }
     ]
   },
   {
-    "id": "list",
+    "id": "additional-links",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "source",
-        "label": "Source Path",
-        "value": "/content/site/articles.json"
+        "name": "cards",
+        "label": "Cards Title",
+        "description": "Enter the title for the entire Card block",
+        "multi": false
       },
       {
-        "component": "multiselect",
-        "name": "keywords",
-        "label": "Keywords",
-        "options": [
-          {
-            "name": "Developer",
-            "value": "Developer"
-          },
-          {
-            "name": "Courses",
-            "value": "Courses"
-          }
-        ]
-      },
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Description",
+        "valueType": "string",
+        "required": true
+      }
+    ]
+  },
+
+  {
+    "id": "additional-link",
+    "fields": [
       {
         "component": "text",
-        "valueType": "number",
-        "name": "limit",
-        "label": "Limit",
-        "value": "4"
+        "valueType": "string",
+        "name": "linkHeadline",
+        "label": "Link Headline",
+        "required": true,
+        "description": "Enter display text for the quick link"
+      },
+      {
+        "component": "aem-content",
+        "name": "linkURL",
+        "label": "Link URL",
+        "valueType": "string",
+        "required": true,
+        "description": "Enter the URL to navigate when Quick Link is clicked",
+        "validation": {
+          "rootPath": "content/lilly-com-eds"
+        }
       },
       {
         "component": "select",
-        "name": "classes",
-        "label": "Classes",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
         "options": [
           {
-            "name": "dark",
-            "value": "dark"
+            "name": "Same Tab",
+            "value": "sameTab"
           },
           {
-            "name": "light",
-            "value": "light"
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Exit Interstitial",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [{ "name": "Exit Interstitial", "value": "true" }]
+      }
+    ]
+  },
+  {
+    "id": "text-component",
+    "fields": [
+      {
+        "component": "select",
+        "name": "alignment",
+        "label": "Alignment",
+        "description": "Select the alignment expected for entire block",
+        "value": "left",
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "description": "Upload the icon image"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Icon Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "text",
+        "name": "eyebrowText",
+        "label": "Eyebrow Text",
+        "valueType": "string",
+        "description": "Enter the Eyebrow text"
+      },
+      {
+        "component": "richtext",
+        "name": "titleRte",
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter the Title"
+      },
+      {
+        "component": "richtext",
+        "name": "descriptionRte",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter description for additional context which can have styling such as Bold, italics and  ability to add text links."
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA"
+      },
+      {
+        "component": "aem-content",
+        "name": "CTA Link",
+        "label": "CTA Link",
+        "description": "Enter the URL to navigate when CTA is clicked",
+        "validation": {
+          "rootPath": "/content/ewi-lilly-com-block-library"
+        }
+      },
+      {
+        "component": "richtext",
+        "name": "footnoteRte",
+        "label": "Footnote",
+        "valueType": "string",
+        "description": "Enter the footnote text."
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "name": "exitInterstitial",
+        "valueType": "boolean",
+        "label": "Exit Interstitial",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [{ "name": "Exit Interstitial", "value": true }]
+      }
+    ]
+  },
+  {
+    "id": "two-column-with-image",
+    "fields": [
+      {
+        "component": "select",
+        "name": "imagePlacement",
+        "label": "Image Placement",
+        "description": "Select the appropriate column for image placement   ⓘ Image will always be displayed at the top in mobile view",
+        "value": "left",
+        "required": true,
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "required": true,
+        "description": "Upload image for the Two Column with Image"
+      },
+      {
+        "component": "text",
+        "name": "altImage",
+        "label": "Image Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "description": "Upload icon for the Two Column with Image"
+      },
+      {
+        "component": "text",
+        "name": "alt",
+        "label": "Icon Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Title",
+        "required": true,
+        "valueType": "string",
+        "description": "Enter the title"
+      },
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter the description"
+      },
+      {
+        "component": "select",
+        "name": "ctaType",
+        "label": "CTA Type",
+        "description": "Select the type of CTA for component",
+        "value": "button",
+        "options": [
+          {
+            "name": "Button",
+            "value": "button"
+          },
+          {
+            "name": "Text Link",
+            "value": "textLink"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA"
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "description": "Enter the URL to navigate when CTA is clicked",
+        "validation": {
+          "rootPath": "/content/lilly-com-eds"
+        }
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Checkbox Group",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [{ "name": "Exit Interstitial", "value": "true" }]
+      }
+      
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "required": true,
+        "label": "Tabs Title",
+        "valueType": "string",
+        "multi": true
+      },
+      {
+        "component": "number",
+        "name": "numberOfTabs",
+        "label": "Number of Tabs",
+        "value": 1,
+        "description": "The label shown for this section in the Content Tree",
+        "validation": {
+          "numberMin": 2,
+          "numberMax": 8,
+          "customErrorMsg": "Max fields reached."
+        }
+      },
+      {
+        "component": "text",
+        "name": "dropdownTitle",
+        "label": "Dropdown Title",
+        "description": "Enter the dropdown title",
+        "valueType": "String"
+      }
+    ]
+  },
+  {
+    "id": "promo-banner",
+    "fields": [
+      {
+        "component": "select",
+        "name": "textAlignment",
+        "label": "Text Alignment",
+        "description": "Choose the text alignment within the Promo Banner component",
+        "value": "left",
+        "required": true,
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "eyebrowText",
+        "label": "Eyebrow Text",
+        "valueType": "string",
+        "description": "Enter the Eyebrow text"
+      },
+      {
+        "component": "select",
+        "name": "highlightedtextColor",
+        "label": "Highlighted Text Color",
+        "description": "Only applicable to italic font in title",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "Tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "required": true,
+        "description": "ⓘ paragraph - Display1 with 100px , ⓘ Heading2 - Display1 with 48px"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter the description"
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA"
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "description": "Enter the URL to navigate when CTA is clicked",
+        "validation": {
+          "rootPath": "/content/lilly-com-eds"
+        }
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Checkbox Group",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [
+          {
+            "name": "Exit Interstitial",
+            "value": "true"
           }
         ]
       }
     ]
   },
   {
-    "id": "navitems",
+    "id": "pull-quote",
     "fields": [
       {
-        "component": "text",
-        "name": "title",
-        "label": "Sublink Title",
+        "component": "select",
+        "name": "componentType",
+        "label": "Component Type",
+        "description": "Select layout of quote block",
+        "value": "noImage",
+        "options": [ {"name": "No Image", "value": "noImage"},{"name": "With Image","value": "withImage" } ]
+      },
+      {
+        "component": "container",
+        "name": "Image",
+        "label": "With image Field Details",
         "valueType": "string",
-        "value": ""
+        "condition": {"===": [{"var": "componentType"},"withImage"]},
+        "fields": [
+          {
+            "component": "select",
+            "name": "imagePosition",
+            "label": "Image Position",
+            "description": "Select the appropriate column for image placement",
+            "value": "left",
+            "options": [{"name": "Left","value": "left"},{"name": "Right","value": "right"}]          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "required": true,
+            "description": "Upload image for the component"
+          },
+          {
+            "component": "text",
+            "name": "imageAlt",
+            "label": "Image Alt text",
+            "description": "Pick alt text from AEM DAM with ability to override it"
+          }
+        ]
       },
       {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Sublink Link"
-      }
-    ]
-  },
-  {
-    "id": "navitem",
-    "fields": [
-      {
-        "component": "text",
-        "name": "navitem_title",
-        "label": "Sublink Item Title",
-        "valueType": "string",
-        "value": ""
+        "component": "select",
+        "name": "alignment",
+        "label": "Alignment",
+        "description": "Select alignment of of icon placed on top",
+        "condition": {"===": [{ "var": "componentType" }, "noImage"]},
+        "value": "left",
+        "options": [ {"name": "Left","value": "left"},{"name": "Center","value": "center"}
+        ]
       },
-      {
-        "component": "reference",
-        "name": "navitem_image",
-        "label": "Sublink Item Image",
-        "valueType": "string",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "navitem_imageAlt",
-        "label": "Sublink Item Image Alt"
-      },
-      {
-        "component": "aem-content",
-        "name": "navitem_link",
-        "label": "Sublink Item Link"
-      }
-    ]
-  },
-  {
-    "id": "quote",
-    "fields": [
       {
         "component": "richtext",
         "name": "quote",
-        "value": "",
         "label": "Quote",
-        "valueType": "string"
+        "valueType": "string",
+        "description": "Enter title for each card",
+        "required": true
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "author",
+        "name": "authorText",
         "label": "Author",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "social-share",
-    "fields": [
-      {
-        "component": "text",
-        "name": "facebook",
-        "value": "",
-        "label": "Facebook URL",
-        "valueType": "string",
-        "description": "Enter Facebook page URL. If left empty, will enable sharing current page."
+        "description": "Enter description for each card"
       },
       {
         "component": "text",
-        "name": "twitter",
-        "value": "",
-        "label": "Twitter URL",
         "valueType": "string",
-        "description": "Enter Twitter profile URL. If left empty, will enable sharing current page."
-      },
-      {
-        "component": "text",
-        "name": "linkedin",
-        "value": "",
-        "label": "LinkedIn URL",
-        "valueType": "string",
-        "description": "Enter LinkedIn profile URL. If left empty, will enable sharing current page."
+        "name": "authorTitle",
+        "label": "Author Title",
+        "description": "Enter Author Title"
       }
+     
     ]
   },
   {
     "id": "table",
     "fields": [
       {
-        "component": "multiselect",
-        "name": "classes",
-        "value": "",
-        "label": "Options",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Border",
-            "children": [
-              {
-                "name": "Striped",
-                "value": "striped"
-              },
-              {
-                "name": "Bordered",
-                "value": "bordered"
-              }
-            ]
-          },
-          {
-            "name": "Header",
-            "children": [
-              {
-                "name": "No Header",
-                "value": "no-header"
-              }
-            ]
-          }
-        ]
-      },
-      {
         "component": "select",
         "name": "filter",
         "label": "Columns",
+        "description": "Select Number Of Columns",
         "valueType": "string",
         "value": "table",
         "options": [
-          {
-            "name": "1 Column",
-            "value": "table"
-          },
           {
             "name": "2 Columns",
             "value": "table-2-columns"
@@ -1851,6 +1479,10 @@
           {
             "name": "5 Columns",
             "value": "table-5-columns"
+          },
+          {
+            "name": "6 Columns",
+            "value": "table-6-columns"
           }
         ]
       }
@@ -1874,13 +1506,13 @@
         "component": "richtext",
         "valueType": "string",
         "name": "column1text",
-        "label": "Column1"
+        "label": "Column1 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column2text",
-        "label": "Column2"
+        "label": "Column2 Description"
       }
     ]
   },
@@ -1891,19 +1523,19 @@
         "component": "richtext",
         "valueType": "string",
         "name": "column1text",
-        "label": "Column1"
+        "label": "Column1 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column2text",
-        "label": "Column2"
+        "label": "Column2 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column3text",
-        "label": "Column3"
+        "label": "Column3 Description"
       }
     ]
   },
@@ -1914,395 +1546,270 @@
         "component": "richtext",
         "valueType": "string",
         "name": "column1text",
-        "label": "Column1"
+        "label": "Column1 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column2text",
-        "label": "Column2"
+        "label": "Column2 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column3text",
-        "label": "Column3"
+        "label": "Column3 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column4text",
-        "label": "Column4"
+        "label": "Column4 Description"
       }
     ]
   },
   {
-    "id": "teaser",
+    "id": "table-col-5",
     "fields": [
       {
-        "component": "reference",
+        "component": "richtext",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "column1text",
+        "label": "Column1 Description"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
+        "name": "column2text",
+        "label": "Column2 Description"
       },
       {
-        "component": "text",
-        "name": "teaserText_subtitle",
-        "value": "",
-        "label": "Teaser Subtitle",
-        "valueType": "string"
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column3text",
+        "label": "Column3 Description"
       },
       {
-        "component": "text",
-        "name": "teaserText_title",
-        "label": "Teaser Title",
-        "value": ""
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column4text",
+        "label": "Column4 Description"
       },
       {
-        "component": "select",
-        "name": "teaserText_titleType",
-        "label": "Title Type",
-        "options": [
-          {
-            "name": "h1",
-            "value": "h1"
-          },
-          {
-            "name": "h2",
-            "value": "h2"
-          },
-          {
-            "name": "h3",
-            "value": "h3"
-          },
-          {
-            "name": "h4",
-            "value": "h4"
-          },
-          {
-            "name": "h5",
-            "value": "h5"
-          },
-          {
-            "name": "h6",
-            "value": "h6"
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "name": "teaserText_description",
-        "label": "Teaser Description",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "name": "teaserText_cta1",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "teaserText_cta1Text",
-        "label": "Text"
-      },
-      {
-        "component": "select",
-        "name": "teaserText_cta1Type",
-        "label": "Type",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
-      },
-      {
-        "component": "aem-content",
-        "name": "teaserText_cta2",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "teaserText_cta2Text",
-        "label": "Text"
-      },
-      {
-        "component": "select",
-        "name": "teaserText_cta2Type",
-        "label": "Type",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "tertiary",
-            "value": "tertiary"
-          }
-        ]
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column5text",
+        "label": "Column5 Description"
       }
     ]
   },
   {
-    "id": "test",
+    "id": "table-col-6",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1 Description"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2 Description"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column3text",
+        "label": "Column3 Description"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column4text",
+        "label": "Column4 Description"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column5text",
+        "label": "Column5 Description"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column6text",
+        "label": "Column6 Description"
+      }
+    ]
+  },
+  {
+    "id": "vertical-numeric-tile",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "id",
-        "label": "ID",
-        "value": ""
+        "name": "vertical-numeric-tile-title",
+        "label": "Title",
+        "description": "Enter the title",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "vertical-numeric-tile-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "red-text",
+        "label": "Red Text",
+        "description": "Enter the numeric value to be displayed on the tile.",
+        "required": true,
+        "valueType": "string",
+        "validation": {
+          "minLength": 1,
+          "maxLength": 4,
+          "customErrorMsg": "Maximum characters length limit should not be more than 4"
+      }
       },
       {
         "component": "richtext",
-        "valueType": "string",
-        "name": "headline",
-        "label": "Headline Text",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "region",
-        "label": "Region"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "portalId",
-        "label": "Portal Id"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "formId",
-        "label": "Form Id"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
         "name": "description",
-        "label": "Subtitle Text",
-        "value": ""
+        "label": "Description",
+        "description": "Enter the description"
+      }
+    ]
+  },
+  {
+    "id": "columncontainer",
+    "fields": [
+      {
+        "component": "select",
+        "name": "componentlayout",
+        "required": true,
+        "description": "Defines the Layout of Column container",
+        "value": "twocolumns",
+        "label": "Component Layout",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "2 Columns",
+            "value": "twocolumns"
+          },
+          {
+             "name": "3 Columns",
+            "value": "threecolumns"
+          },
+          {
+             "name": "4 Columns",
+            "value": "fourcolumns"
+          }
+        ]
       },
       {
         "component": "select",
-        "name": "classes",
-        "value": "",
+        "name": "twocolumnoptions",
+        "description": "Select the option for 2 columns",
+        "value": "50",
+        "condition": { "===": [{"var" : "componentlayout"}, "twocolumns"] },
+        "required": true,
+        "label": "Two Column Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "50% - 50%",
+            "value": "50"
+          },
+          {
+             "name": "25% - 75%",
+            "value": "25-75"
+          },
+          {
+             "name": "75% - 25%",
+            "value": "75-25"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "threecolumnoptions",
+        "description": "Select the option for 3 columns.",
+        "value": "33",
+        "required": true,
+        "condition": { "===": [{"var" : "componentlayout"}, "threecolumns"] },
+        "label": "Three Column Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "33% - 33% - 33%",
+            "value": "33"
+          },
+          {
+             "name": "25% - 25% - 50%",
+            "value": "25-25-50"
+          },
+          {
+             "name": "25% - 50% - 25%",
+            "value": "25-50-25"
+          },
+          {
+             "name": "50% - 25% - 25%",
+            "value": "50-25-25"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "fourcolumnoptions",
+        "description": "Select the option for 4 columns.",
+        "condition": { "===": [{"var" : "componentlayout"}, "fourcolumns"] },
+        "value": "25",
+        "required": true,
+        "label": "Four Column Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "25% - 25% - 25% - 25%",
+            "value": "25"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Apply Offset",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to set offset for Column container",
+        "options": [
+          { "name": "Apply Offset", "value": "true" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "bgcolor",
+        "description": "Select the option for Background Color",
+        "value": "none",
         "label": "Background Color",
         "valueType": "string",
         "options": [
           {
-            "name": "Dark",
-            "value": "bg-dark"
-          },
-          {
-            "name": "Light",
-            "value": "bg-light"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "margin-top",
-        "value": "",
-        "label": "Margin Top",
-        "valueType": "string",
-        "options": [
-          {
             "name": "None",
-            "value": ""
+            "value": "none"
           },
           {
-            "name": "3XS - Triple Extra Small",
-            "value": "margin-top-3xs"
+             "name": "Primary",
+            "value": "primary"
           },
           {
-            "name": "2XS - Double Extra Small",
-            "value": "margin-top-2xs"
+             "name": "Secondary",
+            "value": "secondary"
           },
           {
-            "name": "XS - Extra Small",
-            "value": "margin-top-xs"
-          },
-          {
-            "name": "S - Small",
-            "value": "margin-top-s"
-          },
-          {
-            "name": "M - Medium",
-            "value": "margin-top-m"
-          },
-          {
-            "name": "L - Large",
-            "value": "margin-top-l"
-          },
-          {
-            "name": "XL - Extra Large",
-            "value": "margin-top-xl"
-          },
-          {
-            "name": "2XL - Double Extra large",
-            "value": "margin-top-2xl"
-          },
-          {
-            "name": "3XL - Triple Extra large",
-            "value": "margin-top-3xl"
+             "name": "Tertiary",
+            "value": "tertiary"
           }
         ]
-      },
-      {
-        "component": "select",
-        "name": "margin-bottom",
-        "value": "",
-        "label": "Margin Bottom",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "None",
-            "value": ""
-          },
-          {
-            "name": "3XS - Triple Extra Small",
-            "value": "margin-bottom-3xs"
-          },
-          {
-            "name": "2XS - Double Extra Small",
-            "value": "margin-bottom-2xs"
-          },
-          {
-            "name": "XS - Extra Small",
-            "value": "margin-bottom-xs"
-          },
-          {
-            "name": "S - Small",
-            "value": "margin-bottom-s"
-          },
-          {
-            "name": "M - Medium",
-            "value": "margin-bottom-m"
-          },
-          {
-            "name": "L - Large",
-            "value": "margin-bottom-l"
-          },
-          {
-            "name": "XL - Extra Large",
-            "value": "margin-bottom-xl"
-          },
-          {
-            "name": "2XL - Double Extra large",
-            "value": "margin-bottom-2xl"
-          },
-          {
-            "name": "3XL - Triple Extra large",
-            "value": "margin-bottom-3xl"
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "inner-block-marker",
-        "label": "REQUIRED: Initialising the js of a nested component",
-        "readOnly": true,
-        "hidden": true,
-        "value": "inner-block-hubspot-form"
-      }
-    ]
-  },
-  {
-    "id": "video",
-    "fields": [
-      {
-        "component": "custom-asset-namespace:custom-asset",
-        "name": "video",
-        "label": "Video",
-        "configUrl": "/content/dam/aem-xwalk/video-selector.json",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "video_description",
-        "label": "Video Description",
-        "valueType": "string"
-      },
-      {
-        "component": "select",
-        "name": "customAsset_imageSmartCrop",
-        "label": "Image Version",
-        "options": [
-          {
-            "name": "11square",
-            "value": "11square"
-          },
-          {
-            "name": "169banner",
-            "value": "169banner"
-          },
-          {
-            "name": "54vert",
-            "value": "54vert"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "wysiwyg-table",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "value": "",
-        "label": "Table Style",
-        "options": [
-          {
-            "name": "Table Content Style",
-            "children": [
-              {
-                "name": "No Header",
-                "value": "no-header"
-              }
-            ]
-          }
-        ],
-        "valueType": "string[]"
-      },
-      {
-        "component": "richtext",
-        "label": "WYSIWYG Table Content",
-        "name": "content",
-        "value": "",
-        "valueType": "string"
       }
     ]
   }

@@ -1,213 +1,137 @@
 [
   {
     "id": "main",
-    "components": [
-      "section",
-      "tabs",
-      "marginal",
-      "nav"
-    ]
+    "components": ["section", "tabs-section","columncontainer"]
   },
   {
     "id": "section",
     "components": [
+      "spacer-and-divider",
       "text",
       "image",
       "button",
       "title",
       "hero",
+      "lcdp",
+      "search",
       "cards",
       "columns",
       "fragment",
+      "relatedlinks",
+			"icon-tile",
+      "enhanced-related-links",
+      "text-component",
+      "two-column-with-image",
+      "tabs",
       "accordion",
-      "teaser",
-      "carousel",
-      "articlefeed",
-      "breadcrumbs",
-      "quote",
-      "download",
-      "events",
-      "dynamic-media-asset",
-      "social-share",
-      "embed",
-      "list",
-      "wysiwyg-table",
-      "customtable",
-      "video",
+      "additional-links",
+      "promo-banner",
+      "pull-quote",
       "table",
-      "form",
-      "custom-asset",
-      "landing-page-header",
-      "landing-page-logo-overview",
-      "test"
+      "standard-image",
+      "table-2-columns",
+      "table-3-columns",
+      "table-4-columns",
+      "table-5-columns",
+      "table-6-columns",
+      "vertical-numeric-tile"
     ]
-  },
-  {
-    "id": "nav",
-    "components": [
-      "title",
-      "text",
-      "image",
-      "navitems"
-    ]
-  },
-  {
-    "id": "accordion",
-    "components": [
-      "accordionitem"
-    ]
-  },
-  {
-    "id": "articlefeed"
   },
   {
     "id": "cards",
-    "components": [
-      "card",
-      "hubspot-form",
-      "test"
-    ]
-  },
-  {
-    "id": "carousel",
-    "components": [
-      "carouselitem"
-    ]
-  },
-  {
-    "id": "columns",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "accordionitem"
-    ]
-  },
-  {
-    "id": "customtable",
-    "components": [
-      "customtablecolumn"
-    ]
-  },
-  {
-    "id": "customtablecolumn",
-    "components": [
-      "text"
-    ]
-  },
-  {
-    "id": "events",
-    "components": [
-      "event"
-    ]
+    "components": ["card"]
   },
   {
     "id": "hero",
-    "components": [],
-    "rte": {
-      "format": [
-        "bold",
-        "italic"
-      ],
-      "alignment": [],
-      "indentation": [],
-      "sr_script": [
-        "superscript",
-        "subscript"
-      ],
-      "list": [
-        "bullist",
-        "numlist"
-      ],
-      "insert": [
-        "link"
-      ],
-      "advanced": [],
-      "extensions": [],
-      "editor": [
-        "removeformat"
-      ],
-      "blocks": [
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6",
-        "button",
-        "custom1","customm2"
-      ]
-    }
+    "components": ["icongrid-tile"]
   },
   {
-    "id": "hubspot-form",
-    "components": []
+    "id": "columns",
+    "components": ["column"]
   },
   {
-    "id": "landing-page-header",
-    "components": [],
-    "rte": {
-      "format": [
-        "bold",
-        "italic"
-      ],
-      "alignment": [],
-      "indentation": [],
-      "sr_script": [],
-      "list": [
-        "bullist"
-      ],
-      "insert": [],
-      "advanced": [],
-      "extensions": [],
-      "editor": [],
-      "blocks": []
-    }
+    "id": "lcdp",
+    "components": ["lcdp"]
   },
   {
-    "id": "landing-page-logo-overview",
+    "id": "search",
+    "components": ["search"]
+  },
+  {
+    "id": "column",
+    "components": ["text", "image", "button", "title"]
+  },
+	{
+		"id": "icon-tile-grid",
     "components": [
-      "landing-page-logo-item"
+      "tile"
     ]
+	},
+  {
+    "id": "relatedlinks",
+    "components": ["relatedlink"]
   },
   {
-    "id": "navitems",
-    "components": [
-      "navitem"
-    ]
+    "id": "enhanced-related-links",
+    "components": ["enhanced-related-link"]
+  },
+  {
+    "id": "tabs-section",
+    "components": ["tabs", "image", "text-component"]
+  },
+  {
+    "id": "tabs",
+    "components": ["text-component"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
+  },
+  {
+    "id": "additional-links",
+    "components": ["additional-link"]
   },
   {
     "id": "table",
-    "components": [
-      "table-row"
-    ]
+    "components": ["table-row"]
   },
   {
     "id": "table-2-columns",
-    "components": [
-      "table-col-2"
-    ]
+    "components": ["table-col-2"]
   },
   {
     "id": "table-3-columns",
-    "components": [
-      "table-col-3"
-    ]
+    "components": ["table-col-3"]
   },
   {
     "id": "table-4-columns",
-    "components": [
-      "table-col-4"
-    ]
+    "components": ["table-col-4"]
   },
   {
-    "id": "hubspot-form",
-    "components": []
+    "id": "table-5-columns",
+    "components": ["table-col-5"]
+  },
+  {
+    "id": "table-6-columns",
+    "components": ["table-col-6"]
+  },
+  {
+    "id": "vertical-numeric-tile",
+    "components": ["vertical-numeric-tile-item"]
+  },
+  {
+    "id": "columncontainer",
+    "components": [
+      "column-break",
+      "accordion",
+      "additional-links",
+      "cards",
+      "text",
+      "image",
+      "title",
+      "relatedlinks",
+      "enhanced-related-links",
+      "text-component"
+    ]
   }
 ]
