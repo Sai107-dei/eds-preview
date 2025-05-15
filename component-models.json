@@ -1265,34 +1265,113 @@
   {
     "id": "promo-banner",
     "fields": [
-        {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "description": "Upload Image for the section content"
+      {
+        "component": "select",
+        "name": "textAlignment",
+        "label": "Text Alignment",
+        "description": "Choose the text alignment within the Promo Banner component",
+        "value": "left",
+        "required": true,
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
       },
       {
         "component": "text",
-        "name": "imageAlt",
-        "label": "Image Alt text",
+        "name": "eyebrowText",
+        "label": "Eyebrow Text",
         "valueType": "string",
-        "description": "Pick alt text from AEM DAM with ability to override it"
+        "description": "Enter the Eyebrow text"
       },
-        {
+      {
         "component": "select",
-        "name": "Image size",
-        "label": "Image",
-        "description": "Full bleed will go to the edge of the screen.",
-        "value": "standard",
+        "name": "highlightedtextColor",
+        "label": "Highlighted Text Color",
+        "description": "Only applicable to italic font in title",
         "options": [
           {
-            "name": "Full Bleed",
-            "value": "full bleed"
+            "name": "Primary",
+            "value": "primary"
           },
           {
-            "name": "Standard",
-            "value": "standard"
+            "name": "Secondary",
+            "value": "secondary"
+          },
+          {
+            "name": "Tertiary",
+            "value": "tertiary"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "required": true,
+        "description": "ⓘ paragraph - Display1 with 100px , ⓘ Heading2 - Display1 with 48px"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter the description"
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA"
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "description": "Enter the URL to navigate when CTA is clicked",
+        "validation": {
+          "rootPath": "/content/lilly-com-eds"
+        }
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Checkbox Group",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [
+          {
+            "name": "Exit Interstitial",
+            "value": "true"
           }
         ]
       }
@@ -1589,8 +1668,8 @@
         "required": true,
        "valueType": "string",
         "validation": {
-        "regExp": "^[0-9]+$",
-        "customErrorMsg": "Error not matched"
+        "regExp": "^[a-zA-Z0-9 ]*$",
+        "customErrorMsg": "Error not"
       }
         
       },
