@@ -1667,7 +1667,7 @@
         "description": "Enter the numeric value to be displayed on the tile.",
         "required": true,
         "valueType": "number",
-        "value": 01,
+        "value": "01",
         "validation": {
           "numberMin": 0,
           "numberMax": 9999,
