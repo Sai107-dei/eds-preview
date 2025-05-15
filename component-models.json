@@ -45,7 +45,7 @@
     ]
   },
   {
-    "id": "image",
+    "id": "standard-image",
     "fields": [
       {
         "component": "reference",
