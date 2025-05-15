@@ -23,13 +23,33 @@
       }
     ]
   },
-
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false,
+        "required": true,
+        "description": "Upload Image from DAM"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt text",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true
+      }
+    ]
+  },
   {
     "id": "standard-image",
     "fields": [
       {
         "component": "reference",
-        "name": "image",
+        "name": "standard-image",
         "label": "Image",
         "multi": false,
         "required": true,
