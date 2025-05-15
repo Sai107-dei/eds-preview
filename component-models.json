@@ -1661,12 +1661,18 @@
     "id": "vertical-numeric-tile-item",
     "fields": [
       {
-        "component": "number",
+        "component": "text",
         "name": "red-text",
         "label": "Red Text",
         "description": "Enter the numeric value to be displayed on the tile.",
         "required": true,
-        "valueType": "number"
+       "valueType": "string",
+        "validation": {
+        "minLength": 1955,
+        "maxLength": 1985,
+        "regExp": "^[0-9]+$",
+        "customErrorMsg": "Why don't you make like a tree and get outta here?"
+      }
         
       },
       {
