@@ -1666,11 +1666,8 @@
         "label": "Red Text",
         "description": "Enter the numeric value to be displayed on the tile.",
         "required": true,
-        "valueType": "number",
-        "validation": {
-          "numberMax": 9999,
-          "customErrorMsg": "Maximum characters length limit should not be more than 4"
-      }
+        "valueType": "number"
+        
       },
       {
         "component": "richtext",
