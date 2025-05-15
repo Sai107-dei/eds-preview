@@ -1668,8 +1668,6 @@
         "required": true,
        "valueType": "string",
         "validation": {
-        "minLength": 1955,
-        "maxLength": 1985,
         "regExp": "^[0-9]+$",
         "customErrorMsg": "Why don't you make like a tree and get outta here?"
       }
