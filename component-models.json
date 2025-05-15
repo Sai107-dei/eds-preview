@@ -39,7 +39,7 @@
       },
       {
         "component": "text",
-        "name": "imageTile",
+        "name": "imageTitle",
         "label": "Image Title"
       },
       {
