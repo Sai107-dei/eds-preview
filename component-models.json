@@ -1649,7 +1649,7 @@
     "fields": [
       {
         "component": "text",
-        "valueType": "string",
+        "valueType": "number",
         "name": "vertical-numeric-tile-title",
         "label": "Title",
         "description": "Enter the title",
