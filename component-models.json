@@ -1668,8 +1668,8 @@
         "required": true,
         "valueType": "number",
         "validation": {
-          "minLength": 1,
-          "maxLength": 4,
+          "numberMin": 0,
+          "numberMax": 9999,
           "customErrorMsg": "Maximum characters length limit should not be more than 4"
       }
       },
