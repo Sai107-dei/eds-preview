@@ -1668,7 +1668,7 @@
         "required": true,
        "valueType": "string",
         "validation": {
-        "regExp": "^[a-zA-Z0-9 ]*$",
+        "regExp": "^[a-zA-Z0-9 ]+$",
         "customErrorMsg": "Error not"
       }
         
