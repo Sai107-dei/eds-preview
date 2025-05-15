@@ -127,7 +127,8 @@
         "numlist"
       ],
       "insert": [
-        "link"
+        "link",
+        "openlink"
       ],
       "advanced": [],
       "extensions": [],
