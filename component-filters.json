@@ -126,8 +126,9 @@
         "bullist",
         "numlist"
       ],
-      "insert": ["link", "openlink", "unlink", "media", "anchor", "charmap", "insertdatetime", "linktarget"],
-
+      "insert": [
+        "link"
+      ],
       "advanced": [],
       "extensions": [],
       "editor": [
@@ -139,7 +140,8 @@
         "h4",
         "h5",
         "h6",
-        "button"
+        "button",
+        "custom1","customm2"
       ]
     }
   },
