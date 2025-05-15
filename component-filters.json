@@ -126,10 +126,8 @@
         "bullist",
         "numlist"
       ],
-      "insert": [
-        "link",
-        "openlink"
-      ],
+      "insert": ["link", "openlink", "unlink", "media", "anchor", "charmap", "insertdatetime", "linktarget"],
+
       "advanced": [],
       "extensions": [],
       "editor": [
