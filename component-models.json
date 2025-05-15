@@ -41,6 +41,12 @@
         "label": "Image Alt text",
         "description": "Pick alt text from AEM DAM with ability to override it",
         "required": true
+      },
+      {
+        "component": "text",
+        "name": "lcdp",
+        "label": "LCDP",
+        "description": "Clinical Development Pipeline"
       }
     ]
   },
@@ -765,26 +771,8 @@
         "validation": {
               "rootPath": "content/lilly-com-eds"
           },
-          "condition": {
-            "!": {
-            "or": [
-              {
-                "===": [
-                  {
-                    "var": "linkHeadline"
-                  },
-                  null
-                ]
-              },
-              {
-                "===": [
-                  {
-                    "var": "linkHeadline"
-                  },
-                  ""
-                ]
-              }
-            ]
+          "condition": {"!": {"or": [{ "===": [ { "var": "linkHeadline"},null ]},
+              {"===": [{"var": "linkHeadline" }, ""] }]
           }
         }
       },
