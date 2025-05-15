@@ -1273,7 +1273,7 @@
         "description": "Upload Image for the section content"
       },
       {
-        "component": "image",
+        "component": "text",
         "name": "imageAlt",
         "label": "Image Alt text",
         "valueType": "string",
