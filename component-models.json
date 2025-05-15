@@ -1666,7 +1666,7 @@
         "label": "Red Text",
         "description": "Enter the numeric value to be displayed on the tile.",
         "required": true,
-        "valueType": "string",
+        "valueType": "number",
         "validation": {
           "minLength": 1,
           "maxLength": 4,
