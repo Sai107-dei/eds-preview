@@ -28,7 +28,6 @@
       "promo-banner",
       "pull-quote",
       "table",
-      "standard-image",
       "table-2-columns",
       "table-3-columns",
       "table-4-columns",
@@ -77,7 +76,7 @@
   },
   {
     "id": "tabs-section",
-    "components": ["tabs", "image", "text-component"]
+    "components": ["tabs", "image", "text-component","standard-image"]
   },
   {
     "id": "tabs",
