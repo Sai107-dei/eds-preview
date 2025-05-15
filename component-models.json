@@ -1669,7 +1669,7 @@
        "valueType": "string",
         "validation": {
         "regExp": "^[0-9]+$",
-        "customErrorMsg": "Why don't you make like a tree and get outta here?"
+        "customErrorMsg": "Error not matched"
       }
         
       },
