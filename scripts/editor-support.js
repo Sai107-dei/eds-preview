@@ -13,7 +13,7 @@ import { decorateMain } from './scripts.js';
 function addMetaTag() {
   const meta = document.createElement('meta');
   meta.name = "urn:adobe:aue:config:disable";
-  meta.content = "delete";
+  meta.content = "Delete";
   document.head.appendChild(meta);
  
 }
