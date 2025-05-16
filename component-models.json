@@ -1668,9 +1668,10 @@
         "required": true,
        "valueType": "number",
         "validation": {
-        "regExp": "^[a-zA-Z0-9\\s]+$",
-        "customErrorMsg": "Error not"
-      }
+          "minLength": 8,
+          "regExp": "^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\\d{4}$",
+          "customErrorMsg": "Enter a valid date in the format MM/DD/YYYY"
+        }
         
       },
       {
