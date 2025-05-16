@@ -1661,12 +1661,12 @@
     "id": "vertical-numeric-tile-item",
     "fields": [
       {
-        "component": "text",
+        "component": "number",
         "name": "red-text",
         "label": "Red Text",
         "description": "Enter the numeric value to be displayed on the tile.",
         "required": true,
-       "valueType": "string",
+       "valueType": "number",
         "validation": {
         "regExp": "^[a-zA-Z0-9\\s]+$",
         "customErrorMsg": "Error not"
