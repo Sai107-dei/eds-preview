@@ -351,8 +351,8 @@
                   "model": "accordion",
                   "filter": "accordion",
                   "style": "first",
+                  "condition": { "===": [{"var" : "style"}, "first"] },
                   "item0": {
-                    "condition": { "===": [{"var" : "style"}, "first"] },
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Accordion-Item",
                     "model": "accordion-item"
