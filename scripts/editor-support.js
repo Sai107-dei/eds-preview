@@ -17,7 +17,6 @@ function addMetaTag() {
   document.head.appendChild(meta);
  
 }
-
 addMetaTag();
 
 async function applyChanges(event) {
