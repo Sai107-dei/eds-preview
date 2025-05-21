@@ -1932,7 +1932,7 @@
         "description": "Enter the LinkedIn profile URL",
         "required": true,
         "valueType": "string",
-       "condition": {"in": ["xprofileValue", { "var": "xProfile" } ]}
+       "condition": {"in": ["linkedInProfileValue", { "var": "linkedInProfile" } ]}
       },
       {
         "component": "text",
