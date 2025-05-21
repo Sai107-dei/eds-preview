@@ -1886,7 +1886,7 @@
         "name": "instagramProfile",
         "valueType": "boolean",
         "description": "Select if the Executive’s Instagram profile is available",
-        "options": [{ "name": "InstagramProfile", "value": "true" }]
+        "options": [{ "name": "InstagramProfile", "value": "instagramProfile" }]
       },
       {
         "component": "aem-content",
@@ -1902,7 +1902,8 @@
         "label": "X Profile",
         "name": "xProfile",
         "valueType": "boolean",
-        "description": "Select if the Executive’s X profile is available"
+        "description": "Select if the Executive’s X profile is available",
+        "options": [{ "name": "XProfile", "value": "true" }]
       },
       {
         "component": "aem-content",
@@ -1911,7 +1912,7 @@
         "label": "X URL",
         "valueType": "string",
         "required": true,
-        "condition": { "===": [ { "var": "xProfile"}, true ] },
+        "condition": {"in": ["InstagramProfile", { "var": "instagramProfile" } ]},
         "validation": {
           "rootPath": "/content"
         }
