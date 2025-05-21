@@ -1899,58 +1899,7 @@
           "valueType": "string",
           "condition": { "===": [ { "var": "checkbox"}, "option1" ] }
         },
-      {
-        "component": "checkbox-group",
-        "label": "Instagram Profile",
-        "name": "instagramProfile",
-        "valueType": "string",
-        "description": "Select if the Executive’s Instagram profile is available"
-      },
-      {
-        "component": "aem-content",
-        "name": "instagramURL",
-        "label": "Instagram URL",
-        "description": "Enter the Instagram profile URL",
-        "required": true,
-        "valueType": "string",
-        "condition": { "===": [ { "var": "instagramProfile"}, "true" ] }
-      },
-      {
-        "component": "checkbox-group",
-        "label": "X Profile",
-        "name": "xProfile",
-        "valueType": "boolean",
-        "description": "Select if the Executive’s X profile is available"
-      },
-      {
-        "component": "aem-content",
-        "name": "xURL",
-        "description": "Enter the X profile URL",
-        "label": "X URL",
-        "valueType": "string",
-        "required": true,
-        "condition": { "===": [ { "var": "xProfile"}, true ] },
-        "validation": {
-          "rootPath": "/content"
-        }
-      },
-      
-      {
-        "component": "checkbox-group",
-        "label": "LinkedIn Profile",
-        "name": "linkedInProfile",
-        "valueType": "boolean",
-        "description": "Select if the Executive’s LinkedIn profile is available"
-      },
-      {
-        "component": "aem-content",
-        "name": "linkedInURL",
-        "label": "LinkedIn URL",
-        "description": "Enter the LinkedIn profile URL",
-        "required": true,
-        "valueType": "string",
-        "condition": { "===": [ { "var": "linkedInProfile"}, true ] }
-      },
+   
       {
         "component": "text",
         "name": "ctaLabel",
