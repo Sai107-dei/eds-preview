@@ -1898,11 +1898,12 @@
         "condition": { "===": [ { "var": "instagramProfile"}, true ] }
       },
       {
-        "component": "boolean",
+        "component": "checkbox-group",
         "label": "X Profile",
         "name": "xProfile",
         "valueType": "boolean",
-        "description": "Select if the Executive’s X profile is available"
+        "description": "Select if the Executive’s X profile is available",
+        "options": [{"name": "X Profile","value": true }]
       },
       {
         "component": "aem-content",
@@ -1918,11 +1919,12 @@
       },
       
       {
-        "component": "boolean",
+        "component": "checkbox-group",
         "label": "LinkedIn Profile",
         "name": "linkedInProfile",
         "valueType": "boolean",
-        "description": "Select if the Executive’s LinkedIn profile is available"
+        "description": "Select if the Executive’s LinkedIn profile is available",
+        "options": [{"name": "X Profile","value": true }]
       },
       {
         "component": "aem-content",
