@@ -1881,7 +1881,7 @@
         "required": true
       },
       {
-        "component": "checkbox-group",
+        "component": "boolean",
         "label": "Instagram Profile",
         "name": "instagramProfile",
         "valueType": "boolean",
@@ -1897,7 +1897,7 @@
         "condition": { "===": [ { "var": "instagramProfile"}, true ] }
       },
       {
-        "component": "checkbox-group",
+        "component": "boolean",
         "label": "X Profile",
         "name": "xProfile",
         "valueType": "boolean",
@@ -1917,7 +1917,7 @@
       },
       
       {
-        "component": "checkbox-group",
+        "component": "boolean",
         "label": "LinkedIn Profile",
         "name": "linkedInProfile",
         "valueType": "boolean",
