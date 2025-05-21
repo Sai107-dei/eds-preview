@@ -1898,7 +1898,7 @@
         "condition": {"in": ["instagramProfileValue", { "var": "instagramProfile" } ]}
       },
       {
-        "component": "boolean",
+        "component": "checkbox-group",
         "label": "X Profile",
         "name": "xProfile",
         "valueType": "boolean",
@@ -1918,7 +1918,7 @@
         }
       },
       {
-        "component": "boolean",
+        "component": "checkbox-group",
         "label": "LinkedIn Profile",
         "name": "linkedInProfile",
         "valueType": "boolean",
