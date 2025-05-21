@@ -1880,25 +1880,26 @@
         "description": "Enter the Executive’s Designation",
         "required": true
       },
-        {
-          "component": "checkbox-group",
-          "label": "Checkbox Group",
-          "name": "checkbox",
-          "valueType": "string[]",
-          "options": [
-            { "name": "Option1", "value": "option1" },
-            { "name": "Option 2", "value": "option2" }
-          ]
-        },
-        {
-          "component": "aem-content",
-          "name": "some",
-          "label": "some URL",
-          "description": "Enter the Instagram profile URL",
-          "required": true,
-          "valueType": "string[]",
-          "condition": { "===": [ { "var": "Option1"}, "option1" ] }
-        },
+      {
+        "component": "checkbox-group",
+        "label": "Checkbox Group",
+        "name": "checkbox",
+        "valueType": "string[]",
+        "options": [
+          { "name": "Option1", "value": "option1" },
+          { "name": "Option 2", "value": "option2" }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "some",
+        "label": "some URL",
+        "description": "Enter the Instagram profile URL",
+        "required": true,
+        "valueType": "string",
+        "condition": { "===": [ { "var": "checkbox" }, "option1" ] }
+      }
+,      
    
       {
         "component": "text",
