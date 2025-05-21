@@ -1880,7 +1880,6 @@
         "description": "Enter the Executive’s Designation",
         "required": true
       },
-      [
         {
           "component": "checkbox-group",
           "label": "Instagram Profile",
@@ -1910,7 +1909,6 @@
             ]
           }
         }
-      ]
 ,      
       {
         "component": "checkbox-group",
