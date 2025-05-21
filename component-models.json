@@ -1945,8 +1945,7 @@
         "component": "aem-content",
         "name": "executiveBioFile ",
         "label": "Executive Bio File ",
-        "description": "Upload link to the bio file",
-        "accept": ["application/pdf"]
+        "description": "Upload link to the bio file"
       }
     ]
   },
