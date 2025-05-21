@@ -1904,25 +1904,17 @@
       },
       {
         "component": "aem-content",
-        "name": "reference",
+        "name": "xURL",
         "description": "Enter the URL to navigate when Quick Link is clicked",
-        "label": "Link URL",
+        "label": "Link URL123",
         "valueType": "string",
         "required": true,
         "condition": { "===": [ { "var": "xProfile"}, true ] },
         "validation": {
-          "rootPath": "/content/lilly-com-eds"
+          "rootPath": "/content"
         }
       },
-      {
-        "component": "aem-content",
-        "name": "xURL",
-        "label": "X URL",
-        "description": "Enter the X profile URL",
-        "required": true,
-        "condition": { "===": [ { "var": "xProfile"}, true ] }
-
-      },
+      
       {
         "component": "boolean",
         "label": "LinkedIn Profile",
