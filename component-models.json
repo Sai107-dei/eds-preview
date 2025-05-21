@@ -1885,7 +1885,12 @@
         "label": "Instagram Profile",
         "name": "instagramProfile",
         "valueType": "string",
-        "description": "Select if the Executive’s Instagram profile is available"
+        "description": "Select if the Executive’s Instagram profile is available",
+        "options": [
+          {
+            "name": "Apply Offset",
+            "value": "true"
+          }]
       },
       {
         "component": "aem-content",
