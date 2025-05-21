@@ -1896,7 +1896,7 @@
           "label": "some URL",
           "description": "Enter the Instagram profile URL",
           "required": true,
-          "valueType": "string",
+          "valueType": "string[]",
           "condition": { "===": [ { "var": "checkbox"}, "option1" ] }
         },
    
