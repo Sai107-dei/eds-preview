@@ -1881,17 +1881,6 @@
         "required": true
       },
       {
-        "component": "aem-content",
-        "name": "reference",
-        "description": "Enter the URL to navigate when Quick Link is clicked",
-        "label": "Link URL",
-        "valueType": "string",
-        "required": true,
-        "validation": {
-          "rootPath": "/content/lilly-com-eds"
-        }
-      },
-      {
         "component": "boolean",
         "label": "Instagram Profile",
         "name": "instagramProfile",
@@ -1912,6 +1901,18 @@
         "name": "xProfile",
         "valueType": "boolean",
         "description": "Select if the Executive’s X profile is available"
+      },
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "description": "Enter the URL to navigate when Quick Link is clicked",
+        "label": "Link URL",
+        "valueType": "string",
+        "required": true,
+        "condition": { "===": [ { "var": "xProfile"}, true ] },
+        "validation": {
+          "rootPath": "/content/lilly-com-eds"
+        }
       },
       {
         "component": "aem-content",
