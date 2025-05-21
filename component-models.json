@@ -1946,28 +1946,7 @@
         "name": "executiveBioFile ",
         "label": "Executive Bio File ",
         "description": "Upload link to the bio file",
-        "condition": {
-          "!": {
-            "or": [
-              {
-                "===": [
-                  {
-                    "var": "ctaLabel"
-                  },
-                  null
-                ]
-              },
-              {
-                "===": [
-                  {
-                    "var": "ctaLabel"
-                  },
-                  ""
-                ]
-              }
-            ]
-          }
-        },
+        "condition": {"!": { "or": [ { "===": [  {  "var": "ctaLabel" }, null ]},{"===": [{ "var": "ctaLabel"},""]}]} },
         "validation": {
           "rootPath": "/content"
         }
