@@ -1895,7 +1895,7 @@
         "description": "Enter the Instagram profile URL",
         "required": true,
         "valueType": "string",
-        "condition": { "===": [ { "var": "instagramProfile"}, true ] }
+        "condition": { "===": [ { "var": "InstagramProfile"}, true ] }
       },
       {
         "component": "checkbox-group",
