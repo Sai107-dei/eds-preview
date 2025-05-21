@@ -1944,6 +1944,7 @@
         "name": "executiveBioFile ",
         "label": "Executive Bio File ",
         "description": "Upload link to the bio file",
+        "condition": {"!": { "or": [ {"===": [ {"var": "linkHeadline"},null]},{"===": [{"var": "linkHeadline"},""]}]} },
         "validation": {
           "rootPath": "/content"
         }
