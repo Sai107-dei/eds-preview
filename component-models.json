@@ -1881,7 +1881,7 @@
         "required": true
       },
       {
-        "component": "boolean",
+        "component": "checkbox-group",
         "label": "Instagram Profile",
         "name": "instagramProfile",
         "valueType": "boolean",
@@ -1893,10 +1893,11 @@
         "label": "Instagram URL",
         "description": "Enter the Instagram profile URL",
         "required": true,
-        "condition": { "===": [ { "var": "instagramProfile"},"true" ] }
+        "valueType": "string",
+        "condition": { "===": [ { "var": "instagramProfile"}, true ] }
       },
       {
-        "component": "boolean",
+        "component": "checkbox-group",
         "label": "X Profile",
         "name": "xProfile",
         "valueType": "boolean",
@@ -1905,14 +1906,18 @@
       {
         "component": "aem-content",
         "name": "xURL",
-        "label": "X URL",
         "description": "Enter the X profile URL",
+        "label": "X URL",
+        "valueType": "string",
         "required": true,
-        "condition": { "===": [ { "var": "xProfile"},"true" ] }
-
+        "condition": { "===": [ { "var": "xProfile"}, true ] },
+        "validation": {
+          "rootPath": "/content"
+        }
       },
+      
       {
-        "component": "boolean",
+        "component": "checkbox-group",
         "label": "LinkedIn Profile",
         "name": "linkedInProfile",
         "valueType": "boolean",
@@ -1924,7 +1929,8 @@
         "label": "LinkedIn URL",
         "description": "Enter the LinkedIn profile URL",
         "required": true,
-        "condition": { "===": [ { "var": "linkedInProfile"},"true" ] }
+        "valueType": "string",
+        "condition": { "===": [ { "var": "linkedInProfile"}, true ] }
       },
       {
         "component": "text",
