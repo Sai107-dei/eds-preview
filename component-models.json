@@ -1881,7 +1881,7 @@
         "required": true
       },
       {
-        "component": "boolean",
+        "component": "checkbox-group",
         "label": "Instagram Profile",
         "name": "instagramProfile",
         "valueType": "boolean",
