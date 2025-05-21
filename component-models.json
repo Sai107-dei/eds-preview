@@ -1893,7 +1893,7 @@
         "label": "Instagram URL",
         "description": "Enter the Instagram profile URL",
         "required": true,
-        "condition": { "===": [ { "var": "instagramProfile"},"true" ] }
+        "condition": { "===": [ { "var": "instagramProfile"}, true ] }
       },
       {
         "component": "boolean",
@@ -1908,7 +1908,7 @@
         "label": "X URL",
         "description": "Enter the X profile URL",
         "required": true,
-        "condition": { "===": [ { "var": "xProfile"},"true" ] }
+        "condition": { "===": [ { "var": "xProfile"}, true ] }
 
       },
       {
@@ -1924,7 +1924,7 @@
         "label": "LinkedIn URL",
         "description": "Enter the LinkedIn profile URL",
         "required": true,
-        "condition": { "===": [ { "var": "linkedInProfile"},"true" ] }
+        "condition": { "===": [ { "var": "linkedInProfile"}, true ] }
       },
       {
         "component": "text",
