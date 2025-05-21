@@ -1886,10 +1886,7 @@
         "name": "instagramProfile",
         "valueType": "boolean",
         "description": "Select if the Executive’s Instagram profile is available",
-        "options": [
-        { "name": "Option1", "value": "option1" },
-        { "name": "Option 2", "value": "option2" }
-      ]
+        "options": [{ "name": "InstagramProfile", "value": "true" }]
       },
       {
         "component": "aem-content",
@@ -1898,7 +1895,7 @@
         "description": "Enter the Instagram profile URL",
         "required": true,
         "valueType": "string",
-        "condition": { "===": [ { "var": "instagramProfile"}, "option1" ] }
+        "condition": {"in": ["InstagramProfile", { "var": "instagramProfile" } ]}
       },
       {
         "component": "boolean",
