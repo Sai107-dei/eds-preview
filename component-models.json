@@ -1893,6 +1893,7 @@
         "label": "Instagram URL",
         "description": "Enter the Instagram profile URL",
         "required": true,
+        "valueType": "string",
         "condition": { "===": [ { "var": "instagramProfile"}, true ] }
       },
       {
@@ -1905,8 +1906,8 @@
       {
         "component": "aem-content",
         "name": "xURL",
-        "description": "Enter the URL to navigate when Quick Link is clicked",
-        "label": "Link URL123",
+        "description": "Enter the X profile URL",
+        "label": "X URL",
         "valueType": "string",
         "required": true,
         "condition": { "===": [ { "var": "xProfile"}, true ] },
@@ -1928,6 +1929,7 @@
         "label": "LinkedIn URL",
         "description": "Enter the LinkedIn profile URL",
         "required": true,
+        "valueType": "string",
         "condition": { "===": [ { "var": "linkedInProfile"}, true ] }
       },
       {
