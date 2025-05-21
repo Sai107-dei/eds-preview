@@ -1903,7 +1903,7 @@
         "name": "xProfile",
         "valueType": "boolean",
         "description": "Select if the Executive’s X profile is available",
-        "options": [{"name": "X Profile","value": true }]
+        "options": [{"name": "X Profile","value": "true" }]
       },
       {
         "component": "aem-content",
@@ -1912,7 +1912,7 @@
         "label": "X URL",
         "valueType": "string",
         "required": true,
-        "condition": { "===": [ { "var": "xProfile"}, true ] },
+        "condition": { "===": [ { "var": "xProfile"}, "true" ] },
         "validation": {
           "rootPath": "/content"
         }
@@ -1924,7 +1924,7 @@
         "name": "linkedInProfile",
         "valueType": "boolean",
         "description": "Select if the Executive’s LinkedIn profile is available",
-        "options": [{"name": "X Profile","value": true }]
+        "options": [{"name": "X Profile","value": "true" }]
       },
       {
         "component": "aem-content",
@@ -1933,7 +1933,7 @@
         "description": "Enter the LinkedIn profile URL",
         "required": true,
         "valueType": "string",
-        "condition": { "===": [ { "var": "linkedInProfile"}, true ] }
+        "condition": { "===": [ { "var": "linkedInProfile"}, "true" ] }
       },
       {
         "component": "text",
