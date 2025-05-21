@@ -1915,7 +1915,6 @@
           "rootPath": "/content"
         }
       },
-      
       {
         "component": "boolean",
         "label": "LinkedIn Profile",
