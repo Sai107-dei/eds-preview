@@ -1881,26 +1881,51 @@
         "required": true
       },
       {
-        "component": "checkbox-group",
-        "label": "Checkbox Group",
-        "name": "checkbox",
-        "valueType": "string[]",
-        "options": [
-          { "name": "Option1", "value": "option1" },
-          { "name": "Option 2", "value": "option2" }
-        ]
+        "component": "boolean",
+        "label": "Instagram Profile",
+        "name": "instagramProfile",
+        "valueType": "boolean",
+        "description": "Select if the Executive’s Instagram profile is available"
       },
       {
         "component": "aem-content",
-        "name": "some",
-        "label": "some URL",
+        "name": "instagramURL",
+        "label": "Instagram URL",
         "description": "Enter the Instagram profile URL",
         "required": true,
-        "valueType": "string",
-        "condition": { "===": [ { "var": "checkbox" }, "option1" ] }
-      }
-,      
-   
+        "condition": { "===": [ { "var": "instagramProfile"},"true" ] }
+      },
+      {
+        "component": "boolean",
+        "label": "X Profile",
+        "name": "xProfile",
+        "valueType": "boolean",
+        "description": "Select if the Executive’s X profile is available"
+      },
+      {
+        "component": "aem-content",
+        "name": "xURL",
+        "label": "X URL",
+        "description": "Enter the X profile URL",
+        "required": true,
+        "condition": { "===": [ { "var": "xProfile"},"true" ] }
+
+      },
+      {
+        "component": "boolean",
+        "label": "LinkedIn Profile",
+        "name": "linkedInProfile",
+        "valueType": "boolean",
+        "description": "Select if the Executive’s LinkedIn profile is available"
+      },
+      {
+        "component": "aem-content",
+        "name": "linkedInURL",
+        "label": "LinkedIn URL",
+        "description": "Enter the LinkedIn profile URL",
+        "required": true,
+        "condition": { "===": [ { "var": "linkedInProfile"},"true" ] }
+      },
       {
         "component": "text",
         "name": "ctaLabel",
