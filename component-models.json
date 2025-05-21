@@ -1888,7 +1888,7 @@
         "description": "Select if the Executive’s Instagram profile is available",
         "options": [
           {
-            "name": "Apply Offset",
+            "name": "InstagramProfile",
             "value": "true"
           }]
       },
