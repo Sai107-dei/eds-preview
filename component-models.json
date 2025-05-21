@@ -1884,7 +1884,7 @@
         "component": "checkbox-group",
         "label": "Instagram Profile",
         "name": "instagramProfile",
-        "valueType": "boolean",
+        "valueType": "string",
         "description": "Select if the Executive’s Instagram profile is available"
       },
       {
