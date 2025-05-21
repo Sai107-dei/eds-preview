@@ -1946,7 +1946,7 @@
         "name": "executiveBioFile ",
         "label": "Executive Bio File ",
         "description": "Upload link to the bio file",
-        "accept": [".pdf","application/pdf"]
+        "mimeType": [".pdf","application/pdf"]
       }
     ]
   },
