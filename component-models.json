@@ -1867,14 +1867,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "vertical-numeric-tile-title",
+        "name": "title",
         "label": "Title",
         "description": "Enter title for each card",
         "required": true
       },
       {
         "component": "richtext",
-        "name": "titleRte",
+        "name": "description",
         "label": "Title",
         "valueType": "string",
         "description": "Enter description for each card"
