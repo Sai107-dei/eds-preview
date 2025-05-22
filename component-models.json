@@ -1846,7 +1846,7 @@
     ]
   },
   {
-    "id": "timtline-item",
+    "id": "timeline-item",
     "fields": [
       {
         "component": "reference",
