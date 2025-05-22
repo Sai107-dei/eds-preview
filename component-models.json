@@ -1869,7 +1869,7 @@
         "valueType": "string",
         "name": "vertical-numeric-tile-title",
         "label": "Title",
-        "description": "Enter the title",
+        "description": "Enter title for each card",
         "required": true
       },
       {
@@ -1877,7 +1877,7 @@
         "name": "titleRte",
         "label": "Title",
         "valueType": "string",
-        "description": "Enter the Title"
+        "description": "Enter description for each card"
       }
     ]
   },
