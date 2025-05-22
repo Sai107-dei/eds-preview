@@ -1875,7 +1875,7 @@
       {
         "component": "richtext",
         "name": "description",
-        "label": "Title",
+        "label": "Description",
         "valueType": "string",
         "description": "Enter description for each card"
       }
