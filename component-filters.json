@@ -25,6 +25,7 @@
       "text-component",
       "two-column-with-image",
       "tabs",
+      "timeline",
       "accordion",
       "additional-links",
       "promo-banner",
@@ -73,6 +74,10 @@
       "table-6-columns",
       "vertical-numeric-tile"
     ]
+  },
+  {
+    "id": "timeline",
+    "components": ["timeline-item"]
   },
   {
     "id": "cards",
