@@ -744,7 +744,6 @@ const apiUrl = 'https://delivery-p153303-e1585520.adobeaemcloud.com/adobe/assets
 fetchAndPrintAltTextAccessibility(apiUrl);
 
 
-
 async function loadSections(element) {
   const sections = [...element.querySelectorAll('div.section')];
   for (let i = 0; i < sections.length; i += 1) {
