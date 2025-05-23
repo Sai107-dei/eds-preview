@@ -724,6 +724,27 @@ async function loadSection(section, loadCallback) {
  * @param {Element} element The parent element of sections to load
  */
 
+function fetchAndPrintAltTextAccessibility(url) {
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(data => {
+      const altTextAccessibility = data.assetMetadata['Iptc4xmpCore:AltTextAccessibility'];
+      console.log('Iptc4xmpCore:AltTextAccessibility:', altTextAccessibility);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+const apiUrl = 'https://delivery-p153303-e1585520.adobeaemcloud.com/adobe/assets/urn:aaid:aem:d2358024-836e-47b6-a541-4093a63654a3/metadata';
+fetchAndPrintAltTextAccessibility(apiUrl);
+
+
 async function loadSections(element) {
   const sections = [...element.querySelectorAll('div.section')];
   for (let i = 0; i < sections.length; i += 1) {
@@ -763,4 +784,5 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  fetchAndPrintAltTextAccessibility,
 };
