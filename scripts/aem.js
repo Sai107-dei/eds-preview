@@ -743,7 +743,6 @@ function fetchAndPrintAltTextAccessibility(url) {
 const apiUrl = 'https://delivery-p153303-e1585520.adobeaemcloud.com/adobe/assets/urn:aaid:aem:d2358024-836e-47b6-a541-4093a63654a3/metadata';
 fetchAndPrintAltTextAccessibility(apiUrl);
 
-
 async function loadSections(element) {
   const sections = [...element.querySelectorAll('div.section')];
   for (let i = 0; i < sections.length; i += 1) {
