@@ -14,4 +14,25 @@ indices:
       url:
         select: head > meta[property="og:url"]
         value: attribute(el, "content")
+
+  blogs:
+    include:
+      /**
+    target: /custom/query-index.json
+    properties:
+      category:
+        select: head > meta[name="category"]
+        value: |
+          attribute(el, 'content')
+      d title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
+      url:
+        select: head > meta[property="og:url"]
+        value: attribute(el, "content")
+      description:
+        select: head > meta[property="og:description"]
+        value: attribute(el, 'content')
+
+       
      
