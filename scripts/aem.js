@@ -726,23 +726,23 @@ async function loadSection(section, loadCallback) {
 
 function fetchAndPrintAltTextAccessibility(url) {
   fetch(url)
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
+        throw new Error(`Network response was not ok ${response.statusText}`);
       }
       return response.json();
     })
-    .then(data => {
+    .then((data) => {
       const altTextAccessibility = data.assetMetadata['Iptc4xmpCore:AltTextAccessibility'];
-      console.log('Iptc4xmpCore:AltTextAccessibility:', altTextAccessibility);
+      console.log('Iptc4xmpCore:AltTextAccessibility:', altTextAccessibility); // eslint-disable-line no-console
     })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
+    .catch((error) => {
+      console.error('There was a problem with the fetch operation:', error); // eslint-disable-line no-console
     });
 }
-
 const apiUrl = 'https://delivery-p153303-e1585520.adobeaemcloud.com/adobe/assets/urn:aaid:aem:d2358024-836e-47b6-a541-4093a63654a3/metadata';
 fetchAndPrintAltTextAccessibility(apiUrl);
+
 
 
 async function loadSections(element) {
