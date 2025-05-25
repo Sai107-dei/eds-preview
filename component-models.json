@@ -2439,7 +2439,8 @@
         "component": "date-time",
         "label": "Date",
         "name": "date",
-        "valueType": "date"
+        "valueType": "date",
+        "required": true
       },
       {
         "component": "richtext",
