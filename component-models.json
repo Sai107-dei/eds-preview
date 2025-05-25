@@ -2440,8 +2440,7 @@
         "label": "Date",
         "name": "date",
         "valueType": "date",
-        "description": "Select the date",
-        "required":true
+        "description": "Select the date"
       },
       {
         "component": "richtext",
