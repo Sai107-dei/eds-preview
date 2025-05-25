@@ -18,7 +18,7 @@ indices:
   blogs:
     include:
       /**
-    target: /custom/query-index1.json
+    target: /api/breadcrumb-.json
     properties:
       pageTitle:
           select: head > meta[property="og:title"]
