@@ -6,6 +6,7 @@
   {
     "id": "section",
     "components": [
+      "news-tile",
       "spacer-and-divider",
       "small-width-media",
       "text",
@@ -166,6 +167,10 @@
   {
     "id": "vertical-numeric-tile",
     "components": ["vertical-numeric-tile-item"]
+  },
+  {
+    "id": "news-tile",
+    "components": ["news-tile-item"]
   },
   {
     "id": "columncontainer",

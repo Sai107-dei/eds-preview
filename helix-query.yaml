@@ -15,7 +15,7 @@ indices:
         select: head > meta[property="og:url"]
         value: attribute(el, "content")
 
-  blogs:
+  breadcrumb:
     include:
       /**
     target: /api/breadcrumb.json
