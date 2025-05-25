@@ -20,6 +20,23 @@
         "name": "keywords",
         "multi": true,
         "label": "Keywords"
+      },
+      {
+        "component": "checkbox-group",
+        "name": "enableBreadcrumb",
+        "label": "Enable Breadcrumb",
+        "valueType": "string",
+        "description": "Select this checkbox to display the breadcrumb on the page",
+        "options": [{ "name": "EnableBreadcrumb", "value": "true" }]
+      },
+      {
+        "component": "select",
+        "name": "breadcrumbType",
+        "label": "Breadcrumb Type",
+        "description": "Select type of breadcrumb desired",
+        "required": true,
+        "options": [{"name": "Partial","value": "partial"}, {"name": "Complete","value": "complete" }],
+        "condition": {"in": ["true", { "var": "enableBreadcrumb" } ]}
       }
     ]
   },
