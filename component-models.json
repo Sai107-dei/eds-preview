@@ -2436,7 +2436,7 @@
         "required": true
       },
       {
-        "component": "date",
+        "component": "date-time",
         "label": "Date",
         "name": "date",
         "valueType": "date",
