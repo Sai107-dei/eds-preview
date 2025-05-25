@@ -1,12 +1,12 @@
 [
   {
     "id": "main",
-    "components": ["section","cont-sec-container", "tabs-section","columncontainer"]
+    "components": ["section","cont-sec-container", "tabs-section","column-container"]
   },
   {
     "id": "section",
     "components": [
-      "news-tile",
+      "image-block",
       "spacer-and-divider",
       "small-width-media",
       "text",
@@ -15,18 +15,17 @@
       "title",
       "hero",
       "lcdp",
-			"horizontal-numeric-tile",
+      "horizontal-numeric-tile",
       "search",
       "cards",
       "columns",
       "fragment",
       "relatedlinks",
-			"icon-tile",
+      "icon-tile",
       "enhanced-related-links",
       "text-component",
       "two-column-with-image",
       "tabs",
-      "timeline",
       "accordion",
       "additional-links",
       "promo-banner",
@@ -40,7 +39,8 @@
       "table-5-columns",
       "table-6-columns",
       "vertical-numeric-tile",
-      "bio-pagination"
+      "bio-pagination",
+      "news-tile"
     ]
   },
   {
@@ -73,12 +73,10 @@
       "table-4-columns",
       "table-5-columns",
       "table-6-columns",
-      "vertical-numeric-tile"
+      "vertical-numeric-tile",
+      "image-block",
+      "news-tile"
     ]
-  },
-  {
-    "id": "timeline",
-    "components": ["timeline-item"]
   },
   {
     "id": "cards",
@@ -104,18 +102,14 @@
     "id": "column",
     "components": ["text", "image", "button", "title"]
   },
-	{
-		"id": "icon-tile-grid",
-    "components": [
-      "tile"
-    ]
-	},
-	{
-		"id": "horizontal-numeric-tile",
-		"components": [
-			"numeric-tile"
-		]
-	},
+  {
+    "id": "icon-tile-grid",
+    "components": ["tile"]
+  },
+  {
+    "id": "horizontal-numeric-tile",
+    "components": ["numeric-tile"]
+  },
   {
     "id": "relatedlinks",
     "components": ["relatedlink"]
@@ -169,11 +163,7 @@
     "components": ["vertical-numeric-tile-item"]
   },
   {
-    "id": "news-tile",
-    "components": ["news-tile-item"]
-  },
-  {
-    "id": "columncontainer",
+    "id": "column-container",
     "components": [
       "column-break",
       "accordion",
@@ -184,7 +174,12 @@
       "title",
       "relatedlinks",
       "enhanced-related-links",
-      "text-component"
+      "text-component",
+      "spacer-and-divider"
     ]
+  },
+  {
+    "id": "news-tile",
+    "components": ["news-tile-item"]
   }
 ]

@@ -20,24 +20,6 @@
         "name": "keywords",
         "multi": true,
         "label": "Keywords"
-      },
-      {
-        "component": "checkbox-group",
-        "name": "enableBreadcrumb",
-        "label": "Enable Breadcrumb",
-        "valueType": "string",
-        "description": "Select this checkbox to display the breadcrumb on the page",
-        "options": [{ "name": "EnableBreadcrumb", "value": "true" }]
-      },
-      {
-        "component": "select",
-        "name": "breadcrumbType",
-        "label": "Breadcrumb Type",
-        "description": "Select type of breadcrumb desired",
-        "required": true,
-        "value": "complete",
-        "options": [{"name": "Partial","value": "partial"}, {"name": "Complete","value": "complete" }],
-        "condition": {"in": ["true", { "var": "enableBreadcrumb" } ]}
       }
     ]
   },
@@ -308,21 +290,7 @@
         "valueType": "string",
         "name": "cards",
         "label": "Section Title",
-        "description": "Enter the title for the entire Card block",
-        "multi": false
-      },
-      {
-        "component": "number",
-        "valueType": "number",
-        "value": 2,
-        "name": "numberOfCards",
-        "label": "Number of Cards",
-        "description": "Choose the number of cards to be displayed in the component",
-        "required": true,
-        "multi": false,
-        "validation": {
-          "numberMin": 2
-        }
+        "description": "Enter the title for the entire Card block"
       }
     ]
   },
@@ -894,7 +862,7 @@
         "valueType": "string",
         "options": [
           {
-            "name": "ExitInterstitial",
+            "name": "Exit Interstitial",
             "value": "true"
           }
         ],
@@ -1089,7 +1057,7 @@
     "id": "numeric-tile",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "name": "title",
         "label": "Title",
         "description": "Enter the numeric value to be displayed on the tile.",
@@ -1543,6 +1511,40 @@
     ]
   },
   {
+    "id": "image-block",
+    "fields": [
+        {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "required": true,
+        "description": "Upload Image for the section content"
+      },
+      {
+        "component": "text",
+        "name": "altText",
+        "label": "Image Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Label",
+        "description": "Add a label"
+      },
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Extended Image Description",
+        "valueType": "string",
+        "description": "Enter the Image description"
+      }
+    ]
+  },
+  {
     "id": "two-column-with-image",
     "fields": [
       {
@@ -1612,7 +1614,7 @@
         "name": "ctaType",
         "label": "CTA Type",
         "description": "Select the type of CTA for component",
-        "value": "button",
+        "value" : "button",
         "options": [
           {
             "name": "Button",
@@ -1863,43 +1865,7 @@
       }
     ]
   },
-  {
-    "id": "timeline-item",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false,
-        "required": true,
-        "description": "Upload images for the card"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt text",
-        "description": "Pick alt text from AEM DAM with ability to override it",
-        "required": true
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Title",
-        "description": "Enter title for each card",
-        "required": true
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description",
-        "valueType": "string",
-        "description": "Enter description for each card"
-      }
-    ]
-  },
-  {
+   {
     "id": "executive-tile",
     "fields": [
       {
@@ -1912,7 +1878,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "exImageAlt",
         "label": "Image Alt text",
         "description": "Pick alt text from AEM DAM with ability to override it",
         "required": true,
@@ -1940,7 +1906,7 @@
         "name": "instagramProfile",
         "valueType": "boolean",
         "description": "Select if the Executive’s Instagram profile is available",
-        "options": [{ "name": "InstagramProfile", "value": "instagramProfileValue" }]
+        "options": [{ "name": "InstagramProfile", "value": "true" }]
       },
       {
         "component": "aem-content",
@@ -1949,7 +1915,7 @@
         "description": "Enter the Instagram profile URL",
         "required": true,
         "valueType": "string",
-        "condition": {"in": ["instagramProfileValue", { "var": "instagramProfile" } ]}
+        "condition": {"in": ["true", { "var": "instagramProfile" } ]}
       },
       {
         "component": "checkbox-group",
@@ -1957,7 +1923,7 @@
         "name": "xProfile",
         "valueType": "boolean",
         "description": "Select if the Executive’s X profile is available",
-        "options": [{ "name": "XProfile", "value": "xProfileValue" }]
+        "options": [{ "name": "XProfile", "value": "true" }]
       },
       {
         "component": "aem-content",
@@ -1966,7 +1932,7 @@
         "label": "X URL",
         "valueType": "string",
         "required": true,
-        "condition": {"in": ["xProfileValue", { "var": "xProfile" } ]},
+        "condition": {"in": ["true", { "var": "xProfile" } ]},
         "validation": {
           "rootPath": "/content"
         }
@@ -1977,7 +1943,7 @@
         "name": "linkedInProfile",
         "valueType": "boolean",
         "description": "Select if the Executive’s LinkedIn profile is available",
-        "options": [{ "name": "linkedInProfile", "value": "linkedInProfileValue" }]
+        "options": [{ "name": "linkedInProfile", "value": "true" }]
       },
       {
         "component": "aem-content",
@@ -1986,7 +1952,7 @@
         "description": "Enter the LinkedIn profile URL",
         "required": true,
         "valueType": "string",
-       "condition": {"in": ["linkedInProfileValue", { "var": "linkedInProfile" } ]}
+       "condition": {"in": ["true", { "var": "linkedInProfile" } ]}
       },
       {
         "component": "text",
@@ -1999,11 +1965,14 @@
         "component": "aem-content",
         "name": "executiveBioFile ",
         "label": "Executive Bio File ",
-        "description": "Upload link to the bio file"
+        "description": "Upload link to the bio file",
+        "condition": {"!": { "or": [ { "===": [  {  "var": "ctaLabel" }, null ]},{"===": [{ "var": "ctaLabel"},""]}]} },
+        "validation": {
+          "rootPath": "/content"
+        }
       }
     ]
   },
-  
   {
     "id": "pull-quote",
     "fields": [
@@ -2349,156 +2318,63 @@
     ]
   },
   {
-    "id": "columncontainer",
+    "id": "column-container",
     "fields": [
       {
-        "component": "select",
-        "name": "componentlayout",
-        "required": true,
-        "description": "Defines the Layout of Column container",
-        "value": "twocolumns",
-        "label": "Component Layout",
+        "component": "multiselect",
+        "name": "extra-styles",
+        "description": "Select the Extra Styles for columns",
+        "label": "Extra Styles",
         "valueType": "string",
         "options": [
           {
-            "name": "2 Columns",
-            "value": "twocolumns"
+            "name": "Apply Offset",
+            "value": "offset"
           },
           {
-            "name": "3 Columns",
-            "value": "threecolumns"
-          },
-          {
-            "name": "4 Columns",
-            "value": "fourcolumns"
+            "name": "Apply Verticle Divider",
+            "value": "dividers"
           }
         ]
       },
       {
         "component": "select",
-        "name": "twocolumnoptions",
-        "description": "Select the option for 2 columns",
-        "value": "50",
-        "condition": {
-          "===": [
-            {
-              "var": "componentlayout"
-            },
-            "twocolumns"
-          ]
-        },
-        "required": true,
-        "label": "Two Column Options",
+        "name": "style",
+        "description": "Select styles to decorate columns",
+        "label": "Select Styles for Columns",
         "valueType": "string",
         "options": [
           {
             "name": "50% - 50%",
-            "value": "50"
+            "value": "two-col-50-50"
           },
           {
             "name": "25% - 75%",
-            "value": "25-75"
+            "value": "two-col-25-75"
           },
           {
             "name": "75% - 25%",
-            "value": "75-25"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "threecolumnoptions",
-        "description": "Select the option for 3 columns.",
-        "value": "33",
-        "required": true,
-        "condition": {
-          "===": [
-            {
-              "var": "componentlayout"
-            },
-            "threecolumns"
-          ]
-        },
-        "label": "Three Column Options",
-        "valueType": "string",
-        "options": [
+            "value": "two-col-75-25"
+          },
           {
             "name": "33% - 33% - 33%",
-            "value": "33"
+            "value": "three-col-33-33-33"
           },
           {
             "name": "25% - 25% - 50%",
-            "value": "25-25-50"
+            "value": "three-col-25-25-50"
           },
           {
             "name": "25% - 50% - 25%",
-            "value": "25-50-25"
+            "value": "three-col-25-50-25"
           },
           {
             "name": "50% - 25% - 25%",
-            "value": "50-25-25"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "fourcolumnoptions",
-        "description": "Select the option for 4 columns.",
-        "condition": {
-          "===": [
-            {
-              "var": "componentlayout"
-            },
-            "fourcolumns"
-          ]
-        },
-        "value": "25",
-        "required": true,
-        "label": "Four Column Options",
-        "valueType": "string",
-        "options": [
+            "value": "three-col-50-25-25"
+          },
           {
             "name": "25% - 25% - 25% - 25%",
-            "value": "25"
-          }
-        ]
-      },
-      {
-        "component": "checkbox-group",
-        "label": "Apply Offset",
-        "name": "checkbox",
-        "valueType": "string",
-        "description": "Select this checkbox to set offset for Column container",
-        "options": [
-          {
-            "name": "Apply Offset",
-            "value": "true"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "bgcolor",
-        "description": "Select the option for Background Color",
-        "value": "none",
-        "label": "Background Color",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "None",
-            "value": "none"
-          },
-          {
-            "name": "Primary",
-            "value": "primary"
-          },
-          {
-            "name": "Secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "Tertiary",
-            "value": "tertiary"
+            "value": "four-col-25-25-25-25"
           }
         ]
       }
@@ -2561,33 +2437,35 @@
       },
       {
         "component": "date-time",
-        "name": "newsTileDate",
-        "label": "Date",
-        "valueType": "date",
-        "description": "Select the Date",
-        "required": true
+        "label": "Date & Time",
+        "name": "date",
+        "valueType": "date"
       },
       {
         "component": "richtext",
         "name": "description",
         "label": "newsTileDescription",
         "valueType": "string",
-        "description": "Enter detailed description"
+        "description": "Enter the description"
       },
       {
         "component": "text",
         "name": "ctaLabel",
         "label": "CTA Label",
         "valueType": "string",
-        "description": "Enter label to display on the CTA"
+        "description": "Enter label to display on the CTA",
+        "value": "Read more",
+        "required": true
       },
       {
         "component": "aem-content",
         "name": "ctaLink",
         "label": "CTA Link",
         "description": "Enter the URL to navigate when CTA is clicked",
+        "required": true,
+        "valueType": "string",
         "validation": {
-          "rootPath": "/content"
+          "rootPath": "/content/lilly-com-eds"
         }
       },
       {
@@ -2596,16 +2474,7 @@
         "label": "Target Path",
         "description": "Select the target path for the authored CTA URL",
         "value": "sameTab",
-        "options": [
-          {
-            "name": "Same Tab",
-            "value": "sameTab"
-          },
-          {
-            "name": "New Tab",
-            "value": "newTab"
-          }
-        ]
+        "options": [{"name": "Same Tab","value": "sameTab" },{"name": "New Tab","value": "newTab"}]
       },
       {
         "component": "checkbox-group",
@@ -2613,13 +2482,7 @@
         "label": "Exit Interstitial",
         "description": "Select this checkbox to enable the modal experience",
         "valueType": "string",
-        "required": true,
-        "options": [
-          {
-            "name": "Exit Interstitial",
-            "value": "true"
-          }
-        ]
+        "options": [{ "name": "Exit Interstitial","value": "true"}]
       },
       {
         "component": "text",
