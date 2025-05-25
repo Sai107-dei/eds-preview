@@ -35,6 +35,7 @@
         "label": "Breadcrumb Type",
         "description": "Select type of breadcrumb desired",
         "required": true,
+        "value": "complete",
         "options": [{"name": "Partial","value": "partial"}, {"name": "Complete","value": "complete" }],
         "condition": {"in": ["true", { "var": "enableBreadcrumb" } ]}
       }
