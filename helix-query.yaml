@@ -1,19 +1,25 @@
 version: 1
+
 indices:
-  site:
+  pages:
     include:
-      - /**
+      - '/**'
+    exclude:
+      - '/**.json'
     target: /query-index.json
     properties:
       lastModified:
         select: none
         value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
-      title:
-        select: head > meta[property="og:title"]
+      robots:
+        select: head > meta[name="robots"]
         value: attribute(el, "content")
+      pageTitle:
+          select: head > meta[property="og:title"]
+          value: attribute(el, "content")
       url:
-        select: head > meta[property="og:url"]
-        value: attribute(el, "content")
+          select: head > meta[property="og:url"]
+          value: attribute(el, "content")  
 
   breadcrumb:
     include:
@@ -26,6 +32,3 @@ indices:
       url:
           select: head > meta[property="og:url"]
           value: attribute(el, "content")
-
-       
-     
