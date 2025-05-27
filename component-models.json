@@ -16,7 +16,7 @@
       },
       {
         "component": "aem-content",
-        "name": "cq:canonicalUrl",
+        "name": "og:type",
         "label": "Canonical Url",
         "valueType": "string",
         "description": "Overwrites the page's canonical url (set by search engines). If not set, the page's url will be the canonical url."
