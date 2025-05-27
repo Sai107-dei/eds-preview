@@ -14,13 +14,12 @@
         "name": "jcr:description",
         "label": "Description"
       },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "jcr:pagetitle",
-        "label": "Page Title",
-        "required": true
-      },
+       {
+            "component": "text",
+            "valueType": "string",
+            "name": "cq:canonicalUrl",
+            "label": "Canonical"
+          },
       {
         "component": "text",
         "valueType": "string",
