@@ -17,8 +17,8 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": ":path",
-        "label": "pagePath"
+        "name": "path",
+        "label": "pagePath1"
       },
       {
         "component": "text",
