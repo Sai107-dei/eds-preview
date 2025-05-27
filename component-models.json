@@ -1783,10 +1783,20 @@
       },
       {
         "component": "text",
-        "name": "jcr:description",
+        "name": "eyebrowText",
         "label": "Eyebrow Text",
         "valueType": "string",
-        "description": "Enter the Eyebrow text"
+        "description": "Enter the Eyebrow text",
+        "value": "something"
+      },
+       {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "required": true,
+        "description": "ⓘ paragraph - Display1 with 100px , ⓘ Heading2 - Display1 with 48px",
+        "condition": {  "===": [ {   "var": "eyebrowText"  }, "something" ] }
       },
       {
         "component": "select",
@@ -1807,14 +1817,6 @@
             "value": "tertiary"
           }
         ]
-      },
-      {
-        "component": "richtext",
-        "name": "title",
-        "label": "Title",
-        "valueType": "string",
-        "required": true,
-        "description": "ⓘ paragraph - Display1 with 100px , ⓘ Heading2 - Display1 with 48px"
       },
       {
         "component": "richtext",
