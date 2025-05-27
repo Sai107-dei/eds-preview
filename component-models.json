@@ -13,7 +13,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "jcr:title",
+        "name": "og:url",
         "label": "Title"
       },
       {
