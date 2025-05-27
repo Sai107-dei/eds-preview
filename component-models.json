@@ -1781,7 +1781,7 @@
         "name": "content_date",
         "required": true,
         "label": "Date Of Content creation12"
-      }
+      },
       {
         "component": "select",
         "name": "textAlignment",
