@@ -1786,7 +1786,8 @@
         "name": "jcr:title",
         "label": "Eyebrow Text",
         "valueType": "string",
-        "description": "Enter the Eyebrow text"
+        "description": "Enter the Eyebrow text",
+        "value": "something"
       },
       {
         "component": "select",
