@@ -1783,11 +1783,10 @@
       },
       {
         "component": "text",
-        "name": "jcr:title",
+        "name": "jcr:description",
         "label": "Eyebrow Text",
         "valueType": "string",
-        "description": "Enter the Eyebrow text",
-        "value": "something"
+        "description": "Enter the Eyebrow text"
       },
       {
         "component": "select",
