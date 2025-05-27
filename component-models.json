@@ -7,7 +7,7 @@
         "valueType": "date",
         "name": "content_date",
         "required": true,
-        "label": "Date Of Content creation"
+        "label": "Date Of Content creation1"
       },
       {
         "component": "text",
