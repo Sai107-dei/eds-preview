@@ -1783,7 +1783,7 @@
       },
       {
         "component": "text",
-        "name": "eyebrowText",
+        "name": "pageCustom",
         "label": "Eyebrow Text",
         "valueType": "string",
         "description": "Enter the Eyebrow text"
