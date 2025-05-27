@@ -15,10 +15,11 @@
         "label": "Description"
       },
       {
-        "component": "text",
+        "component": "aem-content",
+        "name": "cq:canonicalUrl",
+        "label": "Canonical Url",
         "valueType": "string",
-        "name": "pagePath",
-        "label": "pagePath"
+        "description": "Overwrites the page's canonical url (set by search engines). If not set, the page's url will be the canonical url."
       },
       {
         "component": "text",
