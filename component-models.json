@@ -1755,13 +1755,11 @@
     "id": "promo-banner",
     "fields": [
       {
-        "component": "date-time",
-        "valueType": "date",
-        "value": "2024-09-23T00:00:00.000Z",
-        "name": "content_date",
-        "required": true,
-        "label": "Date Of Content creation"
-      },
+      "component": "date-time",
+      "label": "Date & Time",
+      "name": "date",
+      "valueType": "date"
+    },
       {
         "component": "select",
         "name": "textAlignment",
