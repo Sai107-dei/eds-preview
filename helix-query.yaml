@@ -25,7 +25,10 @@ indices:
           value: attribute(el, "content") 
       something:
           select: head > meta[name="modified-time"]
-          value: attribute(el, "content")  
+          value: attribute(el, "content") 
+      smooch:
+          select: head > meta[name="page-swoosh"]
+          value: attribute(el, "content")      
 
   breadcrumb:
     include:
