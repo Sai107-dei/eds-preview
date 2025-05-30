@@ -21,7 +21,7 @@ indices:
           select: head > meta[property="og:url"]
           value: attribute(el, "content")  
       modifiredCsutom:
-          select: head > meta[name="custom-story-title"]
+          select: head > meta[name="storie"]
           value: attribute(el, "content") 
       something:
           select: head > meta[name="modified-time"]

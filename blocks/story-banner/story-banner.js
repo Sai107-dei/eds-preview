@@ -42,10 +42,10 @@ export default function decorate(block) {
     titleWrapper.className = 'title';
     titleWrapper.append(title);
 
-    let meta = document.querySelector('meta[property="custom-story-title"]');
+    let meta = document.querySelector('meta[name="storie"]');
     if (!meta) {   
         meta = document.createElement('meta');   
-        meta.setAttribute('name', 'custom-story-title');   
+        meta.setAttribute('name', 'storie');   
         document.head.appendChild(meta); 
         meta.setAttribute('content', title.textContent.trim());
     } 
