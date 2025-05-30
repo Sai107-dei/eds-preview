@@ -1762,7 +1762,7 @@
     "id": "story-banner",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "name": "title",
         "label": "Title",
         "valueType": "string",
