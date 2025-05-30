@@ -42,11 +42,11 @@ export default function decorate(block) {
     titleWrapper.className = 'title';
     titleWrapper.append(title);
 
-    let meta = document.querySelector('meta[name="og:custom"]');
-    if (!meta) {   
-        meta = document.createElement('meta');   
-        meta.setAttribute('name', 'og:custom');   
-        document.head.appendChild(meta); 
+    let meta = document.querySelector('meta[name="customTitle222"]');
+    if (meta) {   
+        // meta = document.createElement('meta');   
+        // meta.setAttribute('name', 'og:custom');   
+        // document.head.appendChild(meta); 
         meta.setAttribute('content', title.textContent.trim());
     } 
 

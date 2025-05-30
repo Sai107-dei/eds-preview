@@ -6,9 +6,16 @@
         "component": "text",
         "name": "customTitle",
         "label": "custom",
-        "hidden": true,
         "valueType": "string",
         "description": "Enter the title"
+      },
+      {
+        "component": "text",
+        "name": "customTitle222",
+        "label": "custom",
+        "valueType": "string",
+        "description": "Enter the title2",
+        "hidden": true
       },
       {
         "component": "text",
