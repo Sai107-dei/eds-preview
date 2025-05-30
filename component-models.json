@@ -1752,6 +1752,235 @@
     ]
   },
   {
+    "id": "story-banner",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter the title",
+        "required": true
+      },
+      {
+        "component": "date-time",
+        "name": "date",
+        "label": "Date",
+        "valueType": "date",
+        "description": "Enter date published",
+        "value": "2025-05-27T00:00:00.000", 
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "author",
+        "label": "Author",
+        "valueType": "string",
+        "description": "Enter the author",
+        "required": true
+      },
+      {
+        "component": "multiselect",
+        "name": "tags",
+        "description": "Select the tags from the dropdown",
+        "label": "Tags",
+        "valueType": "string",
+        "required": true,
+        "minSize": 1,
+        "options": [
+          {
+            "name": "Alopecia Areata",
+            "value": "alopcia-areata"
+          },
+          {
+            "name": "Alzheimer's",
+            "value": "alzheimer's"
+          },
+          {
+            "name": "Atopic Dermatitis",
+            "value": "atopic-dermatitis"
+          },
+          {
+            "name": "Breast Cancer",
+            "value": "breast-cancer"
+          },
+          {
+            "name": "Cancer",
+            "value": "cancer"
+          },
+          {
+            "name": "Caring",
+            "value": "caring"
+          },
+          {
+            "name": "Clinical Research",
+            "value": "clinical-research"
+          },
+          {
+            "name": "Clinical Trials",
+            "value": "clinical-trials"
+          },
+          {
+            "name": "Collaboration",
+            "value": "collaboration"
+          },
+          {
+            "name": "COVID19",
+            "value": "covid19"
+          },
+          {
+            "name": "Dermatology",
+            "value": "dermatology"
+          },
+          {
+            "name": "Diabetes",
+            "value": "diabetes"
+          },
+          {
+            "name": "Digital Health",
+            "value": "digital-health"
+          },
+          {
+            "name": "Discovery",
+            "value": "discovery"
+          },
+          {
+            "name": "Diversity & Inclusion",
+            "value": "diversity-and-inclusion"
+          },
+          {
+            "name": "Disaster Relief",
+            "value": "disaster-relief"
+          },
+          {
+            "name": "Employee Experience",
+            "value": "employee-experience"
+          },
+          {
+            "name": "Environmental",
+            "value": "environmental"
+          },
+          {
+            "name": "Gastroenterology",
+            "value": "gastroenterology"
+          },
+          {
+            "name": "Genetic Medicine",
+            "value": "genetic-medicine"
+          },
+          {
+            "name": "Global Day of Service",
+            "value": "global-day-of-service"
+          },
+          {
+            "name": "Governance",
+            "value": "governance"
+          },
+          {
+            "name": "Health Equity",
+            "value": "health-equity"
+          },
+          {
+            "name": "Immunology",
+            "value": "immunology"
+          },
+          {
+            "name": "Innovation",
+            "value": "innovation"
+          },
+          {
+            "name": "Insulin",
+            "value": "insulin"
+          },
+          {
+            "name": "Insulin Affordability",
+            "value": "insulin-affordability"
+          },
+          {
+            "name": "Leadership",
+            "value": "leadership"
+          },
+          {
+            "name": "LGBTQ",
+            "value": "lgbtq"
+          },
+          {
+            "name": "Loxo Oncology at Lilly",
+            "value": "loxo-oncology-at-lilly"
+          },
+          {
+            "name": "Manufacturing & Quality",
+            "value": "manufacturing-and-quality"
+          },
+          {
+            "name": "Migraine",
+            "value": "migraine"
+          },
+          {
+            "name": "Neurodegeneration",
+            "value": "neurodegeneration"
+          },
+          {
+            "name": "Obesity",
+            "value": "obesity"
+          },
+          {
+            "name": "Pain",
+            "value": "pain"
+          },
+          {
+            "name": "Patient Story",
+            "value": "patient-story"
+          },
+          {
+            "name": "Policy",
+            "value": "policy"
+          },
+          {
+            "name": "Precision Medicine",
+            "value": "precision-medicine"
+          },
+          {
+            "name": "Psoriasis",
+            "value": "psoriasis"
+          },
+          {
+            "name": "Racial Justice",
+            "value": "racial-justice"
+          },
+          {
+            "name": "Rheumatology",
+            "value": "rheumatology"
+          },
+          {
+            "name": "Science",
+            "value": "science"
+          },
+          {
+            "name": "Scientist Story",
+            "value": "scientist-story"
+          },
+          {
+            "name": "Social Impact",
+            "value": "social-impact"
+          },
+          {
+            "name": "STEM",
+            "value": "stem"
+          },
+          {
+            "name": "Sustainability",
+            "value": "sustainability"
+          },
+          {
+            "name": "United Way",
+            "value": "united-way"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "promo-banner",
     "fields": [
       {
