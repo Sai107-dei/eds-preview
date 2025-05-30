@@ -138,7 +138,6 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
-
 /**
 * Pre-hides the body to avoid flicker in Adobe Target by applying temporary styles.
 * @param {Document} doc - The document object.
@@ -182,7 +181,6 @@ function adobepreload(win, doc, style, timeout) {
     removeStyle(getParent(), STYLE_ID);
   }, timeout);
 }
-
 
 async function loadPage() {
   adobepreload(window, document, 'body {opacity: 0 !important}', 3000);
