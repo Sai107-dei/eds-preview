@@ -16,7 +16,7 @@
         "valueType": "string",
         "value" : "sai1234t",
         "description": "Enter the title2",
-        "hidden": true
+        "disable": true
       },
       {
         "component": "text",
