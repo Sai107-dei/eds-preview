@@ -139,7 +139,53 @@ function loadDelayed() {
 }
 
 
+/**
+* Pre-hides the body to avoid flicker in Adobe Target by applying temporary styles.
+* @param {Document} doc - The document object.
+* @param {string} style - The CSS style to apply.
+* @param {number} timeout - The duration in milliseconds before removing the style.
+*/
+function adobepreload(win, doc, style, timeout) {
+  const STYLE_ID = 'at-body-style';
+
+  function getParent() {
+    return doc.getElementsByTagName('head')[0];
+  }
+
+  function addStyle(parent, id, css) { // Renamed 'style' to 'css' to avoid conflict
+    if (!parent) {
+      return;
+    }
+
+    const styleElement = doc.createElement('style'); // Renamed 'style' to 'styleElement'
+    styleElement.id = id;
+    styleElement.innerHTML = css;
+    parent.appendChild(styleElement);
+  }
+
+  function removeStyle(parent, id) {
+    if (!parent) {
+      return;
+    }
+
+    const styleElement = doc.getElementById(id); // Renamed 'style' to 'styleElement'
+
+    if (!styleElement) {
+      return;
+    }
+
+    parent.removeChild(styleElement);
+  }
+
+  addStyle(getParent(), STYLE_ID, style);
+  setTimeout(() => {
+    removeStyle(getParent(), STYLE_ID);
+  }, timeout);
+}
+
+
 async function loadPage() {
+  adobepreload(window, document, 'body {opacity: 0 !important}', 3000);
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();

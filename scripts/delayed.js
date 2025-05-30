@@ -35,6 +35,7 @@ if (/Chrome/i.test(userAgent) && !/Edge|Edg/i.test(userAgent)) {
 } else {
   browserType = 'Unknown Browser';
 }
+
 adobeDataLayer.push({
   event: 'page_view',
   pageInfo: {
