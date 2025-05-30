@@ -14,7 +14,7 @@
         "name": "customTitle222",
         "label": "custom",
         "valueType": "string",
-        "value" : "",
+        "value" : "sai1234t",
         "description": "Enter the title2",
         "hidden": true
       },
