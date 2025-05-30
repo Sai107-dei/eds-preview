@@ -3,8 +3,8 @@
     "id": "page-metadata",
      "fields": [
       {
-        "component": "richtext",
-        "name": "custom_story_page_title",
+        "component": "text",
+        "name": "customTitle",
         "label": "custom",
         "valueType": "string",
         "description": "Enter the title"
