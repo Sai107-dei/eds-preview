@@ -20,8 +20,11 @@ indices:
       url:
           select: head > meta[property="og:url"]
           value: attribute(el, "content")  
-      url:
+      modifiredCsutom:
           select: head > meta[property="custom-story-title"]
+          value: attribute(el, "content") 
+      something:
+          select: head > meta[property="modified-time"]
           value: attribute(el, "content")  
 
   breadcrumb:
