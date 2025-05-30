@@ -44,3 +44,6 @@ indices:
       url:
           select: head > meta[property="og:url"]
           value: attribute(el, "content")
+      story:
+          select: head > meta[property="storie"]
+          value: attribute(el, "content")
