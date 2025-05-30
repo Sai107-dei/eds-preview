@@ -6,6 +6,7 @@
         "component": "text",
         "name": "customTitle",
         "label": "custom",
+        "hidden": true,
         "valueType": "string",
         "description": "Enter the title"
       },
