@@ -4,11 +4,10 @@
      "fields": [
       {
         "component": "richtext",
-        "name": "custom-story-page-title",
+        "name": "custom_story_page_title",
         "label": "custom",
         "valueType": "string",
-        "description": "Enter the title",
-        "required": true
+        "description": "Enter the title"
       },
       {
         "component": "text",
