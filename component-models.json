@@ -3,6 +3,14 @@
     "id": "page-metadata",
      "fields": [
       {
+        "component": "richtext",
+        "name": "custom-story-page-title",
+        "label": "custom",
+        "valueType": "string",
+        "description": "Enter the title",
+        "required": true
+      },
+      {
         "component": "text",
         "valueType": "string",
         "name": "jcr:title",
