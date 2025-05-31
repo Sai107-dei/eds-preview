@@ -11,6 +11,13 @@
       },
       {
         "component": "text",
+        "name": "cq:template",
+        "label": "cuspagem",
+        "valueType": "string",
+        "description": "pagetitle"
+      },
+      {
+        "component": "text",
         "name": "customTitle222",
         "label": "custom",
         "valueType": "string",
