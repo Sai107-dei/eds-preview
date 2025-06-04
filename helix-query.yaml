@@ -48,7 +48,7 @@ indices:
         select: main .story-banner-title-wrapper p
         value: textContent(el)
       woking: 
-        select: main .story-banner-title-wrapper p
+        select: main .story-banner-title-wrapper h1
         value: textContent(el)
      
      
