@@ -44,17 +44,8 @@ indices:
       url:
           select: head > meta[property="og:url"]
           value: attribute(el, "content")
-      story:
-          select: head > meta[name="og:custom"]
-          value: attribute(el, "content")
-      mainContent:
-        select: main p
-        value: textContent(el)
-      story:
-        select: main h1
-        value: textContent(el)
       storysai: 
-         select: head > meta[property="og:title"]
-         value: attribute(el, "content")
+        select: main .story-banner-title-wrapper h2
+        value: textContent(el)
      
      
