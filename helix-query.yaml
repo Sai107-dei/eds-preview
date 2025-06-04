@@ -47,5 +47,8 @@ indices:
       storysai: 
         select: main .story-banner-title-wrapper p
         value: textContent(el)
+      woking: 
+        select: main .story-banner-title-wrapper p
+        value: textContent(el)
      
      
