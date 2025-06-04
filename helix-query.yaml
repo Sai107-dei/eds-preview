@@ -54,7 +54,16 @@ indices:
         select: main h1
         value: textContent(el)
       storybanne: 
-        select: .story-banner-container .title h2
+        select: main div:nth-child(7) h1
+        value: textContent(el)
+      checking: 
+        select: main div:nth-child(8) h1
+        value: textContent(el)
+      testing: 
+        select: main div:nth-child(9) h1
+        value: textContent(el)
+      fix: 
+        select: main div:nth-child(6) h1
         value: textContent(el)
         
      
