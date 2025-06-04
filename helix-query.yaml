@@ -53,17 +53,8 @@ indices:
       story:
         select: main h1
         value: textContent(el)
-      storybanne: 
-        select: main div:nth-child(7) h1
+      storysai: 
+        select: main .story-banner-title-wrapper h2
         value: textContent(el)
-      checking: 
-        select: main div:nth-child(8) h1
-        value: textContent(el)
-      testing: 
-        select: main div:nth-child(9) h1
-        value: textContent(el)
-      fix: 
-        select: main div:nth-child(6) h1
-        value: textContent(el)
-        
+     
      
