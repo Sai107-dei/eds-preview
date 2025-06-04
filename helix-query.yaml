@@ -50,3 +50,6 @@ indices:
       mainContent:
         select: main p
         value: textContent(el)
+      story:
+        select: main h1
+        value: textContent(el)
