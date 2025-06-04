@@ -53,6 +53,8 @@ indices:
       story:
         select: main h1
         value: textContent(el)
-      largerdescrip:
-        select: main h2
+      storybanne: 
+        select: .story-banner-container .title h2
         value: textContent(el)
+        
+     
