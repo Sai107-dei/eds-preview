@@ -54,7 +54,7 @@ indices:
         select: main h1
         value: textContent(el)
       storysai: 
-        select: main .story-banner-title-wrapper h2
-        value: textContent(el)
+         select: head > meta[property="og:title"]
+         value: attribute(el, "content")
      
      
