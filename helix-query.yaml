@@ -54,5 +54,5 @@ indices:
         select: main h1
         value: textContent(el)
       largerdescrip:
-        select: main .fs-normal lds-ringside-body-large h2
+        select: main h2
         value: textContent(el)
