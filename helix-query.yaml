@@ -45,7 +45,7 @@ indices:
           select: head > meta[property="og:url"]
           value: attribute(el, "content")
       storysai: 
-        select: main .story-banner-title-wrapper p
+        select: main .story-banner-title-wrapper .title [aria-label="fixing 123"] p
         value: textContent(el)
       woking: 
         select: main .story-banner-title-wrapper h1
