@@ -47,3 +47,6 @@ indices:
       story:
           select: head > meta[name="og:custom"]
           value: attribute(el, "content")
+      mainContent:
+        select: main p
+        value: textContent(el)
