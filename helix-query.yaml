@@ -53,3 +53,6 @@ indices:
       story:
         select: main h1
         value: textContent(el)
+      description:
+        select: main .fs-normal lds-ringside-body-large h2
+        value: textContent(el)
