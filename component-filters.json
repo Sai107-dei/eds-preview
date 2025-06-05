@@ -52,7 +52,7 @@
       "news-tile",
       "executive-grids",
       "csr-form",
-      "news-and-story-card"
+      "timeline-card"
     ]
   },
   {
@@ -72,7 +72,8 @@
       "image-block",
       "executive-grids",
       "text-callout",
-      "news-and-story-card"
+      "timeline-card",
+      "media-card"
     ]
   },
   {
@@ -116,7 +117,8 @@
       "news-tile",
       "executive-grids",
       "timeline",
-      "news-and-story-card"
+      "timeline-card",
+      "media-card"
     ]
   },
   {
@@ -167,7 +169,6 @@
     "id": "media-card",
     "components": ["media-card-link"]
   },
-  
   {
     "id": "news-tile",
     "components": ["news-tile-item"]

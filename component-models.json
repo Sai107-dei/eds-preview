@@ -20,6 +20,44 @@
         "name": "keywords",
         "multi": true,
         "label": "Keywords"
+      },
+      {
+        "component": "checkbox-group",
+        "name": "enableBreadcrumb",
+        "valueType": "string",
+        "description": "Select this checkbox to display the breadcrumb on the page for breadcrumb",
+        "options": [
+          {
+            "name": "Enable Breadcrumb",
+            "value": "true"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "breadcrumbType",
+        "label": "Breadcrumb Type",
+        "description": "Select type of breadcrumb desired",
+        "required": true,
+        "value": "complete",
+        "options": [
+          {
+            "name": "Partial",
+            "value": "partial"
+          },
+          {
+            "name": "Complete",
+            "value": "complete"
+          }
+        ],
+        "condition": {
+          "in": [
+            "true",
+            {
+              "var": "enableBreadcrumb"
+            }
+          ]
+        }
       }
     ]
   },
@@ -136,6 +174,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Video Container",
+            "value": "video-container"
           }
         ]
       }
@@ -948,7 +990,7 @@
         ],
         "condition": {
           "!!": {
-            "var": "ctaLabel"
+            "var": "ctalabelprevious"
           }
         }
       },
@@ -962,11 +1004,20 @@
           "rootPath": "/content"
         },
         "condition": {
-          "===": [
+          "and": [
             {
-              "var": "ctaType"
+              "===": [
+                {
+                  "var": "ctaTypeprevious"
+                },
+                "link"
+              ]
             },
-            "link"
+            {
+              "!!": {
+                "var": "ctalabelprevious"
+              }
+            }
           ]
         }
       },
@@ -977,11 +1028,20 @@
         "description": "Upload the Asset (PDF/Image)",
         "valueType": "string",
         "condition": {
-          "===": [
+          "and": [
             {
-              "var": "ctaType"
+              "===": [
+                {
+                  "var": "ctaTypeprevious"
+                },
+                "asset"
+              ]
             },
-            "asset"
+            {
+              "!!": {
+                "var": "ctalabelprevious"
+              }
+            }
           ]
         }
       },
@@ -1016,7 +1076,7 @@
         ],
         "condition": {
           "!!": {
-            "var": "ctaLabel"
+            "var": "ctalabelnext"
           }
         }
       },
@@ -1030,11 +1090,20 @@
           "rootPath": "/content"
         },
         "condition": {
-          "===": [
+          "and": [
             {
-              "var": "ctaType"
+              "===": [
+                {
+                  "var": "ctaTypenext"
+                },
+                "link"
+              ]
             },
-            "link"
+            {
+              "!!": {
+                "var": "ctalabelnext"
+              }
+            }
           ]
         }
       },
@@ -1045,11 +1114,20 @@
         "description": "Upload the Asset (PDF/Image)",
         "valueType": "string",
         "condition": {
-          "===": [
+          "and": [
             {
-              "var": "ctaType"
+              "===": [
+                {
+                  "var": "ctaTypenext"
+                },
+                "asset"
+              ]
             },
-            "asset"
+            {
+              "!!": {
+                "var": "ctalabelnext"
+              }
+            }
           ]
         }
       },
@@ -2109,155 +2187,6 @@
     ]
   },
   {
-    "id": "news-and-story-card-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "description": "Upload images for the card",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text",
-        "description": "Pick alt text from AEM DAM with ability to override it",
-        "required": true
-      },
-      {
-        "component": "date-time",
-        "label": "Date",
-        "name": "date",
-        "valueType": "date",
-        "description": "Select the date for the component"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title",
-        "valueType": "string",
-        "description": "Enter title for each card",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "additional-aria-label",
-        "label": "ARIA Label",
-        "valueType": "string",
-        "description": "Enter ARIA label to comply ADA"
-      },
-      {
-        "component": "select",
-        "name": "ctaType",
-        "label": "CTA Type",
-        "description": "Select the CTA Type",
-        "options": [
-          {
-            "name": "Link",
-            "value": "link"
-          },
-          {
-            "name": "Asset (PDF/Image)",
-            "value": "asset"
-          }
-        ]
-      },
-      {
-        "component": "aem-content",
-        "name": "ctaLink",
-        "label": "CTA Link",
-        "valueType": "string",
-        "description": "Enter the URL to navigate when CTA is clicked",
-        "validation": {
-          "rootPath": "/content"
-        },
-        "condition": {
-          "===": [
-            {
-              "var": "ctaType"
-            },
-            "link"
-          ]
-        }
-      },
-      {
-        "component": "reference",
-        "name": "ctaAsset",
-        "label": "Asset (PDF/Image)",
-        "description": "Upload the Asset (PDF/Image)",
-        "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "ctaType"
-            },
-            "asset"
-          ]
-        }
-      },
-      {
-        "component": "select",
-        "name": "targetPath",
-        "label": "Target Path",
-        "description": "Select the target path for the authored CTA URL",
-        "value": "sameTab",
-        "options": [
-          {
-            "name": "Same Tab",
-            "value": "sameTab"
-          },
-          {
-            "name": "New Tab",
-            "value": "newTab"
-          }
-        ],
-        "condition": {
-          "===": [
-            {
-              "var": "ctaType"
-            },
-            "link"
-          ]
-        }
-      },
-      {
-        "component": "checkbox-group",
-        "label": "Exit Interstitial",
-        "name": "checkbox",
-        "valueType": "string",
-        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
-        "options": [
-          {
-            "name": "Exit Interstitial",
-            "value": "true"
-          }
-        ],
-        "condition": {
-          "===": [
-            {
-              "var": "ctaType"
-            },
-            "link"
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "news-and-story-card",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "componenttitle",
-        "label": "Component  Title",
-        "description": "Enter the title for the entire Card block"
-      }
-    ]
-  },
-  {
     "id": "news-tile-item",
     "fields": [
       {
@@ -2280,7 +2209,9 @@
         "label": "Date",
         "name": "date",
         "valueType": "date",
-        "description": "Select the date"
+        "description": "Select the date",
+        "value": "2025-05-27T00:00:00.000Z",
+        "required": true
       },
       {
         "component": "richtext",
@@ -2295,7 +2226,6 @@
         "label": "CTA Label",
         "valueType": "string",
         "description": "Enter label to display on the CTA",
-        "value": "Read more",
         "required": true
       },
       {
