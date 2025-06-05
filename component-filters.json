@@ -167,10 +167,7 @@
     "id": "media-card",
     "components": ["media-card-link"]
   },
-  {
-    "id": "news-and-story-card",
-    "components": ["news-and-story-card-item"]
-  },
+  
   {
     "id": "news-tile",
     "components": ["news-tile-item"]
