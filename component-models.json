@@ -3969,7 +3969,7 @@
         "valueType": "string",
         "description": "Enter the Footnote text"
       },
-       {
+      {
         "component": "select",
         "name": "ctaNumber",
         "label": "Number of CTA(s)",
@@ -3986,8 +3986,9 @@
           }
         ]
       },
-       {
+      {
         "component": "container",
+        "collapsable": true,
         "name": "twoButton",
         "label": "Two Button Fields",
         "valueType": "string",
