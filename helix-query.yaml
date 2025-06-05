@@ -47,8 +47,18 @@ indices:
       storysai: 
         select: main .story-banner-title-wrapper .title [aria-label] p
         value: textContent(el)
-      woking: 
-        select: main .story-banner-title-wrapper h1
+      lostting: 
+        select: main .story-banner-container div > div:last-child p
         value: textContent(el)
+      oy: 
+        select: main .story-banner-container div > p:last-child
+        value: textContent(el)
+      edoty: 
+        select: main .section story-banner-container div > div:last-child p
+        value: textContent(el)
+      trourooi: 
+        select: main .section story-banner-container div > p:last-child
+        value: textContent(el)
+     
      
      
