@@ -3825,6 +3825,37 @@
         "description": "Enter the description"
       },
       {
+        "component": "text",
+        "name": "eyebrowText",
+        "label": "Eyebrow",
+        "valueType": "string",
+        "description": "Enter the Eyebrow text"
+      },
+      {
+        "component": "richtext",
+        "name": "footNote",
+        "label": "Footnote",
+        "valueType": "string",
+        "description": "Enter the Footnote text"
+      },
+      {
+        "component": "select",
+        "name": "ctaNumber",
+        "label": "Number of CTA(s)",
+        "description": "Select the number of CTA(s) required",
+        "value": "one",
+        "options": [
+          {
+            "name": "One",
+            "value": "one"
+          },
+          {
+            "name": "Two",
+            "value": "two"
+          }
+        ]
+      },
+      {
         "component": "container",
         "collapsible": true,
         "name": "oneButton",
@@ -3961,37 +3992,6 @@
                 "link"
               ]
             }
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "name": "eyebrowText",
-        "label": "Eyebrow",
-        "valueType": "string",
-        "description": "Enter the Eyebrow text"
-      },
-      {
-        "component": "richtext",
-        "name": "rte",
-        "label": "Footnote",
-        "valueType": "string",
-        "description": "Enter the Footnote text"
-      },
-      {
-        "component": "select",
-        "name": "ctaNumber",
-        "label": "Number of CTA(s)",
-        "description": "Select the number of CTA(s) required",
-        "value": "one",
-        "options": [
-          {
-            "name": "One",
-            "value": "one"
-          },
-          {
-            "name": "Two",
-            "value": "two"
           }
         ]
       },
