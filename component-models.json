@@ -3830,14 +3830,6 @@
         "name": "oneButton",
         "label": "One Button Fields",
         "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "ctaNumber"
-            },
-            "two"
-          ]
-        },
         "fields": [
           {
             "component": "select",
