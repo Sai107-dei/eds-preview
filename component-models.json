@@ -4003,7 +4003,7 @@
         "fields": [
           {
             "component": "select",
-            "name": "ctaStyle",
+            "name": "ctaStyleTwo",
             "label": "CTA Style",
             "description": "Select the style of the Button CTA",
             "value": "primary",
@@ -4019,6 +4019,34 @@
             ]
           },
           {
+            "component": "text",
+            "name": "ctaTextTwo",
+            "label": "CTA Text",
+            "valueType": "string",
+            "description": "Enter label to display on the CTA"
+          },
+          {
+            "component": "select",
+            "name": "ctaTypeTwo",
+            "label": "CTA Type",
+            "description": "Select the CTA Type",
+            "options": [
+              {
+                "name": "Link",
+                "value": "link"
+              },
+              {
+                "name": "Asset (PDF/Image)",
+                "value": "asset"
+              }
+            ],
+            "condition": {
+              "!!": {
+                "var": "ctaTextTwo"
+              }
+            }
+          },
+          {
             "component": "aem-content",
             "name": "ctaLink",
             "label": "CTA Link",
@@ -4030,7 +4058,7 @@
             "condition": {
               "===": [
                 {
-                  "var": "ctaType"
+                  "var": "ctaTypeTwo"
                 },
                 "link"
               ]
@@ -4045,7 +4073,7 @@
             "condition": {
               "===": [
                 {
-                  "var": "ctaType"
+                  "var": "ctaTypeTwo"
                 },
                 "asset"
               ]
@@ -4060,7 +4088,7 @@
           },
           {
             "component": "select",
-            "name": "targetPath",
+            "name": "targetPathTwo",
             "label": "Target Path",
             "description": "Select the target path for the authored CTA URL",
             "value": "sameTab",
@@ -4077,7 +4105,7 @@
             "condition": {
               "===": [
                 {
-                  "var": "ctaType"
+                  "var": "ctaTypeTwo"
                 },
                 "link"
               ]
@@ -4086,7 +4114,7 @@
           {
             "component": "checkbox-group",
             "label": "Checkbox Group",
-            "name": "checkbox",
+            "name": "checkboxTwo",
             "valueType": "string",
             "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
             "options": [
@@ -4098,7 +4126,7 @@
             "condition": {
               "===": [
                 {
-                  "var": "ctaType"
+                  "var": "ctaTypeTwo"
                 },
                 "link"
               ]
