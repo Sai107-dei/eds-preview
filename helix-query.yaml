@@ -46,3 +46,6 @@ indices:
       trourooui:
         select: main .story-banner.block p
         value: textContent(el)
+      hema:
+        select: main .story-banner.block > div:first-child > div > p
+        value: textContent(el)
