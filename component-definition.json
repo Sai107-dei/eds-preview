@@ -635,12 +635,8 @@
                 "template": {
                   "name": "News and Story Card",
                   "model": "news-story-card",
-                  "filter": "news-story-card",
-                  "item0": {
-                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
-                    "name": "News and Story Card Item",
-                    "model": "news-and-story-card-item"
-                  }
+                  "filter": "news-story-card"
+                  
                 }
               }
             }
