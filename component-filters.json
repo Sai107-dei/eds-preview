@@ -3,163 +3,212 @@
     "id": "main",
     "components": [
       "section",
-      "cont-sec-container"
+      "cont-sec-container",
+      "column-container",
+      "tabs-section"
     ]
   },
   {
     "id": "section",
     "components": [
+      "image-block",
+      "spacer-and-divider",
+      "small-width-media",
       "text",
       "image",
       "button",
       "title",
       "hero",
+      "lcdp",
+      "horizontal-numeric-tile",
+      "search",
       "cards",
-      "cards-accordion",
+      "timeline",
       "columns",
       "fragment",
-      "sus10",
-      "infobanner",
-      "carousel",
-      "primary-header",
-      "kalthuravideo",
+      "relatedlinks",
+      "icon-tile",
+      "additional-resource-card",
+      "enhanced-related-links",
       "text-component",
-      "teaser",
-      "two-clm-with-img",
-      "quote",
-      "quote-block",
-      "text-block",
-      "table-multi",
-      "carousel-poc",
+      "two-column-with-image",
+      "accordion",
       "additional-links",
-      "en-related-links",
-      "aem-content-fragment",
+      "promo-banner",
       "executive-tile",
+      "text-callout",
+      "pull-quote",
+      "table",
+      "table-2-columns",
+      "table-3-columns",
+      "table-4-columns",
+      "table-5-columns",
+      "table-6-columns",
+      "vertical-numeric-tile",
+      "bio-pagination",
+      "media-card",
+      "expanded-access-form",
+      "submission-form",
+      "news-tile",
       "executive-grids",
-      "media-card"
+      "csr-form",
+      "news-and-story-card"
     ]
   },
-    {
-    "id": "media-card",
-    "components": ["media-card-link"]
+  {
+    "id": "column-container",
+    "components": [
+      "column-break",
+      "accordion",
+      "additional-links",
+      "cards",
+      "text",
+      "image",
+      "title",
+      "relatedlinks",
+      "enhanced-related-links",
+      "text-component",
+      "spacer-and-divider",
+      "image-block",
+      "executive-grids",
+      "text-callout",
+      "news-and-story-card"
+    ]
+  },
+  {
+    "id": "tabs-section",
+    "components": ["tabs", "image", "text-component"]
+  },
+  {
+    "id": "cont-sec-container",
+    "components": [
+      "spacer-and-divider",
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "lcdp",
+      "search",
+      "cards",
+      "columns",
+      "fragment",
+      "relatedlinks",
+      "icon-tile",
+      "additional-resource-card",
+      "enhanced-related-links",
+      "text-component",
+      "two-column-with-image",
+      "tabs",
+      "accordion",
+      "additional-links",
+      "promo-banner",
+      "pull-quote",
+      "table",
+      "table-2-columns",
+      "table-3-columns",
+      "table-4-columns",
+      "table-5-columns",
+      "table-6-columns",
+      "vertical-numeric-tile",
+      "image-block",
+      "expanded-access-form",
+      "news-tile",
+      "executive-grids",
+      "timeline",
+      "news-and-story-card"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
+  },
+  {
+    "id": "additional-links",
+    "components": ["additional-link"]
+  },
+  {
+    "id": "additional-resource-card",
+    "components": ["resource-card"]
+  },
+  {
+    "id": "cards",
+    "components": ["card"]
+  },
+  {
+    "id": "columns",
+    "components": ["column"]
+  },
+  {
+    "id": "enhanced-related-links",
+    "components": ["enhanced-related-link"]
   },
   {
     "id": "executive-grids",
     "components": ["executive-grid"]
   },
   {
-    "id": "table-multi",
-    "components": ["row"]
+    "id": "hero",
+    "components": ["icongrid-tile"]
   },
   {
-    "id": "carousel-poc",
-    "components": [
-      "variation-1"
-    ]
+    "id": "horizontal-numeric-tile",
+    "components": ["numeric-tile"]
   },
   {
-    "id": "carousel-variation-1",
-    "components": [
-      "variation-1"
-    ]
+    "id": "icon-tile-grid",
+    "components": ["tile"]
   },
   {
-    "id": "carousel-variation-2",
-    "components": [
-      "variation-2"
-    ]
+    "id": "lcdp",
+    "components": ["lcdp"]
   },
   {
-    "id": "carousel-variation-3",
-    "components": [
-      "variation-3"
-    ]
-  },
-    {
-    "id": "carousel-variation-4",
-    "components": [
-      "variation-4"
-    ]
+    "id": "media-card",
+    "components": ["media-card-link"]
   },
   {
-    "id": "table-5-columns",
-    "components": [
-      "table-col-5"
-    ]
+    "id": "news-and-story-card",
+    "components": ["news-and-story-card-item"]
   },
   {
-    "id": "table-6-columns",
-    "components": [
-      "table-col-6"
-    ]
+    "id": "news-tile",
+    "components": ["news-tile-item"]
   },
   {
-    "id": "en-related-links",
-    "components": [
-      "en-related-link"
-    ]
+    "id": "promo-banner",
+    "components": ["promo-banner"]
   },
   {
-    "id": "additional-links",
-    "components": [
-      "additional-link"
-    ]
+    "id": "pull-quote",
+    "components": ["pull-quote"]
   },
   {
-    "id": "cards",
-    "components": [
-      "card"
-    ]
+    "id": "relatedlinks",
+    "components": ["relatedlink"]
   },
   {
-    "id": "cards-accordion",
-    "components": [
-      "card-accordion"
-    ]
+    "id": "search",
+    "components": ["search"]
   },
   {
-    "id": "columns",
-    "components": [
-      "column"
-    ]
+    "id": "small-width-media",
+    "components": ["small-width-media"]
   },
   {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "quote",
-      "section",
-      "columns"
-    ]
+    "id": "table",
+    "components": ["table-row"]
   },
   {
-    "id": "infobanner",
-    "components": [
-      "infoitem"
-    ]
+    "id": "tabs",
+    "components": ["text-component"]
   },
   {
-    "id": "carousel",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "id": "timeline",
+    "components": ["timeline-item"]
   },
   {
-    "id": "kalthuravideo",
-    "components": [
-      "text"
-    ]
-  },
-  {
-    "id": "text-component",
-    "components": [
-      "text"
-    ]
+    "id": "vertical-numeric-tile",
+    "components": ["vertical-numeric-tile-item"]
   }
 ]
