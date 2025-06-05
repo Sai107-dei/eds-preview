@@ -3988,7 +3988,7 @@
       },
       {
         "component": "container",
-        "collapsable": true,
+        "collapsible": true,
         "name": "twoButton",
         "label": "Two Button Fields",
         "valueType": "string",
