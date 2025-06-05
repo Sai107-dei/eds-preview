@@ -4003,34 +4003,106 @@
         "fields": [
           {
             "component": "select",
-            "name": "imagePosition",
-            "label": "Image Position",
-            "description": "Select the appropriate column for image placement",
-            "value": "left",
+            "name": "ctaStyle",
+            "label": "CTA Style",
+            "description": "Select the style of the Button CTA",
+            "value": "primary",
             "options": [
               {
-                "name": "Left",
-                "value": "left"
+                "name": "Primary",
+                "value": "primary"
               },
               {
-                "name": "Right",
-                "value": "right"
+                "name": "Secondary",
+                "value": "secondary"
               }
             ]
           },
           {
-            "component": "reference",
+            "component": "aem-content",
+            "name": "ctaLink",
+            "label": "CTA Link",
             "valueType": "string",
-            "name": "image",
-            "label": "Image",
-            "required": true,
-            "description": "Upload image for the component"
+            "description": "Enter the URL to navigate when CTA is clicked",
+            "validation": {
+              "rootPath": "/content"
+            },
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            }
+          },
+          {
+            "component": "reference",
+            "name": "ctaAsset",
+            "label": "Asset (PDF/Image)",
+            "description": "Upload the Asset (PDF/Image)",
+            "valueType": "string",
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "asset"
+              ]
+            }
           },
           {
             "component": "text",
-            "name": "imageAlt",
-            "label": "Image Alt text",
-            "description": "Pick alt text from AEM DAM with ability to override it"
+            "name": "two-column-aria-label",
+            "label": "ARIA Label",
+            "valueType": "string",
+            "description": "Enter ARIA label to comply ADA"
+          },
+          {
+            "component": "select",
+            "name": "targetPath",
+            "label": "Target Path",
+            "description": "Select the target path for the authored CTA URL",
+            "value": "sameTab",
+            "options": [
+              {
+                "name": "Same Tab",
+                "value": "sameTab"
+              },
+              {
+                "name": "New Tab",
+                "value": "newTab"
+              }
+            ],
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            }
+          },
+          {
+            "component": "checkbox-group",
+            "label": "Checkbox Group",
+            "name": "checkbox",
+            "valueType": "string",
+            "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+            "options": [
+              {
+                "name": "Exit Interstitial",
+                "value": "true"
+              }
+            ],
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            }
           }
         ]
       }
