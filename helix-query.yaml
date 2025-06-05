@@ -43,6 +43,6 @@ indices:
       url:
         select: head > meta[property="og:url"]
         value: attribute(el, "content")
-      trourooi:
-        select: main .story-banner p
+      trourooui:
+        select: main .story-banner.block p
         value: textContent(el)
