@@ -1,4 +1,293 @@
 [
+    {
+    "id": "media-card",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mediaCardTitle",
+        "label": "Title",
+        "description": "Enter the text",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "media-card-link",
+    "fields": [
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter the CTA Label",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "Asset Path",
+        "valueType": "string",
+        "description": "Enter the CTA link",
+        "validation": {
+          "rootPath": "content/lilly-com-eds"
+        },
+        "condition": {
+            "!": {
+            "or": [
+              {
+                "===": [
+                  {
+                    "var": "ctaLabel"
+                  },
+                  null
+                ]
+              },
+              {
+                "===": [
+                  {
+                    "var": "ctaLabel"
+                  },
+                  ""
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "component": "text",
+        "name": "news-tile-aria-label",
+        "label": "ARIA Label",
+        "valueType": "string",
+        "description": "Enter ARIA label to comply ADA"
+      }
+    ]
+  },
+  {
+    "id": "executive-grids",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "executiveGrids",
+        "label": "Section Title",
+        "description": "Enter the title for the entire executive grids",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "executive-grid",
+    "fields": [
+      {
+        "component": "select",
+        "name": "imagePlacement",
+        "label": "Image Placement",
+        "description": "Select the appropriate image placement option",
+        "required": true,
+        "value": "left",
+        "options": [
+          {
+            "name": "Top",
+            "value": "top"
+          },
+          {
+            "name": "Left",
+            "value": "left"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "required": true,
+        "description": "Upload the image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text ",
+        "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "text",
+        "name": "executiveName",
+        "label": "Name",
+        "valueType": "string",
+        "description": "Enter the Executive’s name",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "designation",
+        "label": "Designation",
+        "valueType": "string",
+        "description": "Enter the Executive’s Designation",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter the CTA Label",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "Executive bio Link",
+        "valueType": "string",
+        "description": "Enter the CTA link",
+        "validation": {
+          "rootPath": "content/lilly-com-eds"
+        },
+        "condition": {
+            "!": {
+            "or": [
+              {
+                "===": [
+                  {
+                    "var": "ctaLabel"
+                  },
+                  null
+                ]
+              },
+              {
+                "===": [
+                  {
+                    "var": "ctaLabel"
+                  },
+                  ""
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "component": "text",
+        "name": "news-tile-aria-label",
+        "label": "ARIA Label",
+        "valueType": "string",
+        "description": "Enter ARIA label to comply ADA"
+      }
+    ]
+  },
+  {
+    "id": "two-clm-with-img",
+    "fields": [
+      {
+        "component": "select",
+        "name": "imagePlacement",
+        "label": "Image Placement",
+        "description": "Select the alignment expected for entire block",
+        "value": "left",
+        "required": true,
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+      "component": "reference",
+      "valueType": "string",
+      "name": "image",
+      "label": "Image",
+      "required": true,
+      "description": "Upload image for the teaser"
+    },
+    {
+      "component": "text",
+      "valueType": "string",
+      "name": "imageAlt",
+      "label": "Image Alt text",
+      "description": "Add Image Alternate Text"
+    },
+    {
+      "component": "reference",
+      "valueType": "string",
+      "name": "icon",
+      "label": "Icon",
+      "description": "Upload icon for the teaser"
+    },
+    {
+      "component": "text",
+      "valueType": "string",
+      "name": "iconAlt",
+      "label": "Icon Alt text",
+      "description": "Pick alt text from AEM DAM with ability to override it"
+    },
+    {
+      "component": "text",
+      "name": "text",
+      "label": "Title",
+      "required": true,
+      "valueType": "string",
+      "description": "Enter the title"
+    },
+    {
+      "component": "richtext",
+      "name": "rte",
+      "label": "Description",
+      "valueType": "string",
+      "description": "Enter the description"
+    },
+    {
+      "component": "text",
+      "name": "ctaText",
+      "label": "CTA Text",
+      "valueType": "string",
+      "description": "Enter label to display on the CTA"
+    },
+    {
+      "component": "aem-content",
+      "name": "ctaLink",
+      "label": "CTA Link",
+      "description": "Enter the URL to navigate when CTA is clicked",
+      "validation": {
+        "rootPath": "/content/lilly-com-eds"
+      }
+    },
+    {
+      "component": "select",
+      "name": "targetPath",
+      "label": "Target Path",
+      "description": "Select the target path for the authored CTA URL",
+      "value": "sameTab",
+      "options": [
+        {
+          "name": "Same Tab",
+          "value": "sameTab"
+        },
+        {
+          "name": "New Tab",
+          "value": "newTab"
+        }
+      ]
+    },
+    {
+      "component": "checkbox-group",
+      "label": "Checkbox Group",
+      "name": "checkbox",
+      "valueType": "string",
+      "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+      "options": [
+        { "name": "Exit Interstitial", "value": "true" }
+      ]
+    }
+  ]
+  },
   {
     "id": "image",
     "fields": [
@@ -11,7 +300,7 @@
       {
         "component": "text",
         "name": "imageAlt",
-        "label": "Alt Text"
+        "label": "ImageAlt Text"
       }
     ]
   },
@@ -112,28 +401,204 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Content-section",
+            "value": "content-section"
+          },
+          {
+            "name": "Hero-overlay",
+            "value": "hero-overlay"
           }
         ]
       }
     ]
   },
   {
-    "id": "accordion-item",
+    "id": "additional-links",
+    "fields": [],
+    "components": [
+      "additional-link"
+    ]
+  },
+  {
+    "id": "additional-link",
+    "fields": [    
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkHeadline",
+        "label": "Link Headline",
+        "required": true,
+        "description": "Enter display text for the quick link"
+      },
+      {
+        "component": "aem-content",
+        "name": "linkURL",
+        "label": "Link URL",
+        "valueType": "string",
+        "required": true,
+        "description": "Enter the URL to navigate when Quick Link is clicked",
+        "validation": {
+              "rootPath": "content/lilly-com-eds"
+          },
+          "condition": {
+            "!": {
+            "or": [
+              {
+                "===": [
+                  {
+                    "var": "linkHeadline"
+                  },
+                  null
+                ]
+              },
+              {
+                "===": [
+                  {
+                    "var": "linkHeadline"
+                  },
+                  ""
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Exit Interstitial",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [
+          { "name": "Exit Interstitial", "value": "true" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "en-related-links",
+    "fields": [],
+    "components": [
+      "en-related-link"
+    ]
+  },
+  {
+    "id": "en-related-link",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "summary",
-        "value": "",
-        "label": "Summary"
+        "name": "linkHeadline",
+        "label": "Link Headline",
+        "required": true,
+        "description": "Enter display text for the quick link"
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "component": "aem-content",
+        "name": "linkURL",
+        "label": "Link URL",
+        "valueType": "string",
+        "required": true,
+        "description": "Enter the URL to navigate when Quick Link is clicked",
+        "validation": {
+              "rootPath": "content/lilly-com-eds"
+          }
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Exit Interstitial",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [
+          { "name": "Exit Interstitial", "value": "true" }
+        ]
       }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "select",
+        "name": "variations",
+        "label": "Carousel Variations",
+        "description": "Select the carousel variations",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Dot Pagination",
+            "value": "dotPagination"
+          },
+          {
+            "name": "Number Pagination",
+            "value": "numberPagination"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "componentTitle",
+        "label": "Section Title",
+        "description": "Enter the title for the entire Card block",
+        "multi": false
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "value": 2,
+        "name": "numberOfCards",
+        "label": "Number of Cards Test",
+        "description": "Choose the number of cards to be displayed in the component",
+        "required": true,
+        "multi": false,
+        "validation": {
+            "numberMin": 2
+        }
+      }
+    ],
+    "validation": {
+          "numberMax": 2
+      },
+    "components": [
+      "card"
     ]
   },
   {
@@ -144,102 +609,80 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
+        "required": true,
+        "description": "Upload images for the card"
       },
       {
-        "component": "richtext",
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text ",
+        "description": "Add Image Alternate Text"
+      },
+      {
+        "component": "text",
         "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "carousel-item",
-    "fields": [
-      {
-        "component": "reference",
+        "label": "Title",
         "valueType": "string",
-        "name": "media_image",
-        "label": "Background Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "media_imageAlt",
-        "value": "",
-        "label": "Bacgkround Alt"
+        "description": "Enter title for each card",
+        "required": true
       },
       {
         "component": "richtext",
-        "name": "content_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "columns",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter description for each card",
+        "required": true
       },
       {
         "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "embed",
-    "fields": [
-      {
-        "component": "reference",
+        "name": "ctaLabel",
+        "label": "CTA Label",
         "valueType": "string",
-        "name": "embed_placeholder",
-        "label": "Placeholder Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "embed_placeholderAlt",
-        "value": "",
-        "label": "Placeholder Image Alt Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "embed_uri",
-        "label": "URI"
-      }
-    ]
-  },
-  {
-    "id": "form",
-    "fields": [
+        "description": "Enter label to display on the CTA for each card"
+      },  
       {
         "component": "aem-content",
-        "name": "reference",
-        "label": "Form"
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "valueType": "string",
+        "description": "Enter the URL to navigate when CTA is clicked for each card",
+        "validation": {
+              "rootPath": "content/lilly-com-eds"
+          }
       },
       {
-        "component": "text",
-        "name": "action",
-        "label": "Action URL",
-        "valueType": "string"
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Checkbox Group",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [
+          { "name": "Exit Interstitial", "value": "true" }
+        ]
       }
-    ]
+    ],
+    "validation": {
+          "numberMax": 2
+      }
   },
   {
     "id": "fragment",
@@ -253,6 +696,106 @@
   },
   {
     "id": "hero",
+    "fields": [
+      {
+        "component": "select",
+        "name": "PrimarybackgroundType",
+        "label": "Primary Background Type",
+        "description": "Selct Background Type Primary Hero",
+        "required": true,
+        "options": [
+          {
+            "name": "Image",
+            "value": "imageSlide"
+          },
+          {
+            "name": "Video",
+            "value": "videoSlide"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "label": "Background Video",
+        "name": "BackgroundVideo",
+        "description": "Upload video for the Primary Hero",
+        "required": true,
+        "condition": {
+          "===": [
+            {
+              "var": "PrimarybackgroundType"
+            },
+            "videoSlide"
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "label": "Enable Overlay?",
+        "name": "EnableOverlay",
+        "valueType": "boolean",
+        "description": "Enable Overlay video for the Primary Hero",
+        "condition": {
+          "===": [
+            {
+              "var": "PrimarybackgroundType"
+            },
+            "videoSlide"
+          ]
+        }
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "BackgroundImage",
+        "label": "Background Image",
+        "description": "Upload Image for the Primary Hero",
+        "required": true,
+        "condition": {
+          "===": [
+            {
+              "var": "PrimarybackgroundType"
+            },
+            "imageSlide"
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Image Alt",
+        "label": "Image Alt Text",
+        "description": "Add Alt Text for Image Primary Hero",
+        "condition": {
+          "===": [
+            {
+              "var": "PrimarybackgroundType"
+            },
+            "imageSlide"
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Title",
+        "required": true,
+        "valueType": "string",
+        "description": "Enter main heading for the Primary Hero"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter description for additional context"
+      }
+    ]
+  },
+
+  {
+    "id": "sus10",
     "fields": [
       {
         "component": "reference",
@@ -278,128 +821,5264 @@
     ]
   },
   {
-    "id": "modal",
+    "id": "infobanner",
+    "fields": []
+  },
+  {
+    "id": "infoitem",
     "fields": [
       {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cards-accordion",
+    "fields": [
+      {
+        "component": "text",
+        "name": "accordiontitle",
+        "label": "Accordion Title",
+        "description": "Enter title for the entire Accordion Block"
+      },
+      {
+        "component": "select",
+        "name": "style",
+        "label": "Accordion Expansion",
+        "description": "Select the relevant Accordion Expansion option",
+        "value": "none",
+        "required": true,
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "First",
+            "value": "first"
+          },
+          {
+            "name": "All",
+            "value": "all"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card-accordion",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Description",
+        "valueType": "string",
+        "required": true
       },
       {
         "component": "text",
-        "name": "linkText",
-        "label": "Text"
+        "name": "imageTitle",
+        "label": "imageTitle",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "cardsCount",
+        "label": "Cards Count",
+        "options": [
+          {
+            "name": "2",
+            "value": "two"
+          },
+          {
+            "name": "3",
+            "value": "three"
+          },
+          {
+            "name": "4",
+            "value": "four"
+          },
+          {
+            "name": "5",
+            "value": "five"
+          },
+          {
+            "name": "6",
+            "value": "six"
+          }
+        ],
+        "multi": false
+      },
+      {
+        "component": "container",
+        "label": "Slide details",
+        "name": "SlideDetails2",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "two"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Slide 1 contents",
+            "name": "slide1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType1",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image1",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt1",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId1",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle1",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle1",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide1Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide1Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 2 contents",
+            "name": "slide2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType2",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image2",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt2",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId2",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle2",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle2",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide2Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide2Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Slide details",
+        "name": "SlideDetails3",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "three"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Slide 1 contents",
+            "name": "slide1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType1",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image1",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt1",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId1",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle1",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle1",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide1Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide1Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 2 contents",
+            "name": "slide2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType2",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image2",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt2",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId2",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle2",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle2",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide2Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide2Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 3 contents",
+            "name": "slide3",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType3",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage3",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType3"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image3",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt3",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo3",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType3"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId3",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle3",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle3",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide3Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide3Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide3Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide3Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Slide details",
+        "name": "SlideDetails4",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "four"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Slide 1 contents",
+            "name": "slide1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType1",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image1",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt1",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId1",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle1",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle1",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide1Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide1Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 2 contents",
+            "name": "slide2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType2",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image2",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt2",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId2",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle2",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle2",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide2Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide2Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 3 contents",
+            "name": "slide3",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType3",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage3",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType3"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image3",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt3",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo3",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType3"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId3",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle3",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle3",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide3Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide3Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide3Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide3Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 4 contents",
+            "name": "slide4",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType4",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage4",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType4"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image4",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt4",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo4",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType4"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId4",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle4",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle4",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide4Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide4Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide4Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide4Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Slide details",
+        "name": "SlideDetails5",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "five"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Slide 1 contents",
+            "name": "slide1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType1",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image1",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt1",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId1",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle1",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle1",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide1Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide1Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 2 contents",
+            "name": "slide2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType2",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image2",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt2",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId2",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle2",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle2",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide2Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide2Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 3 contents",
+            "name": "slide3",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType3",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage3",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType3"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image3",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt3",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo3",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType3"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId3",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle3",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle3",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide3Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide3Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide3Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide3Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 4 contents",
+            "name": "slide4",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType4",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage4",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType4"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image4",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt4",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo4",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType4"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId4",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle4",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle4",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide4Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide4Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide4Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide4Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 5 contents",
+            "name": "slide5",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType5",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage5",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType5"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image5",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt5",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo5",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType5"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId5",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle5",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle5",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide5Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide5Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide5LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide5LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide5TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide5ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide5Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide5Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide5LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide5LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide5TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide5ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Slide details",
+        "name": "SlideDetails6",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "six"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Slide 1 contents",
+            "name": "slide1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType1",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image1",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt1",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo1",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType1"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId1",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle1",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle1",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide1Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide1Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide1Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide1LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide1ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 2 contents",
+            "name": "slide2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType2",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image2",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt2",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo2",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType2"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId2",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle2",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle2",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide2Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide2Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide2Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide2LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide2ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 3 contents",
+            "name": "slide3",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType3",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage3",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType3"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image3",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt3",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo3",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType3"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId3",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle3",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle3",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide3Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide3Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide3Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide3Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide3LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide3ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 4 contents",
+            "name": "slide4",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType4",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage4",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType4"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image4",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt4",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo4",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType4"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId4",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle4",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle4",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide4Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide4Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide4Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide4Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide4LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide4ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 5 contents",
+            "name": "slide5",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType5",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage5",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType5"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image5",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt5",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo5",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType5"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId5",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle5",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle5",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide5Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide5Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide5LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide5LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide5TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide5ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide5Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide5Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide5LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide5LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide5TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide5ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Slide 6 contents",
+            "name": "slide6",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "select",
+                "valueType": "string",
+                "name": "backgroundType6",
+                "label": "Slide Background Type",
+                "options": [
+                  {
+                    "name": "Image",
+                    "value": "imageSlide"
+                  },
+                  {
+                    "name": "Video",
+                    "value": "videoSlide"
+                  }
+                ],
+                "multi": false
+              },
+              {
+                "component": "container",
+                "label": "Image Details",
+                "name": "carousalImage6",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType6"
+                    },
+                    "imageSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "reference",
+                    "name": "image6",
+                    "label": "Image",
+                    "multi": false
+                  },
+                  {
+                    "component": "text",
+                    "name": "imageAlt6",
+                    "label": "Alt Text"
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Video Details",
+                "name": "carousalVideo6",
+                "valueType": "string",
+                "collapsible": true,
+                "condition": {
+                  "===": [
+                    {
+                      "var": "backgroundType6"
+                    },
+                    "videoSlide"
+                  ]
+                },
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "videoId6",
+                    "label": "Video ID",
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "slideTitle6",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "slideSubTitle6",
+                "value": "",
+                "label": "Sub Title",
+                "valueType": "string"
+              },
+              {
+                "component": "container",
+                "label": "Cta 1",
+                "name": "slide6Cta1",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide6Link1",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide6LinkText1",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide6LinkTitle1",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide6TargetPath1",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide6ButtonType1",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "container",
+                "label": "Cta 2",
+                "name": "slide6Cta2",
+                "valueType": "string",
+                "collapsible": true,
+                "fields": [
+                  {
+                    "component": "text",
+                    "name": "slide6Link2",
+                    "label": "Button Link"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide6LinkText2",
+                    "label": "Button Text"
+                  },
+                  {
+                    "component": "text",
+                    "name": "slide6LinkTitle2",
+                    "label": "Button Title"
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide6TargetPath2",
+                    "label": "target path",
+                    "options": [
+                      {
+                        "name": "New Tab",
+                        "value": "_blank"
+                      },
+                      {
+                        "name": "Same Tab",
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "component": "select",
+                    "name": "slide6ButtonType2",
+                    "label": "Type",
+                    "options": [
+                      {
+                        "name": "filled",
+                        "value": "filled"
+                      },
+                      {
+                        "name": "outlined",
+                        "value": "outlined"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Card details",
+        "name": "cardDetails2",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "two"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Card 1 contents",
+            "name": "card1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage1",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt1",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow1",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description1",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 2 contents",
+            "name": "card2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage2",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt2",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow2",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description2",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Card details",
+        "name": "cardDetails3",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "three"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Card 1 contents",
+            "name": "card1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage1",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt1",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow1",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description1",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 2 contents",
+            "name": "card2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage2",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt2",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow2",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description2",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 3 contents",
+            "name": "card3",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage3",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt3",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow3",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description3",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Card details",
+        "name": "cardDetails4",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "four"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Card 1 contents",
+            "name": "card1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage1",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt1",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow1",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description1",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 2 contents",
+            "name": "card2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage2",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt2",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow2",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description2",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 3 contents",
+            "name": "card3",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage3",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt3",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow3",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description3",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 4 contents",
+            "name": "card4",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage4",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt4",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow4",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description4",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Card details",
+        "name": "cardDetails5",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "five"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Card 1 contents",
+            "name": "card1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage1",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt1",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow1",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description1",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 2 contents",
+            "name": "card2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage2",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt2",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow2",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description2",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 3 contents",
+            "name": "card3",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage3",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt3",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow3",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description3",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 4 contents",
+            "name": "card4",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage4",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt4",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow4",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description4",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 5 contents",
+            "name": "card5",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage5",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt5",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow5",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description5",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Card details",
+        "name": "cardDetails6",
+        "valueType": "string",
+        "collapsible": true,
+        "condition": {
+          "===": [
+            {
+              "var": "cardsCount"
+            },
+            "six"
+          ]
+        },
+        "fields": [
+          {
+            "component": "container",
+            "label": "Card 1 contents",
+            "name": "card1",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage1",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt1",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow1",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description1",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 2 contents",
+            "name": "card2",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage2",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt2",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow2",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description2",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 3 contents",
+            "name": "card3",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage3",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt3",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow3",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description3",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 4 contents",
+            "name": "card4",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage4",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt4",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow4",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description4",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 5 contents",
+            "name": "card5",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage5",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt5",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow5",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description5",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Card 6 contents",
+            "name": "card6",
+            "valueType": "string",
+            "collapsible": true,
+            "fields": [
+              {
+                "component": "reference",
+                "name": "cardImage6",
+                "label": "Image",
+                "multi": false
+              },
+              {
+                "component": "text",
+                "name": "CardImageAlt6",
+                "label": "Alt Text"
+              },
+              {
+                "component": "richtext",
+                "valueType": "string",
+                "name": "eyebrow6",
+                "label": "Eyebrow",
+                "value": ""
+              },
+              {
+                "component": "richtext",
+                "name": "description6",
+                "value": "",
+                "label": "Description",
+                "valueType": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "primary-header",
+    "fields": [
+      {
+        "component": "container",
+        "label": "Columns",
+        "name": "columns",
+        "valueType": "number",
+        "fields": [
+          {
+            "component": "container",
+            "label": "Column 1",
+            "name": "column1",
+            "valueType": "string",
+            "fields": [
+              {
+                "component": "text",
+                "name": "title",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "text",
+                "name": "link",
+                "label": "Link",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Column 2",
+            "name": "column2",
+            "valueType": "string",
+            "fields": [
+              {
+                "component": "text",
+                "name": "title",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "text",
+                "name": "link",
+                "label": "Link",
+                "value": ""
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Column 3",
+            "name": "column3",
+            "valueType": "string",
+            "fields": [
+              {
+                "component": "text",
+                "name": "title",
+                "label": "Title",
+                "value": ""
+              },
+              {
+                "component": "text",
+                "name": "link",
+                "label": "Link",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kalthuravideo",
+    "fields": [
+      {
+        "component": "text",
+        "name": "videoId",
+        "label": "Enter Video ID",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "herocontent",
+        "label": "Hero Content",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "text-component",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Description",
+        "valueType": "string",
+        "required": true,
+        "description": "Enter description for additional context which can have styling such as Bold, italics and  ability to add text links."
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "select",
+        "name": "imagePlacement",
+        "label": "Image Placement",
+        "description": "Select the appropriate column for image placement",
+        "required": true,
+        "value": "left",
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "imagePath",
+        "label": "Image Path",
+        "description": "Upload image for the teaser",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "imageAltTxt",
+        "label": "Image Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "description": "Enter the title",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "description": "Enter the title",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "description": "Enter the title"
+      },
+      {
+        "component": "aem-content",
+        "name": "CTA Link",
+        "label": "CTA Link",
+        "description": "Enter the URL to navigate when CTA is clicked",
+        "validation": {
+          "rootPath": "/content/lilly-com-eds"
+        }
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
       }
     ]
   },
   {
     "id": "quote",
     "fields": [
-      {
-        "component": "richtext",
+       {
+         "component": "richtext",
+         "name": "quote",
+         "value": "",
+         "label": "Quote2",
+         "valueType": "string"
+       },
+       {
+         "component": "text",
+         "valueType": "string",
+         "name": "author",
+         "label": "Author",
+         "value": ""
+       },
+       {
+        "component": "custom-asset-namespace:custom-asset",
         "valueType": "string",
-        "name": "quotation",
+        "name": "media_desktopPosterFileReference",
+        "label": "Desktop Poster Image",
         "value": "",
-        "label": "Quotation"
-      },
+        "description": "Defines the the poster image of the video that will play on desktop. It will be displayed while loading the page.",
+        "required": true,
+        "configUrl":"/content/metafox/rs.resource/tools/image-config.json",
+        "multi": false
+      }
+     ]
+  },
+  {
+    "id": "quote-block",
+    "fields": [
       {
-        "component": "richtext",
-        "name": "attribution",
+        "component": "text",
+        "name": "quote",
         "value": "",
-        "label": "Attribution",
+        "label": "Quote",
         "valueType": "string"
       }
     ]
   },
   {
-    "id": "search",
+    "id": "text-block",
     "fields": [
       {
         "component": "text",
-        "valueType": "string",
-        "name": "index",
-        "label": "Index"
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
+        "name": "text",
         "value": "",
-        "label": "Options",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Search Type",
-            "children": [
-              {
-                "name": "Minimal",
-                "value": "minimal"
-              }
-            ]
-          }
-        ]
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
   {
-    "id": "table",
+    "id": "table-multi",
     "fields": [
       {
-        "component": "multiselect",
-        "name": "classes",
+        "component": "text-input",
+        "valueType": "string[]",
+        "name": "columnName",
         "value": "",
-        "label": "Options",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Border",
-            "children": [
-              {
-                "name": "Striped",
-                "value": "striped"
-              },
-              {
-                "name": "Bordered",
-                "value": "bordered"
-              }
-            ]
-          },
-          {
-            "name": "Header",
-            "children": [
-              {
-                "name": "No Header",
-                "value": "no-header"
-              }
-            ]
-          }
-        ]
-      },
+        "label": "Column Name",
+        "description": "Enter The Column Name",
+        "required": true,
+        "multi": true,
+        "validation": {
+            "maxSize": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "row",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string[]",
+        "name": "rowRTEValue",
+        "label": "Row Value",
+        "value": "",
+        "description": "Enter The Value",
+        "required": true,
+        "multi": true,
+        "validation": {
+            "maxSize": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "carousel-poc",
+    "fields": [
       {
         "component": "select",
         "name": "filter",
-        "label": "Columns",
+        "label": "Select The Variation",
+        "description": "Select The Variation",
         "valueType": "string",
-        "value": "table",
+        "value": "carousel-variation-1",
         "options": [
           {
-            "name": "1 Column",
-            "value": "table"
+            "name": "Variation 1",
+            "value": "carousel-variation-1"
           },
           {
-            "name": "2 Columns",
-            "value": "table-2-columns"
+            "name": "Variation 2",
+            "value": "carousel-variation-2"
           },
           {
-            "name": "3 Columns",
-            "value": "table-3-columns"
+            "name": "Variation 3",
+            "value": "carousel-variation-3"
           },
           {
-            "name": "4 Columns",
-            "value": "table-4-columns"
-          },
-          {
-            "name": "5 Columns",
-            "value": "table-5-columns"
+            "name": "Variation 4",
+            "value": "carousel-variation-4"
           }
         ]
       }
@@ -417,133 +6096,410 @@
     ]
   },
   {
-    "id": "table-col-2",
+    "id": "variation-1",
     "fields": [
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "column1text",
-        "label": "Column1"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "column2text",
-        "label": "Column2"
+        "name": "var1text",
+        "label": "Variation 1 Description"
       }
     ]
   },
   {
-    "id": "table-col-3",
+    "id": "variation-2",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "var2text",
+        "label": "Variation 2 Description"
+      }
+    ]
+  },
+  {
+    "id": "variation-3",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "var31text",
+        "label": "Variation 3 Description"
+      }
+    ]
+  },
+  {
+    "id": "variation-4",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "var4text",
+        "label": "Variation 4 Description"
+      }
+    ]
+  },
+  {
+    "id": "table-col-6",
     "fields": [
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column1text",
-        "label": "Column1"
+        "label": "Column1 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column2text",
-        "label": "Column2"
+        "label": "Column2 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column3text",
-        "label": "Column3"
-      }
-    ]
-  },
-  {
-    "id": "table-col-4",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "column1text",
-        "label": "Column1"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "column2text",
-        "label": "Column2"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "column3text",
-        "label": "Column3"
+        "label": "Column3 Description"
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "column4text",
-        "label": "Column4"
-      }
-    ]
-  },
-  {
-    "id": "tabs-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "tabName",
-        "value": "",
-        "label": "Tab Name"
+        "label": "Column4 Description"
       },
       {
         "component": "richtext",
-        "name": "content",
-        "value": "",
-        "label": "Content",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "column5text",
+        "label": "Column5 Description"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column6text",
+        "label": "Column6 Description"
       }
     ]
   },
   {
-    "id": "video",
+    "id": "aem-content-fragment",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
         "valueType": "string",
-        "name": "uri",
-        "label": "Video"
-      },
+        "variationName": "contentFragmentVariation"
+      }
+    ]
+  },
+  {
+    "id": "cont-sec-container",
+    "fields": [
       {
-        "component": "multiselect",
-        "name": "classes",
-        "value": "",
-        "label": "Options",
-        "valueType": "string",
+        "component": "select",
+        "name": "backgroundColor",
+        "label": "Background Color",
+        "description": "Select the background color",
+        "required": true,
+        "value": "none",
         "options": [
           {
-            "name": "Auto Play",
-            "children": [
-              {
-                "name": "AutoPlay",
-                "value": "autoplay"
-              }
-            ]
+            "name": "Primary - Red",
+            "value": "primary-red"
+          },
+          {
+            "name": "Secondary - Green",
+            "value": "secondary-green"
+          },
+          {
+            "name": "Tertiary - Blue",
+            "value": "tertiary-blue"
+          },
+          {
+            "name": "Quaternary - Gray",
+            "value": "quaternary-gray"
+          },
+          {
+            "name": "Transparent",
+            "value": "transparent"
+          },
+          {
+            "name": "None",
+            "value": "none"
           }
         ]
       },
       {
+        "component": "select",
+        "name": "additionalPadding",
+        "label": "Additional Padding",
+        "description": "Select the padding for each side so that authors have the ability to specify spacing",
+        "required": true,
+        "value": "none",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Narrow",
+            "value": "narrow"
+          },
+          {
+            "name": "Wide",
+            "value": "wide"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "additionalMargins",
+        "label": "Additional Margins",
+        "description": "Select the margins for each side so that authors have the ability to specify spacing",
+        "required": true,
+        "value": "none",
+        "options": [
+          {
+            "name": "None",
+            "value": "none"
+          },
+          {
+            "name": "Narrow",
+            "value": "narrow"
+          },
+          {
+            "name": "Wide",
+            "value": "wide"
+          }
+        ]
+      },
+      {
+        "component": "checkbox-group",
+        "name": "roundedBorders",
+        "valueType": "string",
+        "description": "Select check or unchecked for rounded borders",
+        "options": [
+          { "name": "Rounded Borders", "value": "true" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "test-component",
+    "fields": [
+      {
         "component": "reference",
         "valueType": "string",
-        "name": "placeholder_image",
-        "label": "Placeholder Image",
-        "multi": true
+        "name": "icon",
+        "label": "Icon",
+        "description": "Upload the icon image",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "iconAlt",
+        "label": "Icon Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "required": true,
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter the Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "required": true,
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter the description"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "description": "Upload the image",
+        "required": true
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "placeholder_imageAlt",
-        "value": "",
-        "label": "Placeholder Image Alt Text"
+        "name": "imageAlt",
+        "label": "Image Alt text",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "textoverimage",
+        "required": true,
+        "label": "Text over Image",
+        "valueType": "string",
+        "description": "Enter the text to be displayed over image"
+      },
+      {
+        "component": "aem-content",
+        "name": "image",
+        "label": "Image Link",
+        "required" : true,
+        "description": "Enter the URL to navigate when the Image is clicked"
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "executive-tile",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "required": true,
+        "description": "Upload Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt text",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true,
+        "value": "Alt text from AEM DAM"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "label": "Name",
+        "name": "executiveName",
+        "description": "Enter the Executive’s name",
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "label": "Designation",
+        "name": "executiveDesignation",
+        "description": "Enter the Executive’s Designation",
+        "required": true
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Instagram Profile",
+        "name": "instagramProfile",
+        "valueType": "string",
+        "description": "Select if the Executive’s Instagram profile is available",
+        "options": [
+        { "name": "Option1", "value": "option1" },
+        { "name": "Option 2", "value": "option2" }
+      ]
+      },
+      {
+        "component": "aem-content",
+        "name": "instagramURL",
+        "label": "Instagram URL",
+        "description": "Enter the Instagram profile URL",
+        "required": true,
+        "valueType": "string",
+        "condition": {
+          "in": [
+            "option1",
+            { "var": "instagramProfile" }
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "label": "X Profile",
+        "name": "xProfile",
+        "valueType": "boolean",
+        "description": "Select if the Executive’s X profile is available"
+      },
+      {
+        "component": "aem-content",
+        "name": "xURL",
+        "description": "Enter the X profile URL",
+        "label": "X URL",
+        "valueType": "string",
+        "required": true,
+        "condition": { "===": [ { "var": "xProfile"}, true ] },
+        "validation": {
+          "rootPath": "/content"
+        }
+      },
+      {
+        "component": "boolean",
+        "label": "LinkedIn Profile",
+        "name": "linkedInProfile",
+        "valueType": "boolean",
+        "description": "Select if the Executive’s LinkedIn profile is available"
+      },
+      {
+        "component": "aem-content",
+        "name": "linkedInURL",
+        "label": "LinkedIn URL",
+        "description": "Enter the LinkedIn profile URL",
+        "required": true,
+        "valueType": "string",
+        "condition": { "===": [ { "var": "linkedInProfile"}, true ] }
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA"
+      },
+      {
+        "component": "aem-content",
+        "name": "executiveBioFile ",
+        "label": "Executive Bio File ",
+        "description": "Upload link to the bio file",
+        "condition": {
+          "!": {
+            "or": [
+              {
+                "===": [
+                  {
+                    "var": "ctaLabel"
+                  },
+                  null
+                ]
+              },
+              {
+                "===": [
+                  {
+                    "var": "ctaLabel"
+                  },
+                  ""
+                ]
+              }
+            ]
+          }
+        },
+        "validation": {
+          "rootPath": "/content"
+        }
       }
     ]
   }

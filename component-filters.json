@@ -2,35 +2,107 @@
   {
     "id": "main",
     "components": [
-      "section"
+      "section",
+      "cont-sec-container"
     ]
   },
   {
     "id": "section",
     "components": [
-      "accordion",
-      "button",
-      "cards",
-      "carousel",
-      "columns",
-      "embed",
-      "fragment",
-      "form",
-      "hero",
-      "image",
-      "quote",
-      "search",
-      "tabs",
-      "table",
       "text",
+      "image",
+      "button",
       "title",
-      "video"
+      "hero",
+      "cards",
+      "cards-accordion",
+      "columns",
+      "fragment",
+      "sus10",
+      "infobanner",
+      "carousel",
+      "primary-header",
+      "kalthuravideo",
+      "text-component",
+      "teaser",
+      "two-clm-with-img",
+      "quote",
+      "quote-block",
+      "text-block",
+      "table-multi",
+      "carousel-poc",
+      "additional-links",
+      "en-related-links",
+      "aem-content-fragment",
+      "executive-tile",
+      "executive-grids",
+      "media-card"
+    ]
+  },
+    {
+    "id": "media-card",
+    "components": ["media-card-link"]
+  },
+  {
+    "id": "executive-grids",
+    "components": ["executive-grid"]
+  },
+  {
+    "id": "table-multi",
+    "components": ["row"]
+  },
+  {
+    "id": "carousel-poc",
+    "components": [
+      "variation-1"
     ]
   },
   {
-    "id": "accordion",
+    "id": "carousel-variation-1",
     "components": [
-      "accordion-item"
+      "variation-1"
+    ]
+  },
+  {
+    "id": "carousel-variation-2",
+    "components": [
+      "variation-2"
+    ]
+  },
+  {
+    "id": "carousel-variation-3",
+    "components": [
+      "variation-3"
+    ]
+  },
+    {
+    "id": "carousel-variation-4",
+    "components": [
+      "variation-4"
+    ]
+  },
+  {
+    "id": "table-5-columns",
+    "components": [
+      "table-col-5"
+    ]
+  },
+  {
+    "id": "table-6-columns",
+    "components": [
+      "table-col-6"
+    ]
+  },
+  {
+    "id": "en-related-links",
+    "components": [
+      "en-related-link"
+    ]
+  },
+  {
+    "id": "additional-links",
+    "components": [
+      "additional-link"
     ]
   },
   {
@@ -40,9 +112,9 @@
     ]
   },
   {
-    "id": "carousel",
+    "id": "cards-accordion",
     "components": [
-      "carousel-item"
+      "card-accordion"
     ]
   },
   {
@@ -57,41 +129,37 @@
       "text",
       "image",
       "button",
+      "title",
+      "quote",
+      "section",
+      "columns"
+    ]
+  },
+  {
+    "id": "infobanner",
+    "components": [
+      "infoitem"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "text",
+      "image",
+      "button",
       "title"
     ]
   },
   {
-    "id": "table",
+    "id": "kalthuravideo",
     "components": [
-      "table-row"
+      "text"
     ]
   },
   {
-    "id": "table-2-columns",
+    "id": "text-component",
     "components": [
-      "table-col-2"
+      "text"
     ]
-  },
-  {
-    "id": "table-3-columns",
-    "components": [
-      "table-col-3"
-    ]
-  },
-  {
-    "id": "table-4-columns",
-    "components": [
-      "table-col-4"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tabs-item"
-    ]
-  },
-  {
-    "id": "video",
-    "components": []
   }
 ]
