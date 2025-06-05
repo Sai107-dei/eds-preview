@@ -1,186 +1,97 @@
 [
   {
     "id": "main",
-    "components": ["section","cont-sec-container", "tabs-section","column-container"]
+    "components": [
+      "section"
+    ]
   },
   {
     "id": "section",
     "components": [
-      "image-block",
-      "spacer-and-divider",
-      "small-width-media",
-      "story-banner",
-      "text",
-      "image",
-      "button",
-      "title",
-      "hero",
-      "lcdp",
-      "horizontal-numeric-tile",
-      "search",
-      "cards",
-      "columns",
-      "fragment",
-      "relatedlinks",
-      "icon-tile",
-      "enhanced-related-links",
-      "text-component",
-      "two-column-with-image",
-      "tabs",
       "accordion",
-      "additional-links",
-      "promo-banner",
-      "executive-tile",
-      "text-callout",
-      "pull-quote",
+      "button",
+      "cards",
+      "carousel",
+      "columns",
+      "embed",
+      "fragment",
+      "form",
+      "hero",
+      "image",
+      "quote",
+      "search",
+      "tabs",
       "table",
-      "table-2-columns",
-      "table-3-columns",
-      "table-4-columns",
-      "table-5-columns",
-      "table-6-columns",
-      "vertical-numeric-tile",
-      "bio-pagination",
-      "news-tile"
+      "text",
+      "title",
+      "video"
     ]
   },
   {
-    "id": "cont-sec-container",
+    "id": "accordion",
     "components": [
-      "spacer-and-divider",
-      "text",
-      "image",
-      "button",
-      "title",
-      "hero",
-      "lcdp",
-      "search",
-      "cards",
-      "columns",
-      "fragment",
-      "relatedlinks",
-			"icon-tile",
-      "enhanced-related-links",
-      "text-component",
-      "two-column-with-image",
-      "tabs",
-      "accordion",
-      "additional-links",
-      "promo-banner",
-      "pull-quote",
-      "table",
-      "table-2-columns",
-      "table-3-columns",
-      "table-4-columns",
-      "table-5-columns",
-      "table-6-columns",
-      "vertical-numeric-tile",
-      "image-block",
-      "news-tile"
+      "accordion-item"
     ]
   },
   {
     "id": "cards",
-    "components": ["card"]
-  },
-  {
-    "id": "hero",
-    "components": ["icongrid-tile"]
-  },
-  {
-    "id": "columns",
-    "components": ["column"]
-  },
-  {
-    "id": "lcdp",
-    "components": ["lcdp"]
-  },
-  {
-    "id": "search",
-    "components": ["search"]
-  },
-  {
-    "id": "column",
-    "components": ["text", "image", "button", "title"]
-  },
-  {
-    "id": "icon-tile-grid",
-    "components": ["tile"]
-  },
-  {
-    "id": "horizontal-numeric-tile",
-    "components": ["numeric-tile"]
-  },
-  {
-    "id": "relatedlinks",
-    "components": ["relatedlink"]
-  },
-  {
-    "id": "enhanced-related-links",
-    "components": ["enhanced-related-link"]
-  },
-  {
-    "id": "tabs-section",
-    "components": ["tabs", "image", "text-component"]
-  },
-  {
-    "id": "tabs",
-    "components": ["text-component"]
-  },
-  {
-    "id": "accordion",
-    "components": ["accordion-item"]
-  },
-  {
-    "id": "additional-links",
-    "components": ["additional-link"]
-  },
-  {
-    "id": "table",
-    "components": ["table-row"]
-  },
-  {
-    "id": "table-2-columns",
-    "components": ["table-col-2"]
-  },
-  {
-    "id": "table-3-columns",
-    "components": ["table-col-3"]
-  },
-  {
-    "id": "table-4-columns",
-    "components": ["table-col-4"]
-  },
-  {
-    "id": "table-5-columns",
-    "components": ["table-col-5"]
-  },
-  {
-    "id": "table-6-columns",
-    "components": ["table-col-6"]
-  },
-  {
-    "id": "vertical-numeric-tile",
-    "components": ["vertical-numeric-tile-item"]
-  },
-  {
-    "id": "column-container",
     "components": [
-      "column-break",
-      "accordion",
-      "additional-links",
-      "cards",
-      "text",
-      "image",
-      "title",
-      "relatedlinks",
-      "enhanced-related-links",
-      "text-component",
-      "spacer-and-divider"
+      "card"
     ]
   },
   {
-    "id": "news-tile",
-    "components": ["news-tile-item"]
+    "id": "carousel",
+    "components": [
+      "carousel-item"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "table",
+    "components": [
+      "table-row"
+    ]
+  },
+  {
+    "id": "table-2-columns",
+    "components": [
+      "table-col-2"
+    ]
+  },
+  {
+    "id": "table-3-columns",
+    "components": [
+      "table-col-3"
+    ]
+  },
+  {
+    "id": "table-4-columns",
+    "components": [
+      "table-col-4"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
+    ]
+  },
+  {
+    "id": "video",
+    "components": []
   }
 ]
