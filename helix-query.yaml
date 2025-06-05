@@ -3,9 +3,9 @@ version: 1
 indices:
   pages:
     include:
-      - '/**'
+      - "/**"
     exclude:
-      - '/**.json'
+      - "/**.json"
     target: /query-index.json
     properties:
       lastModified:
@@ -15,50 +15,34 @@ indices:
         select: head > meta[name="robots"]
         value: attribute(el, "content")
       pageTitle:
-          select: head > meta[property="og:title"]
-          value: attribute(el, "content")
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
       url:
-          select: head > meta[property="og:url"]
-          value: attribute(el, "content")  
+        select: head > meta[property="og:url"]
+        value: attribute(el, "content")
       modifiredCsutom:
-          select: head > meta[name="storie"]
-          value: attribute(el, "content") 
+        select: head > meta[name="storie"]
+        value: attribute(el, "content")
       something:
-          select: head > meta[name="modified-time"]
-          value: attribute(el, "content") 
+        select: head > meta[name="modified-time"]
+        value: attribute(el, "content")
       smooch:
-          select: head > meta[name="page-swoosh"]
-          value: attribute(el, "content")  
+        select: head > meta[name="page-swoosh"]
+        value: attribute(el, "content")
       customindex:
-          select: head > meta[name="customtitle"]
-          value: attribute(el, "content")      
+        select: head > meta[name="customtitle"]
+        value: attribute(el, "content")
 
   breadcrumb:
-    include:
-      /**
+    include: /**
     target: /api/breadcrumb.json
     properties:
       pageTitle:
-          select: head > meta[property="og:title"]
-          value: attribute(el, "content")
+        select: head > meta[property="og:title"]
+        value: attribute(el, "content")
       url:
-          select: head > meta[property="og:url"]
-          value: attribute(el, "content")
-      storysai: 
-        select: main .story-banner-title-wrapper .title [aria-label] p
+        select: head > meta[property="og:url"]
+        value: attribute(el, "content")
+      trourooi:
+        select: main .story-banner p
         value: textContent(el)
-      lostting: 
-        select: main .story-banner-container div > div:last-child p
-        value: textContent(el)
-      oy: 
-        select: main .story-banner-container div > p:last-child
-        value: textContent(el)
-      edoty: 
-        select: main .section story-banner-container div > div:last-child p
-        value: textContent(el)
-      trourooi: 
-        select: main .section story-banner-container div > p:last-child
-        value: textContent(el)
-     
-     
-     
