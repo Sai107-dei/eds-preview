@@ -4003,7 +4003,7 @@
         "fields": [
           {
             "component": "select",
-            "name": "ctaStyleTwo",
+            "name": "ctaStyle",
             "label": "CTA Style",
             "description": "Select the style of the Button CTA",
             "value": "primary",
