@@ -3954,6 +3954,84 @@
             "link"
           ]
         }
+      },
+      {
+        "component": "text",
+        "name": "eyebrowText",
+        "label": "Eyebrow",
+        "valueType": "string",
+        "description": "Enter the Eyebrow text"
+      },
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Footnote",
+        "valueType": "string",
+        "description": "Enter the Footnote text"
+      },
+       {
+        "component": "select",
+        "name": "ctaNumber",
+        "label": "Number of CTA(s)",
+        "description": "Select the number of CTA(s) required",
+        "value": "one",
+        "options": [
+          {
+            "name": "One",
+            "value": "one"
+          },
+          {
+            "name": "Two",
+            "value": "two"
+          }
+        ]
+      },
+       {
+        "component": "container",
+        "name": "twoButton",
+        "label": "Two Button Fields",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "ctaNumber"
+            },
+            "two"
+          ]
+        },
+        "fields": [
+          {
+            "component": "select",
+            "name": "imagePosition",
+            "label": "Image Position",
+            "description": "Select the appropriate column for image placement",
+            "value": "left",
+            "options": [
+              {
+                "name": "Left",
+                "value": "left"
+              },
+              {
+                "name": "Right",
+                "value": "right"
+              }
+            ]
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "required": true,
+            "description": "Upload image for the component"
+          },
+          {
+            "component": "text",
+            "name": "imageAlt",
+            "label": "Image Alt text",
+            "description": "Pick alt text from AEM DAM with ability to override it"
+          }
+        ]
       }
     ]
   },
