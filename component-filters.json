@@ -53,7 +53,7 @@
       "executive-grids",
       "csr-form",
       "timeline-card",
-      "video"
+      "video-carousel"
     ]
   },
   {
@@ -121,6 +121,10 @@
       "timeline-card",
       "media-card"
     ]
+  },
+  {
+    "id": "video-carousel",
+    "components": ["video-carousel-item"]
   },
   {
     "id": "accordion",

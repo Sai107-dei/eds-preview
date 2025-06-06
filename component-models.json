@@ -4233,7 +4233,7 @@
     ]
   },
   {
-    "id": "video",
+    "id": "video-carousel-item",
     "fields": [
       {
         "component": "reference",
