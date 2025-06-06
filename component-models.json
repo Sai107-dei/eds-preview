@@ -3866,7 +3866,7 @@
             "component": "select",
             "name": "ctaStyleOne",
             "label": "CTA Style",
-            "description": "Select the style of the Button cta",
+            "description": "Select the style of the Button CTA",
             "value": "primary",
             "options": [
               {
