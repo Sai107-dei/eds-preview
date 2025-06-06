@@ -4272,7 +4272,7 @@
         "name": "Image",
         "label": "With image Field Details",
         "valueType": "string",
-         "condition": {
+        "condition": {
           "===": [
             {
               "var": "videoType"
@@ -4294,6 +4294,47 @@
             "label": "Description",
             "valueType": "string",
             "description": "Enter description of the video"
+          },
+          {
+            "component": "select",
+            "name": "ctaStyle",
+            "label": "CTA Style",
+            "description": "Select the style of the Button CTA",
+            "value": "primary",
+            "options": [
+              {
+                "name": "Primary",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary",
+                "value": "secondary"
+              }
+            ]
+          },
+          {
+            "component": "text",
+            "name": "ctalabel",
+            "label": "CTA Label",
+            "valueType": "string",
+            "description": "Enter label to display on the CTA",
+            "value": "Watch now",
+            "required": true
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "videoID",
+            "label": "Video ID",
+            "description": "Upload the full-length video",
+            "required": true
+          },
+          {
+            "component": "richtext",
+            "name": "rte",
+            "label": "Video Transcript",
+            "valueType": "string",
+            "description": "Enter the video transcript "
           }
         ]
       }
