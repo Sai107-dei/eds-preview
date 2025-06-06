@@ -3760,442 +3760,441 @@
     ]
   },
   {
-      "id": "two-column-with-image",
-      "fields": [
-        {
-          "component": "select",
-          "name": "imagePlacement",
-          "label": "Image Placement",
-          "description": "Select the appropriate column for image placement   ⓘ Image will always be displayed at the top in mobile view",
-          "value": "left",
-          "required": true,
-          "options": [
-            {
-              "name": "Left",
-              "value": "left"
-            },
-            {
-              "name": "Right",
-              "value": "right"
-            }
-          ]
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
-          "required": true,
-          "description": "Upload image for the Two Column with Image"
-        },
-        {
-          "component": "text",
-          "name": "altImage",
-          "label": "Image Alt text",
-          "valueType": "string",
-          "description": "Pick alt text from AEM DAM with ability to override it"
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "icon",
-          "label": "Icon",
-          "description": "Upload icon for the Two Column with Image"
-        },
-        {
-          "component": "text",
-          "name": "alt",
-          "label": "Icon Alt text",
-          "valueType": "string",
-          "description": "Pick alt text from AEM DAM with ability to override it"
-        },
-        {
-          "component": "text",
-          "name": "eyebrowText",
-          "label": "Eyebrow",
-          "valueType": "string",
-          "description": "Enter the Eyebrow text"
-        },
-        {
-          "component": "text",
-          "name": "text",
-          "label": "Title",
-          "required": true,
-          "valueType": "string",
-          "description": "Enter the title"
-        },
-        {
-          "component": "richtext",
-          "name": "rte",
-          "label": "Description",
-          "valueType": "string",
-          "description": "Enter the description"
-        },
-        {
-          "component": "richtext",
-          "name": "footNote",
-          "label": "Footnote",
-          "valueType": "string",
-          "description": "Enter the Footnote text"
-        },
-        {
-          "component": "select",
-          "name": "ctaNumber",
-          "label": "Number of CTA(s)",
-          "description": "Select the number of CTA(s) required",
-          "value": "one",
-          "options": [
-            {
-              "name": "One",
-              "value": "one"
-            },
-            {
-              "name": "Two",
-              "value": "two"
-            }
-          ]
-        },
-        {
-          "component": "container",
-          "collapsible": true,
-          "name": "oneButton",
-          "label": "Single Button Fields",
-          "valueType": "string",
-          "fields": [
-            {
-              "component": "select",
-              "name": "ctaTypeField",
-              "label": "CTA Type",
-              "description": "Select the type of CTA for component",
-              "value": "button",
-              "options": [
-                {
-                  "name": "Button",
-                  "value": "button"
-                },
-                {
-                  "name": "Text Link",
-                  "value": "textLink"
-                }
-              ]
-            },
-            {
-              "component": "select",
-              "name": "ctaStyleOne",
-              "label": "CTA Style",
-              "description": "Select the style of the Button CTA",
-              "value": "primary",
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaTypeField"
-                  },
-                  "button"
-                ]
-              },
-              "options": [
-                {
-                  "name": "Primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "Secondary",
-                  "value": "secondary"
-                }
-              ]
-            },
-            {
-              "component": "text",
-              "name": "ctaText",
-              "label": "CTA Text",
-              "valueType": "string",
-              "description": "Enter label to display on the CTA"
-            },
-            {
-              "component": "select",
-              "name": "ctaType",
-              "label": "CTA Selection",
-              "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
-              "options": [
-                {
-                  "name": "Link",
-                  "value": "link"
-                },
-                {
-                  "name": "Asset (PDF/Image)",
-                  "value": "asset"
-                }
-              ],
-              "condition": {
-                "!!": {
-                  "var": "ctaText"
-                }
-              }
-            },
-            {
-              "component": "aem-content",
-              "name": "ctaLink",
-              "label": "CTA Link",
-              "valueType": "string",
-              "description": "Enter the URL to navigate when CTA is clicked",
-              "validation": {
-                "rootPath": "/content"
-              },
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaType"
-                  },
-                  "link"
-                ]
-              }
-            },
-            {
-              "component": "reference",
-              "name": "ctaAsset",
-              "label": "Asset (PDF/Image)",
-              "description": "Upload the Asset (PDF/Image)",
-              "valueType": "string",
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaType"
-                  },
-                  "asset"
-                ]
-              }
-            },
-            {
-              "component": "text",
-              "name": "two-column-aria-label",
-              "label": "ARIA Label",
-              "valueType": "string",
-              "description": "Enter ARIA label to comply ADA"
-            },
-            {
-              "component": "select",
-              "name": "targetPath",
-              "label": "Target Path",
-              "description": "Select the target path for the authored CTA URL",
-              "value": "sameTab",
-              "options": [
-                {
-                  "name": "Same Tab",
-                  "value": "sameTab"
-                },
-                {
-                  "name": "New Tab",
-                  "value": "newTab"
-                }
-              ],
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaType"
-                  },
-                  "link"
-                ]
-              }
-            },
-            {
-              "component": "checkbox-group",
-              "label": "Checkbox Group",
-              "name": "checkbox",
-              "valueType": "string",
-              "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
-              "options": [
-                {
-                  "name": "Exit Interstitial",
-                  "value": "true"
-                }
-              ],
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaType"
-                  },
-                  "link"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "component": "container",
-          "collapsible": true,
-          "name": "twoButton",
-          "label": "Multiple Button Fields",
-          "valueType": "string",
-          "condition": {
-            "===": [
+    "id": "two-column-with-image",
+    "fields": [
+      {
+        "component": "select",
+        "name": "imagePlacement",
+        "label": "Image Placement",
+        "description": "Select the appropriate column for image placement   ⓘ Image will always be displayed at the top in mobile view",
+        "value": "left",
+        "required": true,
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "required": true,
+        "description": "Upload image for the Two Column with Image"
+      },
+      {
+        "component": "text",
+        "name": "altImage",
+        "label": "Image Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "description": "Upload icon for the Two Column with Image"
+      },
+      {
+        "component": "text",
+        "name": "alt",
+        "label": "Icon Alt text",
+        "valueType": "string",
+        "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "text",
+        "name": "eyebrowText",
+        "label": "Eyebrow",
+        "valueType": "string",
+        "description": "Enter the Eyebrow text"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Title",
+        "required": true,
+        "valueType": "string",
+        "description": "Enter the title"
+      },
+      {
+        "component": "richtext",
+        "name": "rte",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter the description"
+      },
+      {
+        "component": "richtext",
+        "name": "footNote",
+        "label": "Footnote",
+        "valueType": "string",
+        "description": "Enter the Footnote text"
+      },
+      {
+        "component": "select",
+        "name": "ctaNumber",
+        "label": "Number of CTA(s)",
+        "description": "Select the number of CTA(s) required",
+        "value": "one",
+        "options": [
+          {
+            "name": "One",
+            "value": "one"
+          },
+          {
+            "name": "Two",
+            "value": "two"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "collapsible": true,
+        "name": "oneButton",
+        "label": "Single Button Fields",
+        "valueType": "string",
+        "fields": [
+          {
+            "component": "select",
+            "name": "ctaTypeField",
+            "label": "CTA Type",
+            "description": "Select the type of CTA for component",
+            "value": "button",
+            "options": [
               {
-                "var": "ctaNumber"
+                "name": "Button",
+                "value": "button"
               },
-              "two"
+              {
+                "name": "Text Link",
+                "value": "textLink"
+              }
             ]
           },
-          "fields": [
-            {
-              "component": "select",
-              "name": "ctaTypeField",
-              "label": "CTA Type",
-              "description": "Select the type of CTA for component",
-              "value": "button",
-              "options": [
+          {
+            "component": "select",
+            "name": "ctaStyleOne",
+            "label": "CTA Style",
+            "description": "Select the style of the Button CTA",
+            "value": "primary",
+            "condition": {
+              "===": [
                 {
-                  "name": "Button",
-                  "value": "button"
+                  "var": "ctaTypeField"
                 },
-                {
-                  "name": "Text Link",
-                  "value": "textLink"
-                }
+                "button"
               ]
             },
-            {
-              "component": "select",
-              "name": "ctaStyle",
-              "label": "CTA Style",
-              "description": "Select the style of the Button CTA",
-              "value": "primary",
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaTypeField"
-                  },
-                  "button"
-                ]
+            "options": [
+              {
+                "name": "Primary",
+                "value": "primary"
               },
-              "options": [
-                {
-                  "name": "Primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "Secondary",
-                  "value": "secondary"
-                }
-              ]
-            },
-            {
-              "component": "text",
-              "name": "ctaTextTwo",
-              "label": "CTA Text",
-              "valueType": "string",
-              "description": "Enter label to display on the CTA"
-            },
-            {
-              "component": "select",
-              "name": "ctaTypeTwo",
-              "label": "CTA Selection",
-              "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
-              "options": [
-                {
-                  "name": "Link",
-                  "value": "link"
-                },
-                {
-                  "name": "Asset (PDF/Image)",
-                  "value": "asset"
-                }
-              ],
-              "condition": {
-                "!!": {
-                  "var": "ctaTextTwo"
-                }
+              {
+                "name": "Secondary",
+                "value": "secondary"
               }
-            },
-            {
-              "component": "aem-content",
-              "name": "ctaLink",
-              "label": "CTA Link",
-              "valueType": "string",
-              "description": "Enter the URL to navigate when CTA is clicked",
-              "validation": {
-                "rootPath": "/content"
+            ]
+          },
+          {
+            "component": "text",
+            "name": "ctaText",
+            "label": "CTA Text",
+            "valueType": "string",
+            "description": "Enter label to display on the CTA"
+          },
+          {
+            "component": "select",
+            "name": "ctaType",
+            "label": "CTA Selection",
+            "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
+            "options": [
+              {
+                "name": "Link",
+                "value": "link"
               },
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaTypeTwo"
-                  },
-                  "link"
-                ]
+              {
+                "name": "Asset (PDF/Image)",
+                "value": "asset"
               }
-            },
-            {
-              "component": "reference",
-              "name": "ctaAsset",
-              "label": "Asset (PDF/Image)",
-              "description": "Upload the Asset (PDF/Image)",
-              "valueType": "string",
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaTypeTwo"
-                  },
-                  "asset"
-                ]
-              }
-            },
-            {
-              "component": "text",
-              "name": "two-column-aria-label",
-              "label": "ARIA Label",
-              "valueType": "string",
-              "description": "Enter ARIA label to comply ADA"
-            },
-            {
-              "component": "select",
-              "name": "targetPathTwo",
-              "label": "Target Path",
-              "description": "Select the target path for the authored CTA URL",
-              "value": "sameTab",
-              "options": [
-                {
-                  "name": "Same Tab",
-                  "value": "sameTab"
-                },
-                {
-                  "name": "New Tab",
-                  "value": "newTab"
-                }
-              ],
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaTypeTwo"
-                  },
-                  "link"
-                ]
-              }
-            },
-            {
-              "component": "checkbox-group",
-              "label": "Checkbox Group",
-              "name": "checkboxTwo",
-              "valueType": "string",
-              "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
-              "options": [
-                {
-                  "name": "Exit Interstitial",
-                  "value": "true"
-                }
-              ],
-              "condition": {
-                "===": [
-                  {
-                    "var": "ctaTypeTwo"
-                  },
-                  "link"
-                ]
+            ],
+            "condition": {
+              "!!": {
+                "var": "ctaText"
               }
             }
+          },
+          {
+            "component": "aem-content",
+            "name": "ctaLink",
+            "label": "CTA Link",
+            "valueType": "string",
+            "description": "Enter the URL to navigate when CTA is clicked",
+            "validation": {
+              "rootPath": "/content"
+            },
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            }
+          },
+          {
+            "component": "reference",
+            "name": "ctaAsset",
+            "label": "Asset (PDF/Image)",
+            "description": "Upload the Asset (PDF/Image)",
+            "valueType": "string",
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "asset"
+              ]
+            }
+          },
+          {
+            "component": "text",
+            "name": "two-column-aria-label",
+            "label": "ARIA Label",
+            "valueType": "string",
+            "description": "Enter ARIA label to comply ADA"
+          },
+          {
+            "component": "select",
+            "name": "targetPath",
+            "label": "Target Path",
+            "description": "Select the target path for the authored CTA URL",
+            "value": "sameTab",
+            "options": [
+              {
+                "name": "Same Tab",
+                "value": "sameTab"
+              },
+              {
+                "name": "New Tab",
+                "value": "newTab"
+              }
+            ],
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            }
+          },
+          {
+            "component": "checkbox-group",
+            "label": "Checkbox Group",
+            "name": "checkbox",
+            "valueType": "string",
+            "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+            "options": [
+              {
+                "name": "Exit Interstitial",
+                "value": "true"
+              }
+            ],
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "collapsible": true,
+        "name": "twoButton",
+        "label": "Multiple Button Fields",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "ctaNumber"
+            },
+            "two"
           ]
-        }
-      ]
-    }
-  ,
+        },
+        "fields": [
+          {
+            "component": "select",
+            "name": "ctaTypeField",
+            "label": "CTA Type",
+            "description": "Select the type of CTA for component",
+            "value": "button",
+            "options": [
+              {
+                "name": "Button",
+                "value": "button"
+              },
+              {
+                "name": "Text Link",
+                "value": "textLink"
+              }
+            ]
+          },
+          {
+            "component": "select",
+            "name": "ctaStyle",
+            "label": "CTA Style",
+            "description": "Select the style of the Button CTA",
+            "value": "primary",
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaTypeField"
+                },
+                "button"
+              ]
+            },
+            "options": [
+              {
+                "name": "Primary",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary",
+                "value": "secondary"
+              }
+            ]
+          },
+          {
+            "component": "text",
+            "name": "ctaTextTwo",
+            "label": "CTA Text",
+            "valueType": "string",
+            "description": "Enter label to display on the CTA"
+          },
+          {
+            "component": "select",
+            "name": "ctaTypeTwo",
+            "label": "CTA Selection",
+            "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
+            "options": [
+              {
+                "name": "Link",
+                "value": "link"
+              },
+              {
+                "name": "Asset (PDF/Image)",
+                "value": "asset"
+              }
+            ],
+            "condition": {
+              "!!": {
+                "var": "ctaTextTwo"
+              }
+            }
+          },
+          {
+            "component": "aem-content",
+            "name": "ctaLink",
+            "label": "CTA Link",
+            "valueType": "string",
+            "description": "Enter the URL to navigate when CTA is clicked",
+            "validation": {
+              "rootPath": "/content"
+            },
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaTypeTwo"
+                },
+                "link"
+              ]
+            }
+          },
+          {
+            "component": "reference",
+            "name": "ctaAsset",
+            "label": "Asset (PDF/Image)",
+            "description": "Upload the Asset (PDF/Image)",
+            "valueType": "string",
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaTypeTwo"
+                },
+                "asset"
+              ]
+            }
+          },
+          {
+            "component": "text",
+            "name": "two-column-aria-label",
+            "label": "ARIA Label",
+            "valueType": "string",
+            "description": "Enter ARIA label to comply ADA"
+          },
+          {
+            "component": "select",
+            "name": "targetPathTwo",
+            "label": "Target Path",
+            "description": "Select the target path for the authored CTA URL",
+            "value": "sameTab",
+            "options": [
+              {
+                "name": "Same Tab",
+                "value": "sameTab"
+              },
+              {
+                "name": "New Tab",
+                "value": "newTab"
+              }
+            ],
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaTypeTwo"
+                },
+                "link"
+              ]
+            }
+          },
+          {
+            "component": "checkbox-group",
+            "label": "Checkbox Group",
+            "name": "checkboxTwo",
+            "valueType": "string",
+            "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+            "options": [
+              {
+                "name": "Exit Interstitial",
+                "value": "true"
+              }
+            ],
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaTypeTwo"
+                },
+                "link"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
   {
     "id": "vertical-numeric-tile-item",
     "fields": [
