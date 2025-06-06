@@ -4368,7 +4368,7 @@
           ]
         }
       },
-       {
+      {
         "component": "text",
         "name": "ctalabelVideoWithQuoteContainer",
         "label": "CTA Label",
@@ -4385,7 +4385,6 @@
           ]
         }
       },
-     
       {
         "component": "text",
         "valueType": "string",
