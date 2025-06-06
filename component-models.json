@@ -4232,16 +4232,70 @@
       }
     ]
   },
-   {
+  {
     "id": "video",
     "fields": [
       {
-        "component": "text",
+        "component": "reference",
         "valueType": "string",
-        "name": "vertical-numeric-tile-title",
-        "label": "Title",
-        "description": "Enter the title",
+        "name": "image",
+        "label": "Image Thumbnail",
+        "description": "Upload the image thumbnail",
         "required": true
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true
+      },
+      {
+        "component": "select",
+        "name": "videoType",
+        "label": "Video Type",
+        "description": "Select the appropriate variation",
+        "value": "videoStandard",
+        "options": [
+          {
+            "name": "Video [Standard]",
+            "value": "videoStandard"
+          },
+          {
+            "name": "Video with Quote",
+            "value": "videoWithQuote"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "Image",
+        "label": "With image Field Details",
+        "valueType": "string",
+         "condition": {
+          "===": [
+            {
+              "var": "videoType"
+            },
+            "videoStandard"
+          ]
+        },
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Title",
+            "valueType": "string",
+            "description": "Enter main heading of the video"
+          },
+          {
+            "component": "text",
+            "name": "description",
+            "label": "Description",
+            "valueType": "string",
+            "description": "Enter description of the video"
+          }
+        ]
       }
     ]
   }
