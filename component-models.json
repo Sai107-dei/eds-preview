@@ -3888,7 +3888,7 @@
             "condition": {
               "===": [
                 {
-                  "var": "ctaType"
+                  "var": "ctaTypeField"
                 },
                 "button"
               ]
