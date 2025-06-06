@@ -4358,7 +4358,15 @@
         "valueType": "string",
         "description": "Enter label to display on the CTA",
         "value": "Watch now",
-        "required": true
+        "required": true,
+        "condition": {
+          "===": [
+            {
+              "var": "videoType"
+            },
+            "videoStandard"
+          ]
+        }
       },
       {
         "component": "text",
