@@ -43,11 +43,6 @@ indices:
       url:
         select: head > meta[property="og:url"]
         value: attribute(el, "content")
-      trourooui:
-        select: main .story-banner.block p
+      storybanne:
+        select: main .table-container .story-banner-wrapper .story-banner:nth-child(1) p
         value: textContent(el)
-      storysai:
-        select: main .story-banner.block p
-        value: |
-          const nonEmpty = [...el.parentElement.querySelectorAll('p')].find(p => p.textContent.trim() !== '');
-          return nonEmpty ? nonEmpty.textContent.trim() : 'oioi';
