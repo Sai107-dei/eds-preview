@@ -3864,7 +3864,7 @@
         "fields": [
           {
             "component": "select",
-            "name": "ctaStyle",
+            "name": "ctaStyleOne",
             "label": "CTA Style",
             "description": "Select the style of the Button CTA",
             "value": "primary",
