@@ -4353,7 +4353,7 @@
       },
       {
         "component": "text",
-        "name": "ctalabel",
+        "name": "ctalabelVideoStandard",
         "label": "CTA Label",
         "valueType": "string",
         "description": "Enter label to display on the CTA",
@@ -4365,6 +4365,23 @@
               "var": "videoType"
             },
             "videoStandard"
+          ]
+        }
+      },
+       {
+        "component": "text",
+        "name": "ctalabelVideoWithQuoteContainer",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA",
+        "value": "Watch now",
+        "required": true,
+        "condition": {
+          "===": [
+            {
+              "var": "videoType"
+            },
+            "videoWithQuoteContainer"
           ]
         }
       },
