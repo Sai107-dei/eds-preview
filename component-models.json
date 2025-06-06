@@ -3915,7 +3915,7 @@
             "component": "select",
             "name": "ctaType",
             "label": "CTA Selection",
-            "description": "ⓘ Select the CTA Selection — Link/Asset(PDF/Image)",
+            "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
             "options": [
               {
                 "name": "Link",
@@ -4088,7 +4088,7 @@
             "component": "select",
             "name": "ctaTypeTwo",
             "label": "CTA Selection",
-            "description": "ⓘ Select the CTA Selection — Link/Asset(PDF/Image)",
+            "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
             "options": [
               {
                 "name": "Link",
