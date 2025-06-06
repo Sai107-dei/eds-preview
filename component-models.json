@@ -3864,23 +3864,6 @@
         "fields": [
           {
             "component": "select",
-            "name": "ctaStyleOne",
-            "label": "CTA Style",
-            "description": "Select the style of the Button CTA",
-            "value": "primary",
-            "options": [
-              {
-                "name": "Primary",
-                "value": "primary"
-              },
-              {
-                "name": "Secondary",
-                "value": "secondary"
-              }
-            ]
-          },
-          {
-            "component": "select",
             "name": "ctaTypeField",
             "label": "CTA Type",
             "description": "Select the type of CTA for component",
@@ -3893,6 +3876,31 @@
               {
                 "name": "Text Link",
                 "value": "textLink"
+              }
+            ]
+          },
+          {
+            "component": "select",
+            "name": "ctaStyleOne",
+            "label": "CTA Style",
+            "description": "Select the style of the Button CTA",
+            "value": "primary",
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "button"
+              ]
+            },
+            "options": [
+              {
+                "name": "Primary",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary",
+                "value": "secondary"
               }
             ]
           },
@@ -4029,10 +4037,35 @@
         "fields": [
           {
             "component": "select",
+            "name": "ctaTypeField",
+            "label": "CTA Type",
+            "description": "Select the type of CTA for component",
+            "value": "button",
+            "options": [
+              {
+                "name": "Button",
+                "value": "button"
+              },
+              {
+                "name": "Text Link",
+                "value": "textLink"
+              }
+            ]
+          },
+          {
+            "component": "select",
             "name": "ctaStyle",
             "label": "CTA Style",
             "description": "Select the style of the Button CTA",
             "value": "primary",
+            "condition": {
+              "===": [
+                {
+                  "var": "ctaTypeField"
+                },
+                "button"
+              ]
+            },
             "options": [
               {
                 "name": "Primary",
