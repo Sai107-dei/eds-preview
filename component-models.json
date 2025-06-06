@@ -3859,7 +3859,7 @@
         "component": "container",
         "collapsible": true,
         "name": "oneButton",
-        "label": "One Button Fields",
+        "label": "Single Button Fields",
         "valueType": "string",
         "fields": [
           {
@@ -3914,7 +3914,7 @@
           {
             "component": "select",
             "name": "ctaType",
-            "label": "CTA Type",
+            "label": "CTA Selection",
             "description": "Select the CTA Type",
             "options": [
               {
@@ -4024,7 +4024,7 @@
         "component": "container",
         "collapsible": true,
         "name": "twoButton",
-        "label": "Two Button Fields",
+        "label": "Multiple Button Fields",
         "valueType": "string",
         "condition": {
           "===": [
@@ -4087,7 +4087,7 @@
           {
             "component": "select",
             "name": "ctaTypeTwo",
-            "label": "CTA Type",
+            "label": "CTA Selection",
             "description": "Select the CTA Type",
             "options": [
               {
