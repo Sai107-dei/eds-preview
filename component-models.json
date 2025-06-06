@@ -3934,7 +3934,7 @@
           },
           {
             "component": "aem-content",
-            "name": "ctaLink",
+            "name": "ctaLink1",
             "label": "CTA Link",
             "valueType": "string",
             "description": "Enter the URL to navigate when CTA is clicked",
