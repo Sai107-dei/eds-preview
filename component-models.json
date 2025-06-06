@@ -4269,8 +4269,8 @@
       },
       {
         "component": "container",
-        "name": "Image",
-        "label": "With image Field Details",
+        "name": "videoStandardContainer",
+        "label": "Video [Standard] Fields",
         "valueType": "string",
         "condition": {
           "===": [
