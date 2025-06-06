@@ -3859,7 +3859,7 @@
         "component": "container",
         "collapsible": true,
         "name": "oneButton",
-        "label": "Single Button Fields",
+        "label": "One Button Fields",
         "valueType": "string",
         "fields": [
           {
@@ -3914,8 +3914,8 @@
           {
             "component": "select",
             "name": "ctaType",
-            "label": "CTA Selection",
-            "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
+            "label": "CTA Type",
+            "description": "Select the CTA Type",
             "options": [
               {
                 "name": "Link",
@@ -4024,7 +4024,7 @@
         "component": "container",
         "collapsible": true,
         "name": "twoButton",
-        "label": "Multiple Button Fields",
+        "label": "Two Button Fields",
         "valueType": "string",
         "condition": {
           "===": [
@@ -4087,8 +4087,8 @@
           {
             "component": "select",
             "name": "ctaTypeTwo",
-            "label": "CTA Selection",
-            "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
+            "label": "CTA Type",
+            "description": "Select the CTA Type",
             "options": [
               {
                 "name": "Link",
