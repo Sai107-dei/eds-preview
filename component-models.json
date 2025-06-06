@@ -4391,7 +4391,7 @@
         "label": "CTA Label",
         "valueType": "string",
         "description": "Enter label to display on the CTA",
-        "value": "Watch now",
+        "value": "Watch now123",
         "required": true,
         "condition": {
           "===": [
