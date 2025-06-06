@@ -4312,6 +4312,19 @@
         },
         "fields": [
           {
+            "component": "checkbox-group",
+            "label": "Quote Icon",
+            "name": "quotrIcon",
+            "valueType": "string",
+            "description": "Select to display the quote icon",
+            "options": [
+              {
+                "name": "Quote Icon",
+                "value": "true"
+              }
+            ]
+          },
+          {
             "component": "richtext",
             "name": "quote",
             "label": "Quote",
