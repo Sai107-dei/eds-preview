@@ -4294,8 +4294,48 @@
             "label": "Description",
             "valueType": "string",
             "description": "Enter description of the video"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "videoWithQuoteContainer",
+        "label": "Video With Quote Fields",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "videoType"
+            },
+            "videoWithQuote"
+          ]
+        },
+        "fields": [
+       
+          {
+            "component": "richtext",
+            "name": "quote",
+            "label": "Quote",
+            "valueType": "string",
+            "description": "Enter the patient quote"
           },
           {
+            "component": "richtext",
+            "name": "patientName",
+            "label": "Name",
+            "valueType": "string",
+            "description": "Enter the Patient name"
+          },
+          {
+            "component": "richtext",
+            "name": "condition",
+            "label": "Condition",
+            "valueType": "string",
+            "description": "Enter the Patient condition"
+          }
+        ]
+      },
+        {
             "component": "select",
             "name": "ctaStyle",
             "label": "CTA Style",
@@ -4336,8 +4376,6 @@
             "valueType": "string",
             "description": "Enter the video transcript "
           }
-        ]
-      }
     ]
   }
 ]
