@@ -4231,5 +4231,18 @@
         "required": true
       }
     ]
+  },
+   {
+    "id": "video",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "vertical-numeric-tile-title",
+        "label": "Title",
+        "description": "Enter the title",
+        "required": true
+      }
+    ]
   }
 ]
