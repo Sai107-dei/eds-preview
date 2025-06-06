@@ -4037,7 +4037,7 @@
         "fields": [
           {
             "component": "select",
-            "name": "ctaTypeField",
+            "name": "ctaTypeTwoSelect",
             "label": "CTA Type",
             "description": "Select the type of CTA for component",
             "value": "button",
@@ -4061,7 +4061,7 @@
             "condition": {
               "===": [
                 {
-                  "var": "ctaTypeField"
+                  "var": "ctaTypeTwoSelect"
                 },
                 "button"
               ]
@@ -4107,7 +4107,7 @@
           },
           {
             "component": "aem-content",
-            "name": "ctaLink",
+            "name": "ctaLinkMultiple",
             "label": "CTA Link",
             "valueType": "string",
             "description": "Enter the URL to navigate when CTA is clicked",
@@ -4140,7 +4140,7 @@
           },
           {
             "component": "text",
-            "name": "two-column-aria-label",
+            "name": "two-column-aria-label-multiple",
             "label": "ARIA Label",
             "valueType": "string",
             "description": "Enter ARIA label to comply ADA"
