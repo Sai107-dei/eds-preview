@@ -4357,7 +4357,7 @@
         "label": "CTA Label",
         "valueType": "string",
         "description": "Enter label to display on the CTA",
-        "value": "Watch patient story",
+        "value": "Watch now",
         "required": true
       },
       {
