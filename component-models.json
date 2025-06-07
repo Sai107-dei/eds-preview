@@ -3993,5 +3993,46 @@
         "required": true
       }
     ]
+  },
+  {
+    "id": "two-column-text-carousel-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "leftColumneyebrow",
+        "label": "Left Column  Eyebrow",
+        "valueType": "string",
+        "description": "Enter the eyebrow"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftColumnText",
+        "label": "Left Column Text",
+        "description": "Enter the title",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "rightColumnEyebrow",
+        "label": "Right Column Eyebrow",
+        "valueType": "string",
+        "description": "Enter the eyebrow"
+      },
+      {
+        "component": "text",
+        "name": "rightColumnText",
+        "label": "Right Column Text",
+        "valueType": "string",
+        "description": "Enter the description"
+      },
+      {
+        "component": "text",
+        "name": "two-column-text-carousel-arialabel",
+        "label": "ARIA Label",
+        "valueType": "string",
+        "description": "Enter ARIA label to comply ADA"
+      }
+    ]
   }
 ]
