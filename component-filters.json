@@ -52,8 +52,7 @@
       "news-tile",
       "executive-grids",
       "csr-form",
-      "timeline-card",
-      "video-carousel"
+      "timeline-card"
     ]
   },
   {
@@ -121,10 +120,6 @@
       "timeline-card",
       "media-card"
     ]
-  },
-  {
-    "id": "video-carousel",
-    "components": ["video-carousel-item"]
   },
   {
     "id": "accordion",

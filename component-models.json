@@ -3811,13 +3811,6 @@
       },
       {
         "component": "text",
-        "name": "eyebrowText",
-        "label": "Eyebrow",
-        "valueType": "string",
-        "description": "Enter the Eyebrow text"
-      },
-      {
-        "component": "text",
         "name": "text",
         "label": "Title",
         "required": true,
@@ -3832,366 +3825,135 @@
         "description": "Enter the description"
       },
       {
-        "component": "richtext",
-        "name": "footNote",
-        "label": "Footnote",
+        "component": "select",
+        "name": "ctaTypeField",
+        "label": "CTA Type",
+        "description": "Select the type of CTA for component",
+        "value": "button",
+        "options": [
+          {
+            "name": "Button",
+            "value": "button"
+          },
+          {
+            "name": "Text Link",
+            "value": "textLink"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text",
         "valueType": "string",
-        "description": "Enter the Footnote text"
+        "description": "Enter label to display on the CTA"
       },
       {
         "component": "select",
-        "name": "ctaNumber",
-        "label": "Number of CTA(s)",
-        "description": "Select the number of CTA(s) required",
-        "value": "one",
+        "name": "ctaType",
+        "label": "CTA Type",
+        "description": "Select the CTA Type",
         "options": [
           {
-            "name": "One",
-            "value": "one"
+            "name": "Link",
+            "value": "link"
           },
           {
-            "name": "Two",
-            "value": "two"
+            "name": "Asset (PDF/Image)",
+            "value": "asset"
           }
-        ]
+        ],
+        "condition": {
+          "!!": {
+            "var": "ctaText"
+          }
+        }
       },
       {
-        "component": "container",
-        "collapsible": true,
-        "name": "oneButton",
-        "label": "Single Button Fields",
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "CTA Link",
         "valueType": "string",
-        "fields": [
-          {
-            "component": "select",
-            "name": "ctaTypeField",
-            "label": "CTA Type",
-            "description": "Select the type of CTA for component",
-            "value": "button",
-            "options": [
-              {
-                "name": "Button",
-                "value": "button"
-              },
-              {
-                "name": "Text Link",
-                "value": "textLink"
-              }
-            ]
-          },
-          {
-            "component": "select",
-            "name": "ctaStyleOne",
-            "label": "CTA Style",
-            "description": "Select the style of the Button CTA",
-            "value": "primary",
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaTypeField"
-                },
-                "button"
-              ]
+        "description": "Enter the URL to navigate when CTA is clicked",
+        "validation": {
+          "rootPath": "/content"
+        },
+        "condition": {
+          "===": [
+            {
+              "var": "ctaType"
             },
-            "options": [
-              {
-                "name": "Primary",
-                "value": "primary"
-              },
-              {
-                "name": "Secondary",
-                "value": "secondary"
-              }
-            ]
-          },
-          {
-            "component": "text",
-            "name": "ctaText",
-            "label": "CTA Text",
-            "valueType": "string",
-            "description": "Enter label to display on the CTA"
-          },
-          {
-            "component": "select",
-            "name": "ctaType",
-            "label": "CTA Selection",
-            "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
-            "options": [
-              {
-                "name": "Link",
-                "value": "link"
-              },
-              {
-                "name": "Asset (PDF/Image)",
-                "value": "asset"
-              }
-            ],
-            "condition": {
-              "!!": {
-                "var": "ctaText"
-              }
-            }
-          },
-          {
-            "component": "aem-content",
-            "name": "ctaLink",
-            "label": "CTA Link",
-            "valueType": "string",
-            "description": "Enter the URL to navigate when CTA is clicked",
-            "validation": {
-              "rootPath": "/content"
-            },
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "link"
-              ]
-            }
-          },
-          {
-            "component": "reference",
-            "name": "ctaAsset",
-            "label": "Asset (PDF/Image)",
-            "description": "Upload the Asset (PDF/Image)",
-            "valueType": "string",
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            }
-          },
-          {
-            "component": "text",
-            "name": "two-column-aria-label",
-            "label": "ARIA Label",
-            "valueType": "string",
-            "description": "Enter ARIA label to comply ADA"
-          },
-          {
-            "component": "select",
-            "name": "targetPath",
-            "label": "Target Path",
-            "description": "Select the target path for the authored CTA URL",
-            "value": "sameTab",
-            "options": [
-              {
-                "name": "Same Tab",
-                "value": "sameTab"
-              },
-              {
-                "name": "New Tab",
-                "value": "newTab"
-              }
-            ],
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "link"
-              ]
-            }
-          },
-          {
-            "component": "checkbox-group",
-            "label": "Checkbox Group",
-            "name": "checkbox",
-            "valueType": "string",
-            "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
-            "options": [
-              {
-                "name": "Exit Interstitial",
-                "value": "true"
-              }
-            ],
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "link"
-              ]
-            }
-          }
-        ]
+            "link"
+          ]
+        }
       },
       {
-        "component": "container",
-        "collapsible": true,
-        "name": "twoButton",
-        "label": "Multiple Button Fields",
+        "component": "reference",
+        "name": "ctaAsset",
+        "label": "Asset (PDF/Image)",
+        "description": "Upload the Asset (PDF/Image)",
         "valueType": "string",
         "condition": {
           "===": [
             {
-              "var": "ctaNumber"
+              "var": "ctaType"
             },
-            "two"
+            "asset"
           ]
-        },
-        "fields": [
+        }
+      },
+      {
+        "component": "text",
+        "name": "two-column-aria-label",
+        "label": "ARIA Label",
+        "valueType": "string",
+        "description": "Enter ARIA label to comply ADA"
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
           {
-            "component": "select",
-            "name": "ctaTypeTwoSelect",
-            "label": "CTA Type",
-            "description": "Select the type of CTA for component",
-            "value": "button",
-            "options": [
-              {
-                "name": "Button",
-                "value": "button"
-              },
-              {
-                "name": "Text Link",
-                "value": "textLink"
-              }
-            ]
+            "name": "Same Tab",
+            "value": "sameTab"
           },
           {
-            "component": "select",
-            "name": "ctaStyle",
-            "label": "CTA Style",
-            "description": "Select the style of the Button CTA",
-            "value": "primary",
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaTypeTwoSelect"
-                },
-                "button"
-              ]
-            },
-            "options": [
-              {
-                "name": "Primary",
-                "value": "primary"
-              },
-              {
-                "name": "Secondary",
-                "value": "secondary"
-              }
-            ]
-          },
-          {
-            "component": "text",
-            "name": "ctaTextTwo",
-            "label": "CTA Text",
-            "valueType": "string",
-            "description": "Enter label to display on the CTA"
-          },
-          {
-            "component": "select",
-            "name": "ctaTypeTwo",
-            "label": "CTA Selection",
-            "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
-            "options": [
-              {
-                "name": "Link",
-                "value": "link"
-              },
-              {
-                "name": "Asset (PDF/Image)",
-                "value": "asset"
-              }
-            ],
-            "condition": {
-              "!!": {
-                "var": "ctaTextTwo"
-              }
-            }
-          },
-          {
-            "component": "aem-content",
-            "name": "ctaLinkMultiple",
-            "label": "CTA Link",
-            "valueType": "string",
-            "description": "Enter the URL to navigate when CTA is clicked",
-            "validation": {
-              "rootPath": "/content"
-            },
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaTypeTwo"
-                },
-                "link"
-              ]
-            }
-          },
-          {
-            "component": "reference",
-            "name": "ctaAsset",
-            "label": "Asset (PDF/Image)",
-            "description": "Upload the Asset (PDF/Image)",
-            "valueType": "string",
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaTypeTwo"
-                },
-                "asset"
-              ]
-            }
-          },
-          {
-            "component": "text",
-            "name": "two-column-aria-label-multiple",
-            "label": "ARIA Label",
-            "valueType": "string",
-            "description": "Enter ARIA label to comply ADA"
-          },
-          {
-            "component": "select",
-            "name": "targetPathTwo",
-            "label": "Target Path",
-            "description": "Select the target path for the authored CTA URL",
-            "value": "sameTab",
-            "options": [
-              {
-                "name": "Same Tab",
-                "value": "sameTab"
-              },
-              {
-                "name": "New Tab",
-                "value": "newTab"
-              }
-            ],
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaTypeTwo"
-                },
-                "link"
-              ]
-            }
-          },
-          {
-            "component": "checkbox-group",
-            "label": "Checkbox Group",
-            "name": "checkboxTwo",
-            "valueType": "string",
-            "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
-            "options": [
-              {
-                "name": "Exit Interstitial",
-                "value": "true"
-              }
-            ],
-            "condition": {
-              "===": [
-                {
-                  "var": "ctaTypeTwo"
-                },
-                "link"
-              ]
-            }
+            "name": "New Tab",
+            "value": "newTab"
           }
-        ]
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "ctaType"
+            },
+            "link"
+          ]
+        }
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Checkbox Group",
+        "name": "checkbox",
+        "valueType": "string",
+        "description": "Select this checkbox to enable the modal experience that notifies user that they are leaving the site",
+        "options": [
+          {
+            "name": "Exit Interstitial",
+            "value": "true"
+          }
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "ctaType"
+            },
+            "link"
+          ]
+        }
       }
     ]
   },
@@ -4229,189 +3991,6 @@
         "label": "Title",
         "description": "Enter the title",
         "required": true
-      }
-    ]
-  },
-  {
-    "id": "video-carousel-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image Thumbnail",
-        "description": "Upload the image thumbnail",
-        "required": true
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "description": "Pick alt text from AEM DAM with ability to override it",
-        "required": true
-      },
-      {
-        "component": "select",
-        "name": "videoType",
-        "label": "Video Type",
-        "description": "Select the appropriate variation",
-        "value": "videoStandard",
-        "options": [
-          {
-            "name": "Video [Standard]",
-            "value": "videoStandard"
-          },
-          {
-            "name": "Video with Quote",
-            "value": "videoWithQuote"
-          }
-        ]
-      },
-      {
-        "component": "container",
-        "name": "videoStandardContainer",
-        "label": "Video [Standard] Fields",
-        "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "videoType"
-            },
-            "videoStandard"
-          ]
-        },
-        "fields": [
-          {
-            "component": "text",
-            "name": "title",
-            "label": "Title",
-            "valueType": "string",
-            "description": "Enter main heading of the video"
-          },
-          {
-            "component": "text",
-            "name": "description",
-            "label": "Description",
-            "valueType": "string",
-            "description": "Enter description of the video"
-          }
-        ]
-      },
-      {
-        "component": "container",
-        "name": "videoWithQuoteContainer",
-        "label": "Video With Quote Fields",
-        "valueType": "string",
-        "condition": {
-          "===": [
-            {
-              "var": "videoType"
-            },
-            "videoWithQuote"
-          ]
-        },
-        "fields": [
-          {
-            "component": "checkbox-group",
-            "label": "Quote Icon",
-            "name": "quotrIcon",
-            "valueType": "string",
-            "description": "Select to display the quote icon",
-            "options": [
-              {
-                "name": "Quote Icon",
-                "value": "true"
-              }
-            ]
-          },
-          {
-            "component": "richtext",
-            "name": "quote",
-            "label": "Quote",
-            "valueType": "string",
-            "description": "Enter the patient quote"
-          },
-          {
-            "component": "richtext",
-            "name": "patientName",
-            "label": "Name",
-            "valueType": "string",
-            "description": "Enter the Patient name"
-          },
-          {
-            "component": "richtext",
-            "name": "condition",
-            "label": "Condition",
-            "valueType": "string",
-            "description": "Enter the Patient condition"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "ctaStyle",
-        "label": "CTA Style",
-        "description": "Select the style of the Button CTA",
-        "value": "primary",
-        "options": [
-          {
-            "name": "Primary",
-            "value": "primary"
-          },
-          {
-            "name": "Secondary",
-            "value": "secondary"
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "name": "ctalabelVideoStandard",
-        "label": "CTA Label",
-        "valueType": "string",
-        "description": "Enter label to display on the CTA",
-        "value": "Watch now",
-        "required": true,
-        "condition": {
-          "===": [
-            {
-              "var": "videoType"
-            },
-            "videoStandard"
-          ]
-        }
-      },
-      {
-        "component": "text",
-        "name": "ctalabelVideoWithQuoteContainer",
-        "label": "CTA Label",
-        "valueType": "string",
-        "description": "Enter label to display on the CTA",
-        "value": "Watch patient story",
-        "required": true,
-        "condition": {
-          "===": [
-            {
-              "var": "videoType"
-            },
-            "videoWithQuote"
-          ]
-        }
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "videoID",
-        "label": "Video ID",
-        "description": "Upload the full-length video",
-        "required": true
-      },
-      {
-        "component": "richtext",
-        "name": "rte",
-        "label": "Video Transcript",
-        "valueType": "string",
-        "description": "Enter the video transcript "
       }
     ]
   }
