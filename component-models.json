@@ -4024,7 +4024,8 @@
         "name": "rightColumnText",
         "label": "Right Column Text",
         "valueType": "string",
-        "description": "Enter the description"
+        "description": "Enter the description",
+        "required": true
       },
       {
         "component": "text",
