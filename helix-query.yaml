@@ -46,3 +46,6 @@ indices:
       storybanne:
         select: main h2
         value: textContent(el)
+      wrapper:
+        select: main .cards > div > div:last-child
+        value: textContent(el)
