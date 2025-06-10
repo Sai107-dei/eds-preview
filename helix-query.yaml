@@ -44,5 +44,5 @@ indices:
         select: head > meta[property="og:url"]
         value: attribute(el, "content")
       storybanne:
-        select: main .table-container .story-banner-wrapper .story-banner h2
+        select: main h2
         value: textContent(el)
