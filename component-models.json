@@ -4035,5 +4035,194 @@
         "description": "Enter ARIA label to comply ADA"
       }
     ]
-  }
+  },
+   {
+      "id": "executive-grid",
+      "fields": [
+        {
+          "component": "select",
+          "name": "imagePlacement",
+          "label": "Image Placement",
+          "description": "Select the appropriate image placement option",
+          "required": true,
+          "value": "left",
+          "options": [
+            {
+              "name": "Top",
+              "value": "top"
+            },
+            {
+              "name": "Left",
+              "value": "left"
+            }
+          ]
+        },
+        {
+          "component": "custom-asset-namespace:custom-asset",
+          "configUrl": "/content/dam/custom-asset-picker/image.config.json",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "required": true,
+          "description": "Upload the image"
+        },
+        {
+          "component": "custom-asset-namespace:custom-asset-mimetype",
+          "valueType": "string",
+          "name": "imageMimeType"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Image Alt Text ",
+          "description": "Pick alt text from AEM DAM with ability to override it"
+        },
+        {
+          "component": "text",
+          "name": "executiveName",
+          "label": "Name",
+          "valueType": "string",
+          "description": "Enter the Executive\u2019s name",
+          "required": true
+        },
+        {
+          "component": "text",
+          "name": "designation",
+          "label": "Designation",
+          "valueType": "string",
+          "description": "Enter the Executive\u2019s Designation",
+          "required": true
+        },
+        {
+          "component": "text",
+          "name": "ctaLabel",
+          "label": "CTA Label",
+          "valueType": "string",
+          "description": "Enter the CTA Label"
+        },
+        {
+          "component": "select",
+          "name": "ctaType",
+          "label": "CTA Type",
+          "description": "Select the CTA Type",
+          "options": [
+            {
+              "name": "Link",
+              "value": "link"
+            },
+            {
+              "name": "Asset (PDF/Image)",
+              "value": "asset"
+            }
+          ],
+          "condition": {
+            "!!": { "var": "ctaLabel" }
+          }
+        },
+        {
+          "component": "aem-content",
+          "name": "ctaLink",
+          "label": "CTA Link",
+          "valueType": "string",
+          "description": "Enter the URL to navigate when CTA is clicked for each card",
+          "validation": {
+            "rootPath": "/content"
+          },
+          "condition": {
+            "and": [
+              { "===": [{ "var": "ctaType" }, "link"] },
+              { "!!": { "var": "ctaLabel" } }
+            ]
+          }
+        },
+        {
+          "component": "custom-asset-namespace:custom-asset",
+          "configUrl": "/content/dam/custom-asset-picker/image.config.json",
+          "name": "ctaAsset",
+          "label": "Asset (PDF/Image)",
+          "description": "Upload the Asset (PDF/Image)",
+          "valueType": "string",
+          "condition": {
+            "and": [
+              { "===": [{ "var": "ctaType" }, "asset"] },
+              { "!!": { "var": "ctaLabel" } }
+            ]
+          }
+        },
+        {
+          "component": "custom-asset-namespace:custom-asset-mimetype",
+          "valueType": "string",
+          "name": "ctaAssetMimeType",
+          "condition": {
+            "and": [
+              { "===": [{ "var": "ctaType" }, "asset"] },
+              { "!!": { "var": "ctaLabel" } }
+            ]
+          }
+        },
+        {
+          "component": "text",
+          "name": "ex-grid-tile-aria-label",
+          "label": "ARIA Label",
+          "valueType": "string",
+          "description": "Enter ARIA label to comply ADA"
+        },
+        {
+          "component": "select",
+          "name": "targetPath",
+          "label": "Target Path",
+          "description": "Select the target path for the authored CTA URL",
+          "value": "sameTab",
+          "options": [
+            {
+              "name": "Same Tab",
+              "value": "sameTab"
+            },
+            {
+              "name": "New Tab",
+              "value": "newTab"
+            }
+          ],
+          "condition": {
+            "and": [
+              { "===": [{ "var": "ctaType" }, "link"] },
+              { "!!": { "var": "ctaLabel" } }
+            ]
+          }
+        },
+        {
+          "component": "select",
+          "name": "exitInterstitial",
+          "label": "Exit Interstitial",
+          "description": "Select this checkbox to enable the modal experience",
+          "valueType": "string",
+          "value": "select",
+          "options": [
+            { "name": "select", "value": "select" },
+            {
+              "name": "General Third Parties",
+              "value": "general-third-parties"
+            },
+            { "name": "Telehealth", "value": "telehealth" },
+            { "name": "Account", "value": "account" },
+            { "name": "Account Wellbeing", "value": "account-wellbeing" },
+            {
+              "name": "Embedded Tools Healthgrades",
+              "value": "embedded-tools-healthgrades"
+            },
+            {
+              "name": "Embedded Tools Nourish",
+              "value": "embedded-tools-nourish"
+            }
+          ],
+          "condition": {
+            "and": [
+              { "===": [{ "var": "ctaType" }, "link"] },
+              { "!!": { "var": "ctaLabel" } }
+            ]
+          }
+        }
+      ]
+    }
 ]
