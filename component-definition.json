@@ -1077,6 +1077,21 @@
             }
           }
         },
+         {
+      "title": "Executive Grid",
+      "id": "executive-grid",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Executive Grid",
+              "model": "executive-grid"
+            }
+          }
+        }
+      }
+    },
         {
           "title": "Two Column Text Carousel Item",
           "id": "two-column-text-carousel-item",
