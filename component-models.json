@@ -5,12 +5,6 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "navigationTitle",
-        "label": "Navigation Title"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
         "name": "jcr:title",
         "label": "Title"
       },
@@ -40,22 +34,10 @@
         ]
       },
       {
-        "component": "select",
-        "name": "breadcrumbType",
-        "label": "Breadcrumb Type",
-        "description": "Select type of breadcrumb desired",
-        "required": true,
-        "value": "complete",
-        "options": [
-          {
-            "name": "Partial",
-            "value": "partial"
-          },
-          {
-            "name": "Complete",
-            "value": "complete"
-          }
-        ],
+        "component": "container",
+        "name": "breadcrumb",
+        "label": "Breadcrumb Fields",
+        "valueType": "string",
         "condition": {
           "in": [
             "true",
@@ -63,7 +45,33 @@
               "var": "enableBreadcrumb"
             }
           ]
-        }
+        },
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "navigationTitle",
+            "label": "Navigation Title"
+          },
+          {
+            "component": "select",
+            "name": "breadcrumbType",
+            "label": "Breadcrumb Type",
+            "description": "Select type of breadcrumb desired",
+            "required": true,
+            "value": "complete",
+            "options": [
+              {
+                "name": "Partial",
+                "value": "partial"
+              },
+              {
+                "name": "Complete",
+                "value": "complete"
+              }
+            ]
+          }
+        ]
       },
       {
         "component": "select",
@@ -3476,7 +3484,7 @@
         "description": "Select Condition values for Wellbeing Carousel",
         "options": [
           {
-            "name": "Food",
+            "name": "Diabetes",
             "value": "diabetes"
           },
           {
@@ -3593,18 +3601,6 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
-      }
-    ]
-  },
-  {
-    "id": "healthgrades",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -4592,6 +4588,228 @@
     ]
   },
   {
+    "id": "medium-media-carousel-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter the title",
+        "required": true
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset",
+        "configUrl": "/content/dam/custom-asset-picker/image.config.json",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "description": "Upload the image",
+        "required": true
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset-mimetype",
+        "valueType": "string",
+        "name": "imageMimeType"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "description": "Pick alt text from AEM DAM with ability to override it",
+        "required": true
+      },
+      {
+        "component": "select",
+        "name": "textcolor",
+        "label": "Text Color",
+        "description": "Pick the Text Color",
+        "value": "white",
+        "options": [
+          {
+            "name": "Black",
+            "value": "black"
+          },
+          {
+            "name": "White",
+            "value": "white"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "valueType": "string",
+        "description": "Enter label to display on the CTA for each card"
+      },
+      {
+        "component": "select",
+        "name": "ctaType",
+        "label": "CTA Type",
+        "description": "Select the CTA Type",
+        "options": [
+          {
+            "name": "Link",
+            "value": "link"
+          },
+          {
+            "name": "PDF",
+            "value": "pdf"
+          }
+        ],
+        "condition": {
+          "!!": {
+            "var": "ctaLabel"
+          }
+        }
+      },
+      {
+        "component": "aem-content",
+        "name": "ctaLink",
+        "label": "Text Link СТА",
+        "valueType": "string",
+        "description": "Enter the URL to navigate when the image is clicked",
+        "required": true,
+        "validation": {
+          "rootPath": "/content"
+        },
+        "condition": {
+          "and": [
+            {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            },
+            {
+              "!!": {
+                "var": "ctaLabel"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "component": "reference",
+        "name": "ctaAsset",
+        "label": "Asset (PDF/Image)",
+        "description": "Upload the Asset (PDF/Image)",
+        "valueType": "string",
+        "condition": {
+          "and": [
+            {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "pdf"
+              ]
+            },
+            {
+              "!!": {
+                "var": "ctaLabel"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "name": "text-aria-label",
+        "label": "ARIA Label",
+        "valueType": "string",
+        "description": "Enter ARIA label to comply ADA"
+      },
+      {
+        "component": "select",
+        "name": "targetPath",
+        "label": "Target Path",
+        "description": "Select the target path for the authored CTA URL",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ],
+        "condition": {
+          "and": [
+            {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            },
+            {
+              "!!": {
+                "var": "ctaLabel"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "label": "Exit Interstitial",
+        "name": "exitInterstitialSubText",
+        "valueType": "string",
+        "value": "select",
+        "description": "Select this option to enable the modal experience that notifies user that they are leaving the site",
+        "options": [
+          {
+            "name": "select",
+            "value": "select"
+          },
+          {
+            "name": "General Third Parties",
+            "value": "general-third-parties"
+          },
+          {
+            "name": "Telehealth",
+            "value": "telehealth"
+          },
+          {
+            "name": "Account",
+            "value": "account"
+          },
+          {
+            "name": "Account Wellbeing",
+            "value": "account-wellbeing"
+          },
+          {
+            "name": "Embedded Tools Healthgrades",
+            "value": "embedded-tools-healthgrades"
+          },
+          {
+            "name": "Embedded Tools Nourish",
+            "value": "embedded-tools-nourish"
+          }
+        ],
+        "condition": {
+          "and": [
+            {
+              "===": [
+                {
+                  "var": "ctaType"
+                },
+                "link"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
     "id": "news-and-story-card-item",
     "fields": [
       {
@@ -5104,6 +5322,7 @@
         "label": "Title",
         "valueType": "string",
         "description": "Enter the title",
+        "required": true,
         "condition": {
           "===": [
             {
@@ -6651,7 +6870,7 @@
             },
             {
               "!!": {
-                "var": "ctaLabel"
+                "var": "linkHeadline"
               }
             }
           ]
@@ -6921,8 +7140,7 @@
         "name": "mobImageAlt",
         "label": "IconAlt Text",
         "value": "",
-        "description": "Pick alt text from AEM DAM with ability to override it",
-        "required": true
+        "description": "Pick alt text from AEM DAM with ability to override it"
       }
     ]
   },
