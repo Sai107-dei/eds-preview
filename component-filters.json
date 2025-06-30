@@ -51,6 +51,7 @@
       "news-tile",
       "executive-grids",
       "csr-form",
+      "medium-media-carousel",
       "press-release-feed",
       "timeline-card",
       "video",
@@ -90,6 +91,7 @@
       "image-block",
       "executive-grids",
       "text-callout",
+      "medium-media-carousel",
       "vertical-numeric-tile",
       "timeline-card",
       "media-card",
@@ -149,6 +151,7 @@
       "news-tile",
       "executive-grids",
       "timeline",
+      "medium-media-carousel",
       "press-release-feed",
       "timeline-card",
       "video",
@@ -232,6 +235,10 @@
   {
     "id": "media-card",
     "components": ["media-card-link"]
+  },
+  {
+    "id": "medium-media-carousel",
+    "components": ["medium-media-carousel-item"]
   },
   {
     "id": "news-and-story-card",
