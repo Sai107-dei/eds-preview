@@ -1,339 +1,377 @@
 [
   {
+    "id": "empty",
+    "components": []
+  },
+  {
     "id": "main",
-    "components": [
-      "section",
-      "cont-sec-container",
-      "column-container",
-      "tabs-section"
-    ]
+    "components": ["section", "tab-section"]
+  },
+  {
+    "id": "main-browse",
+    "components": ["section", "browse-rail-section", "tab-section"]
+  },
+  {
+    "id": "main-article",
+    "components": ["article-content-section", "article-header-section", "section", "tab-section"]
+  },
+  {
+    "id": "main-profile",
+    "components": ["section", "profile-section", "profile-bottom-section"]
+  },
+  {
+    "id": "main-signup",
+    "components": ["sign-up-flow-section"]
   },
   {
     "id": "section",
     "components": [
-      "image-block",
-      "spacer-and-divider",
-      "small-width-media",
       "text",
+      "image",
       "button",
       "title",
-      "primary-hero",
-      "lcdp",
-      "horizontal-numeric-tile",
-      "search",
-      "cards",
-      "timeline",
       "columns",
-      "fragment",
-      "relatedlinks",
-      "icon-tile",
-      "additional-resource-card",
-      "enhanced-related-links",
-      "text-component",
-      "two-column-with-image",
-      "accordion",
-      "additional-links",
-      "promo-banner",
-      "executive-tile",
-      "text-callout",
-      "pull-quote",
-      "table",
-      "table-2-columns",
-      "table-3-columns",
-      "table-4-columns",
-      "table-5-columns",
-      "table-6-columns",
-      "vertical-numeric-tile",
-      "bio-pagination",
-      "media-card",
-      "expanded-access-form",
-      "submission-form",
-      "news-tile",
-      "executive-grids",
-      "csr-form",
-      "medium-media-carousel",
-      "press-release-feed",
-      "timeline-card",
-      "video",
-      "question-card-carousel",
-      "two-column-text-carousel",
-      "sleep-apnea-quiz",
-      "icon-card",
-      "external-video-player-link",
-      "two-column-text-carousel",
-      "overlapping-block",
-      "numerated-tile",
-      "icon-list-with-eyebrow",
-      "small-media-carousel",
-      "bulleted-icon-list",
-      "story-banner",
-      "story-feed",
-      "news-and-story-card",
-      "media-contacts",
-      "telehealth-cards",
-      "healthgrades",
-      "federated-components"
-    ]
-  },
-  {
-    "id": "column-container",
-    "components": [
-      "column-break",
-      "accordion",
-      "additional-links",
-      "cards",
-      "text",
-      "title",
-      "relatedlinks",
-      "enhanced-related-links",
-      "text-component",
-      "spacer-and-divider",
-      "image-block",
-      "executive-grids",
-      "text-callout",
-      "medium-media-carousel",
-      "vertical-numeric-tile",
-      "timeline-card",
-      "media-card",
-      "video",
-      "question-card-carousel",
-      "telehealth-cards",
-      "promo-banner",
-      "pull-quote",
-      "crm-form",
-      "bulleted-icon-list",
-      "news-and-story-card",
-      "text-callout",
-      "small-media-carousel",
-      "media-contacts",
-      "overlapping-block",
-      "icon-tile"
-    ]
-  },
-  {
-    "id": "tabs-section",
-    "components": ["tabs"]
-  },
-  {
-    "id": "cont-sec-container",
-    "components": [
-      "federated-components",
-      "spacer-and-divider",
-      "text",
-      "button",
-      "title",
-      "primary-hero",
-      "lcdp",
-      "search",
-      "cards",
-      "columns",
-      "fragment",
-      "relatedlinks",
-      "icon-tile",
-      "additional-resource-card",
-      "enhanced-related-links",
-      "text-component",
-      "two-column-with-image",
+      "icon-block",
+      "curated-cards",
+      "teaser",
+      "detailed-teaser",
+      "marquee",
+      "carousel",
+      "sign-up",
+      "video-embed",
+      "iframe-app",
+      "html-app",
+      "secondary-search",
+      "accordion-group",
+      "media",
+      "authorable-card",
+      "featured-cards",
+      "events-cards",
+      "adls-cards",
+      "tabbed-cards",
       "tabs",
-      "accordion",
-      "additional-links",
-      "promo-banner",
-      "pull-quote",
-      "table",
-      "table-2-columns",
-      "table-3-columns",
-      "table-4-columns",
-      "table-5-columns",
-      "table-6-columns",
-      "vertical-numeric-tile",
-      "image-block",
-      "expanded-access-form",
-      "news-tile",
-      "executive-grids",
-      "timeline",
-      "medium-media-carousel",
-      "press-release-feed",
-      "timeline-card",
-      "video",
-      "question-card-carousel",
-      "two-column-text-carousel",
-      "sleep-apnea-quiz",
-      "icon-card",
-      "external-video-player-link",
-      "two-column-text-carousel",
-      "overlapping-block",
-      "telehealth-cards",
-      "numerated-tile",
-      "icon-list-with-eyebrow",
-      "bulleted-icon-list",
-      "telehealth-cards",
-      "story-banner",
-      "story-feed",
-      "media-contacts",
-      "news-and-story-card",
-      "media-contacts",
-      "small-media-carousel",
-      "healthgrades"
+      "recommended-courses",
+      "recommended-content",
+      "recommendation-marquee",
+      "block-quote",
+      "callout",
+      "featured-authors",
+      "inline-survey",
+      "featured-content",
+      "browse-filters",
+      "topic-results",
+      "announcement-ribbon",
+      "qualtrics",
+      "upcoming-event",
+      "upcoming-event-v2",
+      "notification-banner",
+      "code",
+      "playlist-browse",
+      "atomic-search"
     ]
   },
   {
-    "id": "accordion",
-    "components": ["accordion-item"]
+    "id": "profile-bottom-section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "columns",
+      "icon-block",
+      "curated-cards",
+      "teaser",
+      "detailed-teaser",
+      "marquee",
+      "carousel",
+      "sign-up",
+      "video-embed",
+      "iframe-app",
+      "html-app",
+      "secondary-search",
+      "accordion-group",
+      "media",
+      "authorable-card",
+      "featured-cards",
+      "events-cards",
+      "adls-cards",
+      "tabbed-cards",
+      "tabs",
+      "recommended-courses",
+      "recommended-content",
+      "recommendation-marquee",
+      "block-quote",
+      "callout",
+      "featured-authors",
+      "inline-survey",
+      "featured-content",
+      "browse-filters",
+      "topic-results",
+      "announcement-ribbon",
+      "qualtrics",
+      "upcoming-event",
+      "upcoming-event-v2"
+    ]
   },
   {
-    "id": "additional-links",
-    "components": ["additional-link"]
+    "id": "section-article",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "columns",
+      "icon-block",
+      "curated-cards",
+      "teaser",
+      "detailed-teaser",
+      "marquee",
+      "carousel",
+      "sign-up",
+      "video-embed",
+      "secondary-search",
+      "accordion-group",
+      "media",
+      "authorable-card",
+      "featured-cards",
+      "events-cards",
+      "adls-cards",
+      "tabbed-cards",
+      "tabs",
+      "recommended-courses",
+      "recommended-content",
+      "recommendation-marquee",
+      "block-quote",
+      "callout",
+      "featured-authors",
+      "inline-survey",
+      "featured-content",
+      "browse-filters",
+      "topic-results",
+      "article-tags",
+      "qualtrics",
+      "code",
+      "announcement-ribbon"
+    ]
   },
   {
-    "id": "additional-resource-card",
-    "components": ["resource-card"]
+    "id": "tab-section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "columns",
+      "icon-block",
+      "teaser",
+      "detailed-teaser",
+      "video-embed",
+      "media",
+      "block-quote",
+      "callout",
+      "note"
+    ]
   },
   {
-    "id": "bulleted-icon-list",
-    "components": ["bulleted-icon-list-item"]
+    "id": "section-browse",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "columns",
+      "icon-block",
+      "curated-cards",
+      "teaser",
+      "detailed-teaser",
+      "marquee",
+      "sign-up",
+      "video-embed",
+      "secondary-search",
+      "accordion-group",
+      "media",
+      "authorable-card",
+      "browse-filters",
+      "featured-cards",
+      "events-cards",
+      "adls-cards",
+      "tabbed-cards",
+      "tabs",
+      "recommended-courses",
+      "recommended-content",
+      "recommendation-marquee",
+      "block-quote",
+      "callout",
+      "qualtrics",
+      "announcement-ribbon"
+    ]
+  },
+  {
+    "id": "section-author-bio",
+    "components": ["author-bio"]
+  },
+  {
+    "id": "section-header",
+    "components": [
+      "adobe-logo",
+      "brand",
+      "nav",
+      "search",
+      "language-selector",
+      "sign-in",
+      "profile-menu",
+      "product-grid"
+    ]
+  },
+  {
+    "id": "section-footer",
+    "components": ["footer-breadcrumb", "footer-item", "social", "footer-copyrights", "language-selector"]
+  },
+  {
+    "id": "profile-section",
+    "components": [
+      "text",
+      "title",
+      "button",
+      "image",
+      "adobe-account-card",
+      "data-and-email-consent",
+      "role-and-industry",
+      "user-profile-card",
+      "email-card",
+      "product-interests",
+      "product-experience-level",
+      "bookmarks",
+      "awards",
+      "profile-welcome",
+      "recommended-content",
+      "recommendation-marquee",
+      "personalized-content-placeholder",
+      "announcement-ribbon",
+      "recently-reviewed",
+      "qualtrics"
+    ]
+  },
+  {
+    "id": "sign-up-flow-section",
+    "components": [
+      "text",
+      "title",
+      "button",
+      "image",
+      "adobe-account-card",
+      "data-and-email-consent",
+      "role-and-industry",
+      "user-profile-card",
+      "product-interests",
+      "product-experience-level",
+      "icon-block"
+    ]
+  },
+  {
+    "id": "article-content-section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "cards",
+      "columns",
+      "icon-block",
+      "curated-cards",
+      "teaser",
+      "detailed-teaser",
+      "marquee",
+      "carousel",
+      "sign-up",
+      "video-embed",
+      "media",
+      "block-quote",
+      "callout",
+      "article-tags",
+      "author-summary",
+      "social-share",
+      "featured-authors",
+      "inline-survey",
+      "featured-content",
+      "note",
+      "qualtrics",
+      "code",
+      "announcement-ribbon"
+    ]
+  },
+  {
+    "id": "browse-rail-section",
+    "components": ["browse-rail"]
+  },
+  {
+    "id": "article-header-section",
+    "components": []
+  },
+  {
+    "id": "columns",
+    "components": []
+  },
+  {
+    "id": "column",
+    "components": ["text", "image", "button", "title"]
+  },
+  {
+    "id": "text",
+    "rte": {
+      "format": ["bold", "italic"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": ["superscript", "subscript"],
+      "list": ["bullist", "numlist"],
+      "insert": ["link"],
+      "advanced": [],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
   },
   {
     "id": "cards",
     "components": ["card"]
   },
   {
-    "id": "columns",
-    "components": ["column"]
+    "id": "icon-block",
+    "components": ["icon-card"]
   },
   {
-    "id": "enhanced-related-links",
-    "components": ["enhanced-related-link"]
+    "id": "teaser",
+    "components": ["teaser", "detailed-teaser"]
   },
   {
-    "id": "executive-grids",
-    "components": ["executive-grid"]
+    "id": "accordion",
+    "components": ["accordion"]
   },
   {
-    "id": "external-video-player-link",
-    "components": ["external-video-player-link-item"]
+    "id": "authorable-card",
+    "components": ["authored-card"]
   },
   {
-    "id": "horizontal-numeric-tile",
-    "components": ["numeric-tile"]
-  },
-  {
-    "id": "icon-card",
-    "components": ["icon-card-item"]
-  },
-  {
-    "id": "icon-tile-eyebrow-grid",
-    "components": ["icon-tile-eyebrow"]
-  },
-  {
-    "id": "icon-tile-grid",
-    "components": ["tile"]
-  },
-  {
-    "id": "lcdp",
-    "components": ["lcdp"]
-  },
-  {
-    "id": "media-card",
-    "components": ["media-card-link"]
-  },
-  {
-    "id": "medium-media-carousel",
-    "components": ["medium-media-carousel-item"]
-  },
-  {
-    "id": "news-and-story-card",
-    "components": ["news-and-story-card-item"]
-  },
-  {
-    "id": "news-tile",
-    "components": ["news-tile-item"]
-  },
-  {
-    "id": "numerated-tile",
-    "components": ["numerated-tile-item"]
-  },
-  {
-    "id": "primary-hero",
-    "components": ["icongrid-tile"]
-  },
-  {
-    "id": "promo-banner",
-    "components": ["promo-banner"]
-  },
-  {
-    "id": "pull-quote",
-    "components": ["pull-quote"]
-  },
-  {
-    "id": "question-card-carousel",
-    "components": ["question-card-carousel-item"]
-  },
-  {
-    "id": "relatedlinks",
-    "components": ["relatedlink"]
-  },
-  {
-    "id": "search",
-    "components": ["search"]
-  },
-  {
-    "id": "sleep-apnea-quiz",
-    "components": ["sleep-apnea-quiz"]
-  },
-  {
-    "id": "small-media-carousel",
-    "components": ["small-media-carousel-item"]
-  },
-  {
-    "id": "small-width-media",
-    "components": ["small-width-media"]
-  },
-  {
-    "id": "table-2-columns",
-    "components": ["table-col-2"]
-  },
-  {
-    "id": "table-3-columns",
-    "components": ["table-col-3"]
-  },
-  {
-    "id": "table-4-columns",
-    "components": ["table-col-4"]
-  },
-  {
-    "id": "table-5-columns",
-    "components": ["table-col-5"]
-  },
-  {
-    "id": "table-6-columns",
-    "components": ["table-col-6"]
-  },
-  {
-    "id": "table",
-    "components": ["table-row"]
-  },
-  {
-    "id": "tabs",
+    "id": "tab",
     "components": ["tab"]
   },
   {
-    "id": "telehealth-cards",
-    "components": ["telehealth-card"]
+    "id": "topic-results",
+    "components": []
   },
   {
-    "id": "timeline",
-    "components": ["timeline-item"]
-  },
-  {
-    "id": "two-column-text-carousel",
-    "components": ["two-column-text-carousel-item"]
-  },
-  {
-    "id": "vertical-numeric-tile",
-    "components": ["vertical-numeric-tile-item"]
-  },
-  {
-    "id": "video",
-    "components": ["video-item"]
+    "id": "rte-custom-options",
+    "components": [],
+    "rte": {
+      "format": ["bold", "italic", "underline"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": ["superscript", "subscript"],
+      "list": [],
+      "insert": ["link"],
+      "advanced": [],
+      "extensions": [],
+      "editor": ["removeformat"],
+      "blocks": []
+    }
   }
 ]
