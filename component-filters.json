@@ -1,331 +1,309 @@
 [
   {
-    "id": "empty",
-    "components": []
-  },
-  {
     "id": "main",
-    "components": ["section", "tab-section"]
+    "components": [
+      "all-models-section",
+      "bmw_main_section",
+      "bmw-video",
+      "flexible-width-section",
+      "footer-section",
+      "header-section",
+      "section",
+      "stock-locator-section",
+      "tabs-section"
+    ]
   },
   {
-    "id": "main-browse",
-    "components": ["section", "browse-rail-section", "tab-section"]
+    "id": "columns",
+    "components": ["column"]
   },
   {
-    "id": "main-article",
-    "components": ["article-content-section", "article-header-section", "section", "tab-section"]
+    "id": "column",
+    "components": [
+      "button",
+      "copy_text",
+      "eyebrow",
+      "headline",
+      "image",
+      "title"
+    ]
   },
   {
-    "id": "main-profile",
-    "components": ["section", "profile-section", "profile-bottom-section"]
+    "id": "bmw_main_section",
+    "components": [
+      "section",
+      "text-image",
+      "text-image-v2"
+    ]
   },
   {
-    "id": "main-signup",
-    "components": ["sign-up-flow-section"]
+    "id": "footer-section",
+    "components": [
+      "copyright",
+      "icon-link-list",
+      "link-list",
+      "speed-dial"
+    ]
+  },
+  {
+    "id": "header-section",
+    "components": [
+      "icon-link-list",
+      "logo",
+      "menu-flyout",
+      "menu-link"
+    ]
+  },
+  {
+    "id": "menu-flyout",
+    "components": [
+      "link-list",
+      "menu-teaser"
+    ]
+  },
+  {
+    "id": "menu-teaser",
+    "components": [
+      "button",
+      "copy_text"
+    ]
+  },
+  {
+    "id": "text-with-media",
+    "components": [
+      "text-with-image",
+      "text-with-video"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "components": [],
+    "rte": {
+      "format": ["bold"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": ["superscript"],
+      "list": ["bullist", "numlist"],
+      "insert": ["link"],
+      "blocks": [],
+      "advanced": [],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
+  },
+  {
+    "id": "text-with-image",
+    "components": [],
+    "rte": {
+      "format": ["bold"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [],
+      "insert": ["link"],
+      "blocks": [],
+      "advanced": [""],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
+  },
+  {
+    "id": "text-with-video",
+    "components": [],
+    "rte": {
+      "format": ["bold"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [],
+      "insert": ["link"],
+      "blocks": [],
+      "advanced": [""],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
+  },
+  {
+    "id": "video-carousel",
+    "components": [],
+    "rte": {
+      "format": ["bold"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [],
+      "insert": ["link"],
+      "blocks": [],
+      "advanced": [""],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
+  },
+  {
+    "id": "image-carousel",
+    "components": [],
+    "rte": {
+      "format": ["bold"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [],
+      "insert": ["link"],
+      "blocks": [],
+      "advanced": [""],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
+  },
+  {
+    "id": "quote",
+    "components": [],
+    "rte": {
+      "format": ["bold"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [],
+      "insert": [""],
+      "blocks": [],
+      "advanced": [""],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
   },
   {
     "id": "section",
     "components": [
-      "text",
-      "image",
+      "accordion",
+      "background-media",
       "button",
-      "title",
       "columns",
-      "icon-block",
-      "curated-cards",
-      "teaser",
-      "detailed-teaser",
-      "marquee",
-      "carousel",
-      "sign-up",
-      "video-embed",
-      "iframe-app",
-      "html-app",
-      "secondary-search",
-      "accordion-group",
-      "media",
-      "authorable-card",
-      "featured-cards",
-      "events-cards",
-      "adls-cards",
-      "tabbed-cards",
-      "tabs",
-      "recommended-courses",
-      "recommended-content",
-      "recommendation-marquee",
-      "block-quote",
-      "callout",
-      "featured-authors",
-      "inline-survey",
-      "featured-content",
-      "browse-filters",
-      "topic-results",
-      "announcement-ribbon",
-      "qualtrics",
-      "upcoming-event",
-      "upcoming-event-v2",
-      "notification-banner",
-      "code",
-      "playlist-browse",
-      "atomic-search"
+      "content-navigation",
+      "cookiepolicy",
+      "copy_text",
+      "disclaimer",
+      "download",
+      "drivetrain-switch",
+      "eyebrow",
+      "footer-text",
+      "headline",
+      "iframe",
+      "image",
+      "link-list",
+      "media-carousel",
+      "model-card",
+      "multicontent-gallery",
+      "precon",
+      "quote",
+      "technical-data",
+      "text-with-media",
+      "title",
+      "video",
+      "video-gallery",
+      "website-search"
     ]
   },
   {
-    "id": "profile-bottom-section",
-    "components": [
-      "text",
-      "image",
+    "id":"flexible-width-section",
+    "components":[
+      "accordion",
       "button",
-      "title",
       "columns",
-      "icon-block",
-      "curated-cards",
-      "teaser",
-      "detailed-teaser",
-      "marquee",
-      "carousel",
-      "sign-up",
-      "video-embed",
-      "iframe-app",
-      "html-app",
-      "secondary-search",
-      "accordion-group",
-      "media",
-      "authorable-card",
-      "featured-cards",
-      "events-cards",
-      "adls-cards",
-      "tabbed-cards",
-      "tabs",
-      "recommended-courses",
-      "recommended-content",
-      "recommendation-marquee",
-      "block-quote",
-      "callout",
-      "featured-authors",
-      "inline-survey",
-      "featured-content",
-      "browse-filters",
-      "topic-results",
-      "announcement-ribbon",
-      "qualtrics",
-      "upcoming-event",
-      "upcoming-event-v2"
+      "copy_text",
+      "cookiepolicy",
+      "disclaimer",
+      "download"   ,
+      "eyebrow",
+      "headline",
+      "image",
+      "quote",
+      "title",
+      "video"
     ]
   },
   {
-    "id": "section-article",
+    "id": "tabs-section",
     "components": [
-      "text",
-      "image",
+      "accordion",
+      "background-media",
       "button",
-      "title",
       "columns",
-      "icon-block",
-      "curated-cards",
-      "teaser",
-      "detailed-teaser",
-      "marquee",
-      "carousel",
-      "sign-up",
-      "video-embed",
-      "secondary-search",
-      "accordion-group",
-      "media",
-      "authorable-card",
-      "featured-cards",
-      "events-cards",
-      "adls-cards",
-      "tabbed-cards",
-      "tabs",
-      "recommended-courses",
-      "recommended-content",
-      "recommendation-marquee",
-      "block-quote",
-      "callout",
-      "featured-authors",
-      "inline-survey",
-      "featured-content",
-      "browse-filters",
-      "topic-results",
-      "article-tags",
-      "qualtrics",
-      "code",
-      "announcement-ribbon"
-    ]
-  },
-  {
-    "id": "tab-section",
-    "components": [
-      "text",
+      "content-navigation",
+      "cookiepolicy",
+      "copy_text",
+      "disclaimer",
+      "download",
+      "drivetrain-switch",
+      "eyebrow",
+      "footer-text",
+      "headline",
+      "icon",
+      "icon-link-list",
+      "iframe",
       "image",
-      "button",
+      "link-list",
+      "media-carousel",
+      "model-card",
+      "multicontent-gallery",
+      "precon",
+      "quote",
+      "technical-data",
+      "text-with-media",
       "title",
-      "columns",
-      "icon-block",
-      "teaser",
-      "detailed-teaser",
-      "video-embed",
-      "media",
-      "block-quote",
-      "callout",
-      "note"
+      "video",
+      "video-gallery"
     ]
   },
   {
-    "id": "section-browse",
+    "id": "all-models-section",
     "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "columns",
-      "icon-block",
-      "curated-cards",
-      "teaser",
-      "detailed-teaser",
-      "marquee",
-      "sign-up",
-      "video-embed",
-      "secondary-search",
-      "accordion-group",
-      "media",
-      "authorable-card",
-      "browse-filters",
-      "featured-cards",
-      "events-cards",
-      "adls-cards",
-      "tabbed-cards",
-      "tabs",
-      "recommended-courses",
-      "recommended-content",
-      "recommendation-marquee",
-      "block-quote",
-      "callout",
-      "qualtrics",
-      "announcement-ribbon"
+      "all-models",
+      "headline",
+      "link-list"
     ]
   },
   {
-    "id": "section-author-bio",
-    "components": ["author-bio"]
-  },
-  {
-    "id": "section-header",
-    "components": [
-      "adobe-logo",
-      "brand",
-      "nav",
-      "search",
-      "language-selector",
-      "sign-in",
-      "profile-menu",
-      "product-grid"
-    ]
-  },
-  {
-    "id": "section-footer",
-    "components": ["footer-breadcrumb", "footer-item", "social", "footer-copyrights", "language-selector"]
-  },
-  {
-    "id": "profile-section",
-    "components": [
-      "text",
-      "title",
-      "button",
-      "image",
-      "adobe-account-card",
-      "data-and-email-consent",
-      "role-and-industry",
-      "user-profile-card",
-      "email-card",
-      "product-interests",
-      "product-experience-level",
-      "bookmarks",
-      "awards",
-      "profile-welcome",
-      "recommended-content",
-      "recommendation-marquee",
-      "personalized-content-placeholder",
-      "announcement-ribbon",
-      "recently-reviewed",
-      "qualtrics"
-    ]
-  },
-  {
-    "id": "sign-up-flow-section",
-    "components": [
-      "text",
-      "title",
-      "button",
-      "image",
-      "adobe-account-card",
-      "data-and-email-consent",
-      "role-and-industry",
-      "user-profile-card",
-      "product-interests",
-      "product-experience-level",
-      "icon-block"
-    ]
-  },
-  {
-    "id": "article-content-section",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "cards",
-      "columns",
-      "icon-block",
-      "curated-cards",
-      "teaser",
-      "detailed-teaser",
-      "marquee",
-      "carousel",
-      "sign-up",
-      "video-embed",
-      "media",
-      "block-quote",
-      "callout",
-      "article-tags",
-      "author-summary",
-      "social-share",
-      "featured-authors",
-      "inline-survey",
-      "featured-content",
-      "note",
-      "qualtrics",
-      "code",
-      "announcement-ribbon"
-    ]
-  },
-  {
-    "id": "browse-rail-section",
-    "components": ["browse-rail"]
-  },
-  {
-    "id": "article-header-section",
-    "components": []
-  },
-  {
-    "id": "columns",
-    "components": []
-  },
-  {
-    "id": "column",
-    "components": ["text", "image", "button", "title"]
-  },
-  {
-    "id": "text",
+    "id": "stock-locator-model-overview",
+    "components": [],
     "rte": {
-      "format": ["bold", "italic"],
+      "format": [],
       "alignment": [],
       "indentation": [],
-      "sr_script": ["superscript", "subscript"],
+      "sr_script": [],
+      "list": [],
+      "insert": [],
+      "blocks": [],
+      "advanced": [""],
+      "extensions": [],
+      "editor": ["removeformat"]
+    }
+  },
+  {
+   "id" : "stock-locator-section",
+   "components":[
+    "copy_text",
+    "headline",
+    "stock-locator-model-detail",
+    "stock-locator-model-overview"
+   ]
+  },
+  {
+    "id": "copy_text",
+    "rte": {
+      "format": ["bold"],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": ["superscript"],
       "list": ["bullist", "numlist"],
       "insert": ["link"],
-      "advanced": [],
+      "blocks": [],
+      "advanced": ["h3"],
       "extensions": [],
       "editor": ["removeformat"]
     }
@@ -335,43 +313,96 @@
     "components": ["card"]
   },
   {
-    "id": "icon-block",
-    "components": ["icon-card"]
+    "id": "icon-link-list",
+    "components": ["icon"]
   },
   {
-    "id": "teaser",
-    "components": ["teaser", "detailed-teaser"]
-  },
-  {
-    "id": "accordion",
-    "components": ["accordion"]
-  },
-  {
-    "id": "authorable-card",
-    "components": ["authored-card"]
-  },
-  {
-    "id": "tab",
-    "components": ["tab"]
-  },
-  {
-    "id": "topic-results",
-    "components": []
-  },
-  {
-    "id": "rte-custom-options",
+    "id": "link-list",
     "components": [],
     "rte": {
-      "format": ["bold", "italic", "underline"],
+      "format": [],
       "alignment": [],
       "indentation": [],
-      "sr_script": ["superscript", "subscript"],
-      "list": [],
+      "sr_script": [],
+      "list": ["bullist"],
       "insert": ["link"],
       "advanced": [],
       "extensions": [],
-      "editor": ["removeformat"],
-      "blocks": []
+      "editor": []
     }
+  },
+  {
+    "id": "multicontent-gallery",
+    "components": [
+      "image-slide",
+      "video-slide"
+    ]
+  },
+  {
+    "id": "video-slide",
+    "components": []
+  },
+  {
+    "id": "image-slide",
+    "components": []
+  },
+  {
+    "id": "media-carousel",
+    "components": [
+      "image-carousel",
+      "video-carousel"
+    ]
+  },
+  {
+    "id": "background-media",
+    "components":[
+      "background-image",
+      "background-video"
+    ]
+  },
+  {
+    "id": "video-gallery",
+    "components": [
+      "video-gallery-slide"
+    ]
+  },
+  {
+    "id": "drivetrain-switch",
+    "components": [
+      "drivetrain-model-card"
+    ]
+  },
+  {
+    "id": "precon",
+    "components": [
+      "precon-vehicle"
+    ]
+  },
+  {
+    "id": "speed-dial",
+    "components":[
+      "speed-dial-item"
+    ]
+  },
+  {
+    "id": "technical-data",
+    "components":[
+      "model-data"
+    ],
+    "rte": {
+      "format": [],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [],
+      "insert": ["link"],
+      "advanced": ["h2"],
+      "extensions": [],
+       "editor": []
+    }
+  },
+  {
+    "id": "website-search",
+    "components":[]
   }
 ]
