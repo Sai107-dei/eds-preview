@@ -2,40 +2,29 @@
   {
     "id": "headline",
     "fields": [
-      {
-        "component": "text-input",
-        "valueType": "string",
-        "name": "jcr:title",
-        "value": "",
-        "label": "Headline",
-        "required": true,
-        "description": "Defines the headline text that will appear on the page."
-      },
-      {
-        "component": "select",
-        "name": "type",
-        "value": "h2",
-        "label": "Headline Type",
-        "valueType": "string",
-        "required": true,
-        "description": "Defines the styling of the headline that will be displayed on the page.",
-        "options": [
-          {
-            "name": "Headline 1",
-            "value": "h1"
-          },
-          {
-            "name": "Headline 2",
-            "value": "h2"
-          },
-          {
-            "name": "Headline 3",
-            "value": "h3"
-          }
-        ]
-      }
-    ]
-  },
+ {
+          "component": "container",
+          "name": "test",
+          "label": "Multi Text",
+          "multi": true,
+          "fields": [
+            {
+              "component": "reference",
+              "name": "image",
+              "value": "",
+              "label": "Sample Image",
+              "valueType": "string"
+            },
+            {
+              "component": "text",
+              "name": "alt",
+              "value": "",
+              "label": "Alt Text",
+              "valueType": "string"
+            }
+          ]
+        }
+    ],
   {
     "id": "eyebrow",
     "fields": [
