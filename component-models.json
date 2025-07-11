@@ -2,29 +2,30 @@
   {
     "id": "headline",
     "fields": [
- {
-          "component": "container",
-          "name": "test",
-          "label": "Multi Text",
-          "multi": true,
-          "fields": [
-            {
-              "component": "reference",
-              "name": "image",
-              "value": "",
-              "label": "Sample Image",
-              "valueType": "string"
-            },
-            {
-              "component": "text",
-              "name": "alt",
-              "value": "",
-              "label": "Alt Text",
-              "valueType": "string"
-            }
-          ]
-        }
-    ],
+      {
+        "component": "container",
+        "name": "test",
+        "label": "Multi Text",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "image",
+            "value": "",
+            "label": "Sample Image",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "alt",
+            "value": "",
+            "label": "Alt Text",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
   {
     "id": "eyebrow",
     "fields": [
@@ -169,14 +170,14 @@
           "numberMin": 1,
           "customErrorMsg": "Please enter a no. greater or equal to 1"
         }
-      },      
+      },
       {
         "component": "multiselect",
         "name": "classes",
         "label": "Alignment",
         "valueType": "string",
         "description": "Defines the alignment of the elements added to the Columns and if an additional margin in between the columns on mobile is enabled",
-        "maxSize": 3,      
+        "maxSize": 3,
         "options": [
           {
             "name": "Horizontal Alignment",
@@ -591,7 +592,7 @@
         "component": "text",
         "name": "style",
         "value": "allmodel-section",
-        "hidden":true
+        "hidden": true
       }
     ]
   },
@@ -734,22 +735,20 @@
         "description": "Defines the text to be displayed in the button or as the link."
       },
       {
-        "component":"tab",
-        "name":"analytics_tab",
-        "label":"Analytics"
-
+        "component": "tab",
+        "name": "analytics_tab",
+        "label": "Analytics"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "options": [
           {
@@ -763,15 +762,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following options should appear:",
         "name": "analytics_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analytics_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -824,10 +830,9 @@
           {
             "name": "Other",
             "value": "Other"
-          }    
+          }
         ]
       }
-     
     ]
   },
   {
@@ -948,7 +953,7 @@
         "value": "",
         "description": "Defines video that will play on desktop.",
         "required": true,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json",
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json",
         "multi": false
       },
       {
@@ -958,7 +963,7 @@
         "label": "Mobile Video Path",
         "value": "",
         "description": "Defines the video that will play on mobile.",
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json",
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json",
         "multi": false
       },
       {
@@ -969,7 +974,7 @@
         "value": "",
         "description": "Defines the the poster image of the video that will play on desktop. It will be displayed while loading the page.",
         "required": true,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json",
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json",
         "multi": false
       },
       {
@@ -1078,22 +1083,20 @@
         "description": "Defines the text to be displayed in the button or as the link."
       },
       {
-        "component":"tab",
-        "name":"analytics_tab",
-        "label":"Analytics"
-
+        "component": "tab",
+        "name": "analytics_tab",
+        "label": "Analytics"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "options": [
           {
@@ -1107,15 +1110,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following options should appear:",
         "name": "analytics_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analytics_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -1168,7 +1178,7 @@
           {
             "name": "Other",
             "value": "Other"
-          }    
+          }
         ]
       }
     ]
@@ -1187,8 +1197,7 @@
   },
   {
     "id": "cookiepolicy",
-    "fields": [
-    ]
+    "fields": []
   },
   {
     "id": "footer-section",
@@ -1239,7 +1248,7 @@
         "valueType": "string",
         "name": "image",
         "label": "Image / Icon",
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json",
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json",
         "multi": true
       },
       {
@@ -1435,7 +1444,7 @@
           {
             "name": "Other",
             "value": "other"
-          }         
+          }
         ]
       },
       {
@@ -1452,7 +1461,7 @@
           {
             "name": "White Background",
             "value": "transparent"
-          }          
+          }
         ]
       },
       {
@@ -1588,9 +1597,9 @@
         "label": "Analytics"
       },
       {
-        "component":"text",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": "string",
         "description": "Defines a brief description of the content within the Text with Image for analytics. Please fill out this field in English."
       },
@@ -1734,7 +1743,7 @@
         "multi": false,
         "required": true,
         "description": "Defines the path that will be displaying poster image on desktop while loading the page.",
-        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"       
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
@@ -1748,7 +1757,7 @@
         "label": "Mobile Poster Image Path",
         "multi": false,
         "description": "Defines the path that will be displaying poster image on mobile while loading the page.",
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
@@ -1843,7 +1852,7 @@
         "name": "img_image",
         "label": "Image",
         "multi": false,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
@@ -1885,7 +1894,7 @@
         "name": "m_menuTeaserpropText",
         "value": "",
         "label": "Link Label"
-      },  
+      },
       {
         "component": "select",
         "name": "menuTeaserpropType",
@@ -1974,7 +1983,7 @@
         "label": "Desktop Video Path",
         "multi": false,
         "required": true,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset",
@@ -1983,7 +1992,7 @@
         "description": "Defines the path to a video on the mobile.",
         "label": "Mobile Video Path",
         "multi": false,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset",
@@ -1993,7 +2002,7 @@
         "label": "Desktop Poster Image Path",
         "multi": false,
         "required": true,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
@@ -2007,11 +2016,11 @@
         "description": "Defines the path that will be displaying poster image on mobile while loading the page.",
         "label": "Mobile Poster Image Path",
         "multi": false,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
-        "valueType": "string",        
+        "valueType": "string",
         "name": "media_videoSlidePosterMobileMimeType"
       },
       {
@@ -2082,16 +2091,16 @@
         "name": "analytics_tab4"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": "string",
         "description": "Defines a brief description of the content for analytics. Please fill out this field in English."
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
@@ -2106,8 +2115,8 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
@@ -2115,7 +2124,14 @@
         "name": "analytics_others",
         "valueType": "string",
         "description": "Defines the category of the Button/Link authored if Other is selected as its Type.",
-        "condition": { "===": [{"var" : "analytics_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -2168,7 +2184,7 @@
           {
             "name": "Other",
             "value": "Other"
-          }    
+          }
         ]
       }
     ]
@@ -2218,7 +2234,7 @@
         "description": "Defines media object that can be displayed on the right side.",
         "label": "Image",
         "multi": false,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
@@ -2267,16 +2283,16 @@
         "name": "analytics_tab4"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": "string",
         "description": "Defines a brief description of the content for analytics. Please fill out this field in English."
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
@@ -2291,8 +2307,8 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
@@ -2300,7 +2316,14 @@
         "name": "analytics_others",
         "valueType": "string",
         "description": "Defines the category of the Button/Link authored if Other is selected as its Type.",
-        "condition": { "===": [{"var" : "analytics_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -2353,7 +2376,7 @@
           {
             "name": "Other",
             "value": "Other"
-          }    
+          }
         ]
       }
     ]
@@ -2434,16 +2457,15 @@
         "label": "Analytics"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "options": [
           {
@@ -2457,8 +2479,8 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
@@ -2588,7 +2610,7 @@
       },
       {
         "component": "text",
-        "name": "accordionItemIconType",        
+        "name": "accordionItemIconType",
         "valueType": "string",
         "value": "h5",
         "hidden": true
@@ -2599,12 +2621,11 @@
         "label": "Analytics"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Accordion Item Analytics Label",
-        "description":"Defines a brief description of the content within the Accordion Item for analytics. Please fill out this field in English.",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Accordion Item Analytics Label",
+        "description": "Defines a brief description of the content within the Accordion Item for analytics. Please fill out this field in English.",
         "valueType": " "
-
       }
     ]
   },
@@ -2681,7 +2702,7 @@
         "name": "bgImgGeneral_headlineclassType",
         "value": "h2",
         "label": "Headline Type",
-        "valueType": "string",        
+        "valueType": "string",
         "description": "Defines the headline of the text that will appear in the page.",
         "hidden": true
       },
@@ -2738,7 +2759,7 @@
         "label": "Gradient",
         "valueType": "string",
         "description": "Defines colours and position of the gradient.",
-        "maxSize": 2,      
+        "maxSize": 2,
         "options": [
           {
             "name": "Colour",
@@ -2934,19 +2955,18 @@
         "label": "Analytics"
       },
       {
-        "component":"text-input",
-        "name":"analyticscta1_label",
-        "label":"Analytics Link Label",
-        "description":"Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
+        "component": "text-input",
+        "name": "analyticscta1_label",
+        "label": "Analytics Link Label",
+        "description": "Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analyticscta1_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analyticscta1_button",
+        "label": "Button/Link Type",
         "valueType": "string",
-        "description":"Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
           {
             "name": "Exit",
@@ -2959,15 +2979,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following opotions should appear:",
         "name": "analyticscta1_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analyticscta1_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analyticscta1_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -3024,20 +3051,19 @@
         ]
       },
       {
-        "component":"text-input",
-        "name":"analyticscta2_label",
-        "label":"Analytics Link Label",
-        "description":"Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
+        "component": "text-input",
+        "name": "analyticscta2_label",
+        "label": "Analytics Link Label",
+        "description": "Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analyticscta2_button",
-        "label":"Button/Link 2 Type", 
+        "component": "select",
+        "name": "analyticscta2_button",
+        "label": "Button/Link 2 Type",
         "valueType": "string",
-        "description":"Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
-       "options": [
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "options": [
           {
             "name": "Exit",
             "value": "exit"
@@ -3049,15 +3075,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following opotions should appear:",
         "name": "analyticscta2_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analyticscta2_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analyticscta2_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -3119,14 +3152,14 @@
         "label": "Financial Offer"
       },
       {
-        "component" : "text",
+        "component": "text",
         "name": "price",
         "label": "Price",
         "description": "Defines the price information, e.g. € 619,- *.",
         "value": ""
       },
       {
-        "component" : "richtext",
+        "component": "richtext",
         "name": "price-details",
         "label": "Price Details",
         "description": "Defines the description for the price information."
@@ -3155,13 +3188,13 @@
         ]
       },
       {
-        "component" : "text",
+        "component": "text",
         "name": "shopthelook_linkLabel",
         "label": "Link Label",
         "description": "Defines the text to be displayed in the contextualized button.",
         "value": ""
       },
-       {
+      {
         "component": "aem-content",
         "label": "Link",
         "valueType": "string",
@@ -3210,7 +3243,7 @@
         "component": "shopthelookcustomtype",
         "label": "Shop the look Context",
         "name": "wdh_vehicletype",
-        "description": "Defines the specific vehicle to be displayed.",        
+        "description": "Defines the specific vehicle to be displayed.",
         "valueType": "string"
       },
       {
@@ -3218,7 +3251,7 @@
         "name": "wdh_contexttype",
         "label": "Context Type",
         "valueType": "string",
-        "description" : "Defines the type of context to be set.",
+        "description": "Defines the type of context to be set.",
         "options": [
           {
             "name": "Model Range",
@@ -3235,19 +3268,18 @@
         ]
       },
       {
-        "component":"text-input",
-        "name":"analyticsimagestl_label",
-        "label":"Analytics Link Label",
-        "description":"Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
+        "component": "text-input",
+        "name": "analyticsimagestl_label",
+        "label": "Analytics Link Label",
+        "description": "Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analyticsimagestl_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analyticsimagestl_button",
+        "label": "Button/Link Type",
         "valueType": "string",
-        "description":"Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
           {
             "name": "Exit",
@@ -3260,15 +3292,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following opotions should appear:",
         "name": "analyticsimagestl_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analyticsimagestl_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analyticsimagestl_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -3324,7 +3363,6 @@
           }
         ]
       }
-
     ]
   },
   {
@@ -3394,12 +3432,12 @@
             "value": "small"
           }
         ]
-      },      
+      },
       {
         "component": "text",
         "valueType": "string",
         "name": "bgVidGeneral_headlineclassType",
-        "value": "h2",        
+        "value": "h2",
         "hidden": true
       },
       {
@@ -3564,7 +3602,7 @@
         "description": "Defines the path to a video on the desktop.",
         "valueType": "string",
         "required": true,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset",
@@ -3572,7 +3610,7 @@
         "name": "bgVidVideo_videoMobile",
         "description": "Defines the path to a video on the mobile.",
         "valueType": "string",
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset",
@@ -3581,7 +3619,7 @@
         "description": "Defines the path that will be displaying poster image on desktop while loading the page.",
         "valueType": "string",
         "required": true,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
@@ -3594,7 +3632,7 @@
         "name": "bgVidVideo_imgMobile",
         "description": "Defines the path that will be displaying poster image on mobile while loading the page.",
         "valueType": "string",
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
@@ -3710,19 +3748,18 @@
         "label": "Analytics"
       },
       {
-        "component":"text-input",
-        "name":"analyticscta1_label",
-        "label":"Analytics Link Label",
-        "description":"Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
+        "component": "text-input",
+        "name": "analyticscta1_label",
+        "label": "Analytics Link Label",
+        "description": "Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analyticscta1_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analyticscta1_button",
+        "label": "Button/Link Type",
         "valueType": "string",
-        "description":"Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
           {
             "name": "Exit",
@@ -3735,15 +3772,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following opotions should appear:",
         "name": "analyticscta1_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analyticscta1_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analyticscta1_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -3800,19 +3844,18 @@
         ]
       },
       {
-        "component":"text-input",
-        "name":"analyticscta2_label",
-        "label":"Analytics Link Label",
-        "description":"Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
+        "component": "text-input",
+        "name": "analyticscta2_label",
+        "label": "Analytics Link Label",
+        "description": "Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analyticscta2_button",
-        "label":"Button/Link 2 Type", 
+        "component": "select",
+        "name": "analyticscta2_button",
+        "label": "Button/Link 2 Type",
         "valueType": "string",
-        "description":"Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
           {
             "name": "Exit",
@@ -3825,15 +3868,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following opotions should appear:",
         "name": "analyticscta2_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analyticscta2_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analyticscta2_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -3895,14 +3945,14 @@
         "label": "Financial Offer"
       },
       {
-        "component" : "text",
+        "component": "text",
         "name": "price",
         "label": "Price",
         "description": "Defines the price information, e.g. € 619,- *.",
         "value": ""
       },
       {
-        "component" : "richtext",
+        "component": "richtext",
         "name": "price-details",
         "label": "Price Details",
         "description": "Defines the description for the price information."
@@ -3931,13 +3981,13 @@
         ]
       },
       {
-        "component" : "text",
+        "component": "text",
         "name": "shopthelook_linkLabel",
         "label": "Link Label",
         "description": "Defines the text to be displayed in the contextualized button.",
         "value": ""
       },
-       {
+      {
         "component": "aem-content",
         "label": "Link",
         "valueType": "string",
@@ -3986,7 +4036,7 @@
         "component": "shopthelookcustomtype",
         "label": "Shop the look Context",
         "name": "wdh_vehicletype",
-        "description": "Defines the specific vehicle to be displayed.",        
+        "description": "Defines the specific vehicle to be displayed.",
         "valueType": "string"
       },
       {
@@ -3994,7 +4044,7 @@
         "name": "wdh_contexttype",
         "label": "Context Type",
         "valueType": "string",
-        "description" : "Defines the type of context to be set.",
+        "description": "Defines the type of context to be set.",
         "options": [
           {
             "name": "Model Range",
@@ -4011,19 +4061,18 @@
         ]
       },
       {
-        "component":"text-input",
-        "name":"analyticsvideostl_label",
-        "label":"Analytics Link Label",
-        "description":"Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
+        "component": "text-input",
+        "name": "analyticsvideostl_label",
+        "label": "Analytics Link Label",
+        "description": "Defines a brief description of the content within the Text with Video for analytics. Please fill out this field in English.",
         "valueType": " "
-
       },
       {
-        "component":"select",
-        "name":"analyticsvideostl_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analyticsvideostl_button",
+        "label": "Button/Link Type",
         "valueType": "string",
-        "description":"Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
           {
             "name": "Exit",
@@ -4036,15 +4085,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following opotions should appear:",
         "name": "analyticsvideostl_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analyticsimagestl_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analyticsimagestl_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -4150,7 +4206,7 @@
         "name": "download",
         "label": "Download",
         "description": "Defines the downloadable element.",
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "text-input",
@@ -4161,19 +4217,18 @@
         "description": "Defines the name of the downloadable element."
       },
       {
-        "component":"tab",
-        "name":"analytics_tab",
-        "label":"Analytics"
-
+        "component": "tab",
+        "name": "analytics_tab",
+        "label": "Analytics"
       },
       {
-        "component":"text-input",
-        "name":"analytics-label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics-label",
+        "label": "Analytics Label",
         "valueType": "string",
         "value": "",
         "description": "Defines the label for analytics."
-      }   
+      }
     ]
   },
   {
@@ -4439,16 +4494,16 @@
         "name": "analytics_tab4"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": "string",
         "description": "Defines a brief description of the content for analytics. Please fill out this field in English."
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
@@ -4463,8 +4518,8 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
@@ -4472,7 +4527,14 @@
         "name": "analytics_others",
         "valueType": "string",
         "description": "Defines the category of the Button/Link authored if Other is selected as its Type.",
-        "condition": { "===": [{"var" : "analytics_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -4526,7 +4588,6 @@
             "name": "Other",
             "value": "Other"
           }
-    
         ]
       }
     ]
@@ -4592,7 +4653,7 @@
         "description": "Defines media object that can be displayed on the right side.",
         "label": "Image",
         "multi": false,
-        "configUrl":"/content/metafox/rs.resource/tools/image-config.json"
+        "configUrl": "/content/metafox/rs.resource/tools/image-config.json"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
@@ -4693,16 +4754,16 @@
         "name": "analytics_tab4"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": "string",
         "description": "Defines a brief description of the content for analytics. Please fill out this field in English."
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
@@ -4717,8 +4778,8 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
@@ -4726,7 +4787,14 @@
         "name": "analytics_others",
         "valueType": "string",
         "description": "Defines the category of the Button/Link authored if Other is selected as its Type.",
-        "condition": { "===": [{"var" : "analytics_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -4780,7 +4848,6 @@
             "name": "Other",
             "value": "Other"
           }
-    
         ]
       }
     ]
@@ -4955,9 +5022,9 @@
         "name": "analytics"
       },
       {
-        "component":"text",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": "string",
         "description": "Defines a brief description of the content for analytics. Please fill out this field in English."
       }
@@ -4994,7 +5061,7 @@
       },
       {
         "component": "text",
-        "name": "content_labelsourceType",        
+        "name": "content_labelsourceType",
         "valueType": "string",
         "value": "h2",
         "hidden": true
@@ -5014,11 +5081,11 @@
       {
         "component": "text",
         "label": "Active Model Title",
-        "name": "detail_activemodelType",        
+        "name": "detail_activemodelType",
         "valueType": "string",
         "value": "h3",
         "hidden": true
-      },     
+      },
       {
         "component": "text",
         "label": "Model Description",
@@ -5029,7 +5096,7 @@
       {
         "component": "text",
         "label": "Model Description",
-        "name": "detail_descpType",        
+        "name": "detail_descpType",
         "valueType": "string",
         "value": "h4",
         "hidden": true
@@ -5056,7 +5123,7 @@
         "valueType": "string",
         "value": "primary",
         "hidden": true
-      },      
+      },
       {
         "component": "boolean",
         "label": "Enable Popover",
@@ -5068,7 +5135,7 @@
       {
         "component": "text",
         "label": "Enable Popover",
-        "name": "detail_popoverType",        
+        "name": "detail_popoverType",
         "valueType": "string",
         "value": "h6",
         "hidden": true
@@ -5089,12 +5156,12 @@
         "component": "text-input",
         "label": "Technical Data Fact Label 1",
         "name": "technical_fact1",
-        "description": "Defines the label appearing above the Technical Data Fact Value 1. ",        
+        "description": "Defines the label appearing above the Technical Data Fact Value 1. ",
         "valueType": "string"
       },
       {
-        "component": "text",        
-        "name": "technical_fact1Type",        
+        "component": "text",
+        "name": "technical_fact1Type",
         "valueType": "string",
         "value": "h2",
         "hidden": true
@@ -5103,12 +5170,12 @@
         "component": "text-input",
         "label": "Technical Data Fact Value 1",
         "name": "technical_value1",
-        "description": "Defines value appearing underneath the Technical Data Fact Label 1. Placeholders can be authored to populate technical data values.",        
+        "description": "Defines value appearing underneath the Technical Data Fact Label 1. Placeholders can be authored to populate technical data values.",
         "valueType": "string"
       },
       {
-        "component": "text",        
-        "name": "technical_value1Type",        
+        "component": "text",
+        "name": "technical_value1Type",
         "valueType": "string",
         "value": "h3",
         "hidden": true
@@ -5117,12 +5184,12 @@
         "component": "text-input",
         "label": "Technical Data Fact Label 2",
         "name": "technical_fact2",
-        "description": "Defines the label appearing above the Technical Data Fact Value 2.",        
+        "description": "Defines the label appearing above the Technical Data Fact Value 2.",
         "valueType": "string"
       },
       {
-        "component": "text",        
-        "name": "technical_fact2Type",        
+        "component": "text",
+        "name": "technical_fact2Type",
         "valueType": "string",
         "value": "h4",
         "hidden": true
@@ -5131,12 +5198,12 @@
         "component": "text-input",
         "label": "Technical Data Fact Value 2",
         "name": "technical_value2",
-        "description": "Defines value appearing underneath the Technical Data Fact Label 2. Placeholders can be authored to populate technical data values.",        
+        "description": "Defines value appearing underneath the Technical Data Fact Label 2. Placeholders can be authored to populate technical data values.",
         "valueType": "string"
       },
       {
-        "component": "text",        
-        "name": "technical_value2Type",        
+        "component": "text",
+        "name": "technical_value2Type",
         "valueType": "string",
         "value": "h5",
         "hidden": true
@@ -5145,12 +5212,12 @@
         "component": "text-input",
         "label": "Technical Data Fact Label 3",
         "name": "technical1_fact3",
-        "description": "Defines the label appearing above the Technical Data Fact Value 3.",        
+        "description": "Defines the label appearing above the Technical Data Fact Value 3.",
         "valueType": "string"
       },
       {
-        "component": "text",        
-        "name": "technical1_fact3Type",        
+        "component": "text",
+        "name": "technical1_fact3Type",
         "valueType": "string",
         "value": "h2",
         "hidden": true
@@ -5159,12 +5226,12 @@
         "component": "text-input",
         "label": "Technical Data Fact Value 3",
         "name": "technical1_value3",
-        "description": "Defines value appearing underneath the Technical Data Fact Label 3. Placeholders can be authored to populate technical data values.",        
+        "description": "Defines value appearing underneath the Technical Data Fact Label 3. Placeholders can be authored to populate technical data values.",
         "valueType": "string"
       },
       {
-        "component": "text",        
-        "name": "technical1_value3Type",        
+        "component": "text",
+        "name": "technical1_value3Type",
         "valueType": "string",
         "value": "h3",
         "hidden": true
@@ -5173,12 +5240,12 @@
         "component": "text-input",
         "label": "Technical Data Fact Label 4",
         "name": "technical1_fact4",
-        "description": "Defines the label appearing above the Technical Data Fact Value 4.",        
+        "description": "Defines the label appearing above the Technical Data Fact Value 4.",
         "valueType": "string"
       },
       {
-        "component": "text",        
-        "name": "technical1_fact4Type",        
+        "component": "text",
+        "name": "technical1_fact4Type",
         "valueType": "string",
         "value": "h4",
         "hidden": true
@@ -5187,12 +5254,12 @@
         "component": "text-input",
         "label": "Technical Data Fact Value 4",
         "name": "technical1_value4",
-        "description": "Defines value appearing underneath the Technical Data Fact Label 4. Placeholders can be authored to populate technical data values.",        
+        "description": "Defines value appearing underneath the Technical Data Fact Label 4. Placeholders can be authored to populate technical data values.",
         "valueType": "string"
       },
       {
-        "component": "text",        
-        "name": "technical1_value4Type",        
+        "component": "text",
+        "name": "technical1_value4Type",
         "valueType": "string",
         "value": "h5",
         "hidden": true
@@ -5267,7 +5334,7 @@
         "component": "text-input",
         "label": "Model Label",
         "name": "group_modellabel",
-        "description": "Defines the Model Labels displayed in the panels with the vehicles on the left-hand side of the DriveTrain Switch if the Model Label Source is selected as Manual.",        
+        "description": "Defines the Model Labels displayed in the panels with the vehicles on the left-hand side of the DriveTrain Switch if the Model Label Source is selected as Manual.",
         "valueType": "string"
       },
       {
@@ -5279,7 +5346,7 @@
         "component": "customtype",
         "label": "Model Card Context",
         "name": "wdh_customSeriesModelRangeSelection",
-        "description": "Defines the link to the page a user lands on when clicking on the panel with the vehicle image on the left-hand side of the DriveTrain Switch.",        
+        "description": "Defines the link to the page a user lands on when clicking on the panel with the vehicle image on the left-hand side of the DriveTrain Switch.",
         "valueType": "string"
       },
       {
@@ -5288,16 +5355,16 @@
         "name": "analytics"
       },
       {
-        "component":"text-input",
-        "name":"analytics_label",
-        "label":"Analytics Label",
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
         "valueType": "string",
         "description": "Defines a brief description of the content for analytics. Please fill out this field in English."
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
@@ -5312,8 +5379,8 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
@@ -5321,7 +5388,14 @@
         "name": "analytics_others",
         "valueType": "string",
         "description": "Defines the category of the Button/Link authored if Other is selected as its Type.",
-        "condition": { "===": [{"var" : "analytics_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -5374,7 +5448,7 @@
           {
             "name": "Other",
             "value": "Other"
-          }    
+          }
         ]
       }
     ]
@@ -5419,7 +5493,7 @@
         "component": "preconcustomtype",
         "label": "Precon Context",
         "name": "wdh_preconCustomModelRangeSelection",
-        "description": "Defines the link to the page a user lands on when clicking on the panel with the vehicle image on the left-hand side of the DriveTrain Switch.",        
+        "description": "Defines the link to the page a user lands on when clicking on the panel with the vehicle image on the left-hand side of the DriveTrain Switch.",
         "valueType": "string"
       },
       {
@@ -5427,7 +5501,7 @@
         "name": "wdh_contextType",
         "label": "Context Type",
         "valueType": "string",
-        "description" : "Defines the type of context to be set.",
+        "description": "Defines the type of context to be set.",
         "options": [
           {
             "name": "Model Range",
@@ -5596,15 +5670,14 @@
         "required": true
       },
       {
-        "component":"tab",
-        "name":"analytics_tab",
-        "label":"Analytics"
-
+        "component": "tab",
+        "name": "analytics_tab",
+        "label": "Analytics"
       },
       {
-        "component":"select",
-        "name":"analytics_button",
-        "label":"Button/Link Type", 
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
         "valueType": "string",
         "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
         "options": [
@@ -5619,15 +5692,22 @@
           {
             "name": "Other",
             "value": "other"
-          }          
-        ]    
+          }
+        ]
       },
       {
         "component": "select",
         "label": "Only if other is selected the following options should appear:",
         "name": "analytics_others",
         "valueType": "string",
-        "condition": { "===": [{"var" : "analytics_button"}, "other"] },
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
         "options": [
           {
             "name": "Learn More",
@@ -5680,7 +5760,7 @@
           {
             "name": "Other",
             "value": "Other"
-          }    
+          }
         ]
       }
     ]
@@ -5702,7 +5782,7 @@
         "value": true
       },
       {
-        "component": "text",        
+        "component": "text",
         "name": "content_autoDataType",
         "valueType": "string",
         "hidden": true
@@ -5716,7 +5796,7 @@
         "value": true
       },
       {
-        "component": "text",        
+        "component": "text",
         "name": "content_accordionViewType",
         "valueType": "string",
         "hidden": true
@@ -5734,63 +5814,63 @@
         "valueType": "string",
         "name": "headline1_headlineAndText1",
         "label": "Headline and Text",
-        "description": "Defines the headline and copy text to be displayed underneath the technical data table."        
+        "description": "Defines the headline and copy text to be displayed underneath the technical data table."
       },
       {
         "component": "aem-content",
         "valueType": "string",
         "name": "headline1_headline1Link",
         "label": "Link",
-        "description": "Defines the page to which the user will be directed to. Please add the full URL including https://"        
+        "description": "Defines the page to which the user will be directed to. Please add the full URL including https://"
       },
       {
         "component": "text-input",
         "valueType": "string",
         "name": "headline1_headline1LinkText",
         "label": "Link Label",
-        "description": "Defines the text to be displayed as the Link Button."        
+        "description": "Defines the text to be displayed as the Link Button."
       },
       {
         "component": "text-input",
         "valueType": "string",
         "name": "headline1_headline1LinkType",
         "label": "Link Label",
-        "hidden": true        
+        "hidden": true
       },
       {
         "component": "richtext",
         "valueType": "string",
         "name": "headline2_headlineAndText2",
-        "label": "Headline and Text",        
-        "description": "Defines the headline and copy text to be displayed underneath the technical data table."        
+        "label": "Headline and Text",
+        "description": "Defines the headline and copy text to be displayed underneath the technical data table."
       },
       {
         "component": "aem-content",
         "valueType": "string",
         "name": "headline2_headline2Link",
         "label": "Link",
-        "description": "Defines the page to which the user will be directed to. Please add the full URL including https://"        
+        "description": "Defines the page to which the user will be directed to. Please add the full URL including https://"
       },
       {
         "component": "text-input",
         "valueType": "string",
         "name": "headline2_headline2LinkText",
         "label": "Link Label",
-        "description": "Defines the text to be displayed as the Link Button."        
+        "description": "Defines the text to be displayed as the Link Button."
       },
       {
         "component": "text-input",
         "valueType": "string",
         "name": "headline2_headline2LinkType",
         "label": "Link Label",
-        "hidden": true        
+        "hidden": true
       },
       {
         "component": "text-input",
         "valueType": "string",
         "name": "disclaimer_headline",
         "label": "Headline",
-        "description": "Defines the headline of the text what will appear above the referenced disclaimer."        
+        "description": "Defines the headline of the text what will appear above the referenced disclaimer."
       },
       {
         "component": "text",
@@ -5798,7 +5878,7 @@
         "name": "disclaimer_headlineType",
         "label": "Headline",
         "description": "Defines the headline of the text what will appear above the referenced disclaimer.",
-        "hidden":true
+        "hidden": true
       },
       {
         "component": "aem-content-fragment",
@@ -5847,17 +5927,17 @@
         "name": "content_models_overview"
       },
       {
-          "component": "text-input",
-          "valueType": "string",
-          "name": "content_description",
-          "label": "Content Navigation Description",
-          "value": "",
-          "description": "Summarises the description of the Content Navigation for the accessibility purposes.",
-          "required": true
+        "component": "text-input",
+        "valueType": "string",
+        "name": "content_description",
+        "label": "Content Navigation Description",
+        "value": "",
+        "description": "Summarises the description of the Content Navigation for the accessibility purposes.",
+        "required": true
       },
       {
         "component": "text",
-        "name": "content_descriptionType",        
+        "name": "content_descriptionType",
         "valueType": "string",
         "value": "h2",
         "hidden": true
@@ -5872,7 +5952,7 @@
       },
       {
         "component": "text",
-        "name": "content_confvariantType",        
+        "name": "content_confvariantType",
         "valueType": "string",
         "value": "h3",
         "hidden": true
@@ -5884,131 +5964,138 @@
         "label": "Filter Headline",
         "value": "",
         "description": "Defines the headline for the filters"
-    },
-    {
-      "component": "text",
-      "name": "content_headlineType",        
-      "valueType": "string",
-      "value": "h4",
-      "hidden": true
-    },
-    {
-      "component": "aem-content",
-      "name": "content_spreadsheet1",
-      "description": "Contains the filter labels and their translations.",
-      "label": "Filter Spreadsheet ",
-      "valueType": "string"
-    },
-    {
-      "component": "aem-content",
-      "name": "model_spreadsheet2",
-      "description": "Contains all models labels and details (e.g. model name, model code, price etc.).",
-      "label": "Model Overview Spreadsheet",
-      "valueType": "string"
-    },
-    {
-      "component":"tab",
-      "name":"analytics_tab",
-      "label":"Analytics"
-    },
-    {
-      "component": "text-input",
-      "name": "analytics_label",
-      "label": "Analytics Label",
-      "valueType": "string",
-      "description": "Defines a brief description of the content within the Text with Image for analytics. Please fill out this field in English."
-    },
-    {
-      "component":"select",
-      "name":"analytics_button",
-      "label":"Button/Link Type", 
-      "valueType": "string",
-      "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
-      "options": [
-        {
-          "name": "Exit",
-          "value": "exit"
-        },
-        {
-          "name": "Download",
-          "value": "download"
-        },
-        {
-          "name": "Other",
-          "value": "other"
-        }          
-      ]    
-    },
-    {
-      "component": "select",
-      "label": "Button Category",
-      "name": "analytics_others",
-      "valueType": "string",
-      "description":"Defines the category of the Button/Link authored if Other is selected as its Type.",
-      "condition": { "===": [{"var" : "analytics_button"}, "other"] },
-      "options": [
-        {
-          "name": "Learn More",
-          "value": "LearnMore"
-        },
-        {
-          "name": "Configure",
-          "value": "Configure"
-        },
-        {
-          "name": "Technical Data",
-          "value": "Technical Data"
-        },
-        {
-          "name": "Options and Prices",
-          "value": "Options and Prices"
-        },
-        {
-          "name": "Vehicles in Stock",
-          "value": "Vehicles in Stock"
-        },
-        {
-          "name": "Request for Offer",
-          "value": "Request for Offer"
-        },
-        {
-          "name": "Sales and Service Network",
-          "value": "Sales and Service Network"
-        },
-        {
-          "name": "Test Drive",
-          "value": "Test Drive"
-        },
-        {
-          "name": "Newsletter Signup",
-          "value": "Newsletter Signup"
-        },
-        {
-          "name": "Contact",
-          "value": "Contact"
-        },
-        {
-          "name": "Search",
-          "value": "Search"
-        },
-        {
-          "name": "Show More / Show Less",
-          "value": "Show More / Show Less"
-        },
-        {
-          "name": "Other",
-          "value": "Other"
-        }    
-      ]
-    }
-   ]
-  },
-  {
-    "id" : "stock-locator-section",
-    "fields" :[
+      },
       {
         "component": "text",
-        "name": "stockLocatorLabel",        
+        "name": "content_headlineType",
+        "valueType": "string",
+        "value": "h4",
+        "hidden": true
+      },
+      {
+        "component": "aem-content",
+        "name": "content_spreadsheet1",
+        "description": "Contains the filter labels and their translations.",
+        "label": "Filter Spreadsheet ",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "model_spreadsheet2",
+        "description": "Contains all models labels and details (e.g. model name, model code, price etc.).",
+        "label": "Model Overview Spreadsheet",
+        "valueType": "string"
+      },
+      {
+        "component": "tab",
+        "name": "analytics_tab",
+        "label": "Analytics"
+      },
+      {
+        "component": "text-input",
+        "name": "analytics_label",
+        "label": "Analytics Label",
+        "valueType": "string",
+        "description": "Defines a brief description of the content within the Text with Image for analytics. Please fill out this field in English."
+      },
+      {
+        "component": "select",
+        "name": "analytics_button",
+        "label": "Button/Link Type",
+        "valueType": "string",
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "options": [
+          {
+            "name": "Exit",
+            "value": "exit"
+          },
+          {
+            "name": "Download",
+            "value": "download"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "label": "Button Category",
+        "name": "analytics_others",
+        "valueType": "string",
+        "description": "Defines the category of the Button/Link authored if Other is selected as its Type.",
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_button"
+            },
+            "other"
+          ]
+        },
+        "options": [
+          {
+            "name": "Learn More",
+            "value": "LearnMore"
+          },
+          {
+            "name": "Configure",
+            "value": "Configure"
+          },
+          {
+            "name": "Technical Data",
+            "value": "Technical Data"
+          },
+          {
+            "name": "Options and Prices",
+            "value": "Options and Prices"
+          },
+          {
+            "name": "Vehicles in Stock",
+            "value": "Vehicles in Stock"
+          },
+          {
+            "name": "Request for Offer",
+            "value": "Request for Offer"
+          },
+          {
+            "name": "Sales and Service Network",
+            "value": "Sales and Service Network"
+          },
+          {
+            "name": "Test Drive",
+            "value": "Test Drive"
+          },
+          {
+            "name": "Newsletter Signup",
+            "value": "Newsletter Signup"
+          },
+          {
+            "name": "Contact",
+            "value": "Contact"
+          },
+          {
+            "name": "Search",
+            "value": "Search"
+          },
+          {
+            "name": "Show More / Show Less",
+            "value": "Show More / Show Less"
+          },
+          {
+            "name": "Other",
+            "value": "Other"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stock-locator-section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "stockLocatorLabel",
         "valueType": "string",
         "label": "Section Label",
         "description": "Defines the name of the Section for analytics. Please define the Section Name in English."
@@ -6017,7 +6104,7 @@
   },
   {
     "id": "stock-locator-model-overview",
-    "fields":[
+    "fields": [
       {
         "component": "tab",
         "label": "General",
@@ -6085,20 +6172,20 @@
         "component": "richtext",
         "name": "banner_tabRte",
         "label": "Fallback Banner Content",
-        "valueType": "string",        
+        "valueType": "string",
         "description": "Defines the content of the fallback banner displayed if there are no results matching the applied filter. Please use Headline 1 styling for the headline, paragraph for the copy text and links can be added if required."
       }
     ]
   },
   {
-    "id" : "stock-locator-model-detail",
-     "fields" :[
-       {
-         "component": "tab",
-         "label": "General",
-         "name": "content_modelDefinitionTab"
-       },
-       {
+    "id": "stock-locator-model-detail",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "General",
+        "name": "content_modelDefinitionTab"
+      },
+      {
         "component": "aem-content",
         "valueType": "string",
         "name": "content_buttonLink",
@@ -6114,241 +6201,240 @@
         "label": "RFO Form Button Label",
         "description": "Defines the text to be displayed in the button or as the link."
       },
-      
-       {
-         "component": "select",
-         "name": "content_buttonLinkStyling",
-         "label": "RFO Form Button Styling",
-         "valueType": "string",
-         "hidden": true,
-         "value": "Money Button",
-         "description": "Defines the styling applied to the button or if the button will displayed as a link."
-       },
-       {
-         "component": "text",
-         "label": "Dealer Location Button Label",
-         "name": "content_dealerButton",
-         "valueType": "string",
-         "description": "Defines the label of the button leading to the Google Maps link with the location of the Dealer with the vehicle in stock.",
-         "value": "Find the dealer"
-       },
-       {
-         "component": "text",
-         "name": "content_dealerButtonType",
-         "valueType": "string",
-         "hidden": true,
-         "value": "h3"
-       },
-       {
-         "component": "select",
-         "name": "content_dealerButtonStyling",
-         "label": "Dealer Location Button Styling",
-         "valueType": "string",
-         "hidden": true,
-         "value": "Ghost Dark",
-         "description": "Defines the styling applied to the button or if the button will displayed as a link."
-       },
-       {
-         "component": "aem-content-fragment",
-         "name": "content_infoIconText",
-         "label": "Info Icon Text",
-         "valueType": "string",
-         "description": "Defines the text appearing in the tooltip of the info icon displayed next to the price. Please select the relevant Info Icon Text per market and language under /content/dam/metafox/"
-       },
-       {
-         "component": "aem-content-fragment",
-         "name": "content_disclaimer",
-         "label": "Disclaimers",
-         "valueType": "string",
-         "description": "Defines the Disclaimer Content Fragment that will be displayed in the page. Please select the relevant disclaimers per market and language under /content/dam/metafox/"
-       },
-       {
-         "component": "tab",
-         "label": "Analytics",
-         "name": "analytics_tab"
-       },
-       {
-         "component": "select",
-         "name": "analytics_rfoButton",
-         "label": "RFO Form Button/Link Type",
-         "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
-         "valueType": "string",
-         "options": [
-           {
-             "name": "Exit",
-             "value": "exit"
-           },
-           {
-             "name": "Download",
-             "value": "download"
-           },
-           {
-             "name": "Other",
-             "value": "other"
-           }
-         ]
-       },
-       {
-         "component": "select",
-         "label": "RFO Form Button Category",
-         "name": "analytics_others",
-         "valueType": "string",
-         "description": "Defines the category of the Button/Link authored if Other is selected as its Type.",
-         "condition": {
-           "===": [
-             {
-               "var": "analytics_rfoButton"
-             },
-             "other"
-           ]
-         },
-         "options": [
-           {
-             "name": "Learn More",
-             "value": "LearnMore"
-           },
-           {
-             "name": "Configure",
-             "value": "Configure"
-           },
-           {
-             "name": "Technical Data",
-             "value": "Technical Data"
-           },
-           {
-             "name": "Options and Prices",
-             "value": "Options and Prices"
-           },
-           {
-             "name": "Vehicles in Stock",
-             "value": "Vehicles in Stock"
-           },
-           {
-             "name": "Request for Offer",
-             "value": "Request for Offer"
-           },
-           {
-             "name": "Sales and Service Network",
-             "value": "Sales and Service Network"
-           },
-           {
-             "name": "Test Drive",
-             "value": "Test Drive"
-           },
-           {
-             "name": "Newsletter Signup",
-             "value": "Newsletter Signup"
-           },
-           {
-             "name": "Contact",
-             "value": "Contact"
-           },
-           {
-             "name": "Search",
-             "value": "Search"
-           },
-           {
-             "name": "Show More / Show Less",
-             "value": "Show More / Show Less"
-           },
-           {
-             "name": "Other",
-             "value": "Other"
-           }
-         ]
-       },
-       {
-         "component": "select",
-         "name": "analytics_dealerButton",
-         "label": "Dealer Location Button/Link Type",
-         "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
-         "valueType": "string",
-         "options": [
-           {
-             "name": "Exit",
-             "value": "exit"
-           },
-           {
-             "name": "Download",
-             "value": "download"
-           },
-           {
-             "name": "Other",
-             "value": "other"
-           }
-         ]
-       },
-       {
-         "component": "select",
-         "label": "Dealer Location Button Category",
-         "name": "analytics_othersButtonCategory",
-         "valueType": "string",
-         "description": "Defines the category of the Button/Link authored if Other is selected as its Type..",
-         "condition": {
-           "===": [
-             {
-               "var": "analytics_dealerButton"
-             },
-             "other"
-           ]
-         },
-         "options": [
-           {
-             "name": "Learn More",
-             "value": "LearnMore"
-           },
-           {
-             "name": "Configure",
-             "value": "Configure"
-           },
-           {
-             "name": "Technical Data",
-             "value": "Technical Data"
-           },
-           {
-             "name": "Options and Prices",
-             "value": "Options and Prices"
-           },
-           {
-             "name": "Vehicles in Stock",
-             "value": "Vehicles in Stock"
-           },
-           {
-             "name": "Request for Offer",
-             "value": "Request for Offer"
-           },
-           {
-             "name": "Sales and Service Network",
-             "value": "Sales and Service Network"
-           },
-           {
-             "name": "Test Drive",
-             "value": "Test Drive"
-           },
-           {
-             "name": "Newsletter Signup",
-             "value": "Newsletter Signup"
-           },
-           {
-             "name": "Contact",
-             "value": "Contact"
-           },
-           {
-             "name": "Search",
-             "value": "Search"
-           },
-           {
-             "name": "Show More / Show Less",
-             "value": "Show More / Show Less"
-           },
-           {
-             "name": "Other",
-             "value": "Other"
-           }
-         ]
-       }
-     ] 
-   },
+      {
+        "component": "select",
+        "name": "content_buttonLinkStyling",
+        "label": "RFO Form Button Styling",
+        "valueType": "string",
+        "hidden": true,
+        "value": "Money Button",
+        "description": "Defines the styling applied to the button or if the button will displayed as a link."
+      },
+      {
+        "component": "text",
+        "label": "Dealer Location Button Label",
+        "name": "content_dealerButton",
+        "valueType": "string",
+        "description": "Defines the label of the button leading to the Google Maps link with the location of the Dealer with the vehicle in stock.",
+        "value": "Find the dealer"
+      },
+      {
+        "component": "text",
+        "name": "content_dealerButtonType",
+        "valueType": "string",
+        "hidden": true,
+        "value": "h3"
+      },
+      {
+        "component": "select",
+        "name": "content_dealerButtonStyling",
+        "label": "Dealer Location Button Styling",
+        "valueType": "string",
+        "hidden": true,
+        "value": "Ghost Dark",
+        "description": "Defines the styling applied to the button or if the button will displayed as a link."
+      },
+      {
+        "component": "aem-content-fragment",
+        "name": "content_infoIconText",
+        "label": "Info Icon Text",
+        "valueType": "string",
+        "description": "Defines the text appearing in the tooltip of the info icon displayed next to the price. Please select the relevant Info Icon Text per market and language under /content/dam/metafox/"
+      },
+      {
+        "component": "aem-content-fragment",
+        "name": "content_disclaimer",
+        "label": "Disclaimers",
+        "valueType": "string",
+        "description": "Defines the Disclaimer Content Fragment that will be displayed in the page. Please select the relevant disclaimers per market and language under /content/dam/metafox/"
+      },
+      {
+        "component": "tab",
+        "label": "Analytics",
+        "name": "analytics_tab"
+      },
+      {
+        "component": "select",
+        "name": "analytics_rfoButton",
+        "label": "RFO Form Button/Link Type",
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Exit",
+            "value": "exit"
+          },
+          {
+            "name": "Download",
+            "value": "download"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "label": "RFO Form Button Category",
+        "name": "analytics_others",
+        "valueType": "string",
+        "description": "Defines the category of the Button/Link authored if Other is selected as its Type.",
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_rfoButton"
+            },
+            "other"
+          ]
+        },
+        "options": [
+          {
+            "name": "Learn More",
+            "value": "LearnMore"
+          },
+          {
+            "name": "Configure",
+            "value": "Configure"
+          },
+          {
+            "name": "Technical Data",
+            "value": "Technical Data"
+          },
+          {
+            "name": "Options and Prices",
+            "value": "Options and Prices"
+          },
+          {
+            "name": "Vehicles in Stock",
+            "value": "Vehicles in Stock"
+          },
+          {
+            "name": "Request for Offer",
+            "value": "Request for Offer"
+          },
+          {
+            "name": "Sales and Service Network",
+            "value": "Sales and Service Network"
+          },
+          {
+            "name": "Test Drive",
+            "value": "Test Drive"
+          },
+          {
+            "name": "Newsletter Signup",
+            "value": "Newsletter Signup"
+          },
+          {
+            "name": "Contact",
+            "value": "Contact"
+          },
+          {
+            "name": "Search",
+            "value": "Search"
+          },
+          {
+            "name": "Show More / Show Less",
+            "value": "Show More / Show Less"
+          },
+          {
+            "name": "Other",
+            "value": "Other"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "analytics_dealerButton",
+        "label": "Dealer Location Button/Link Type",
+        "description": "Defines the Button/Link type for event tracking in analytics. Please select Other for a CTA leading to another page on the BMW Serbia website.",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Exit",
+            "value": "exit"
+          },
+          {
+            "name": "Download",
+            "value": "download"
+          },
+          {
+            "name": "Other",
+            "value": "other"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "label": "Dealer Location Button Category",
+        "name": "analytics_othersButtonCategory",
+        "valueType": "string",
+        "description": "Defines the category of the Button/Link authored if Other is selected as its Type..",
+        "condition": {
+          "===": [
+            {
+              "var": "analytics_dealerButton"
+            },
+            "other"
+          ]
+        },
+        "options": [
+          {
+            "name": "Learn More",
+            "value": "LearnMore"
+          },
+          {
+            "name": "Configure",
+            "value": "Configure"
+          },
+          {
+            "name": "Technical Data",
+            "value": "Technical Data"
+          },
+          {
+            "name": "Options and Prices",
+            "value": "Options and Prices"
+          },
+          {
+            "name": "Vehicles in Stock",
+            "value": "Vehicles in Stock"
+          },
+          {
+            "name": "Request for Offer",
+            "value": "Request for Offer"
+          },
+          {
+            "name": "Sales and Service Network",
+            "value": "Sales and Service Network"
+          },
+          {
+            "name": "Test Drive",
+            "value": "Test Drive"
+          },
+          {
+            "name": "Newsletter Signup",
+            "value": "Newsletter Signup"
+          },
+          {
+            "name": "Contact",
+            "value": "Contact"
+          },
+          {
+            "name": "Search",
+            "value": "Search"
+          },
+          {
+            "name": "Show More / Show Less",
+            "value": "Show More / Show Less"
+          },
+          {
+            "name": "Other",
+            "value": "Other"
+          }
+        ]
+      }
+    ]
+  },
   {
     "id": "search",
     "fields": [
@@ -6503,8 +6589,8 @@
         "component": "text-input",
         "name": "websiteSearchTab3_techErrorHeadlineType",
         "valueType": "string",
-        "value" : "h2",
-        "hidden": true  
+        "value": "h2",
+        "hidden": true
       },
       {
         "component": "text-input",
@@ -6532,7 +6618,7 @@
         "name": "websiteSearchTab3_bkButtonLabelType",
         "valueType": "string",
         "value": "h4",
-        "hidden" : true
+        "hidden": true
       },
       {
         "component": "select",
