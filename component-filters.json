@@ -281,6 +281,10 @@
     "components": ["relatedlink"]
   },
   {
+    "id": "search-faq",
+    "components": ["search-faq-item"]
+  },
+  {
     "id": "search",
     "components": ["search"]
   },
