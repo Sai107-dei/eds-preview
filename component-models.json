@@ -222,37 +222,6 @@
         "component": "text",
         "name": "title",
         "label": "Title"
-      },
-      {
-        "component": "select",
-        "name": "titleType",
-        "label": "Title Type",
-        "options": [
-          {
-            "name": "h1",
-            "value": "h1"
-          },
-          {
-            "name": "h2",
-            "value": "h2"
-          },
-          {
-            "name": "h3",
-            "value": "h3"
-          },
-          {
-            "name": "h4",
-            "value": "h4"
-          },
-          {
-            "name": "h5",
-            "value": "h5"
-          },
-          {
-            "name": "h6",
-            "value": "h6"
-          }
-        ]
       }
     ]
   },
@@ -429,7 +398,42 @@
   },
   {
     "id": "tabs-section",
-    "fields": []
+    "fields": [
+      {
+        "component": "select",
+        "name": "backgroundColor",
+        "label": "Background Color",
+        "description": "Select the background color",
+        "required": true,
+        "value": "none",
+        "options": [
+          {
+            "name": "Primary - Red",
+            "value": "primary-red"
+          },
+          {
+            "name": "Secondary - Red",
+            "value": "secondary-red"
+          },
+          {
+            "name": "Secondary - Green",
+            "value": "secondary-green"
+          },
+          {
+            "name": "Tertiary - Blue",
+            "value": "tertiary-blue"
+          },
+          {
+            "name": "Quaternary - Gray",
+            "value": "quaternary-gray"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "cont-sec-container",
@@ -1414,24 +1418,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaAssetMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctatype"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "ctaAssetMimeType"
       },
       {
         "component": "text",
@@ -1900,24 +1887,7 @@
           {
             "component": "custom-asset-namespace:custom-asset-mimetype",
             "valueType": "string",
-            "name": "ctaAssetMimeType",
-            "condition": {
-              "and": [
-                {
-                  "===": [
-                    {
-                      "var": "oneButton|ctaType"
-                    },
-                    "asset"
-                  ]
-                },
-                {
-                  "!!": {
-                    "var": "oneButton|ctaLabel"
-                  }
-                }
-              ]
-            }
+            "name": "ctaAssetMimeType"
           },
           {
             "component": "text",
@@ -2115,24 +2085,7 @@
           {
             "component": "custom-asset-namespace:custom-asset-mimetype",
             "valueType": "string",
-            "name": "secCtaAssetMimeType",
-            "condition": {
-              "and": [
-                {
-                  "===": [
-                    {
-                      "var": "twoButton|secCtaType"
-                    },
-                    "asset"
-                  ]
-                },
-                {
-                  "!!": {
-                    "var": "twoButton|secCtaLabel"
-                  }
-                }
-              ]
-            }
+            "name": "secCtaAssetMimeType"
           },
           {
             "component": "text",
@@ -2843,24 +2796,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaAssetMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "ctaAssetMimeType"
       },
       {
         "component": "text",
@@ -3178,24 +3114,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaAssetMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "ctaAssetMimeType"
       },
       {
         "component": "text",
@@ -4259,24 +4178,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaAssetMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "ctaAssetMimeType"
       },
       {
         "component": "text",
@@ -4413,6 +4315,19 @@
         "label": "Extended Image Description",
         "valueType": "string",
         "description": "Enter the Image description"
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Square edges",
+        "name": "squareEdges",
+        "valueType": "string",
+        "description": "Select this checkbox to apply square edges on standalone image",
+        "options": [
+          {
+            "name": "Enable Square edges",
+            "value": "true"
+          }
+        ]
       }
     ]
   },
@@ -4540,24 +4455,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "imageMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "imageMimeType"
       },
       {
         "component": "text",
@@ -4729,6 +4627,132 @@
         "name": "logoImageAlt",
         "label": "Logo Image Alt Text",
         "description": "Pick alt text from AEM DAM with ability to override it"
+      },
+      {
+        "component": "select",
+        "name": "medicineUrlCtaType",
+        "label": "CTA Selection for Medicine Card/Logo",
+        "description": "Select the dropdown option to navigate to link/asset for Medicine Card/Logo",
+        "options": [
+          {
+            "name": "Link",
+            "value": "medicineUrlLink"
+          },
+          {
+            "name": "Asset (PDF/Image)",
+            "value": "medicineUrlAsset"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "medicineUrlLink",
+        "label": "CTA Link for Medicine Card/Logo",
+        "valueType": "string",
+        "description": "Enter the URL or pull the EDS page for Medicine Card/Logo",
+        "validation": {
+          "rootPath": "/content"
+        },
+        "condition": {
+          "===": [
+            {
+              "var": "medicineUrlCtaType"
+            },
+            "medicineUrlLink"
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "name": "medicineUrlLinkTargetPath",
+        "label": "Target Path for Medicine Card/Logo",
+        "description": "Select the target path for the URL for Medicine Card/Logo",
+        "value": "sameTab",
+        "options": [
+          {
+            "name": "Same Tab",
+            "value": "sameTab"
+          },
+          {
+            "name": "New Tab",
+            "value": "newTab"
+          }
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "medicineUrlCtaType"
+            },
+            "medicineUrlLink"
+          ]
+        }
+      },
+      {
+        "component": "select",
+        "name": "medicineUrlLinkExitInterstitial",
+        "label": "Exit interstitial for Medicine Card/Logo",
+        "description": "Select this Dropdown option to enable the modal experience when clicked on Medicine Card/Logo",
+        "valueType": "string",
+        "value": "select",
+        "options": [
+          {
+            "name": "select",
+            "value": "select"
+          },
+          {
+            "name": "General Third Parties",
+            "value": "general-third-parties"
+          },
+          {
+            "name": "Telehealth",
+            "value": "telehealth"
+          },
+          {
+            "name": "Account",
+            "value": "account"
+          },
+          {
+            "name": "Account Wellbeing",
+            "value": "account-wellbeing"
+          },
+          {
+            "name": "Embedded Tools Healthgrades",
+            "value": "embedded-tools-healthgrades"
+          },
+          {
+            "name": "Embedded Tools Nourish",
+            "value": "embedded-tools-nourish"
+          }
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "medicineUrlCtaType"
+            },
+            "medicineUrlLink"
+          ]
+        }
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset",
+        "configUrl": "/content/dam/custom-asset-picker/image.config.json",
+        "name": "MedicineUrlLinkAsset",
+        "label": "Asset (PDF/Image) for Medicine Card/Logo",
+        "description": "Add asset (image/pdf) for Medicine Card/Logo",
+        "valueType": "string",
+        "condition": {
+          "===": [
+            {
+              "var": "medicineUrlCtaType"
+            },
+            "medicineUrlAsset"
+          ]
+        }
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset-mimetype",
+        "valueType": "string",
+        "name": "medicineUrlLinkImageOrPdfMime"
       },
       {
         "component": "text",
@@ -5080,24 +5104,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaImageOrPdfMime",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "ctaImageOrPdfMime"
       },
       {
         "component": "tab",
@@ -5369,24 +5376,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaImageOrPdfMimeForSecondLink",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaTypeForSecondLink"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabelForSecondLink"
-              }
-            }
-          ]
-        }
+        "name": "ctaImageOrPdfMimeForSecondLink"
       },
       {
         "component": "tab",
@@ -5642,24 +5632,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaImageOrPdfMimeTypeForThirdLink",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaTypeForThirdLink"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabelForThirdLink"
-              }
-            }
-          ]
-        }
+        "name": "ctaImageOrPdfMimeTypeForThirdLink"
       },
       {
         "component": "tab",
@@ -5899,24 +5872,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaImageOrPdfMimeTypeForFourthLink",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaTypeForFourthLink"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabelForFourthLink"
-              }
-            }
-          ]
-        }
+        "name": "ctaImageOrPdfMimeTypeForFourthLink"
       },
       {
         "component": "tab",
@@ -6140,24 +6096,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaImageOrPdfMimeTypeForFifthLink",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaTypeForFifthLink"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabelForFifthLink"
-              }
-            }
-          ]
-        }
+        "name": "ctaImageOrPdfMimeTypeForFifthLink"
       },
       {
         "component": "tab",
@@ -6365,29 +6304,13 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaImageOrPdfMimeTypeForSixthLink",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaTypeForSixthLink"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabelForSixthLink"
-              }
-            }
-          ]
-        }
+        "name": "ctaImageOrPdfMimeTypeForSixthLink"
       }
     ]
   },
   {
-    "id": "medicine-cards"
+    "id": "medicine-cards",
+    "fields": []
   },
   {
     "id": "medium-media-carousel-item",
@@ -6939,24 +6862,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaAssetMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "ctaAssetMimeType"
       },
       {
         "component": "text",
@@ -7242,6 +7148,75 @@
         ]
       },
       {
+        "component": "text",
+        "name": "text",
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter main heading for the Primary Hero",
+        "validation": {
+          "minLength": 0,
+          "maxLength": 70,
+          "customErrorMsg": "Maximum Characters length limit should not be more than 70"
+        }
+      },
+      {
+        "component": "select",
+        "name": "titleFont",
+        "label": "Title Font",
+        "valueType": "string",
+        "value": "Ringside",
+        "description": "Select a font for the title",
+        "options": [
+          {
+            "name": "Garamond",
+            "value": "Garamond"
+          },
+          {
+            "name": "Ringside",
+            "value": "Ringside"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter description for additional context"
+      },
+      {
+        "component": "select",
+        "name": "size",
+        "label": "Size",
+        "value": "large",
+        "description": "Enter the size of the hero",
+        "options": [
+          {
+            "name": "Medium",
+            "value": "medium"
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          }
+        ],
+        "condition": {
+          "===": [
+            {
+              "var": "PrimarybackgroundType"
+            },
+            "imageSlide"
+          ]
+        }
+      },
+      {
+        "component": "boolean",
+        "label": "Offset Content?",
+        "name": "OffsetContent",
+        "valueType": "boolean",
+        "description": "Offset content on the left in the hero section"
+      },
+      {
         "component": "custom-asset-namespace:custom-asset",
         "configUrl": "/content/dam/custom-asset-picker/image.config.json",
         "valueType": "string",
@@ -7261,15 +7236,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "BackgroundImageMimeType",
-        "condition": {
-          "===": [
-            {
-              "var": "PrimarybackgroundType"
-            },
-            "imageSlide"
-          ]
-        }
+        "name": "BackgroundImageMimeType"
       },
       {
         "component": "text",
@@ -7290,9 +7257,9 @@
         "component": "custom-asset-namespace:custom-asset",
         "configUrl": "/content/dam/custom-asset-picker/image.config.json",
         "valueType": "string",
-        "label": "Background Video",
-        "name": "BackgroundVideo",
-        "description": "Upload video for the Primary Hero",
+        "name": "videoPath",
+        "label": "Video Path",
+        "description": "Upload the full-length video",
         "required": true,
         "condition": {
           "===": [
@@ -7306,29 +7273,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "BackgroundVideoMimeType"
-      },
-      {
-        "component": "boolean",
-        "label": "Enable Overlay?",
-        "name": "EnableOverlay",
-        "valueType": "boolean",
-        "description": "Enable Overlay video for the Primary Hero"
-      },
-      {
-        "component": "text-input",
-        "valueType": "string",
-        "name": "overlayTitle",
-        "label": "Overlay Title",
-        "required": true,
-        "condition": {
-          "===": [
-            {
-              "var": "EnableOverlay"
-            },
-            true
-          ]
-        }
+        "name": "videoPathMimeType"
       },
       {
         "component": "custom-asset-namespace:custom-asset",
@@ -7349,15 +7294,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "iconMimeType",
-        "condition": {
-          "===": [
-            {
-              "var": "PrimarybackgroundType"
-            },
-            "imageSlide"
-          ]
-        }
+        "name": "iconMimeType"
       },
       {
         "component": "text",
@@ -7584,32 +7521,7 @@
           {
             "component": "custom-asset-namespace:custom-asset-mimetype",
             "valueType": "string",
-            "name": "ctaAssetMimeType",
-            "condition": {
-              "and": [
-                {
-                  "===": [
-                    {
-                      "var": "PrimarybackgroundType"
-                    },
-                    "imageSlide"
-                  ]
-                },
-                {
-                  "!!": {
-                    "var": "oneButton|ctaLabel"
-                  }
-                },
-                {
-                  "===": [
-                    {
-                      "var": "oneButton|ctaType"
-                    },
-                    "asset"
-                  ]
-                }
-              ]
-            }
+            "name": "ctaAssetMimeType"
           },
           {
             "component": "text",
@@ -7916,32 +7828,7 @@
           {
             "component": "custom-asset-namespace:custom-asset-mimetype",
             "valueType": "string",
-            "name": "secCtaAssetMimeType",
-            "condition": {
-              "and": [
-                {
-                  "===": [
-                    {
-                      "var": "PrimarybackgroundType"
-                    },
-                    "imageSlide"
-                  ]
-                },
-                {
-                  "!!": {
-                    "var": "twoButton|secCtaLabel"
-                  }
-                },
-                {
-                  "===": [
-                    {
-                      "var": "twoButton|secCtaType"
-                    },
-                    "asset"
-                  ]
-                }
-              ]
-            }
+            "name": "secCtaAssetMimeType"
           },
           {
             "component": "text",
@@ -8067,26 +7954,6 @@
             }
           }
         ]
-      },
-      {
-        "component": "text",
-        "name": "text",
-        "label": "Title",
-        "valueType": "string",
-        "description": "Enter main heading for the Primary Hero",
-        "validation": {
-          "minLength": 0,
-          "maxLength": 70,
-          "regExp": "^foo:.*",
-          "customErrorMsg": "Maximum Characters length limit should not be more than 70"
-        }
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description",
-        "valueType": "string",
-        "description": "Enter description for additional context"
       }
     ]
   },
@@ -8240,24 +8107,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "imageMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "imageMimeType"
       },
       {
         "component": "text",
@@ -8586,24 +8436,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaAssetMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "linkHeadline"
-              }
-            }
-          ]
-        }
+        "name": "ctaAssetMimeType"
       },
       {
         "component": "text",
@@ -8791,24 +8624,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "subTextctaAssetMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "subTextHeadline"
-              }
-            }
-          ]
-        }
+        "name": "subTextctaAssetMimeType"
       },
       {
         "component": "text",
@@ -8905,6 +8721,84 @@
             }
           ]
         }
+      }
+    ]
+  },
+  {
+    "id": "search-faq-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "accordionGroupTitle",
+        "label": "AccordionGroup Title",
+        "valueType": "string",
+        "description": "ⓘ Enter the Accordion title to be grouped",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter the Search FAQ title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Enter the Search FAQ Description"
+      }
+    ]
+  },
+  {
+    "id": "search-faq",
+    "fields": [
+      {
+        "component": "text",
+        "name": "faqText_subtitle",
+        "label": "Title",
+        "valueType": "string",
+        "description": "Enter the title",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "faqText_subtitleType",
+        "valueType": "string",
+        "value": "h1",
+        "hidden": true
+      },
+      {
+        "component": "text",
+        "name": "faqText_title",
+        "label": "Subtitle",
+        "valueType": "string",
+        "required": true,
+        "description": "Enter the subtitle"
+      },
+      {
+        "component": "text",
+        "name": "faqText_titleType",
+        "valueType": "string",
+        "value": "h6",
+        "hidden": true
+      },
+      {
+        "component": "text",
+        "name": "faqText_description",
+        "label": "Placeholder Title",
+        "valueType": "string",
+        "description": "Enter the Placeholder Title",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "faqText_placeholder",
+        "label": "Placeholder Text",
+        "valueType": "string",
+        "description": "Enter the Placeholder Text",
+        "required": true
       }
     ]
   },
@@ -9128,24 +9022,7 @@
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "ctaAssetMimeType",
-        "condition": {
-          "and": [
-            {
-              "===": [
-                {
-                  "var": "ctaType"
-                },
-                "asset"
-              ]
-            },
-            {
-              "!!": {
-                "var": "ctaLabel"
-              }
-            }
-          ]
-        }
+        "name": "ctaAssetMimeType"
       },
       {
         "component": "text",
@@ -10097,24 +9974,7 @@
           {
             "component": "custom-asset-namespace:custom-asset-mimetype",
             "valueType": "string",
-            "name": "ctaAssetOneMimeType",
-            "condition": {
-              "and": [
-                {
-                  "===": [
-                    {
-                      "var": "oneButton|ctaTypeOne"
-                    },
-                    "asset"
-                  ]
-                },
-                {
-                  "!!": {
-                    "var": "oneButton|ctaTextOne"
-                  }
-                }
-              ]
-            }
+            "name": "ctaAssetOneMimeType"
           },
           {
             "component": "text",
@@ -10221,11 +10081,23 @@
         "label": "Second Button CTA Fields",
         "valueType": "string",
         "condition": {
-          "===": [
+          "and": [
             {
-              "var": "ctaNumber"
+              "===": [
+                {
+                  "var": "PrimarybackgroundType"
+                },
+                "imageSlide"
+              ]
             },
-            "two"
+            {
+              "===": [
+                {
+                  "var": "ctaNumber"
+                },
+                "two"
+              ]
+            }
           ]
         },
         "fields": [
@@ -10346,24 +10218,7 @@
           {
             "component": "custom-asset-namespace:custom-asset-mimetype",
             "valueType": "string",
-            "name": "ctaAssetTwoMimeType",
-            "condition": {
-              "and": [
-                {
-                  "===": [
-                    {
-                      "var": "twoButton|ctaTypeTwo"
-                    },
-                    "asset"
-                  ]
-                },
-                {
-                  "!!": {
-                    "var": "twoButton|ctaTextTwo"
-                  }
-                }
-              ]
-            }
+            "name": "ctaAssetTwoMimeType"
           },
           {
             "component": "text",
@@ -10862,24 +10717,7 @@
           {
             "component": "custom-asset-namespace:custom-asset-mimetype",
             "valueType": "string",
-            "name": "ctaAssetOneMimeType",
-            "condition": {
-              "and": [
-                {
-                  "===": [
-                    {
-                      "var": "oneButton|ctaTypeOne"
-                    },
-                    "asset"
-                  ]
-                },
-                {
-                  "!!": {
-                    "var": "oneButton|ctaTextOne"
-                  }
-                }
-              ]
-            }
+            "name": "ctaAssetOneMimeType"
           },
           {
             "component": "text",
@@ -11119,24 +10957,7 @@
           {
             "component": "custom-asset-namespace:custom-asset-mimetype",
             "valueType": "string",
-            "name": "ctaAssetTwoMimeType",
-            "condition": {
-              "and": [
-                {
-                  "===": [
-                    {
-                      "var": "twoButton|ctaTypeTwo"
-                    },
-                    "asset"
-                  ]
-                },
-                {
-                  "!!": {
-                    "var": "twoButton|ctaTextTwo"
-                  }
-                }
-              ]
-            }
+            "name": "ctaAssetTwoMimeType"
           },
           {
             "component": "text",
@@ -11289,6 +11110,18 @@
         "name": "vertical-numeric-tile-title",
         "label": "Title",
         "description": "Enter the title"
+      }
+    ]
+  },
+  {
+    "id": "story-feed",
+    "fields": [
+      {
+        "component": "aem-tag",
+        "label": "Category",
+        "name": "story-cq:tags",
+        "valueType": "string",
+        "description": "Select the tags for which feed needs to be displayed."
       }
     ]
   },
