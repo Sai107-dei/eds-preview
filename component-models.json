@@ -11400,7 +11400,7 @@
       {
         "component": "richtext",
         "name": "rte",
-        "label": "Video Transcript",
+        "label": "Video Transcrip1t",
         "required": true,
         "valueType": "string",
         "description": "Enter the video transcript"
