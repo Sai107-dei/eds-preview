@@ -10465,7 +10465,7 @@
     "fields": [
       {
         "component": "select",
-        "name": "imagePlacement",
+        "name": "classes",
         "label": "Image Placement",
         "description": "Select the appropriate column for image placement   ⓘ Image will always be displayed at the top in mobile view",
         "value": "left",
@@ -10473,11 +10473,11 @@
         "options": [
           {
             "name": "Left",
-            "value": "left"
+            "value": "leftImagePlacement"
           },
           {
             "name": "Right",
-            "value": "right"
+            "value": "rightImagePlacement"
           }
         ]
       },
@@ -10497,14 +10497,14 @@
       },
       {
         "component": "text",
-        "name": "altImage",
+        "name": "imageAlt",
         "label": "Image Alt text",
         "valueType": "string",
         "description": "Pick alt text from AEM DAM with ability to override it"
       },
       {
         "component": "select",
-        "name": "mediaType",
+        "name": "classes_mediatype",
         "label": "Media Type ",
         "description": "Select the appropriate media to be uploaded",
         "value": "icon",
@@ -10523,32 +10523,32 @@
         "component": "custom-asset-namespace:custom-asset",
         "configUrl": "/content/dam/custom-asset-picker/image.config.json",
         "valueType": "string",
-        "name": "icon",
+        "name": "iconImage",
         "label": "Icon",
         "description": "Upload icon for the Two Column with Image"
       },
       {
         "component": "custom-asset-namespace:custom-asset-mimetype",
         "valueType": "string",
-        "name": "iconMimeType"
+        "name": "iconImageMimeType"
       },
       {
         "component": "text",
-        "name": "alt",
+        "name": "iconImageAlt",
         "label": "Icon Alt text",
         "valueType": "string",
         "description": "Pick alt text from AEM DAM with ability to override it"
       },
       {
         "component": "text",
-        "name": "eyebrowText",
+        "name": "twoColumn_eyebrowText",
         "label": "Eyebrow",
         "valueType": "string",
         "description": "Enter the Eyebrow text"
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "twoColumn_title",
         "label": "Title",
         "required": true,
         "valueType": "string",
@@ -10556,21 +10556,21 @@
       },
       {
         "component": "richtext",
-        "name": "rte",
+        "name": "twoColumn_description",
         "label": "Description",
         "valueType": "string",
         "description": "Enter the description"
       },
       {
         "component": "richtext",
-        "name": "footNote",
+        "name": "twoColumn_footnote",
         "label": "Footnote",
         "valueType": "string",
         "description": "Enter the Footnote text"
       },
       {
         "component": "select",
-        "name": "ctaNumber",
+        "name": "classes_ctanumber",
         "label": "Number of CTA(s)",
         "description": "Select the number of CTA(s) required",
         "value": "one",
@@ -10586,15 +10586,59 @@
         ]
       },
       {
+        "component": "select",
+        "name": "classes_ctatextplacement",
+        "label": "Text & CTA Placement",
+        "description": "Select the appropriate column for text and CTA placement",
+        "value": "left",
+        "required": true,
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "classes_backgroundcolor",
+        "label": "Background Color",
+        "description": "Select the background color",
+        "value": "none",
+        "required": true,
+        "options": [
+          {
+            "name": "Primary - White",
+            "value": "#var(--lds-g-color-neutral-base-000) "
+          },
+          {
+            "name": "Secondary - Light Grayish Blue",
+            "value": "#F5FBFE"
+          },
+          {
+            "name": "None",
+            "value": "none"
+          }
+        ]
+      },
+      {
         "component": "container",
         "collapsible": true,
-        "name": "oneButton",
+        "name": "twoColumn_oneButton",
         "label": "First Button CTA Fields",
         "valueType": "string",
         "fields": [
           {
             "component": "select",
-            "name": "ctaTypeFieldOne",
+            "name": "classes_ctatypetieldone",
             "label": "CTA Type",
             "description": "Select the type of CTA for component",
             "value": "button",
@@ -10611,14 +10655,14 @@
           },
           {
             "component": "select",
-            "name": "ctaStyleOne",
+            "name": "classes_ctastyleone",
             "label": "CTA Style",
             "description": "Select the style of the Button CTA",
             "value": "primary",
             "condition": {
               "===": [
                 {
-                  "var": "oneButton|ctaTypeFieldOne"
+                  "var": "twoColumn_oneButton|classes_ctatypetieldone"
                 },
                 "button"
               ]
@@ -10636,14 +10680,14 @@
           },
           {
             "component": "text",
-            "name": "ctaTextOne",
+            "name": "linkText",
             "label": "CTA Text",
             "valueType": "string",
             "description": "Enter label to display on the CTA"
           },
           {
             "component": "select",
-            "name": "ctaTypeOne",
+            "name": "classes_ctatypeone",
             "label": "CTA Selection",
             "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
             "options": [
@@ -10658,13 +10702,13 @@
             ],
             "condition": {
               "!!": {
-                "var": "oneButton|ctaTextOne"
+                "var": "twoColumn_oneButton|linkText"
               }
             }
           },
           {
             "component": "aem-content",
-            "name": "ctaLinkOne",
+            "name": "link",
             "label": "CTA Link",
             "valueType": "string",
             "description": "Enter the URL to navigate when CTA is clicked",
@@ -10676,14 +10720,14 @@
                 {
                   "===": [
                     {
-                      "var": "oneButton|ctaTypeOne"
+                      "var": "twoColumn_oneButton|classes_ctatypeone"
                     },
                     "link"
                   ]
                 },
                 {
                   "!!": {
-                    "var": "oneButton|ctaTextOne"
+                    "var": "twoColumn_oneButton|linkText"
                   }
                 }
               ]
@@ -10701,14 +10745,14 @@
                 {
                   "===": [
                     {
-                      "var": "oneButton|ctaTypeOne"
+                      "var": "twoColumn_oneButton|classes_ctatypeone"
                     },
                     "asset"
                   ]
                 },
                 {
                   "!!": {
-                    "var": "oneButton|ctaTextOne"
+                    "var": "twoColumn_oneButton|linkText"
                   }
                 }
               ]
@@ -10721,14 +10765,55 @@
           },
           {
             "component": "text",
-            "name": "two-column-aria-label-one",
+            "name": "ctaAssetOneAlt",
+            "label": "Image Alt text",
+            "valueType": "string",
+            "description": "Pick alt text from AEM DAM with ability to override it",
+            "condition": {
+              "and": [
+                {
+                  "===": [
+                    {
+                      "var": "twoColumn_oneButton|classes_ctatypeone"
+                    },
+                    "asset"
+                  ]
+                },
+                {
+                  "!!": {
+                    "var": "twoColumn_oneButton|linkText"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "component": "text",
+            "name": "linkTitle",
             "label": "ARIA Label",
             "valueType": "string",
-            "description": "Enter ARIA label to comply ADA"
+            "description": "Enter ARIA label to comply ADA",
+            "condition": {
+              "and": [
+                {
+                  "===": [
+                    {
+                      "var": "twoColumn_oneButton|classes_ctatypeone"
+                    },
+                    "link"
+                  ]
+                },
+                {
+                  "!!": {
+                    "var": "twoColumn_oneButton|linkText"
+                  }
+                }
+              ]
+            }
           },
           {
             "component": "select",
-            "name": "targetPathOne",
+            "name": "classes_targetpathone",
             "label": "Target Path",
             "description": "Select the target path for the authored CTA URL",
             "value": "sameTab",
@@ -10747,14 +10832,14 @@
                 {
                   "===": [
                     {
-                      "var": "oneButton|ctaTypeOne"
+                      "var": "twoColumn_oneButton|classes_ctatypeone"
                     },
                     "link"
                   ]
                 },
                 {
                   "!!": {
-                    "var": "oneButton|ctaTextOne"
+                    "var": "twoColumn_oneButton|linkText"
                   }
                 }
               ]
@@ -10763,7 +10848,7 @@
           {
             "component": "select",
             "label": "Exit Interstitial",
-            "name": "exitInterstitial",
+            "name": "classes_exitinterstitial",
             "valueType": "string",
             "value": "select",
             "description": "Select this option to enable the modal experience that notifies user that they are leaving the site",
@@ -10802,14 +10887,14 @@
                 {
                   "===": [
                     {
-                      "var": "oneButton|ctaTypeOne"
+                      "var": "twoColumn_oneButton|classes_ctatypeone"
                     },
                     "link"
                   ]
                 },
                 {
                   "!!": {
-                    "var": "oneButton|ctaTextOne"
+                    "var": "twoColumn_oneButton|linkText"
                   }
                 }
               ]
@@ -10820,13 +10905,13 @@
       {
         "component": "container",
         "collapsible": true,
-        "name": "twoButton",
+        "name": "twoColumn_twoButton",
         "label": "Second Button CTA Fields",
         "valueType": "string",
         "condition": {
           "===": [
             {
-              "var": "ctaNumber"
+              "var": "classes_ctanumber"
             },
             "two"
           ]
@@ -10834,77 +10919,77 @@
         "fields": [
           {
             "component": "select",
-            "name": "ctaTypeFieldTwo",
+            "name": "classes_ctatypefieldtwo",
             "label": "CTA Type",
             "description": "Select the type of CTA for component",
             "value": "button",
             "options": [
               {
                 "name": "Button",
-                "value": "button"
+                "value": "button_two"
               },
               {
                 "name": "Text Link",
-                "value": "textLink"
+                "value": "textLink_two"
               }
             ]
           },
           {
             "component": "select",
-            "name": "ctaStyleTwo",
+            "name": "classes_ctastyletwo",
             "label": "CTA Style",
             "description": "Select the style of the Button CTA",
-            "value": "primary",
+            "value": "primary_two",
             "condition": {
               "===": [
                 {
-                  "var": "twoButton|ctaTypeFieldTwo"
+                  "var": "twoColumn_twoButton|classes_ctatypefieldtwo"
                 },
-                "button"
+                "button_two"
               ]
             },
             "options": [
               {
                 "name": "Primary",
-                "value": "primary"
+                "value": "primary_two"
               },
               {
                 "name": "Secondary",
-                "value": "secondary"
+                "value": "secondary_two"
               }
             ]
           },
           {
             "component": "text",
-            "name": "ctaTextTwo",
+            "name": "link1Text",
             "label": "CTA Text",
             "valueType": "string",
             "description": "Enter label to display on the CTA"
           },
           {
             "component": "select",
-            "name": "ctaTypeTwo",
+            "name": "classes_ctatypetwo",
             "label": "CTA Selection",
             "description": "ⓘ Select the CTA Selection Link/Asset(PDF/Image)",
             "options": [
               {
                 "name": "Link",
-                "value": "link"
+                "value": "link_two"
               },
               {
                 "name": "Asset (PDF/Image)",
-                "value": "asset"
+                "value": "asset_two"
               }
             ],
             "condition": {
               "!!": {
-                "var": "twoButton|ctaTextTwo"
+                "var": "twoColumn_twoButton|link1Text"
               }
             }
           },
           {
             "component": "aem-content",
-            "name": "ctaLinkTwo",
+            "name": "link1",
             "label": "CTA Link",
             "valueType": "string",
             "description": "Enter the URL to navigate when CTA is clicked",
@@ -10916,14 +11001,14 @@
                 {
                   "===": [
                     {
-                      "var": "twoButton|ctaTypeTwo"
+                      "var": "twoColumn_twoButton|classes_ctatypetwo"
                     },
-                    "link"
+                    "link_two"
                   ]
                 },
                 {
                   "!!": {
-                    "var": "twoButton|ctaTextTwo"
+                    "var": "twoColumn_twoButton|link1Text"
                   }
                 }
               ]
@@ -10941,14 +11026,14 @@
                 {
                   "===": [
                     {
-                      "var": "twoButton|ctaTypeTwo"
+                      "var": "twoColumn_twoButton|classes_ctatypetwo"
                     },
-                    "asset"
+                    "asset_two"
                   ]
                 },
                 {
                   "!!": {
-                    "var": "twoButton|ctaTextTwo"
+                    "var": "twoColumn_twoButton|link1Text"
                   }
                 }
               ]
@@ -10961,25 +11046,25 @@
           },
           {
             "component": "text",
-            "name": "two-column-aria-label-two",
+            "name": "link1Title",
             "label": "ARIA Label",
             "valueType": "string",
             "description": "Enter ARIA label to comply ADA"
           },
           {
             "component": "select",
-            "name": "targetPathTwo",
+            "name": "classes_targetpathtwo",
             "label": "Target Path",
             "description": "Select the target path for the authored CTA URL",
             "value": "sameTab",
             "options": [
               {
                 "name": "Same Tab",
-                "value": "sameTab"
+                "value": "sameTab_two"
               },
               {
                 "name": "New Tab",
-                "value": "newTab"
+                "value": "newTab_two"
               }
             ],
             "condition": {
@@ -10987,14 +11072,14 @@
                 {
                   "===": [
                     {
-                      "var": "twoButton|ctaTypeTwo"
+                      "var": "twoColumn_twoButton|classes_ctatypetwo"
                     },
-                    "link"
+                    "link_two"
                   ]
                 },
                 {
                   "!!": {
-                    "var": "twoButton|ctaTextTwo"
+                    "var": "twoColumn_twoButton|link1Text"
                   }
                 }
               ]
@@ -11003,38 +11088,38 @@
           {
             "component": "select",
             "label": "Exit Interstitial",
-            "name": "exitInterstitialTwo",
+            "name": "classes_exitinterstitialtwo",
             "valueType": "string",
-            "value": "select",
+            "value": "select_two",
             "description": "Select this option to enable the modal experience that notifies user that they are leaving the site",
             "options": [
               {
                 "name": "select",
-                "value": "select"
+                "value": "select_two"
               },
               {
                 "name": "General Third Parties",
-                "value": "general-third-parties"
+                "value": "general-third-parties_two"
               },
               {
                 "name": "Telehealth",
-                "value": "telehealth"
+                "value": "telehealth_two"
               },
               {
                 "name": "Account",
-                "value": "account"
+                "value": "account_two"
               },
               {
                 "name": "Account Wellbeing",
-                "value": "account-wellbeing"
+                "value": "account-wellbeing_two"
               },
               {
                 "name": "Embedded Tools Healthgrades",
-                "value": "embedded-tools-healthgrades"
+                "value": "embedded-tools-healthgrades_two"
               },
               {
                 "name": "Embedded Tools Nourish",
-                "value": "embedded-tools-nourish"
+                "value": "embedded-tools-nourish_two"
               }
             ],
             "condition": {
@@ -11042,14 +11127,14 @@
                 {
                   "===": [
                     {
-                      "var": "twoButton|ctaTypeTwo"
+                      "var": "twoColumn_twoButton|classes_ctatypetwo"
                     },
-                    "link"
+                    "link_two"
                   ]
                 },
                 {
                   "!!": {
-                    "var": "twoButton|ctaTextTwo"
+                    "var": "twoColumn_twoButton|link1Text"
                   }
                 }
               ]
