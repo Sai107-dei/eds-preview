@@ -4282,39 +4282,14 @@
     "id": "image-block",
     "fields": [
       {
-        "component": "custom-asset-namespace:custom-asset",
-        "configUrl": "/content/dam/custom-asset-picker/image.config.json",
+        "component": "aem-experience-fragment",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "required": true,
-        "description": "Upload Image for the section content"
-      },
-      {
-        "component": "custom-asset-namespace:custom-asset-mimetype",
-        "valueType": "string",
-        "name": "imageMimeType"
-      },
-      {
-        "component": "text",
-        "name": "altText",
-        "label": "Image Alt text",
-        "valueType": "string",
-        "description": "Pick alt text from AEM DAM with ability to override it"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "text",
-        "label": "Label",
-        "description": "Add a label"
-      },
-      {
-        "component": "richtext",
-        "name": "rte",
-        "label": "Extended Image Description",
-        "valueType": "string",
-        "description": "Enter the Image description"
+        "name": "experience-fragment",
+        "label": "experience-fragment",
+        "variationName": "experienceFragmentVariation",
+        "validation": {
+            "rootPath": "/content/refresh"
+        }
       },
       {
         "component": "checkbox-group",
