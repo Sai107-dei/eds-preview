@@ -3588,7 +3588,7 @@
     ]
   },
    {
-    "id": "isi",
+    "id": "teaser-modal",
     "fields": [
       {
         "component": "text",
@@ -3733,7 +3733,7 @@
     ]
   },
    {
-      "id": "interstitial-modal",
+      "id": "teaser-modal",
       "fields": [
         {
           "component": "custom-asset-namespace:custom-asset",
