@@ -3619,13 +3619,6 @@
           "description": "Enter the title",
           "required": true
         },
-		 {
-        "component": "text",
-        "name": "titleType",
-        "value": "h4",
-        "valueType": "string",
-        "hidden": true
-      },
         {
           "component": "richtext",
           "name": "description",
