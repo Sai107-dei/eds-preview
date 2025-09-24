@@ -675,7 +675,7 @@
           }
         },
         {
-          "title": "Interstitial Modal",
+          "title": "Teaser Modal",
           "id": "interstitial-modal",
           "plugins": {
             "xwalk": {
@@ -694,7 +694,7 @@
           }
         },
         {
-          "title": "ISI",
+          "title": "Teaser Block1",
           "id": "isi",
           "plugins": {
             "xwalk": {
