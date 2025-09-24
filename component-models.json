@@ -3588,15 +3588,108 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "interstitial-modal",
     "fields": [
       {
-        "component": "text",
-        "name": "dropdownTitle",
-        "label": "Dropdown Title",
-        "description": "Enter the dropdown title",
+        "component": "custom-asset-namespace:custom-asset",
+        "configUrl": "/content/dam/custom-asset-picker/image.config.json",
         "valueType": "string",
+        "name": "image",
+        "label": "Icon",
+        "required": true,
+        "description": "Upload the icon image"
+      },
+      {
+        "component": "custom-asset-namespace:custom-asset-mimetype",
+        "valueType": "string",
+        "name": "imageMimeType"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Icon alt text",
+        "valueType": "string",
+        "required": true,
+        "description": "Enter alternative text for the icon image. Can override AEM DAM alt text."
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title",
+        "description": "Enter the title",
         "required": true
+      },
+      {
+        "component": "text",
+        "name": "titleType",
+        "value": "h4",
+        "valueType": "string",
+        "hidden": true
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "description": "Enter the description"
+      },
+      {
+        "component": "container",
+        "name": "continueCancelButtons",
+        "label": "Button1 Fields",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "linkText",
+            "label": "CTA Label",
+            "description": "Enter label to display on the CTA"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "link",
+            "label": "CTA Link",
+            "description": "Enter link for the CTA",
+            "hidden": true
+          },
+          {
+            "component": "text",
+            "name": "linkType",
+            "label": "CTA Aria-label",
+            "description": "Enter Aria label for the Button CTA"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "signupSigninButtons",
+        "label": "Button2 Fields",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "link1Text",
+            "label": "CTA Label",
+            "description": "Enter label to display on the CTA"
+          },
+          {
+            "component": "text",
+            "name": "link1",
+            "label": "CTA Link",
+            "description": "Enter link for the CTA",
+            "hidden": true
+          },
+          {
+            "component": "text",
+            "name": "link1Title",
+            "label": "CTA Aria-label",
+            "description": "Enter Aria label for the Button CTA"
+          }
+        ]
       }
     ]
   }
