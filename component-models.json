@@ -3664,12 +3664,12 @@
         "component": "text",
         "valueType": "string",
         "label": "Column 2 Eyebrow",
-        "name": "isiColSecondEyebrow",
+        "name": "column_isiColSecondEyebrow",
         "description": "Enter the eyebrow text to be displayed for column 2"
       },
       {
         "component": "text",
-        "name": "isiColSecondEyebrowType",
+        "name": "column_isiColSecondEyebrowType",
         "value": "h2",
         "valueType": "string",
         "hidden": true
@@ -3677,14 +3677,14 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "isiColSecondDescription",
+        "name": "column_isiColSecondDescription",
         "label": "Column 2 Description",
         "description": "Enter the description text to be displayed for column 2",
         "required": true
       },
       {
         "component": "select",
-        "name": "classes_colSecondRteFontSize",
+        "name": "column_colSecondRteFontSize",
         "label": "Column 2 Description Font Size",
         "description": "Select the font size for the Column 2 Description",
         "options": [
