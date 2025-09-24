@@ -3588,7 +3588,7 @@
     ]
   },
    {
-    "id": "teaser-modal",
+    "id": "teaser-block",
     "fields": [
       {
         "component": "text",
@@ -3733,7 +3733,7 @@
     ]
   },
    {
-      "id": "teaser-block",
+      "id": "teaser-modal",
       "fields": [
         {
           "component": "custom-asset-namespace:custom-asset",
