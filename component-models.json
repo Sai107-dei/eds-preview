@@ -3733,7 +3733,7 @@
     ]
   },
    {
-      "id": "teaser-modal",
+      "id": "teaser-block",
       "fields": [
         {
           "component": "custom-asset-namespace:custom-asset",
