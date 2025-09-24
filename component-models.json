@@ -3647,7 +3647,7 @@
               "description": "Enter label to display on the CTA"
             },
             {
-              "component": "text",
+              "component": "aem-content",
               "valueType": "string",
               "name": "link",
               "label": "CTA Link",
@@ -3676,7 +3676,7 @@
               "description": "Enter label to display on the CTA"
             },
             {
-              "component": "text",
+              "component": "aem-content",
               "name": "link-cta",
               "label": "CTA Link",
               "description": "Enter link for the CTA"
