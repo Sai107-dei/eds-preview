@@ -3588,6 +3588,151 @@
     ]
   },
    {
+    "id": "isi",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "isiColFirstEyebrow",
+        "label": "Column 1 Eyebrow",
+        "description": "Enter the eyebrow text to be displayed for column 1"
+      },
+      {
+        "component": "text",
+        "name": "isiColFirstEyebrowType",
+        "value": "h2",
+        "valueType": "string",
+        "hidden": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "isiColFirstDescription",
+        "label": "Column 1 Description",
+        "description": "Enter the description text to be displayed for column 1",
+        "required": true
+      },
+      {
+        "component": "select",
+        "name": "classes_colFirstRteFontSize",
+        "label": "Column 1 Description Font Size",
+        "description": "Select the font size for the Column 1 Description",
+        "options": [
+          {
+            "name": "100px",
+            "value": "colFirst-fs-100px"
+          },
+          {
+            "name": "60px",
+            "value": "colFirst-fs-60px"
+          },
+          {
+            "name": "48px",
+            "value": "colFirst-fs-48px"
+          },
+          {
+            "name": "36px",
+            "value": "colFirst-fs-36px"
+          },
+          {
+            "name": "32px",
+            "value": "colFirst-fs-32px"
+          },
+          {
+            "name": "28px",
+            "value": "colFirst-fs-28px"
+          },
+          {
+            "name": "24px",
+            "value": "colFirst-fs-24px"
+          },
+          {
+            "name": "20px",
+            "value": "colFirst-fs-20px"
+          },
+          {
+            "name": "16px",
+            "value": "colFirst-fs-16px"
+          },
+          {
+            "name": "14px",
+            "value": "colFirst-fs-14px"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "label": "Column 2 Eyebrow",
+        "name": "isiColSecondEyebrow",
+        "description": "Enter the eyebrow text to be displayed for column 2"
+      },
+      {
+        "component": "text",
+        "name": "isiColSecondEyebrowType",
+        "value": "h2",
+        "valueType": "string",
+        "hidden": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "isiColSecondDescription",
+        "label": "Column 2 Description",
+        "description": "Enter the description text to be displayed for column 2",
+        "required": true
+      },
+      {
+        "component": "select",
+        "name": "classes_colSecondRteFontSize",
+        "label": "Column 2 Description Font Size",
+        "description": "Select the font size for the Column 2 Description",
+        "options": [
+          {
+            "name": "100px",
+            "value": "colSecond-fs-100px"
+          },
+          {
+            "name": "60px",
+            "value": "colSecond-fs-60px"
+          },
+          {
+            "name": "48px",
+            "value": "colSecond-fs-48px"
+          },
+          {
+            "name": "36px",
+            "value": "colSecond-fs-36px"
+          },
+          {
+            "name": "32px",
+            "value": "colSecond-fs-32px"
+          },
+          {
+            "name": "28px",
+            "value": "colSecond-fs-28px"
+          },
+          {
+            "name": "24px",
+            "value": "colSecond-fs-24px"
+          },
+          {
+            "name": "20px",
+            "value": "colSecond-fs-20px"
+          },
+          {
+            "name": "16px",
+            "value": "colSecond-fs-16px"
+          },
+          {
+            "name": "14px",
+            "value": "colSecond-fs-14px"
+          }
+        ]
+      }
+    ]
+  },
+   {
       "id": "interstitial-modal",
       "fields": [
         {
