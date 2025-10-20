@@ -87,7 +87,7 @@
                   "name": "Content Section Container",
                   "model": "content-section-container",
                   "backgroundOption": "color",
-                  "backgroundColor": "neutral",
+                  "backgroundColor": "background-none",
                   "backgroundImagePositioning": "center",
                   "textColor": "auto",
                   "highlightColor": "auto"
@@ -109,8 +109,9 @@
                   "filter": "column-container",
                   "style": "two-col-50-50",
                   "backgroundOption": "color",
-                  "backgroundColor": "neutral",
-                  "textColor": "auto"
+                  "backgroundColor": "background-none",
+                  "textColor": "auto",
+                  "style_backgroundOption": "inner-color"
                 }
               }
             }
@@ -148,7 +149,17 @@
                 "template": {
                   "name": "Accordion-Item",
                   "model": "accordion-item",
-                  "titleStyle": "standardTitle"
+                  "titleStyle": "standardTitle",
+                  "classes_ctaNumber": "ctaNumber-one",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_ctacolortwo": "ctaColor-light-two",
+                  "classes_ctastyletwo": "ctaStyle-primary-two",
+                  "classes_ctatypetwo": "ctaSelection-link",
+                  "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                  "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two"
                 }
               }
             }
@@ -165,10 +176,21 @@
                   "name": "Accordion",
                   "model": "accordion",
                   "filter": "accordion",
+                  "classes_style": "accordion-none",
                   "item0": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Accordion-Item",
-                    "model": "accordion-item"
+                    "model": "accordion-item",
+                    "classes_ctaNumber": "ctaNumber-one",
+                    "classes_ctacolorone": "ctaColor-light",
+                    "classes_ctastyleone": "ctaStyle-primary",
+                    "classes_targetpathone": "ctaTarget-sameTab",
+                    "classes_exitinterstitial": "ctaExitInterstitial-select",
+                    "classes_ctacolortwo": "ctaColor-light-two",
+                    "classes_ctastyletwo": "ctaStyle-primary-two",
+                    "classes_ctatypetwo": "ctaSelection-link",
+                    "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                    "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two"
                   }
                 }
               }
@@ -258,40 +280,50 @@
                   "name": "Brand Card",
                   "model": "brand-card",
                   "filter": "brand-card",
-                  "classes": "font_color#79DE00",
-                  "classes_ctanumber": "none",
-                  "classes_ctatypefieldone": "button",
-                  "classes_ctastyleone": "primary",
-                  "classes_ctatypeone": "link",
-                  "classes_targetpathone": "sameTab",
-                  "classes_exitinterstitial": "select",
-                  "classes_ctatypefieldtwo": "button_two",
-                  "classes_ctastyletwo": "primary_two",
-                  "classes_ctatypetwo": "link_two",
-                  "classes_targetpathtwo": "sameTab_two",
-                  "classes_exitinterstitialtwo": "select_two",
-                  "classes_elementSelector": "ctas",
-                  "classes_ctaNum": "one_bottom",
-                  "classes_ctatypefieldthree": "button_three",
-                  "classes_ctastylethree": "primary_three",
-                  "classes_ctatypethree": "link_three",
-                  "classes_targetpaththree": "sameTab_three",
-                  "classes_exitinterstitialthree": "select_three",
-                  "classes_ctatypefieldfour": "button_four",
-                  "classes_ctastylefour": "primary_four",
-                  "classes_ctatypefour": "link_four",
-                  "classes_targetpathfour": "sameTab_four",
-                  "classes_exitinterstitialfour": "select_four",
-                  "classes_quicklinksctanumber": "quick_link_cta_one",
-                  "classes_quicklinksctatypeone": "quick_link",
-                  "classes_quicklinkstargetpathone": "quick_link_sameTab",
-                  "classes_quicklinksexitinterstitial": "quick_link_select",
-                  "classes_quicklinksctatypetwo": "quick_link_two",
-                  "classes_quicklinkstargetpathtwo": "quick_link_sameTab_two",
-                  "classes_quicklinksexitinterstitialtwo": "quick_link_select_two",
-                  "classes_quicklinksctatypethree": "quick_link_three",
-                  "classes_quicklinkstargetpaththree": "quick_link_sameTab_three",
-                  "classes_quicklinksexitinterstitialthree": "quick_link_select_three",
+                  "classes": "highlight-lime-green",
+                  "classes_ctanumber": "ctaNumber-none",
+                  "classes_ctatypefieldone": "ctaType-button",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_ctatypeone": "ctaSelection-link",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_ctatypefieldtwo": "ctaType-button_two",
+                  "classes_ctacolortwo": "ctaColor-light-two",
+                  "classes_ctastyletwo": "ctaStyle-primary-two",
+                  "classes_ctatypetwo": "ctaSelection-link_two",
+                  "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                  "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two",
+                  "classes_elementSelector": "element-ctas",
+                  "classes_ctaNum": "ctaNumber-one_bottom",
+                  "classes_ctatypefieldthree": "ctaType-button_three",
+                  "classes_ctacolorthree": "ctaColor-light-three",
+                  "classes_ctastylethree": "ctaStyle-primary-three",
+                  "classes_ctatypethree": "ctaSelection-link_three",
+                  "classes_targetpaththree": "ctaTarget-sameTab_three",
+                  "classes_exitinterstitialthree": "ctaExitInterstitial-select_three",
+                  "classes_ctatypefieldfour": "ctaType-button_four",
+                  "classes_ctacolorfour": "ctaColor-light-four",
+                  "classes_ctastylefour": "ctaStyle-primary-four",
+                  "classes_ctatypefour": "ctaSelection-link_four",
+                  "classes_targetpathfour": "ctaTarget-sameTab_four",
+                  "classes_exitinterstitialfour": "ctaExitInterstitial-select_four",
+                  "classes_quicklinksctanumber": "ctaNumber-quicklink_one",
+                  "classes_ctacolorfive": "ctaColor-light-five",
+                  "classes_ctastylefive": "ctaStyle-primary-five",
+                  "classes_quicklinksctatypeone": "ctaSelection-quicklink-link",
+                  "classes_quicklinkstargetpathone": "ctaTarget-quicklink-sameTab",
+                  "classes_quicklinksexitinterstitial": "ctaExitInterstitial-quicklink-select",
+                  "classes_ctacolorsix": "ctaColor-light-six",
+                  "classes_ctastylesix": "ctaStyle-primary-six",
+                  "classes_quicklinksctatypetwo": "ctaSelection-quicklink-link-two",
+                  "classes_quicklinkstargetpathtwo": "ctaTarget-quicklink-sameTab_two",
+                  "classes_quicklinksexitinterstitialtwo": "ctaExitInterstitial-quicklink-select_two",
+                  "classes_ctacolorseven": "ctaColor-light-seven",
+                  "classes_ctastyleseven": "ctaStyle-primary-seven",
+                  "classes_quicklinksctatypethree": "ctaSelection-quicklink-link-three",
+                  "classes_quicklinkstargetpaththree": "ctaTarget-quicklink-sameTab_three",
+                  "classes_quicklinksexitinterstitialthree": "ctaExitInterstitial-quicklink-select_three",
                   "item0": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Jump Link Item",
@@ -363,15 +395,17 @@
                   "name": "Card",
                   "model": "card",
                   "card_titleType": "h3",
-                  "classes": "one",
-                  "classes_ctastyleone": "primary",
-                  "classes_targetpathone": "sameTab",
-                  "classes_exitinterstitial": "select",
-                  "classes_ctastyletwo": "primary_two",
-                  "classes_targetpathtwo": "sameTab_two",
-                  "classes_exitinterstitialtwo": "select_two",
-                  "classes_ctatypefieldtwo": "textLink_two",
-                  "classes_ctatypetieldone": "textLink"
+                  "classes": "ctaNumber-one",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_ctacolortwo": "ctaColor-light-two",
+                  "classes_ctastyletwo": "ctaStyle-primary-two",
+                  "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                  "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two",
+                  "classes_ctatypefieldtwo": "ctaType-textLink_two",
+                  "classes_ctatypetieldone": "ctaType-textLink"
                 }
               }
             }
@@ -390,19 +424,20 @@
                   "filter": "cards",
                   "number": 2,
                   "item0": {
-                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Card",
                     "model": "card",
                     "card_titleType": "h3",
-                    "classes": "one",
-                    "classes_ctastyleone": "primary",
-                    "classes_targetpathone": "sameTab",
-                    "classes_exitinterstitial": "select",
-                    "classes_ctastyletwo": "primary_two",
-                    "classes_targetpathtwo": "sameTab_two",
-                    "classes_exitinterstitialtwo": "select_two",
-                    "classes_ctatypefieldtwo": "textLink_two",
-                    "classes_ctatypetieldone": "textLink"
+                    "classes": "ctaNumber-one",
+                    "classes_ctacolorone": "ctaColor-light",
+                    "classes_ctastyleone": "ctaStyle-primary",
+                    "classes_targetpathone": "ctaTarget-sameTab",
+                    "classes_exitinterstitial": "ctaExitInterstitial-select",
+                    "classes_ctacolortwo": "ctaColor-light-two",
+                    "classes_ctastyletwo": "ctaStyle-primary-two",
+                    "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                    "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two",
+                    "classes_ctatypefieldtwo": "ctaType-textLink_two",
+                    "classes_ctatypetieldone": "ctaType-textLink"
                   }
                 }
               }
@@ -449,7 +484,81 @@
                 "template": {
                   "name": "CRM Weight",
                   "model": "crm-weight",
-                  "filter": "crm-weight"
+                  "filter": "crm-weight",
+                  "crm_type": "weight"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Doctor Discussion Guide",
+          "id": "doctor-discussion-guide",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Doctor Discussion Guide",
+                  "model": "doctor-discussion-guide",
+                  "filter": "doctor-discussion-guide"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Email Yourself",
+          "id": "email-yourself",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Email Yourself",
+                  "model": "email-yourself"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "External Video Player Link Item",
+          "id": "external-video-player-link-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "model": "external-video-player-link-item",
+                  "name": "External Video Player Link Item",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "External Video Player Link",
+          "id": "external-video-player-link",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "model": "external-video-player-link",
+                  "filter": "external-video-player-link",
+                  "name": "External Video Player Link",
+                  "item0": {
+                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
+                    "model": "external-video-player-link-item",
+                    "name": "External Video Player Link Item",
+                    "classes_ctacolorone": "ctaColor-light",
+                    "classes_ctastyleone": "ctaStyle-primary",
+                    "classes_exitinterstitial": "ctaExitInterstitial-select"
+                  }
                 }
               }
             }
@@ -503,21 +612,6 @@
           }
         },
         {
-          "title": "Hero",
-          "id": "hero",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Hero",
-                  "model": "hero"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Horizontal Numeric Tile",
           "id": "horizontal-numeric-tile",
           "plugins": {
@@ -564,21 +658,20 @@
                   "name": "Icon Card Item",
                   "model": "icon-card-item",
                   "eyebrowType": "h4",
-                  "classes_ctanumber": "one",
-                  "classes_ctatypetieldone": "button",
-                  "classes": "textLink",
-                  "classes_ctaStyle": "primary",
-                  "classes_targetPath": "sameTab",
-                  "classes_interstitial": "select",
-                  "classes_ctastyleone": "primary",
-                  "classes_ctatypeone": "link",
-                  "classes_targetpathone": "sameTab",
-                  "classes_exitinterstitial": "select",
-                  "classes_ctatypefieldtwo": "button_two",
-                  "classes_ctastyletwo": "primary_two",
-                  "classes_ctatypetwo": "link_two",
-                  "classes_targetpathtwo": "sameTab_two",
-                  "classes_exitinterstitialtwo": "select_two"
+                  "classes_ctanumber": "ctaNumber-one",
+                  "classes_ctatypetieldone": "ctaType-button",
+                  "classes": "ctaType-textLink",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_ctatypeone": "ctaSelection-link",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_ctatypefieldtwo": "ctaType-button_two",
+                  "classes_ctacolortwo": "ctaColor-light-two",
+                  "classes_ctastyletwo": "ctaStyle-primary-two",
+                  "classes_ctatypetwo": "ctaSelection-link_two",
+                  "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                  "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two"
                 }
               }
             }
@@ -595,28 +688,26 @@
                   "name": "Icon Card",
                   "model": "icon-card",
                   "filter": "icon-card",
-                  "classes": "2-col",
-                  "classes_backgroundcolor": "default",
+                  "classes": "column-configuration-2-col",
+                  "classes_backgroundcolor": "background-color-transparent",
                   "item0": {
-                    "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Icon Card Item",
                     "model": "icon-card-item",
                     "eyebrowType": "h4",
-                    "classes_ctanumber": "one",
-                    "classes_ctatypetieldone": "button",
-                    "classes": "textLink",
-                    "classes_ctaStyle": "primary",
-                    "classes_targetPath": "sameTab",
-                    "classes_interstitial": "select",
-                    "classes_ctastyleone": "primary",
-                    "classes_ctatypeone": "link",
-                    "classes_targetpathone": "sameTab",
-                    "classes_exitinterstitial": "select",
-                    "classes_ctatypefieldtwo": "button_two",
-                    "classes_ctastyletwo": "primary_two",
-                    "classes_ctatypetwo": "link_two",
-                    "classes_targetpathtwo": "sameTab_two",
-                    "classes_exitinterstitialtwo": "select_two"
+                    "classes_ctanumber": "ctaNumber-one",
+                    "classes_ctatypetieldone": "ctaType-button",
+                    "classes": "ctaType-textLink",
+                    "classes_ctacolorone": "ctaColor-light",
+                    "classes_ctastyleone": "ctaStyle-primary",
+                    "classes_ctatypeone": "ctaSelection-link",
+                    "classes_targetpathone": "ctaTarget-sameTab",
+                    "classes_exitinterstitial": "ctaExitInterstitial-select",
+                    "classes_ctatypefieldtwo": "ctaType-button_two",
+                    "classes_ctacolortwo": "ctaColor-light-two",
+                    "classes_ctastyletwo": "ctaStyle-primary-two",
+                    "classes_ctatypetwo": "ctaSelection-link_two",
+                    "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                    "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two"
                   }
                 }
               }
@@ -675,37 +766,19 @@
           }
         },
         {
-          "title": "Teaser Modal",
-          "id": "teaser-modal",
+          "title": "Interstitial - Zepbound",
+          "id": "interstitial-zepbound",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Teaser Modal",
-                  "model": "teaser-modal",
-                  "classes": "continue-cancel",
+                  "name": "Interstitial Zepbound",
+                  "model": "interstitial-zepbound",
+                  "classes": "cancel",
                   "link": "#",
                   "link1": "#",
                   "link3": "#"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Teaser Block",
-          "id": "teaser-block",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Teaser Block",
-                  "model": "teaser-block",
-                  "enableISI": false,
-                  "isiColSecondEyebrowType": "h2",
-                  "isiColFirstEyebrowType": "h2"
                 }
               }
             }
@@ -735,7 +808,9 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Green Card",
-                  "model": "green-card"
+                  "model": "green-card",
+                  "classes_cardcolor": "cardcolor-primary",
+                  "classes_highlightcolor": "highlight-deep-secondary"
                 }
               }
             }
@@ -752,19 +827,67 @@
                   "name": "Price Card",
                   "model": "price-card",
                   "filter": "price-card",
-                  "pricecard_eyebrowType": "h3",
-                  "classes": "one",
-                  "classes_ctastyleone": "primary",
-                  "classes_targetpathone": "sameTab",
-                  "classes_exitinterstitial": "select",
-                  "classes_targetpathtwo": "sameTab_two",
-                  "classes_ctastyletwo": "primary_two",
-                  "classes_exitinterstitialtwo": "select_two",
+                  "classes_cardcolor": "cardcolor-primary",
+                  "classes": "ctaNumber-one",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                  "classes_ctacolortwo": "ctaColor-light-two",
+                  "classes_ctastyletwo": "ctaStyle-primary-two",
+                  "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two",
                   "item0": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Green Card",
-                    "model": "green-card"
+                    "model": "green-card",
+                    "classes_cardcolor": "cardcolor-primary",
+                    "classes_highlightcolor": "highlight-deep-secondary"
                   }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "IconGrid Tile",
+          "id": "icongrid-tile",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Icongrid-tile",
+                  "model": "icongrid-tile"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Primary Hero",
+          "id": "primary-hero",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Primary Hero",
+                  "model": "primary-hero",
+                  "filter": "primary-hero",
+                  "classes_titleFont": "titlefont-Ringside",
+                  "classes_size": "herosize-large",
+                  "classes_textcolor": "textcolor-white",
+                  "classes_overlayEffect": "overlay-light",
+                  "classes_ctaNumber": "ctaNumber-one",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_ctacolortwo": "ctaColor-light-two",
+                  "classes_ctastyletwo": "ctaStyle-primary-light-two",
+                  "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                  "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two"
                 }
               }
             }
@@ -781,11 +904,13 @@
                   "name": "Promo banner",
                   "model": "promo-banner",
                   "promoBanner_headingType": "h2",
-                  "classes": "left",
-                  "classes_highlightcolor": "#40A929",
-                  "classes_ctatypeone": "link",
-                  "classes_targetpathone": "sameTab",
-                  "classes_exitinterstitial": "select"
+                  "classes": "textalign-left",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_highlightcolor": "highlight-color-primary",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_ctatypeone": "ctaSelection-link",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select"
                 }
               }
             }
@@ -801,6 +926,21 @@
                 "template": {
                   "name": "Quiz Block",
                   "model": "quiz-block"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Row Break",
+          "id": "row-break",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Row Break",
+                  "model": "row-break"
                 }
               }
             }
@@ -832,12 +972,36 @@
                   "name": "Small Media Carousel",
                   "model": "small-media-carousel",
                   "filter": "small-media-carousel",
-                  "classes": "top",
+                  "classes": "titleplacement-top",
                   "item0": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Small Media Carousel Item",
                     "model": "small-media-carousel-item"
                   }
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Small Width Media",
+          "id": "small-width-media",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Small Width Media",
+                  "model": "small-width-media",
+                  "classes_textalignment": "textalign-center",
+                  "classes_ctatypefieldone": "ctaType-button",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_ctatypeone": "ctaSelection-link",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_backgroundverticalposition": "background-vertical-center",
+                  "classes_backgroundhorizontalposition": "background-horizontal-centercenter"
                 }
               }
             }
@@ -852,7 +1016,11 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Spacer and Divider",
-                  "model": "spacer-and-divider"
+                  "model": "spacer-and-divider",
+                  "classes": "divider",
+                  "classes_spacerheight": "small",
+                  "classes_dividercolor": "contrast",
+                  "classes_topbottomspacing": "small_one"
                 }
               }
             }
@@ -1001,6 +1169,49 @@
           }
         },
         {
+          "title": "Text Component",
+          "id": "text-component",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Text Component",
+                  "model": "text-component",
+                  "classes": "alignment-left",
+                  "classes_ctaNumber": "ctaNumber-one",
+                  "classes_ctatypefieldone": "ctaType-button",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_ctastyleplacement": "ctaPlacement-vertical",
+                  "classes_ctatypefieldtwo": "ctaType-button_two",
+                  "classes_ctacolortwo": "ctaColor-light-two",
+                  "classes_ctastyletwo": "ctaStyle-primary-two",
+                  "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                  "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Transparent Block",
+          "id": "transparent-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Transparent Block",
+                  "model": "transparent-block"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Two Column with Image",
           "id": "two-column-with-image",
           "plugins": {
@@ -1010,19 +1221,22 @@
                 "template": {
                   "name": "Two Column With Image",
                   "model": "two-column-with-image",
-                  "classes": "leftImagePlacement",
-                  "classes_mediatype": "icon",
-                  "classes_ctanumber": "ctanumber_one",
-                  "classes_ctatextplacement": "ctaalign_left",
-                  "classes_ctatypetieldone": "button",
-                  "classes_backgroundcolor": "background_none",
-                  "classes_ctastyleone": "primary",
-                  "classes_targetpathone": "sameTab",
-                  "classes_exitinterstitial": "select",
-                  "classes_ctastyletwo": "primary_two",
-                  "classes_targetpathtwo": "sameTab_two",
-                  "classes_exitinterstitialtwo": "select_two",
-                  "classes_ctatypefieldtwo": "button_two"
+                  "classes": "imageplacement-left",
+                  "classes_mediatype": "mediatype-icon",
+                  "classes_textplacement": "textplacement-top",
+                  "classes_ctanumber": "ctaNumber-one",
+                  "classes_ctatextplacement": "ctaPlacement_left",
+                  "classes_ctatypetieldone": "ctaType-button",
+                  "classes_ctacolorone": "ctaColor-light",
+                  "classes_backgroundcolor": "background-color-none",
+                  "classes_ctastyleone": "ctaStyle-primary",
+                  "classes_targetpathone": "ctaTarget-sameTab",
+                  "classes_exitinterstitial": "ctaExitInterstitial-select",
+                  "classes_ctacolortwo": "ctaColor-light-two",
+                  "classes_ctastyletwo": "ctaStyle-primary-two",
+                  "classes_targetpathtwo": "ctaTarget-sameTab_two",
+                  "classes_exitinterstitialtwo": "ctaExitInterstitial-select_two",
+                  "classes_ctatypefieldtwo": "ctaType-button_two"
                 }
               }
             }
@@ -1037,7 +1251,12 @@
                 "resourceType": "core/franklin/components/block/v1/item",
                 "template": {
                   "name": "Video Item",
-                  "model": "video-item"
+                  "model": "video-item",
+                  "classes": "video-standard",
+                  "classes_ctacolor": "ctaColor-light",
+                  "classes_ctastyle": "ctaStyle-primary",
+                  "video_videoPathStandardText": "Watch now",
+                  "video_videoPathQuoteText": "Watch patient story"
                 }
               }
             }
@@ -1057,7 +1276,12 @@
                   "item0": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Video Item",
-                    "model": "video-item"
+                    "model": "video-item",
+                    "classes": "video-standard",
+                    "classes_ctacolor": "ctaColor-light",
+                    "classes_ctastyle": "ctaStyle-primary",
+                    "video_videoPathStandardText": "Watch now",
+                    "video_videoPathQuoteText": "Watch patient story"
                   }
                 }
               }
