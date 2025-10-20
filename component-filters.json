@@ -16,12 +16,12 @@
       "button",
       "title",
       "cards",
-      "columns",
       "fragment",
       "icon-card",
       "promo-banner",
       "anchor-links",
       "two-column-with-image",
+      "primary-hero",
       "table",
       "table-2-columns",
       "table-3-columns",
@@ -29,7 +29,6 @@
       "table-5-columns",
       "table-6-columns",
       "overlapping-block",
-      "teaser-block",
       "brand-card",
       "image-block",
       "small-media-carousel",
@@ -39,14 +38,18 @@
       "spacer-and-divider",
       "horizontal-numeric-tile",
       "additional-resource-card",
-      "tabs",
-      "teaser-modal",
+      "interstitial-zepbound",
       "price-card",
       "quiz-block",
       "promo-banner",
       "crm-weight",
       "hcp-coverage",
-      "hcp-request-resources"
+      "doctor-discussion-guide",
+      "hcp-request-resources",
+      "text-component",
+      "video",
+      "external-video-player-link",
+      "small-width-media"
     ]
   },
   {
@@ -57,7 +60,6 @@
       "button",
       "title",
       "cards",
-      "columns",
       "fragment",
       "two-column-with-image",
       "table",
@@ -67,146 +69,207 @@
       "table-5-columns",
       "table-6-columns",
       "overlapping-block",
-      "isi",
       "brand-card",
       "image-block",
+      "doctor-discussion-guide",
       "small-media-carousel",
       "bulleted-icon-list",
+      "primary-hero",
+      "icon-card",
       "icon-tile",
       "accordion",
       "spacer-and-divider",
       "horizontal-numeric-tile",
       "additional-resource-card",
-      "tabs",
-      "interstitial-modal",
+      "interstitial-zepbound",
       "price-card",
       "quiz-block",
       "promo-banner",
       "video",
       "crm-weight",
       "hcp-coverage",
-      "hcp-request-resources"
+      "hcp-request-resources",
+      "text-component",
+      "video"
     ]
   },
   {
     "id": "column-container",
     "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "cards",
-      "columns",
-      "fragment",
-      "two-column-with-image",
-      "table",
-      "table-2-columns",
-      "table-3-columns",
-      "table-4-columns",
-      "table-5-columns",
-      "table-6-columns",
-      "overlapping-block",
-      "isi",
-      "brand-card",
-      "image-block",
-      "small-media-carousel",
-      "bulleted-icon-list",
-      "icon-tile",
-      "accordion",
-      "spacer-and-divider",
-      "horizontal-numeric-tile",
-      "additional-resource-card",
-      "tabs",
-      "promo-banner",
-      "column-break"
+      "columns"
     ]
   },
   {
     "id": "tabs-section",
-    "components": ["tabs"]
+    "components": [
+      "tabs"
+    ]
   },
   {
     "id": "accordion",
-    "components": ["accordion-item"]
+    "components": [
+      "accordion-item"
+    ]
   },
   {
     "id": "additional-resource-card",
-    "components": ["resource-card"]
+    "components": [
+      "resource-card"
+    ]
   },
   {
     "id": "anchor-links",
-    "components": ["anchor-links-item"]
+    "components": [
+      "anchor-links-item"
+    ]
   },
   {
     "id": "brand-card",
-    "components": ["jump-link-item"]
+    "components": [
+      "jump-link-item"
+    ]
   },
   {
     "id": "bulleted-icon-list",
-    "components": ["bulleted-icon-list-item"]
+    "components": [
+      "bulleted-icon-list-item"
+    ]
   },
   {
     "id": "cards",
-    "components": ["card"]
+    "components": [
+      "card",
+      "numeric-tile"
+    ]
   },
   {
     "id": "columns",
-    "components": ["column"]
+    "components": [
+      "column"
+    ]
   },
   {
     "id": "column",
-    "components": ["text", "image", "button", "title","accordion"]
+    "components": [
+      "accordion",
+      "additional-links",
+      "cards",
+      "relatedlinks",
+      "enhanced-related-links",
+      "text-component",
+      "spacer-and-divider",
+      "image-block",
+      "executive-grids",
+      "text-callout",
+      "medium-media-carousel",
+      "vertical-numeric-tile",
+      "horizontal-numeric-tile",
+      "timeline-card",
+      "media-card",
+      "video",
+      "question-card-carousel",
+      "telehealth-cards",
+      "promo-banner",
+      "pull-quote",
+      "healthgrades-widget",
+      "crm-form",
+      "bulleted-icon-list",
+      "news-and-story-card",
+      "text-callout",
+      "small-media-carousel",
+      "media-contacts",
+      "overlapping-block",
+      "icon-tile"
+    ]
+  },
+  {
+    "id": "external-video-player-link",
+    "components": [
+      "external-video-player-link-item"
+    ]
   },
   {
     "id": "horizontal-numeric-tile",
-    "components": ["numeric-tile"]
+    "components": [
+      "numeric-tile"
+    ]
   },
   {
     "id": "icon-card",
-    "components": ["icon-card-item"]
+    "components": [
+      "icon-card-item"
+    ]
   },
   {
     "id": "icon-tile-grid",
-    "components": ["tile"]
+    "components": [
+      "tile"
+    ]
   },
   {
     "id": "price-card",
-    "components": ["green-card"]
+    "components": [
+      "green-card"
+    ]
   },
   {
     "id": "small-media-carousel",
-    "components": ["small-media-carousel-item"]
+    "components": [
+      "small-media-carousel-item"
+    ]
+  },
+  {
+    "id": "small-width-media",
+    "components": [
+      "small-width-media"
+    ]
   },
   {
     "id": "table-2-columns",
-    "components": ["table-col-2"]
+    "components": [
+      "table-col-2"
+    ]
   },
   {
     "id": "table-3-columns",
-    "components": ["table-col-3"]
+    "components": [
+      "table-col-3"
+    ]
   },
   {
     "id": "table-4-columns",
-    "components": ["table-col-4"]
+    "components": [
+      "table-col-4"
+    ]
   },
   {
     "id": "table-5-columns",
-    "components": ["table-col-5"]
+    "components": [
+      "table-col-5"
+    ]
   },
   {
     "id": "table-6-columns",
-    "components": ["table-col-6"]
+    "components": [
+      "table-col-6"
+    ]
   },
   {
     "id": "table",
-    "components": ["table-row"]
+    "components": [
+      "table-row"
+    ]
   },
   {
     "id": "tabs",
-    "components": ["tab"]
+    "components": [
+      "tab"
+    ]
   },
   {
     "id": "video",
-    "components": ["video-item"]
+    "components": [
+      "video-item"
+    ]
   }
 ]
