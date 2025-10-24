@@ -3,9 +3,9 @@
     "id": "main",
     "components": [
       "section",
-      "tabs-section",
-      "content-section-container",
-      "column-container"
+      "tabs",
+      "marginal",
+      "nav"
     ]
   },
   {
@@ -15,131 +15,82 @@
       "image",
       "button",
       "title",
+      "hero",
       "cards",
+      "columns",
       "fragment",
-      "icon-card",
-      "promo-banner",
-      "anchor-links",
-      "two-column-with-image",
-      "primary-hero",
-      "table",
-      "table-2-columns",
-      "table-3-columns",
-      "table-4-columns",
-      "table-5-columns",
-      "table-6-columns",
-      "overlapping-block",
-      "brand-card",
-      "image-block",
-      "small-media-carousel",
-      "bulleted-icon-list",
-      "icon-tile",
       "accordion",
-      "spacer-and-divider",
-      "horizontal-numeric-tile",
-      "additional-resource-card",
-      "interstitial-zepbound",
-      "price-card",
-      "quiz-block",
-      "promo-banner",
-      "crm-weight",
-      "hcp-coverage",
-      "doctor-discussion-guide",
-      "hcp-request-resources",
-      "text-component",
+      "teaser",
+      "carousel",
+      "articlefeed",
+      "breadcrumbs",
+      "quote",
+      "download",
+      "events",
+      "dynamic-media-asset",
+      "social-share",
+      "embed",
+      "list",
+      "wysiwyg-table",
+      "customtable",
       "video",
-      "external-video-player-link",
-      "small-width-media"
+      "table",
+      "form",
+      "custom-asset",
+      "landing-page-header",
+      "landing-page-logo-overview",
+      "test",
+      "custom-image",
+      "copyright-text",
+      "test-block"
     ]
   },
   {
-    "id": "content-section-container",
+    "id": "subssection",
     "components": [
       "text",
       "image",
       "button",
       "title",
+      "hero",
       "cards",
+      "columns",
       "fragment",
-      "two-column-with-image",
-      "table",
-      "table-2-columns",
-      "table-3-columns",
-      "table-4-columns",
-      "table-5-columns",
-      "table-6-columns",
-      "overlapping-block",
-      "brand-card",
-      "image-block",
-      "doctor-discussion-guide",
-      "small-media-carousel",
-      "bulleted-icon-list",
-      "primary-hero",
-      "icon-card",
-      "icon-tile",
       "accordion",
-      "spacer-and-divider",
-      "horizontal-numeric-tile",
-      "additional-resource-card",
-      "interstitial-zepbound",
-      "price-card",
-      "quiz-block",
-      "promo-banner",
-      "video",
-      "crm-weight",
-      "hcp-coverage",
-      "hcp-request-resources",
-      "text-component",
-      "video"
+      "test-block"
     ]
   },
   {
-    "id": "column-container",
+    "id": "nav",
     "components": [
-      "columns"
-    ]
-  },
-  {
-    "id": "tabs-section",
-    "components": [
-      "tabs"
+      "title",
+      "text",
+      "image",
+      "navitems"
     ]
   },
   {
     "id": "accordion",
     "components": [
-      "accordion-item"
+      "accordionitem"
     ]
   },
   {
-    "id": "additional-resource-card",
-    "components": [
-      "resource-card"
-    ]
-  },
-  {
-    "id": "anchor-links",
-    "components": [
-      "anchor-links-item"
-    ]
-  },
-  {
-    "id": "brand-card",
-    "components": [
-      "jump-link-item"
-    ]
-  },
-  {
-    "id": "bulleted-icon-list",
-    "components": [
-      "bulleted-icon-list-item"
-    ]
+    "id": "articlefeed"
   },
   {
     "id": "cards",
     "components": [
       "card",
-      "numeric-tile"
+      "hubspot-form",
+      "test"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carouselitem",
+      "carouselanotheritem"
     ]
   },
   {
@@ -151,77 +102,108 @@
   {
     "id": "column",
     "components": [
-      "accordion",
-      "additional-links",
-      "cards",
-      "relatedlinks",
-      "enhanced-related-links",
-      "text-component",
-      "spacer-and-divider",
-      "image-block",
-      "executive-grids",
-      "text-callout",
-      "medium-media-carousel",
-      "vertical-numeric-tile",
-      "horizontal-numeric-tile",
-      "timeline-card",
-      "media-card",
-      "video",
-      "question-card-carousel",
-      "telehealth-cards",
-      "promo-banner",
-      "pull-quote",
-      "healthgrades-widget",
-      "crm-form",
-      "bulleted-icon-list",
-      "news-and-story-card",
-      "text-callout",
-      "small-media-carousel",
-      "media-contacts",
-      "overlapping-block",
-      "icon-tile"
+      "text",
+      "image",
+      "button",
+      "title",
+      "accordionitem"
     ]
   },
   {
-    "id": "external-video-player-link",
+    "id": "customtable",
     "components": [
-      "external-video-player-link-item"
+      "customtablecolumn"
     ]
   },
   {
-    "id": "horizontal-numeric-tile",
+    "id": "customtablecolumn",
     "components": [
-      "numeric-tile"
+      "text"
     ]
   },
   {
-    "id": "icon-card",
+    "id": "events",
     "components": [
-      "icon-card-item"
+      "event"
     ]
   },
   {
-    "id": "icon-tile-grid",
+    "id": "hero",
+    "components": [],
+    "rte": {
+      "format": [
+        "bold",
+        "italic"
+      ],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [
+        "superscript",
+        "subscript"
+      ],
+      "list": [
+        "bullist",
+        "numlist"
+      ],
+      "insert": [
+        "link"
+      ],
+      "advanced": [],
+      "extensions": [],
+      "editor": [
+        "removeformat"
+      ],
+      "blocks": [
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "button"
+      ]
+    }
+  },
+  {
+    "id": "hubspot-form",
+    "components": []
+  },
+  {
+    "id": "landing-page-header",
+    "components": [],
+    "rte": {
+      "format": [
+        "bold",
+        "italic"
+      ],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [
+        "bullist"
+      ],
+      "insert": [],
+      "advanced": [],
+      "extensions": [],
+      "editor": [],
+      "blocks": []
+    }
+  },
+  {
+    "id": "landing-page-logo-overview",
     "components": [
-      "tile"
+      "landing-page-logo-item"
     ]
   },
   {
-    "id": "price-card",
+    "id": "navitems",
     "components": [
-      "green-card"
+      "navitem"
     ]
   },
   {
-    "id": "small-media-carousel",
+    "id": "table",
     "components": [
-      "small-media-carousel-item"
-    ]
-  },
-  {
-    "id": "small-width-media",
-    "components": [
-      "small-width-media"
+      "table-row"
     ]
   },
   {
@@ -243,33 +225,16 @@
     ]
   },
   {
-    "id": "table-5-columns",
+    "id": "test-block",
     "components": [
-      "table-col-5"
+      "title",
+      "text",
+      "button",
+      "image"
     ]
   },
   {
-    "id": "table-6-columns",
-    "components": [
-      "table-col-6"
-    ]
-  },
-  {
-    "id": "table",
-    "components": [
-      "table-row"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tab"
-    ]
-  },
-  {
-    "id": "video",
-    "components": [
-      "video-item"
-    ]
+    "id": "test",
+    "components": []
   }
 ]
