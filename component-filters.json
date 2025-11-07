@@ -1,65 +1,240 @@
 [
   {
-    "id": "richtext",
-    "rte": {
-      "toolbar": {
-        "format": [
-          "bold",
-          "italic"
-        ],
-        "blocks": [
-          "paragraph",
-          "h1",
-          "h2"
-        ],
-        "list": [
-          "bullet_list",
-          "ordered_list"
-        ],
-        "insert": [
-          "link",
-          "unlink"
-        ],
-        "sections": [
-          "format",
-          "blocks",
-          "list",
-          "insert"
-        ]
-      },
-      "actions": {
-        "bold": {
-          "tag": "strong",
-          "shortcut": "Mod-B",
-          "label": "Bold"
-        },
-        "italic": {
-          "tag": "em",
-          "shortcut": "Mod-I"
-        },
-        "bullet_list": {
-          "wrapInParagraphs": true,
-          "label": "Bullet List"
-        },
-        "ordered_list": {
-          "wrapInParagraphs": false
-        },
-        "link": {
-          "hideTarget": false,
-          "shortcut": "Mod-K",
-          "label": "Add Link"
-        },
-        "unlink": {
-          "label": "Remove Link"
-        },
-        "h1": {
-          "shortcut": "Mod-Alt-1",
-          "label": "Main Heading"
-        }
-      }
-    },
+    "id": "main",
     "components": [
-      "richtext"
+      "section",
+      "tabs",
+      "marginal",
+      "nav"
     ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "fragment",
+      "accordion",
+      "teaser",
+      "carousel",
+      "articlefeed",
+      "breadcrumbs",
+      "quote",
+      "download",
+      "events",
+      "dynamic-media-asset",
+      "social-share",
+      "embed",
+      "list",
+      "wysiwyg-table",
+      "customtable",
+      "video",
+      "table",
+      "form",
+      "custom-asset",
+      "landing-page-header",
+      "landing-page-logo-overview",
+      "test",
+      "custom-image",
+      "copyright-text",
+      "test-block"
+    ]
+  },
+  {
+    "id": "subssection",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "fragment",
+      "accordion",
+      "test-block"
+    ]
+  },
+  {
+    "id": "nav",
+    "components": [
+      "title",
+      "text",
+      "image",
+      "navitems"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordionitem"
+    ]
+  },
+  {
+    "id": "articlefeed"
+  },
+  {
+    "id": "cards",
+    "components": [
+      "card",
+      "hubspot-form",
+      "test"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carouselitem",
+      "carouselanotheritem"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title",
+      "accordionitem"
+    ]
+  },
+  {
+    "id": "customtable",
+    "components": [
+      "customtablecolumn"
+    ]
+  },
+  {
+    "id": "customtablecolumn",
+    "components": [
+      "text"
+    ]
+  },
+  {
+    "id": "events",
+    "components": [
+      "event"
+    ]
+  },
+  {
+    "id": "hero",
+    "components": [],
+    "rte": {
+      "format": [
+        "bold",
+        "italic"
+      ],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [
+        "superscript",
+        "subscript"
+      ],
+      "list": [
+        "bullist",
+        "numlist"
+      ],
+      "insert": [
+        "link"
+      ],
+      "advanced": [],
+      "extensions": [],
+      "editor": [
+        "removeformat"
+      ],
+      "blocks": [
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "button"
+      ]
+    }
+  },
+  {
+    "id": "hubspot-form",
+    "components": []
+  },
+  {
+    "id": "landing-page-header",
+    "components": [],
+    "rte": {
+      "format": [
+        "bold",
+        "italic"
+      ],
+      "alignment": [],
+      "indentation": [],
+      "sr_script": [],
+      "list": [
+        "bullist"
+      ],
+      "insert": [],
+      "advanced": [],
+      "extensions": [],
+      "editor": [],
+      "blocks": []
+    }
+  },
+  {
+    "id": "landing-page-logo-overview",
+    "components": [
+      "landing-page-logo-item"
+    ]
+  },
+  {
+    "id": "navitems",
+    "components": [
+      "navitem"
+    ]
+  },
+  {
+    "id": "table",
+    "components": [
+      "table-row"
+    ]
+  },
+  {
+    "id": "table-2-columns",
+    "components": [
+      "table-col-2"
+    ]
+  },
+  {
+    "id": "table-3-columns",
+    "components": [
+      "table-col-3"
+    ]
+  },
+  {
+    "id": "table-4-columns",
+    "components": [
+      "table-col-4"
+    ]
+  },
+  {
+    "id": "test-block",
+    "components": [
+      "title",
+      "text",
+      "button",
+      "image"
+    ]
+  },
+  {
+    "id": "test",
+    "components": []
   }
 ]
